@@ -12,7 +12,6 @@ Football projects built around specific tactical questions, reproducible data pr
 
 The first project includes pressure and recovery maps, event-level replays, team comparisons, an exploratory xT model, automated tests and a written investigation. It identifies patterns consistent with pressing traps; event data alone cannot prove intent.
 
-![Pressing trap detector dashboard](projects/pressing-trap-detector/outputs/dashboard-preview.png)
 
 ## Run the website
 
