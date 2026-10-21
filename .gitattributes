@@ -1,0 +1,3 @@
+# The website release includes compiled third-party runtime code.
+# Keep generated artifacts out of the authored-code language breakdown.
+projects/pressing-trap-detector/web/** linguist-generated=true
