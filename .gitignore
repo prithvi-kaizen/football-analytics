@@ -10,6 +10,7 @@
 **/data/raw/
 **/outputs/reviewed.json
 **/outputs/pressures.csv
+**/outputs/*/manifest.json
 
 # This local symlink keeps the existing Codex preview running after the move.
 /dashboard

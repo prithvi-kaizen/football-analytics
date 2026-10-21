@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "snapshot": {
+    "archive": "snapshot.json.gz",
+    "archive_sha256": "7fd3376aae2d6232bc12702d6bcd44c53b613cd6757c63a74f1b72b1ac835222",
+    "path": "snapshot.48fb042be3272071.json.gz",
+    "sha256": "48fb042be3272071a0b5933caa5774607b7067e3503bd27b25c7049c3ad57fdf"
+  },
+  "assets": {
+    "index.html": "5e5a44c85b85ac025f0497274ffd2dd501955d2a0e0157f7a86fa7a5c7e6248c",
+    "app.js": "f97edb2c80b4e8d23441abd524615aaf6a2cf24b1ff5ec65c8ed4b4abec00959",
+    "style.css": "168480f7a2ed23e1c20ff99f0eb06ba5abde07896c7d8b6990c6d7d828584fb3",
+    "vendor/plotly.min.js": "8ef4c6ab1369f0019611cbcd2d5b8aafef23e5d19ef58c39d4b4249831fe2180",
+    "vendor/LICENSE-plotly.txt": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7"
+  },
+  "profiles": {
+    "4.5": 444,
+    "5.0": 303,
+    "5.5": 209
+  }
+}

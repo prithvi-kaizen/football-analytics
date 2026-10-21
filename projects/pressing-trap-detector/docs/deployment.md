@@ -23,9 +23,11 @@ The existing Vercel project imports `prithvi-kaizen/football-analytics` with the
 | --- | --- |
 | Framework | Other / none |
 | Install command | Empty |
-| Build command | `python3 projects/pressing-trap-detector/scripts/build_website.py` |
-| Output directory | `projects/pressing-trap-detector/dist` |
+| Build command | `python3 scripts/build_website.py` |
+| Output directory | `dist` |
 | Environment variables | None |
+
+The portfolio build now adds The Invisible Runner at `/invisible-runner/`. For deployment from the repository root, use `python3 scripts/build_website.py` as the build command and `dist` as the output directory, as configured in the root `vercel.json`. The project-local command above still builds only this pressing dashboard. Its existing root route and packaged analysis are preserved.
 
 The website is a static, historical snapshot. It requires no server functions, database or live StatsBomb connection. Complete-view query parameters preserve the selected team, match and replay when sharing links. Viewer presentation changes remain in that browser; this Vercel release does not provide shared owner editing or hosted data refresh APIs.
 

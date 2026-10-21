@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A reproducible football analytics project measuring off-ball runs, defender movement and changes in receiving space using SkillCorner open tracking data.">
+  <meta name="theme-color" content="#faf8f1">
+  <title>The Invisible Runner | Football analytics</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="vendor/plotly.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#analysis">Skip to analysis</a>
+  <header>
+    <a href="https://github.com/prithvi-kaizen/football-analytics">Football analytics</a>
+    <nav aria-label="Project links"><a href="/">Pressing trap detector</a><a href="#methods">Methods</a><a href="https://github.com/prithvi-kaizen/football-analytics/tree/main/projects/invisible-runner">Code &amp; setup</a></nav>
+  </header>
+  <main id="analysis">
+    <div class="title-row"><h1>The Invisible Runner</h1><span>Tracking study · 2024/25 A-League</span></div>
+    <p class="intro">What changes when a player runs without the ball?</p>
+    <p class="scope" id="scope">Loading the reviewed match…</p>
+    <p class="caution">Space changes are geometric associations. Extrapolated positions and other players' movement can explain them. These measurements do not establish causal credit.</p>
+    <div id="status" role="status">Loading real tracking replays and detection profiles…</div>
+    <section id="workbench" hidden aria-label="Run analysis">
+      <form id="filters" class="filters" aria-label="Filter runs">
+        <label>Detection profile<select id="profile"><option value="4.5">4.5 m/s</option><option value="5.0" selected>5.0 m/s · baseline</option><option value="5.5">5.5 m/s</option></select></label>
+        <label>Team<select id="team"><option value="all">All teams</option></select></label>
+        <label>Run type<select id="kind"><option value="all">All types</option><option value="behind_line">Behind line</option><option value="wide_channel">Wide channel</option><option value="toward_space">Toward space</option></select></label>
+        <label>Observation coverage<select id="quality"><option value="all">All estimates</option><option value="runner">Runner fully detected</option><option value="context">Runner + context endpoints</option></select></label>
+        <label>Minimum distance<span class="distance-input"><input id="distance" type="number" min="5" max="20" step="1" value="5" required aria-label="Minimum run distance in metres"><span>m</span></span></label>
+      </form>
+      <div class="population"><p id="population" aria-live="polite"></p><div class="exports"><button id="reset">Reset filters</button><button id="download">Download filtered CSV</button></div></div>
+      <p class="small">Profiles are calculated in Python from the same full match. The website filters those reviewed results; the Streamlit app supports additional recalculation.</p>
+      <p id="empty" class="empty" hidden>No runs meet these filters. Reset the filters or select All estimates.</p>
+      <div id="details-view">
+        <label class="run-picker">Run to inspect<select id="run"></select></label>
+        <div class="replay-grid">
+          <section class="pitch-section" aria-labelledby="run-title">
+            <div class="run-heading"><h2 id="run-title"></h2><span id="run-facts"></span></div>
+            <div class="transport"><button id="play">Play run</button><button id="rewind">Return to start</button><label class="frame-label">Replay frame<input id="frame" type="range" min="0" max="1" step="1" value="0"></label><output id="time"></output></div>
+            <div id="pitch" class="pitch-plot" role="img" aria-label="Player positions and receiving-space changes at the selected run frame"></div>
+            <p class="legend">Star: runner · diamond: selected teammate · teal: attacking team · rust: opposition<br>Filled: detected · hollow: extrapolated · pale cells: already free · teal cells: newly free · rust cells: no longer free</p>
+          </section>
+          <aside class="run-evidence" aria-label="Run measurements">
+            <h3>The space around a teammate</h3>
+            <p id="teammate"></p>
+            <dl id="metrics"></dl>
+            <p id="visibility" class="small"></p>
+            <h3>During the run</h3>
+            <div id="timeline" class="timeline" role="img" aria-label="Estimated free receiving patch over elapsed run time"></div>
+            <p class="small">The same 6 m patch around the teammate's starting position is compared throughout the run. It is a geometric estimate, without a pass-accessibility model.</p>
+          </aside>
+        </div>
+        <section class="comparison" aria-labelledby="comparison-title"><h2 id="comparison-title">Space change across the selected runs</h2><p class="small">Hover to inspect a run; select a point to load its replay. The run selector provides a keyboard alternative.</p><div id="scatter" class="scatter" role="img" aria-label="Run distance versus change in teammate receiving space"></div></section>
+        <details id="records"><summary>Inspect exact run records</summary><div class="table-scroll"><table><caption>Current filtered population; missing measurements remain unavailable.</caption><thead><tr><th>Player</th><th>Clock</th><th>Distance (m)</th><th>Patch change (m²)</th><th>Runner detected</th><th>Context detected</th></tr></thead><tbody id="rows"></tbody></table></div></details>
+      </div>
+    </section>
+    <section id="methods" class="methods">
+      <h2>What these measurements mean</h2>
+      <div class="method-columns"><div><h3>A rule-based baseline</h3><p>Each profile finds contiguous attacking movement at its speed threshold, lasting at least 1 s, travelling at least 5 m and progressing at least 3 m toward goal. Team possession comes from in-play phases; the runner stays at least 3 m from the tracked ball and outside their provider possession intervals.</p><p>Seven-frame smoothing reduces positional noise. Gaps, implausible raw jumps and source boundaries break trajectories. Missing carrier identities and extrapolated ball positions limit touch-free classification.</p></div><div><h3>Space, defined precisely</h3><p>A teammate is chosen from the starting state, before measuring change. Free patch area counts 1 m² cell centres within 6 m of that starting position, at least 3 m from every opponent. Context metrics require a complete, continuous opponent roster at both endpoints.</p><p>Behind-line runs cross the second-deepest outfield opponent. Wide runs finish in an outer channel while moving outward. Toward-space runs gain at least 2 m of nearest-opponent clearance. Categories can overlap.</p></div></div>
+      <p class="caution">Fully detected runners can still depend on extrapolated defenders. Strict coverage refers to the runner throughout the run, and contextual players and ball at both endpoints. It does not certify visibility between endpoints. No causal model or human-labelled accuracy study is included.</p>
+      <div class="source-links"><a href="https://github.com/SkillCorner/opendata/tree/4340d274572876239c154c90bc507a9b3250a656">SkillCorner / PySport source</a><a href="LICENSE-skillcorner.txt">Data license</a><a href="space-change.png">Publication chart</a><a href="https://github.com/prithvi-kaizen/football-analytics/blob/main/projects/invisible-runner/outputs/1886347-full/findings.md">Findings report</a><a href="https://github.com/prithvi-kaizen/football-analytics/blob/main/projects/invisible-runner/docs/methodology.md">Full methodology</a><button id="provenance" disabled>Download view provenance</button></div>
+      <p id="source-note" class="small">Historical snapshot of one match. No account, API key or live data feed is required.</p>
+    </section>
+  </main>
+  <footer>Built from free SkillCorner open data, with PySport. Project code and data retain their respective MIT notices. Plotly.js is bundled locally under its <a href="vendor/LICENSE-plotly.txt">MIT license</a>.</footer>
+  <noscript><p class="caution">Enable JavaScript for interactive replays. The <a href="space-change.png">chart</a>, <a href="runs.csv">baseline CSV</a> and <a href="provenance.json">source provenance</a> remain available.</p></noscript>
+</body>
+</html>

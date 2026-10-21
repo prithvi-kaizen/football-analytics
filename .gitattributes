@@ -1,3 +1,8 @@
 # The website release includes compiled third-party runtime code.
 # Keep generated artifacts out of the authored-code language breakdown.
 projects/pressing-trap-detector/web/** linguist-generated=true
+projects/invisible-runner/web/vendor/** linguist-vendored=true -whitespace
+projects/invisible-runner/web/snapshot.json.gz linguist-generated=true
+projects/invisible-runner/outputs/** linguist-generated=true -whitespace
+# Preserve copied upstream documentation byte for byte.
+projects/invisible-runner/docs/source/** -whitespace

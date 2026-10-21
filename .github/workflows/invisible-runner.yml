@@ -1,0 +1,26 @@
+name: Invisible Runner
+on:
+  push:
+    paths: ['projects/invisible-runner/**', 'scripts/build_website.py', 'vercel.json', '.github/workflows/invisible-runner.yml']
+  pull_request:
+    paths: ['projects/invisible-runner/**', 'scripts/build_website.py', 'vercel.json', '.github/workflows/invisible-runner.yml']
+permissions:
+  contents: read
+jobs:
+  sample-pipeline:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/invisible-runner
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: projects/invisible-runner/requirements.txt
+      - run: python -m pip install -r requirements.txt
+      - run: python -m invisible_runner run --match 1886347 --seconds 300
+      - run: python -m pytest -q
+      - name: Build both published websites without analytics dependencies
+        run: python -S ../../scripts/build_website.py

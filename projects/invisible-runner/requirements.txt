@@ -1,0 +1,9 @@
+numpy>=2.2,<3
+pandas>=2.2,<3
+scipy>=1.15,<2
+matplotlib>=3.10,<4
+mplsoccer>=1.4,<2
+plotly>=6,<7
+streamlit>=1.45,<2
+pytest>=8.3,<10
+pyarrow>=18,<27

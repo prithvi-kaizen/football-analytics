@@ -2,11 +2,15 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "",
-  "buildCommand": "python3 projects/pressing-trap-detector/scripts/build_website.py",
-  "outputDirectory": "projects/pressing-trap-detector/dist",
+  "buildCommand": "python3 scripts/build_website.py",
+  "outputDirectory": "dist",
   "headers": [
     {
       "source": "/snapshot.:hash.json",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/invisible-runner/snapshot.:hash.json.gz",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     }
   ]

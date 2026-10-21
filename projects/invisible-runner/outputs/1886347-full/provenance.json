@@ -1,0 +1,117 @@
+{
+  "match_id": 1886347,
+  "revision": "4340d274572876239c154c90bc507a9b3250a656",
+  "scope": "full match",
+  "sources": {
+    "metadata": {
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1886347/1886347_match.json",
+      "revision": "4340d274572876239c154c90bc507a9b3250a656",
+      "max_lines": null,
+      "complete": true,
+      "sha256": "30c608e78663e9f490b3545479a3ce67b171f418c5133d5609cb249a2466abb2",
+      "bytes": 27541
+    },
+    "events": {
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1886347/1886347_dynamic_events.csv",
+      "revision": "4340d274572876239c154c90bc507a9b3250a656",
+      "max_lines": null,
+      "complete": true,
+      "sha256": "b21368b9b94eb8f83032fe14a2a8da88ab7eda048b4f8078c06d0e6955d12bfb",
+      "bytes": 4918599
+    },
+    "phases": {
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1886347/1886347_phases_of_play.csv",
+      "revision": "4340d274572876239c154c90bc507a9b3250a656",
+      "max_lines": null,
+      "complete": true,
+      "sha256": "d1c3066f7ed0598069d0d1b317bb30261eca3d7786fd9d540985f395e4c8aea9",
+      "bytes": 121864
+    },
+    "tracking": {
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1886347/1886347_tracking_extrapolated.jsonl",
+      "revision": "4340d274572876239c154c90bc507a9b3250a656",
+      "max_lines": null,
+      "complete": true,
+      "sha256": "3577e2803da95390f8b2f85d47829eb55fbbfee6211c94adc65db0dc78e46b41",
+      "bytes": 89280839
+    }
+  },
+  "config": {
+    "speed_mps": 5.0,
+    "min_duration_s": 1.0,
+    "min_distance_m": 5.0,
+    "min_progress_m": 3.0,
+    "ball_buffer_m": 3.0,
+    "smoothing_window": 7,
+    "max_speed_mps": 12.5,
+    "patch_radius_m": 6.0,
+    "control_radius_m": 3.0,
+    "grid_m": 1.0
+  },
+  "code_sha256": "5d58797860b8c168b2c6e7f7d9a881e943d522b2c14fea703af50e15aee74a82",
+  "runtime": {
+    "python": "3.14.2",
+    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+    "packages": {
+      "numpy": "2.5.4",
+      "pandas": "2.3.3",
+      "scipy": "1.18.1",
+      "pyarrow": "26.0.0",
+      "matplotlib": "3.11.2",
+      "mplsoccer": "1.8.1",
+      "plotly": "6.9.0",
+      "streamlit": "1.66.0"
+    }
+  },
+  "audit": {
+    "source_frames": 59061,
+    "null_period_frames": 19,
+    "invalid_positions": 39,
+    "unknown_players": 0,
+    "player_rows": 956037,
+    "extrapolated_rows": 389259,
+    "raw_jump_rows": 12,
+    "smoothed_missing_rows": 12,
+    "in_play_player_rows": 691456,
+    "first_frame": 10,
+    "last_frame": 59038,
+    "periods": [
+      1,
+      2
+    ],
+    "detected_fraction": 0.5928410720505587
+  },
+  "validation": {
+    "provider_runs_fully_in_scope": 595,
+    "baseline_runs": 303,
+    "baseline_runs_overlapping_provider": 175,
+    "provider_runs_overlapping_baseline": 181,
+    "rule": "same player and period, temporal intersection/union >=0.3; different definitions, not ground truth"
+  },
+  "sensitivity": [
+    {
+      "speed_mps": 4.5,
+      "min_distance_m": 5.0,
+      "runs": 444,
+      "median_distance_m": 13.35747985516678
+    },
+    {
+      "speed_mps": 5.0,
+      "min_distance_m": 5.0,
+      "runs": 303,
+      "median_distance_m": 14.076842133588377
+    },
+    {
+      "speed_mps": 5.5,
+      "min_distance_m": 5.0,
+      "runs": 209,
+      "median_distance_m": 13.492731876183807
+    }
+  ],
+  "run_count": 303,
+  "metric_valid_count": 299,
+  "outputs": {
+    "runs_sha256": "1b3a90da4268f6cda3586e0450128a07aaf3012cc6e85931c336542f13ab255e",
+    "sensitivity_sha256": "0b7c81ffe65028bac050baa9b5894b0e0902bea6aedf40c20c7e0e8a994de916"
+  }
+}
