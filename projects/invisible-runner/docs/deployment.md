@@ -32,7 +32,9 @@ The existing `football-analytics` Vercel project is connected to this repository
 | Environment variables | None |
 | Production branch | `main` |
 
-The root `vercel.json` supplies the build/output settings. A push to a development branch creates a preview through the existing Vercel Git integration; a push to `main` publishes production. No new paid service is needed. Deployment is still subject to the account's applicable hosting limits and terms.
+The root `vercel.json` supplies the build/output settings and canonical trailing-slash directory URLs, so relative assets resolve correctly under `/invisible-runner/`. A push to a development branch creates a preview through the existing Vercel Git integration; a push to `main` publishes production. No new paid service is needed. Deployment is still subject to the account's applicable hosting limits and terms.
+
+If automatic GitHub deployments are delayed, use the existing project's Deployments page and **Create Deployment**, selecting the reviewed branch or commit. Confirm the source commit and Ready status before sharing the new release; do not redeploy an older production commit by mistake.
 
 Configuration references: [Vercel build configuration](https://vercel.com/docs/builds/configure-a-build), [project settings](https://vercel.com/docs/project-configuration/vercel-json). If a persistent hosted Streamlit server is desired later, [Streamlit Community Cloud](https://docs.streamlit.io/deploy/streamlit-community-cloud) is a separate option; it is not part of this deployment.
 
