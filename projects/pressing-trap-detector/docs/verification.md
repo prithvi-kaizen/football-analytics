@@ -1,5 +1,14 @@
 # Verification: 21 October 2026
 
+## Publication checks
+
+- GitHub repository created and populated: `prithvi-kaizen/football-analytics`, public, with the project at `projects/pressing-trap-detector/`.
+- GitHub Actions run `39563607605` completed successfully on the first project commit, running the detector unit tests and static website build.
+- Vercel confirmed a successful GitHub-connected deployment to `https://football-analytics-self.vercel.app` in the owner's existing account. The displayed build command and output directory match `vercel.json`.
+- The public website bundle removes the local chat-routing meta tag and preserves every reviewed row. Its build verifies HTML, compressed snapshot and decompressed snapshot hashes.
+- The fallback claimable-deployment service timed out and returned no deployment URL; the successful deployment was made through the signed-in Vercel GitHub import flow instead.
+- The live URL was confirmed from Vercel's successful deployment screen. No independent curl or fetch of the deployed website was performed.
+
 ## Evidence and build
 
 PASS: All 51 raw event-file SHA-256 hashes match the pinned manifest. The files contain 187,924 events. Event IDs are unique within each match.

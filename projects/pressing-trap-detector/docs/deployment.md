@@ -1,5 +1,7 @@
 # Website deployment
 
+Live website: [football-analytics-self.vercel.app](https://football-analytics-self.vercel.app). Vercel project: `football-analytics`, connected to `prithvi-kaizen/football-analytics`. The initial deployment was created in the owner's signed-in Vercel account on 21 October 2026. Production tracks `main`; pushes to other branches create previews.
+
 The repository includes an integrity-checked static release under `web/`. The HTML is the same compiled dashboard used in local verification, with its transient local chat-routing metadata removed. The full reviewed data is stored losslessly as `snapshot.json.gz`. No raw event files, account tokens, local caches or workspace paths are required to deploy it.
 
 ## Local build
@@ -15,7 +17,7 @@ The build verifies the HTML, compressed archive and decompressed snapshot agains
 
 ## Vercel
 
-Import `prithvi-kaizen/football-analytics` into your Vercel account with the repository root as the Root Directory. The root `vercel.json` sets:
+The existing Vercel project imports `prithvi-kaizen/football-analytics` with the repository root as the Root Directory. For a fork or a separate deployment, import your own repository with the same settings. The root `vercel.json` sets:
 
 | Setting | Value |
 | --- | --- |

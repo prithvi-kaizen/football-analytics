@@ -2,6 +2,8 @@
 
 **Football question:** Where does Spain actually win the ball, and what opposition passing patterns precede pressure?
 
+**[Open the live dashboard](https://football-analytics-self.vercel.app)** · [Methodology](docs/methodology.md) · [Article](docs/where-does-spain-win-the-ball.md) · [CI checks](https://github.com/prithvi-kaizen/football-analytics/actions/workflows/check.yml)
+
 An event-data analysis and interactive dashboard covering all **51 Euro 2024 matches**, **24 teams**, **187,924 source events** and **12,891 eligible pressure events**. Spain is the default view; Germany and every other tournament team are available for comparison.
 
 ![Dashboard preview](outputs/dashboard-preview.png)

@@ -2,6 +2,8 @@
 
 Football projects built around specific tactical questions, reproducible data processing and interactive analysis.
 
+**Live dashboard:** [Pressing trap detector](https://football-analytics-self.vercel.app) · [Project](projects/pressing-trap-detector/) · [Analysis](projects/pressing-trap-detector/docs/where-does-spain-win-the-ball.md)
+
 ## Projects
 
 | Project | Football question | Data | Status |
@@ -31,7 +33,7 @@ See the [project README](projects/pressing-trap-detector/README.md) for the down
 
 ## Deployment
 
-The root `vercel.json` builds and serves the first project's static website. See the [Vercel deployment guide](projects/pressing-trap-detector/docs/deployment.md) for settings, preview versus production deployment, and how to refresh the packaged release. No environment variables are required.
+The website is deployed at [football-analytics-self.vercel.app](https://football-analytics-self.vercel.app) through the repository's Vercel GitHub integration. Pushes to `main` update the production website; other branches create preview deployments. The root `vercel.json` builds and serves the first project's static website. See the [Vercel deployment guide](projects/pressing-trap-detector/docs/deployment.md) for settings and how to refresh the packaged release. No environment variables are required.
 
 ## Repository conventions
 
