@@ -1,0 +1,30 @@
+.DS_Store
+**/__pycache__/
+**/*.py[cod]
+**/.venv/
+**/node_modules/
+**/.vercel/
+**/.env
+**/.env.*
+**/dist/
+**/data/raw/
+**/outputs/reviewed.json
+**/outputs/pressures.csv
+
+# This local symlink keeps the existing Codex preview running after the move.
+/dashboard
+
+# Preserve the local Data app authoring environment, but publish only this project's authored UI.
+/projects/pressing-trap-detector/dashboard/*
+!/projects/pressing-trap-detector/dashboard/src/
+/projects/pressing-trap-detector/dashboard/src/*
+!/projects/pressing-trap-detector/dashboard/src/theme.css
+!/projects/pressing-trap-detector/dashboard/src/content/
+/projects/pressing-trap-detector/dashboard/src/content/*
+!/projects/pressing-trap-detector/dashboard/src/content/dashboard/
+!/projects/pressing-trap-detector/dashboard/src/content/assets/
+/projects/pressing-trap-detector/dashboard/src/content/dashboard/*
+!/projects/pressing-trap-detector/dashboard/src/content/dashboard/DashboardContent.jsx
+!/projects/pressing-trap-detector/dashboard/src/content/dashboard/pressing.css
+/projects/pressing-trap-detector/dashboard/src/content/assets/*
+!/projects/pressing-trap-detector/dashboard/src/content/assets/statsbomb-logo.png

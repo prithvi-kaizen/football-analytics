@@ -1,0 +1,17 @@
+{
+  "format": 1,
+  "html": {
+    "path": "index.html",
+    "sha256": "8e4e65f364255f0a80b08bb91965b1b9968fe9f3ea8097f072aea1386cdcad35"
+  },
+  "snapshot": {
+    "path": "snapshot.b41944560ea5cecba48f1a6603c7c22de931e34ef8e9c756b88144bf80d71ea2.json",
+    "archive": "snapshot.json.gz",
+    "sha256": "b41944560ea5cecba48f1a6603c7c22de931e34ef8e9c756b88144bf80d71ea2",
+    "archive_sha256": "031720ec69ab5b958ad0fa2cf4d0e1ffedc91e28846594bac7dbb1f0967dd5b5",
+    "bytes": 51772065
+  },
+  "upstream_html_sha256": "dabc28c20f4b7243f332c79ff9fc5397d5b9781f8dc2c866d0325ad92eebdcf0",
+  "runtime_sha256": "9e3ede84b28aded3c7379b6e6a5611f0d95b9977eb0f781e279ceefabfcbd27e",
+  "removed_local_thread_tags": 1
+}

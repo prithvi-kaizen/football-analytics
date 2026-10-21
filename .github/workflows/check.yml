@@ -1,0 +1,29 @@
+name: Check pressing trap detector
+on:
+  push:
+    paths:
+      - 'projects/pressing-trap-detector/**'
+      - '.github/workflows/check.yml'
+      - 'vercel.json'
+  pull_request:
+    paths:
+      - 'projects/pressing-trap-detector/**'
+      - '.github/workflows/check.yml'
+      - 'vercel.json'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/pressing-trap-detector
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test detector rules
+        run: python -m unittest discover -s tests -v
+      - name: Check packaged evidence and build website
+        run: python scripts/build_website.py
