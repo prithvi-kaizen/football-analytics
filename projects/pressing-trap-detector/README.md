@@ -6,7 +6,6 @@
 
 An event-data analysis and interactive dashboard covering all **51 Euro 2024 matches**, **24 teams**, **187,924 source events** and **12,891 eligible pressure events**. Spain is the default view; Germany and every other tournament team are available for comparison.
 
-![Dashboard preview](outputs/dashboard-preview.png)
 
 ## What the dashboard does
 
