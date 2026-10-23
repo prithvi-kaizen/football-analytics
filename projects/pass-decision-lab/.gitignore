@@ -1,0 +1,19 @@
+.venv/
+data/
+outputs/*
+!outputs/findings.md
+!outputs/metrics.csv
+!outputs/calibration.png
+!outputs/calibration.svg
+!outputs/calibration.csv
+!outputs/run-summary.json
+!outputs/validation.md
+!outputs/dependency-licenses.json
+!outputs/requirements-lock.txt
+__pycache__/
+.pytest_cache/
+*.egg-info/
+# Keep source specifications/extracted text local; link official copies instead.
+/docs/source/*.txt
+/docs/source/Open*.pdf
+/docs/source/StatsBomb*.pdf

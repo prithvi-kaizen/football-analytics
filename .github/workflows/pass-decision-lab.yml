@@ -1,0 +1,30 @@
+name: Pass Decision Lab
+on:
+  push:
+    paths: ['projects/pass-decision-lab/**', '.github/workflows/pass-decision-lab.yml']
+  pull_request:
+    paths: ['projects/pass-decision-lab/**', '.github/workflows/pass-decision-lab.yml']
+  workflow_dispatch:
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/pass-decision-lab
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: projects/pass-decision-lab/pyproject.toml
+      - name: Verify committed static release
+        run: python scripts/build_website.py
+      - run: pip install -e '.[dev]'
+      - run: ruff check passlab tests app.py
+      - run: pytest -q -m 'not integration'
+      - name: Real-data baseline and offline reproduction
+        run: |
+          python -m passlab.pipeline --sample 2 --models baseline --output outputs/smoke
+          python -m passlab.pipeline --sample 2 --models baseline --output outputs/smoke --offline
+      - run: PASSLAB_TEST_OUTPUT=outputs/smoke pytest -q

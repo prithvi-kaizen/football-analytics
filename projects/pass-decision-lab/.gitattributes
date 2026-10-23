@@ -1,0 +1,4 @@
+# Preserve Matplotlib's reproducible SVG path formatting verbatim.
+outputs/*.svg -whitespace linguist-generated=true
+web/*.svg -whitespace linguist-generated=true
+web/cases/*.png linguist-generated=true

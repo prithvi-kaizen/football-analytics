@@ -2,7 +2,7 @@
 
 Football projects built around specific tactical questions, reproducible data processing and interactive analysis.
 
-**Live projects:** [Pressing trap detector](https://football-analytics-self.vercel.app) · [The Invisible Runner](https://football-analytics-self.vercel.app/invisible-runner/) · [Rest Defence Analyzer](https://football-analytics-self.vercel.app/rest-defence/)
+**Live projects:** [Pressing trap detector](https://football-analytics-self.vercel.app) · [The Invisible Runner](https://football-analytics-self.vercel.app/invisible-runner/) · [Rest Defence Analyzer](https://football-analytics-self.vercel.app/rest-defence/) · [Pass Decision Lab](https://football-analytics-self.vercel.app/pass-decision-lab/)
 
 ## Projects
 
@@ -10,6 +10,7 @@ Football projects built around specific tactical questions, reproducible data pr
 | --- | --- | --- | --- |
 | [Pressing trap detector](projects/pressing-trap-detector/) | Where does Spain actually win the ball, and which opposition passing patterns precede pressure? | StatsBomb Open Data, Euro 2024, all 51 matches | Working dashboard and reproducible analysis |
 | [The Invisible Runner](projects/invisible-runner/) | How can we measure players who create space without touching the ball? | SkillCorner open A-League 2024/25 tracking; one complete match validated | Python pipeline, Streamlit app and published browser replay |
+| [Pass Decision Lab](projects/pass-decision-lab/) | Which visible ground-pass alternatives warrant review, without leaking recorded endpoints? | StatsBomb Euro 2024 + Women's Euro 2025 event/360, all 82 matches | Validated Python/Streamlit project and published Vercel case-study companion |
 | [Rest Defence Analyzer](projects/rest-defence-analyzer/) | How vulnerable is a team to counterattacks while it attacks? | DFL open 2022/23 tracking and events; one complete match validated | Python/Streamlit workbench, independent XML audit and browser replay |
 
 The first project includes pressure and recovery maps, event-level replays, team comparisons, an exploratory xT model, automated tests and a written investigation. It identifies patterns consistent with pressing traps; event data alone cannot prove intent.
@@ -37,9 +38,13 @@ For tracking analysis, use the [Invisible Runner setup](projects/invisible-runne
 
 Rest defence: see the [project setup](projects/rest-defence-analyzer/README.md) and [findings](projects/rest-defence-analyzer/outputs/J03WPY/findings.md). All 293 published behind-ball counts were independently checked. The fixed score has approximately zero correlation with subsequent ball movement in this match; it is an exploratory diagnostic.
 
+Pass-choice research: see the [Pass Decision Lab setup](projects/pass-decision-lab/README.md) for the four-match smoke download, full 82-match run and local Streamlit app. Its [public companion](https://football-analytics-self.vercel.app/pass-decision-lab/) publishes 12 attributed review cases and aggregate model evidence; the [findings](projects/pass-decision-lab/outputs/findings.md) distinguish observed completion from hypothetical estimates. [Hosting instructions](projects/pass-decision-lab/docs/deployment.md) explain the static Vercel release and full local explorer.
+
 ## Deployment
 
 The websites are deployed at [football-analytics-self.vercel.app](https://football-analytics-self.vercel.app) through the repository's Vercel GitHub integration. Pushes to `main` update production; other branches create previews. The root `vercel.json` runs `python3 scripts/build_website.py` and serves `dist/`: the existing pressing dashboard at `/`, the run analyzer at `/invisible-runner/`, and rest-defence inspection at `/rest-defence/`. No environment variables or server functions are required. See the [Invisible Runner hosting guide](projects/invisible-runner/docs/deployment.md) and [pressing release guide](projects/pressing-trap-detector/docs/deployment.md).
+
+Pass Decision Lab is served at `/pass-decision-lab/` by the same static build. Its committed release contains bounded analytical cases and aggregate model results, without raw StatsBomb snapshots.
 
 ## Repository conventions
 

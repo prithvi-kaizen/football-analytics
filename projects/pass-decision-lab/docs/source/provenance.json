@@ -1,0 +1,44 @@
+{
+  "revision": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+  "repository": "https://github.com/hudl/open-data",
+  "logo_origin": "Existing official StatsBomb logo reused from projects/pressing-trap-detector/dashboard/src/content/assets/statsbomb-logo.png",
+  "inspected_upstream_documents": {
+    "LICENSE.pdf": {
+      "sha256": "a5462e69aeb71a39268b760b110c5c2190a2e0cee3015ba976f66bd71f6c2bb4",
+      "bytes": 165130
+    },
+    "LICENSE.txt": {
+      "sha256": "3a245fdde9999be83001f69219ba52a4e73fe9c1f8e7c36fda882414e0ec0b0b",
+      "bytes": 8808
+    },
+    "Open Data 360 Frames v1.0.0 (1).pdf": {
+      "sha256": "dd15b0d0075bcb6c4758f3d111745d3c09b8bdde68c9bd8e9dea2fad2e1924fc",
+      "bytes": 175991
+    },
+    "Open Data 360 Frames v1.0.0 (1).txt": {
+      "sha256": "a322ebb2721a614885ff5f21eebc1ebad8a0a2098d0be1f888b496912c6bfaf2",
+      "bytes": 2747
+    },
+    "Open Data Events v4.0.0.pdf": {
+      "sha256": "05de42cc76b0c9cd26213d8e5c72610cac7d4d92c9c2ac878073a565dbb6c44a",
+      "bytes": 384530
+    },
+    "Open Data Events v4.0.0.txt": {
+      "sha256": "32fbdbe1141282257604496287bc43eb12953cae5382497cb0bb0cfd57967d02",
+      "bytes": 34874
+    },
+    "README.md": {
+      "sha256": "98a757466c4d931dba4b6c4290c55c2fe74e4550d7455bbe05fd884dc831aff3",
+      "bytes": 1753
+    },
+    "StatsBomb Open Data Specification v1.1.pdf": {
+      "sha256": "d5a8267939c5db35a9501b1a272cc9861a2bb3bef2f53c723d4a43ec1f5ef477",
+      "bytes": 722855
+    },
+    "StatsBomb Open Data Specification v1.1.txt": {
+      "sha256": "60fc09860acaff905d7ec2c84d62b2e18323e0e2590ab89d65e35db5234a55b6",
+      "bytes": 68281
+    }
+  },
+  "note": "Hashes identify the pinned upstream documents inspected during the audit, not the explanatory local README. Specification copies and extracted text are not distributed."
+}

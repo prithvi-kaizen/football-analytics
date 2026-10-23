@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pass Decision Lab | Football analytics</title>
+<meta name="description" content="Explore 12 historical pass-choice cases and match-separated xPass validation from Euro 2024 and Women's Euro 2025.">
+<link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to analysis</a>
+<header>
+<a class="portfolio" href="https://github.com/prithvi-kaizen/football-analytics">Football analytics / project 03</a>
+<h1>Pass Decision Lab</h1>
+<p class="intro">The pass played is only one possibility.<br>What else did the camera show?</p>
+<dl class="scope" aria-label="Analysis scope"><div><dt>Matches</dt><dd id="matches">82</dd></div><div><dt>Eligible passes</dt><dd id="passes">54,200</dd></div><div><dt>Held-out matches</dt><dd id="holdout">21</dd></div><div><dt>Recipient-proxy coverage</dt><dd id="coverage">4.4%</dd></div></dl>
+<nav aria-label="Analysis views"><button aria-pressed="true" data-view="lab">Explore a decision</button><button aria-pressed="false" data-view="evidence">Model evidence</button><button aria-pressed="false" data-view="methods">Methods & source</button></nav>
+</header>
+<main id="content" tabindex="-1">
+<p id="loading" role="status">Loading reviewed analysis…</p><p id="error" class="caution" hidden role="alert"></p>
+<section id="lab" class="view" hidden aria-labelledby="lab-title">
+<div class="section-heading"><h2 id="lab-title">A review case, not a verdict</h2><p>These 12 published cases come from 146 flagged held-out events. Alternative passes have no observed outcomes.</p></div>
+<div class="workbench"><aside aria-label="Decision selection">
+<label for="tournament">Tournament</label><select id="tournament"></select>
+<label for="case">Published case</label><select id="case"></select>
+<p id="selection-note" class="small"></p>
+<label for="target">Highlight a visible teammate</label><select id="target"></select>
+<div class="target-reading" aria-live="polite"><h3 id="target-title"></h3><p id="target-probability" class="probability"></p><p id="target-gain"></p><p id="target-note" class="small"></p></div>
+<a id="source-event" href="#" target="_blank" rel="noopener">Inspect official match events</a>
+</aside>
+<article><h3 id="decision-title"></h3><p id="decision-meta" class="small"></p>
+<figure><img id="pitch" alt="" width="1210" height="814"><figcaption>Solid rust: recorded endpoint. Dashed teal: hypothetical ground-pass lane. Squares: observed opponents. T labels are anonymous and valid only within this frame.</figcaption></figure>
+<p class="caution">An inferred receiver identity and a higher territorial estimate do not establish that a lane was available, onside or tactically better.</p></article></div>
+<h3>Visible candidate estimates</h3><p class="small">Forward gain is target x minus origin x in normalized StatsBomb units. Expected positive gain = experimental xPass × max(forward gain, 0); failure has zero gain, with no turnover penalty.</p>
+<div class="table-scroll" role="region" aria-label="Candidate estimates" tabindex="0"><table id="candidate-table"><thead><tr><th>Teammate</th><th>Inferred chosen</th><th>Forward gain</th><th>Distance</th><th>Nearest lane defender</th><th>Experimental xPass</th><th>Expected positive gain</th><th>Review flag</th></tr></thead><tbody></tbody></table></div>
+</section>
+<section id="evidence" class="view" hidden aria-labelledby="evidence-title">
+<div class="section-heading"><h2 id="evidence-title">What changes in unseen matches?</h2><p>Identical held-out observations within each population. Fixed models, without test-set tuning.</p></div>
+<figure class="evaluation"><img src="calibration.png" alt="Held-out logistic context-model calibration and log loss, comparing event origin and period with added 360 context." width="1980" height="1008"><figcaption>Context-only completion models. The event baseline uses origin and period, so this is not a replication of Hudl's target-aware baseline. Only calibration bins with at least 30 observations are drawn.</figcaption></figure>
+<label for="population">Evaluation population</label><select id="population"><option value="context">Framed passes with visible defenders</option><option value="recipient_proxy">Restricted recipient-proxy sample</option></select>
+<div class="table-scroll" role="region" aria-label="Held-out model scores" tabindex="0"><table id="metrics-table"><thead><tr><th>Estimator</th><th>Features</th><th>Train passes</th><th>Test passes</th><th>Log loss</th><th>95% match interval</th><th>Brier</th><th>AUC</th></tr></thead><tbody></tbody></table></div>
+<p class="small">Lower log loss and Brier are better. AUC measures discrimination. The interval is a conditional match-cluster bootstrap for log loss, not uncertainty about counterfactual passes or model retraining.</p>
+<p><a href="calibration.svg" download>Download figure (SVG)</a> · <a href="metrics.csv" download>Aggregate scores (CSV)</a> · <a href="calibration.csv" download>Calibration counts (CSV)</a></p>
+</section>
+<section id="methods" class="view reading" hidden aria-labelledby="methods-title">
+<h2 id="methods-title">What this project can support</h2>
+<p>The local <a href="https://github.com/prithvi-kaizen/football-analytics/tree/main/projects/pass-decision-lab">Python and Streamlit project</a> explores all 82 matches. This Vercel companion publishes 12 analytical case studies and aggregate validation. It does not distribute the underlying 360 coordinate files or fit models in your browser.</p>
+<h3>A conservative target proxy</h3><p>Open 360 frames identify the actor but give other players no persistent IDs. To place an annotated intended recipient in a snapshot, the model requires an earlier same-team actor event within five seconds, a current teammate within three coordinate units of that earlier origin, and a two-unit nearest-neighbor margin. Only on-pitch targets qualify. That identity remains unverified and recently involved players are overrepresented.</p>
+<h3>Leakage and validation</h3><p>Recorded endpoints, provider pass length/angle, outcomes, duration and future receipts are excluded from prediction features. Collector pressure is display-only. Entire matches are split within each tournament: 61 training, 21 held out, seed 2026. Imputation and scaling use training rows only. The fixed logistic model drives candidate estimates; gradient boosting is a separate comparison, with random-row early stopping disabled.</p>
+<h3>What a probability leaves out</h3><p>Targets are stationary visible teammates, assuming a ground pass. Estimates are withheld for missing features, off-pitch targets, unknown or outside camera visibility, and features outside the training 1st–99th percentile. Those marginal checks do not establish joint support, offside legality, pass feasibility or calibration on unchosen options. Finite off-pitch opponents remain in the spatial calculations.</p>
+<h3>A territorial proxy, not expected threat</h3><p>Expected positive gain assigns zero progress to failure and ignores turnover cost. It is not xT or goal value. A review flag requires a different inferred target, at least 10 forward coordinate units, probability at least 70%, and at least five more expected positive units than the inferred chosen recipient. These fixed rules identify hypotheses for video review.</p>
+<h3>Which 12 cases are published?</h3><p id="case-method"></p><p>All are flagged cases, so this selection is not a representative sample of passing or proof that the model is correct. No tactical explanation or player ranking is inferred.</p>
+<h3>Data and terms</h3><p>Data: <a href="https://github.com/hudl/open-data">StatsBomb Open Data</a>, UEFA Euro 2024 and Women's Euro 2025. Source revision: <code id="revision"></code>. Untyped ground passes with either foot in periods 1–4; unknown outcomes excluded. Coordinates use the actor-oriented 120 × 80 normalized pitch and are not surveyed metres.</p>
+<p>The <a href="LICENSE-statsbomb.pdf">StatsBomb Public Data User Agreement</a> governs the source data, including attribution, commercial-use and redistribution restrictions. Original project code is MIT licensed. Conceptual reference: <a href="https://www.hudl.com/blog/xpass-360-upgrading-expected-pass-xpass-models">Conor Sharpe, xPass 360, 17 June 2025</a>. This implementation does not reproduce Hudl's proprietary model.</p>
+<p><a href="findings.md" download>Download the findings report</a> · <a href="https://github.com/prithvi-kaizen/football-analytics/tree/main/projects/pass-decision-lab">Setup, tests and source code</a></p>
+</section>
+</main>
+<footer><img src="statsbomb-logo.png" width="150" alt="StatsBomb"><p>StatsBomb Open Data. Original code: MIT. Candidate estimates are research hypotheses.</p><a href="https://github.com/prithvi-kaizen/football-analytics">View repository</a></footer>
+</body></html>
