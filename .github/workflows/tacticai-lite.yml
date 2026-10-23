@@ -1,0 +1,38 @@
+name: TacticAI Lite
+on:
+  push:
+    paths: ['projects/tacticai-lite/**', '.github/workflows/tacticai-lite.yml', 'scripts/build_website.py']
+  pull_request:
+    paths: ['projects/tacticai-lite/**', '.github/workflows/tacticai-lite.yml', 'scripts/build_website.py']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: projects/tacticai-lite
+    env:
+      MPLBACKEND: Agg
+      LOKY_MAX_CPU_COUNT: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: projects/tacticai-lite/requirements-lock.txt
+      - run: python -m pip install -r requirements-lock.txt
+      - run: python -m pip install --no-deps -e .
+      - name: Unit tests and public-release checks
+        run: python -m pytest -q -m 'not real_data'
+      - name: Real-data smoke test and verified offline replay
+        run: |
+          python -m tacticai_lite --sample 1
+          python -m tacticai_lite --sample 1 --offline
+          python -m pytest -q
+      - name: Offline portfolio build
+        working-directory: .
+        run: python scripts/build_website.py

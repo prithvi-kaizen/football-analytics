@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore observed corner-kick shot creation in Euro 2024 and Women's Euro 2025. Reproducible Python analysis, partial 360 configurations and a match-held-out baseline.">
+  <title>TacticAI Lite | Corner-kick analysis</title>
+  <link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to analysis</a>
+<header class="masthead"><a href="../">Football analytics</a><nav aria-label="Project links"><a href="https://github.com/prithvi-kaizen/football-analytics/tree/main/projects/tacticai-lite">Source &amp; setup</a><a href="#method">Method</a></nav></header>
+<main id="main">
+  <section class="intro" aria-labelledby="title"><div><p class="eyebrow">Corner-kick analysis</p><h1 id="title">TacticAI Lite</h1><p class="question">Which corner patterns are associated with a shot?</p><p>Explore observed deliveries and partial 360 configurations from two European Championships. A research tool inspired by TacticAI, with a reproducible Python pipeline behind every result.</p></div><dl id="inventory" aria-label="Dataset coverage"><dt>Dataset</dt><dd>Loading reviewed findings…</dd></dl></section>
+  <div id="status" role="status" aria-live="polite">Loading aggregate findings…</div>
+  <section id="analysis" aria-labelledby="analysis-title" hidden>
+    <div class="section-head"><div><h2 id="analysis-title">Shot creation by observed pattern</h2><p>One or more attacking shots within 15 seconds, in the same period and possession, before a restart or stoppage.</p></div><a class="button" href="reports/corner-shot-creation.png" download>Download research chart</a></div>
+    <form class="controls" id="filters" aria-label="Filter aggregate findings">
+      <label>Tournament<select id="tournament"><option value="all">Both tournaments</option></select></label>
+      <label>Compare<select id="dimension"><option value="delivery">Delivery</option><option value="clusters">Configuration cluster</option></select></label>
+      <label>Find a pattern<input id="search" type="search" placeholder="e.g. Outswinging" autocomplete="off"></label>
+      <label>Minimum corners<input id="minimum" type="number" min="1" step="1" value="1"></label>
+      <button type="reset">Reset filters</button>
+    </form>
+    <p id="scope" class="scope" aria-live="polite"></p>
+    <div id="chart" class="chart" aria-label="Observed shot rates and 95 percent Wilson intervals"></div>
+    <p class="note">Dots show observed rates; lines show descriptive 95% Wilson intervals. The intervals assume independent corners and do not account for dependence within matches. These associations do not establish that changing delivery causes more shots.</p>
+    <p id="cluster-note" class="note" hidden>Clusters group visible spatial features without using outcomes. IDs are descriptive, not inferred tactical routines. Camera coverage can drive similarity. The unassigned group is a coverage reference, not a configuration.</p>
+    <details><summary>Exact counts and intervals</summary><div class="table-wrap"><table><caption>Current comparison population</caption><thead><tr><th scope="col">Tournament</th><th scope="col">Pattern</th><th scope="col">Shot corners</th><th scope="col">Corners</th><th scope="col">Rate</th><th scope="col">95% interval</th></tr></thead><tbody id="rates"></tbody></table></div><button id="download">Download filtered aggregate CSV</button></details>
+  </section>
+  <section class="secondary" aria-label="Model and sensitivity">
+    <div><h2>A modest model check</h2><p>Can the visible configuration predict shot creation on different matches?</p><p id="split"></p><div class="table-wrap"><table><caption>Whole-match holdout; no test-set tuning</caption><thead><tr><th scope="col">Model</th><th scope="col">Brier ↓</th><th scope="col">Log loss ↓</th><th scope="col">ROC AUC ↑</th></tr></thead><tbody id="models"></tbody></table></div><p id="model-finding" class="note"></p></div>
+    <div><h2>The time window matters</h2><p>The same possession and stoppage rules, measured over three explicit windows.</p><div class="table-wrap"><table><caption>Shot creation under alternative windows</caption><thead><tr><th scope="col">Tournament</th><th scope="col">10 seconds</th><th scope="col">15 seconds</th><th scope="col">20 seconds</th></tr></thead><tbody id="sensitivity"></tbody></table></div><p class="note">This table includes all recorded corners, including four directly shot corners. Delivery comparisons and the classifier exclude direct shots because their shot outcome is automatic.</p></div>
+  </section>
+  <section id="method" class="method" aria-labelledby="method-title"><h2 id="method-title">What this system can support</h2><div class="method-grid"><div><h3>Explicit definitions</h3><p>Short means a recorded pass length of at most 15 standardized units. Swing uses the provider’s recorded technique. Unknown techniques remain unknown. Multiple shots count once for the binary outcome.</p><p>360 measures visible players, box counts, centroids, spread, nearest-defender distances and density within the camera-visible part of the box. Missing frames and unseen players are not zero defensive density.</p></div><div><h3>Inspect, then interpret</h3><p>This public site contains aggregate findings. The Python/Streamlit project adds local corner inspection, linked player frames, event timelines and configuration search after downloading directly from the provider.</p><p>360 is broadcast snapshots, not continuous tracking. It cannot establish runs, marking assignments or tactical intent. This is inspired by TacticAI, not a reproduction of its proprietary data or model.</p></div></div><p id="audit" class="audit"></p><p class="source-line">Data: <a href="https://github.com/statsbomb/open-data">StatsBomb Open Data</a>. Research inspiration: <a href="https://doi.org/10.1038/s41467-024-45965-x">Wang et al., Nature Communications (2024)</a>.</p><div class="links"><a href="reports/findings.md" download>Findings report (Markdown)</a><a href="https://github.com/prithvi-kaizen/football-analytics/tree/main/projects/tacticai-lite#quick-start">Run the full Streamlit app</a><a href="reports/validation.json">Validation receipt</a><a href="release.json">Release hashes</a></div></section>
+</main>
+<footer><img src="assets/SB%20-%20Icon%20Lockup%20-%20Colour%20positive.png" alt="StatsBomb" width="180"><p>StatsBomb data and branding retain their original terms. Free research access does not grant unrestricted redistribution or commercial-use rights. This release shares aggregate analytical findings; raw events and player frames are excluded.</p></footer>
+</body></html>

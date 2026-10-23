@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "source_revision": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+  "definitions": {
+    "horizon_seconds": 15,
+    "short_threshold_units": 15,
+    "direct_shots_excluded": 4
+  },
+  "inventory": [
+    {
+      "tournament": "Men's Euro 2024",
+      "matches": 51,
+      "corners": 512,
+      "frames": 290,
+      "usable_frames": 290,
+      "shots_created": 183,
+      "pass_corners": 508
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "matches": 31,
+      "corners": 305,
+      "frames": 195,
+      "usable_frames": 194,
+      "shots_created": 114,
+      "pass_corners": 305
+    }
+  ],
+  "delivery": [
+    {
+      "tournament": "Men's Euro 2024",
+      "delivery": "Inswinging",
+      "corners": 221,
+      "shots_created": 61,
+      "rate": 0.276018099547511,
+      "low": 0.221288800959361,
+      "high": 0.338400944342682
+    },
+    {
+      "tournament": "Men's Euro 2024",
+      "delivery": "Other / unknown",
+      "corners": 48,
+      "shots_created": 18,
+      "rate": 0.375,
+      "low": 0.252152667608682,
+      "high": 0.516372364807847
+    },
+    {
+      "tournament": "Men's Euro 2024",
+      "delivery": "Outswinging",
+      "corners": 161,
+      "shots_created": 73,
+      "rate": 0.453416149068323,
+      "low": 0.378497805081636,
+      "high": 0.530505669485304
+    },
+    {
+      "tournament": "Men's Euro 2024",
+      "delivery": "Short",
+      "corners": 62,
+      "shots_created": 20,
+      "rate": 0.32258064516129,
+      "low": 0.219544906512839,
+      "high": 0.446319119071519
+    },
+    {
+      "tournament": "Men's Euro 2024",
+      "delivery": "Straight",
+      "corners": 16,
+      "shots_created": 7,
+      "rate": 0.4375,
+      "low": 0.230986524054924,
+      "high": 0.668214436011881
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "delivery": "Inswinging",
+      "corners": 160,
+      "shots_created": 49,
+      "rate": 0.30625,
+      "low": 0.240067621784349,
+      "high": 0.38151777884461
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "delivery": "Other / unknown",
+      "corners": 18,
+      "shots_created": 8,
+      "rate": 0.444444444444444,
+      "low": 0.245595181270056,
+      "high": 0.662835843579572
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "delivery": "Outswinging",
+      "corners": 54,
+      "shots_created": 29,
+      "rate": 0.537037037037037,
+      "low": 0.406053560210115,
+      "high": 0.663100988820189
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "delivery": "Short",
+      "corners": 27,
+      "shots_created": 6,
+      "rate": 0.222222222222222,
+      "low": 0.1060723945236,
+      "high": 0.407569288666326
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "delivery": "Straight",
+      "corners": 46,
+      "shots_created": 22,
+      "rate": 0.478260869565217,
+      "low": 0.341246894340457,
+      "high": 0.61862586927196
+    }
+  ],
+  "clusters": [
+    {
+      "tournament": "Men's Euro 2024",
+      "cluster": "C1",
+      "corners": 134,
+      "shots_created": 45,
+      "rate": 0.335820895522388,
+      "low": 0.261422242619838,
+      "high": 0.419370456641741
+    },
+    {
+      "tournament": "Men's Euro 2024",
+      "cluster": "C2",
+      "corners": 3,
+      "shots_created": 1,
+      "rate": 0.333333333333333,
+      "low": 0.061491944720396,
+      "high": 0.792340399197952
+    },
+    {
+      "tournament": "Men's Euro 2024",
+      "cluster": "C3",
+      "corners": 84,
+      "shots_created": 26,
+      "rate": 0.30952380952381,
+      "low": 0.220819236280019,
+      "high": 0.414888088830328
+    },
+    {
+      "tournament": "Men's Euro 2024",
+      "cluster": "C4",
+      "corners": 67,
+      "shots_created": 24,
+      "rate": 0.358208955223881,
+      "low": 0.253980570763916,
+      "high": 0.477814901600781
+    },
+    {
+      "tournament": "Men's Euro 2024",
+      "cluster": "No usable frame",
+      "corners": 220,
+      "shots_created": 83,
+      "rate": 0.377272727272727,
+      "low": 0.315846806544415,
+      "high": 0.442911020158027
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "cluster": "C1",
+      "corners": 41,
+      "shots_created": 14,
+      "rate": 0.341463414634146,
+      "low": 0.215588082573848,
+      "high": 0.494501634801703
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "cluster": "C2",
+      "corners": 31,
+      "shots_created": 15,
+      "rate": 0.483870967741936,
+      "low": 0.319702515624173,
+      "high": 0.651596045519712
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "cluster": "C3",
+      "corners": 83,
+      "shots_created": 24,
+      "rate": 0.289156626506024,
+      "low": 0.202674488491748,
+      "high": 0.394292208345229
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "cluster": "C4",
+      "corners": 39,
+      "shots_created": 18,
+      "rate": 0.461538461538462,
+      "low": 0.315668856067278,
+      "high": 0.614305517294842
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "cluster": "No usable frame",
+      "corners": 111,
+      "shots_created": 43,
+      "rate": 0.387387387387387,
+      "low": 0.301977416983693,
+      "high": 0.480331165154458
+    }
+  ],
+  "cluster_profiles": [
+    {
+      "tournament": "Men's Euro 2024",
+      "cluster": "C1",
+      "corners": 134,
+      "attackers_box": 5.238805970149254,
+      "defenders_box": 9.798507462686567,
+      "box_visible_fraction": 0.941357781638074
+    },
+    {
+      "tournament": "Men's Euro 2024",
+      "cluster": "C2",
+      "corners": 3,
+      "attackers_box": 3.333333333333334,
+      "defenders_box": 7.333333333333333,
+      "box_visible_fraction": 0.554397415833479
+    },
+    {
+      "tournament": "Men's Euro 2024",
+      "cluster": "C3",
+      "corners": 84,
+      "attackers_box": 6.226190476190476,
+      "defenders_box": 10.738095238095237,
+      "box_visible_fraction": 0.93956035436101
+    },
+    {
+      "tournament": "Men's Euro 2024",
+      "cluster": "C4",
+      "corners": 67,
+      "attackers_box": 5.716417910447762,
+      "defenders_box": 10.388059701492537,
+      "box_visible_fraction": 0.929147597800527
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "cluster": "C1",
+      "corners": 41,
+      "attackers_box": 5.170731707317073,
+      "defenders_box": 9.731707317073171,
+      "box_visible_fraction": 0.896198719337842
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "cluster": "C2",
+      "corners": 31,
+      "attackers_box": 3.064516129032258,
+      "defenders_box": 7.129032258064516,
+      "box_visible_fraction": 0.52472380939144
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "cluster": "C3",
+      "corners": 83,
+      "attackers_box": 6.385542168674699,
+      "defenders_box": 10.493975903614459,
+      "box_visible_fraction": 0.883619105031377
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "cluster": "C4",
+      "corners": 39,
+      "attackers_box": 5.666666666666667,
+      "defenders_box": 10.41025641025641,
+      "box_visible_fraction": 0.911859203130358
+    }
+  ],
+  "sensitivity": [
+    {
+      "tournament": "Men's Euro 2024",
+      "horizon_seconds": 10,
+      "corners": 512,
+      "shot_created": 169,
+      "rate": 0.330078125
+    },
+    {
+      "tournament": "Men's Euro 2024",
+      "horizon_seconds": 15,
+      "corners": 512,
+      "shot_created": 183,
+      "rate": 0.357421875
+    },
+    {
+      "tournament": "Men's Euro 2024",
+      "horizon_seconds": 20,
+      "corners": 512,
+      "shot_created": 187,
+      "rate": 0.365234375
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "horizon_seconds": 10,
+      "corners": 305,
+      "shot_created": 107,
+      "rate": 0.350819672131148
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "horizon_seconds": 15,
+      "corners": 305,
+      "shot_created": 114,
+      "rate": 0.373770491803279
+    },
+    {
+      "tournament": "Women's Euro 2025",
+      "horizon_seconds": 20,
+      "corners": 305,
+      "shot_created": 118,
+      "rate": 0.386885245901639
+    }
+  ],
+  "model": {
+    "status": "evaluated",
+    "scope": "Pass corners with a usable linked frame and observed outcome; direct shots excluded",
+    "features": [
+      "attackers_box",
+      "defenders_box",
+      "attackers_near",
+      "attackers_far",
+      "attacker_mean_x",
+      "attacker_mean_y",
+      "attacker_spread_y",
+      "defender_mean_x",
+      "nearest_defender_mean",
+      "box_visible_fraction",
+      "defenders_per_100_visible_units"
+    ],
+    "train_corners": 332,
+    "test_corners": 150,
+    "metrics": {
+      "constant": {
+        "brier": 0.21907715198141972,
+        "log_loss": 0.6301367784383901,
+        "roc_auc": 0.5,
+        "average_precision": 0.32
+      },
+      "logistic": {
+        "brier": 0.22036843455387958,
+        "log_loss": 0.6693113579512804,
+        "roc_auc": 0.6043709150326797,
+        "average_precision": 0.4431977239681542
+      }
+    },
+    "seed": 2026
+  },
+  "split": {
+    "train_matches": 57,
+    "test_matches": 25
+  },
+  "audit": {
+    "corners_checked": 817,
+    "mismatches": 0
+  }
+}

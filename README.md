@@ -2,7 +2,7 @@
 
 Football projects built around specific tactical questions, reproducible data processing and interactive analysis.
 
-**Live projects:** [Pressing trap detector](https://football-analytics-self.vercel.app) · [The Invisible Runner](https://football-analytics-self.vercel.app/invisible-runner/) · [Rest Defence Analyzer](https://football-analytics-self.vercel.app/rest-defence/) · [Pass Decision Lab](https://football-analytics-self.vercel.app/pass-decision-lab/) · [Possession danger](https://football-analytics-self.vercel.app/possession-danger/)
+**Live projects:** [Pressing trap detector](https://football-analytics-self.vercel.app) · [The Invisible Runner](https://football-analytics-self.vercel.app/invisible-runner/) · [Rest Defence Analyzer](https://football-analytics-self.vercel.app/rest-defence/) · [Pass Decision Lab](https://football-analytics-self.vercel.app/pass-decision-lab/) · [Possession danger](https://football-analytics-self.vercel.app/possession-danger/) · [TacticAI Lite](https://football-analytics-self.vercel.app/tacticai-lite/)
 
 ## Projects
 
@@ -13,6 +13,7 @@ Football projects built around specific tactical questions, reproducible data pr
 | [Pass Decision Lab](projects/pass-decision-lab/) | Which visible ground-pass alternatives warrant review, without leaking recorded endpoints? | StatsBomb Euro 2024 + Women's Euro 2025 event/360, all 82 matches | Validated Python/Streamlit project and published Vercel case-study companion |
 | [Rest Defence Analyzer](projects/rest-defence-analyzer/) | How vulnerable is a team to counterattacks while it attacks? | DFL open 2022/23 tracking and events; one complete match validated | Python/Streamlit workbench, independent XML audit and browser replay |
 | [Is possession actually dangerous?](projects/possession-danger/) | Does Barcelona's possession create more danger than its rivals? | StatsBomb women's leagues; full Liga F 2023/24 and five-league samples | Python/Streamlit workbench, tested xT model, public browser dashboard and reproducible findings |
+| [TacticAI Lite](projects/tacticai-lite/) | Which corner-kick patterns are associated with shot creation? | StatsBomb Euro 2024 and Women’s Euro 2025; all 82 matches | Validated Python/Streamlit project, match-held-out baseline and public aggregate explorer |
 
 The first project includes pressure and recovery maps, event-level replays, team comparisons, an exploratory xT model, automated tests and a written investigation. It identifies patterns consistent with pressing traps; event data alone cannot prove intent.
 
@@ -29,7 +30,7 @@ python3 scripts/build_website.py
 python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
 ```
 
-Open [Pressing trap detector](http://127.0.0.1:4173/), [The Invisible Runner](http://127.0.0.1:4173/invisible-runner/), [Rest Defence Analyzer](http://127.0.0.1:4173/rest-defence/), [Pass Decision Lab](http://127.0.0.1:4173/pass-decision-lab/), or [Possession danger](http://127.0.0.1:4173/possession-danger/). The build verifies and restores the published releases without downloading raw data or installing analytics dependencies. Keep the server running while using the websites.
+Open [Pressing trap detector](http://127.0.0.1:4173/), [The Invisible Runner](http://127.0.0.1:4173/invisible-runner/), [Rest Defence Analyzer](http://127.0.0.1:4173/rest-defence/), [Pass Decision Lab](http://127.0.0.1:4173/pass-decision-lab/), [Possession danger](http://127.0.0.1:4173/possession-danger/), or [TacticAI Lite](http://127.0.0.1:4173/tacticai-lite/). The build verifies and restores the published releases without downloading raw data or installing analytics dependencies. Keep the server running while using the websites.
 
 ## Reproduce the analysis
 
@@ -43,6 +44,8 @@ Pass-choice research: see the [Pass Decision Lab setup](projects/pass-decision-l
 
 Possession research: the [Possession danger setup](projects/possession-danger/README.md) covers the six-match smoke download and full 240-match Liga F run. The [findings](projects/possession-danger/outputs/liga-f/findings.md) compare Barcelona with opponents in six held-out fixtures. Its browser dashboard uses reviewed derived possession summaries; event-level pitch inspection and recalculation run in the Python/Streamlit workbench.
 
+For corner-kick research, see the [TacticAI Lite setup](projects/tacticai-lite/README.md), [findings](projects/tacticai-lite/reports/findings.md) and [deployment guide](projects/tacticai-lite/docs/deployment.md). Its public site contains aggregate analysis; raw events and player frames remain local under the provider’s terms.
+
 ## Deployment
 
 The websites are deployed at [football-analytics-self.vercel.app](https://football-analytics-self.vercel.app) through the repository's Vercel GitHub integration. Pushes to `main` update production; other branches create previews. The root `vercel.json` runs `python3 scripts/build_website.py` and serves `dist/`: the existing pressing dashboard at `/`, the run analyzer at `/invisible-runner/`, and rest-defence inspection at `/rest-defence/`. No environment variables or server functions are required. See the [Invisible Runner hosting guide](projects/invisible-runner/docs/deployment.md) and [pressing release guide](projects/pressing-trap-detector/docs/deployment.md).
@@ -50,6 +53,8 @@ The websites are deployed at [football-analytics-self.vercel.app](https://footba
 Pass Decision Lab is served at `/pass-decision-lab/` by the same static build. Its committed release contains bounded analytical cases and aggregate model results, without raw StatsBomb snapshots.
 
 Possession analysis is served at `/possession-danger/` by the same build. See its [hosting and release guide](projects/possession-danger/docs/deployment.md). Raw StatsBomb events and event coordinates are excluded from its public release.
+
+TacticAI Lite is served at `/tacticai-lite/` by the same offline portfolio build.
 
 ## Repository conventions
 

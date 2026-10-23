@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "source_revision": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+  "classification": "Aggregate analytical findings; no provider event/player records",
+  "files": {
+    "web/index.html": "46b929645e9a4182a3a94403ae8dbd69182b82460624941f9a7588a3ae8cb0d6",
+    "web/app.js": "ba23f5bd481c3fd6a533bcbd20a61ea1dceaf4d9f435359d2e992cc2d1faf97d",
+    "web/style.css": "27c22d70e7491b71dda3b6fdab6591a1b27da15d56ae480b239e81e802f084da",
+    "web/data.json": "8174db56d0b6e207051ba41c1287cc0424605fec0351336e88e7175608f5195e",
+    "assets/SB - Icon Lockup - Colour positive.png": "8ba5480785f0dc4be2342ec47c70509483eb79287f85f92be1dfba36fc2872a7",
+    "reports/corner-shot-creation.png": "2dd0c68b4b854b3e9755a030cf9f4eac980055196a40738781d032b1ef95c281",
+    "reports/delivery_summary.csv": "2d96900baa107fc2550eff1a1abeb6687d5636cd8305fbbaf2fae0ed2501785e",
+    "reports/window_sensitivity.csv": "7d596e46276904b8eb1f073a3d24427d5aa75539d4a9a524e5a6ca5f72949603",
+    "reports/findings.md": "76d23cabfcec84f51705fa1506f331bb49065c0b618c9e259441c74e01622d85",
+    "reports/validation.json": "937ebc0f59624639534dd03dfe8fa552583daf39813239dde4a9568e7a621d78"
+  }
+}

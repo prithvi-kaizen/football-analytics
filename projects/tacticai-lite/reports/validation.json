@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "independently_reconstructed_corners": 817,
+  "matches": 82,
+  "source_revision": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+  "mismatched_labels": 0,
+  "mismatched_shot_counts": 0,
+  "disjoint_model_match_split": true,
+  "scope": "All local source corner labels and shot counts; 10/15/20 second sensitivity. Not video adjudication."
+}
