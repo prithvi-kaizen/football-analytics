@@ -43,3 +43,11 @@ Checked 23 October 2026. Owner selected application during construction and the 
 * R-05/R-06/R-11/R-15/R-16/R-20/R-21/R-29/R-30/R-31 PASS: one light theme, system typography, restrained two-team palette, native widget consistency, explicit units/definitions, and no buzzword or decorative-accent sections.
 
 Analytical validation and remaining limits are in `validation.md`. The author's app-level check does not replace the source paper's measurement limitations or establish ground truth.
+
+## Static publication addendum
+
+* Static companion PASS: the owner-selected light, pitch-first red/teal direction is retained using native HTML/CSS/SVG and no new decorative assets.
+* Controls PASS: native browser team/half/scope/corroboration filters, reset, turnover selection, overlay switch, keyboard frame stepping, recorded playback, CSV export and definitions disclosure were exercised. The live public site's default and team-filter counts agree with the Python results.
+* Source binding PASS: every published transition, complete snapshot and timeline maximum is covered by release tests. A changed asset or analytical fingerprint fails verification.
+* Layout PASS in checked desktop viewport: measured document width 1265 px within a 1280 px viewport, with no horizontal overflow. Responsive CSS supplies intermediate and narrow reflows; the new static companion has not received exhaustive device/screen-reader testing.
+* Publication PASS: exact-commit Vercel status succeeded, the public page loaded its checksum-verified snapshot, and GitHub Actions passed the smoke/test/report/build workflow.

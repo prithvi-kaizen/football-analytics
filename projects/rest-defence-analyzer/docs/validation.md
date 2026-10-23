@@ -51,7 +51,7 @@ Computed contrast: charcoal `#202c2b` on `#faf9f5` **13.69:1**; white on red `#9
 
 ## Material remaining limits
 
-Only J03WPY has received the full ingestion and independent audit; the other six manifest IDs are supported but untested. There are no video-labelled turnover/intent annotations. Event timestamps remain imperfect, corridor availability is static geometry, and the score has approximately zero within-match rank association with ball movement. No learned model or held-out test result is presented. The included CI workflow has been authored but has not run on GitHub in this session.
+Only J03WPY has received the full ingestion and independent audit; the other six manifest IDs are supported but untested. There are no video-labelled turnover/intent annotations. Event timestamps remain imperfect, corridor availability is static geometry, and the score has approximately zero within-match rank association with ball movement. No learned model or held-out test result is presented. The publication checks below record the completed GitHub CI run.
 
 ## GitHub/Vercel publication checks
 
@@ -60,3 +60,5 @@ The public browser companion is packaged from the same verified full-match outpu
 Local browser checks confirmed the default 168-turnover / 94-advance / 1-shot scope, Düsseldorf's 81 / 47 / 1 selection, and all-turnover totals of 293 / 153 / 13. Combined half/event filters, native keyboard frame stepping and recorded-frame playback were exercised. Static replay coordinates are recorded 5 Hz positions, with no interpolation; the 25 Hz outcome timeline begins at the native new-control frame.
 
 No full raw tracking, clean cache, environment, credentials or unrelated local project is part of the release. See `deployment.md` for the publication architecture and refresh commands.
+
+Publication verification: commit [`07f9574`](https://github.com/prithvi-kaizen/football-analytics/commit/07f9574bfe137360add237f41445124ba1a5809e) was pushed to main. [GitHub Actions](https://github.com/prithvi-kaizen/football-analytics/actions/runs/39894243176) passed on Python 3.12, including installation, real bundled smoke ingestion, tests, report generation and the static build. Vercel reported a successful deployment for the same commit. The public `/rest-defence/` page was opened in a browser and its 168 / 94 / 1 default counts and 81 / 47 / 1 Düsseldorf selection were confirmed.
