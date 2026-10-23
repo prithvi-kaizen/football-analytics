@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "snapshot": {
+    "archive": "snapshot.json.gz",
+    "archive_sha256": "667b5b75d128d29d5085548cee93f579a92e9474545b7dd2edaff03be94eca46",
+    "path": "snapshot.80afcc1e47efc99f.json.gz",
+    "sha256": "80afcc1e47efc99f58e98c569bd1cdeadd02b41baf9c35d96f5ff3708a5fb007"
+  },
+  "assets": {
+    "index.html": "bd2e37a1ce3e41764def88ff152ecd3b860b8b8c9be490627c1e986d7df50a88",
+    "app.js": "7e3714e093a920a386663c23d8c7d395be9fd9a88633d98510a1c57e47f5a396",
+    "metrics.js": "4288e8d95fd37e59ac7018acbaa20ff23d5007ea88583c7c90a2a2436a84cf37",
+    "style.css": "43a28dd8619e34ba2d9c711f95d0b794d1de193ccd39052f5133604111c41121",
+    "vendor/plotly.min.js": "8ef4c6ab1369f0019611cbcd2d5b8aafef23e5d19ef58c39d4b4249831fe2180",
+    "vendor/LICENSE-plotly.txt": "8c45d9eaf50c2f72dd9c7ab9ef440788ba58a3538484b5c51c1f17d5128752e7"
+  },
+  "downloads": {
+    "statsbomb-logo.png": {
+      "source": "assets/statsbomb-logo.png",
+      "sha256": "8ba5480785f0dc4be2342ec47c70509483eb79287f85f92be1dfba36fc2872a7"
+    },
+    "findings.md": {
+      "source": "outputs/liga-f/findings.md",
+      "sha256": "ff0068d19cab9f38047f1960531e82ea57b7e98e8b7b1dc987e1315fa28119ff"
+    },
+    "possession-vs-threat.png": {
+      "source": "outputs/liga-f/possession-vs-threat.png",
+      "sha256": "507c514f7a3a876a25d68786eba3a12d21a66ab3a76c33f9faf07a27d847c6e2"
+    },
+    "possession-vs-threat.svg": {
+      "source": "outputs/liga-f/possession-vs-threat.svg",
+      "sha256": "5b21ba74b697ab87e5ef4f6ca318460fa7c009fb00d33f61fe01c953e86fdb95"
+    },
+    "statsbomb-terms.pdf": {
+      "source": "docs/source/LICENSE.pdf",
+      "sha256": "a5462e69aeb71a39268b760b110c5c2190a2e0cee3015ba976f66bd71f6c2bb4"
+    },
+    "source-audit.md": {
+      "source": "docs/source-audit.md",
+      "sha256": "39d7be15e75440d8867f60f9d9975bdc659f3e99455616b27a21d5934d66ba5a"
+    }
+  }
+}

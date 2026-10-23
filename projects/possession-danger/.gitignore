@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+data/
+outputs/.possession-build-*/
+outputs/*/events.csv
+outputs/*/possessions.csv
+outputs/*/actions.csv
+outputs/*/team_matches.csv
+outputs/*/score_states.csv
+!outputs/*/manifest.json

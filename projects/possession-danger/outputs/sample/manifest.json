@@ -1,0 +1,123 @@
+{
+  "revision": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+  "generated_at": "2026-10-22T16:27:14.564238+00:00",
+  "python": "3.14.2",
+  "dependencies": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "requests": "2.34.2",
+    "streamlit": "1.66.1",
+    "plotly": "6.9.0",
+    "mplsoccer": "1.8.1",
+    "matplotlib": "3.11.2"
+  },
+  "sample": true,
+  "split": {
+    "3910744": "train",
+    "3910745": "train",
+    "3910746": "train",
+    "3910748": "train",
+    "3910936": "test",
+    "3910740": "test"
+  },
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/competitions.json",
+      "sha256": "120ea45ec486eba81d489f9568675c210884ccd5470bd42f9b0c9c90963a62f3",
+      "bytes": 36168,
+      "retrieved_at": "2026-10-22T16:07:12.793507+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/matches/182/281.json",
+      "sha256": "ae62691c63e2c446b044fdce45df5a57a5a6c715763f16c2b5bccdc27c88eadb",
+      "bytes": 489370,
+      "retrieved_at": "2026-10-22T16:07:13.242053+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910744.json",
+      "sha256": "8a07a13b51db8fe23d25e9df1b591ff884b479829ce2b810cb0c293aa7a6f55e",
+      "bytes": 3684988,
+      "retrieved_at": "2026-10-22T16:07:15.693240+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910745.json",
+      "sha256": "cd1452b1b006955ff606ad9a4fae6458fba10e9a212448611357f49617bcf752",
+      "bytes": 3076240,
+      "retrieved_at": "2026-10-22T16:07:14.553182+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910746.json",
+      "sha256": "bd50c508b520c1f4ee94a3cb4aca622c72d4e2defc548c3e8eeafaab525c1e99",
+      "bytes": 3513600,
+      "retrieved_at": "2026-10-22T16:07:14.030564+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910748.json",
+      "sha256": "34ad39e29b33405e2d8897bb36907dabca4c92d773ac12c9dd530fd73f917c69",
+      "bytes": 3856058,
+      "retrieved_at": "2026-10-22T16:07:14.452571+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910936.json",
+      "sha256": "2734c40ebd0c552c4828245fa8be8ff8fa9cf9c13e126fd53d1173bcb3e49eb2",
+      "bytes": 3534580,
+      "retrieved_at": "2026-10-22T16:07:15.337754+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910740.json",
+      "sha256": "9773a8967e020d9cd6c6a69b400f71223f995d1489560cf2438f465668657478",
+      "bytes": 3945541,
+      "retrieved_at": "2026-10-22T16:07:15.802268+00:00"
+    }
+  ],
+  "code_sha256": {
+    "possession_danger/__init__.py": "872f282ffcd03ee8dcebd659303dbc458f341a747117a6dfefd04379e1f54cc7",
+    "possession_danger/analysis.py": "dc1f6e27226ae2f2818955e01718225e18d12dce1bed0f55b877861a8e8b3050",
+    "possession_danger/cli.py": "95fce7b1b8985db3fda47890d895eba9b3bdee506c4c741fdb3ae8af29f1d025",
+    "possession_danger/data.py": "7f3b78c73aef4e12dec8e6bfdf85e2e0e5988a1b9734f08475b45221c6649d07",
+    "possession_danger/events.py": "ebc37da98858f28dffc358652f23131847adc43d87175c92e514c81e213b3b76",
+    "possession_danger/pipeline.py": "62a60dad15afea2937455eb325cd7209e5b7a6471917e9d7edf2939524a642be",
+    "possession_danger/report.py": "828c8978b59bca5a21b6d05f277ecab9f43fabf37efb50d294bc22fc316a02c9",
+    "possession_danger/viz.py": "ca87747987f11503ea6230c5403cd93ffb7c69454bf0feb8706f018fb9b3022c",
+    "possession_danger/xt.py": "b9770ddf5805b20d6f099777269f26ee33fccd4ac895eb382b48ca6b65f2f3bc",
+    "app.py": "04e49fb1869d530fd3012fee34f9ad244c0070bb5ad5982a4c172c9ce5b70676",
+    "pyproject.toml": "f4080f8fd96e611db79c326f31fb11395eee86499b8113df6f6ce180d219beb9",
+    "requirements-lock.txt": "0461775457578e5a586b9065c9cb11b741c3761065444e794dedf5b772329b7f",
+    ".streamlit/config.toml": "0859473d70f8bc04c0984faea7c8b98912ff1322accd7b102ba7ebea65221b9c"
+  },
+  "run_configuration": {
+    "test_fraction": 0.2,
+    "grid": [
+      12,
+      8
+    ],
+    "sample": true,
+    "match_ids": [
+      3910744,
+      3910745,
+      3910746,
+      3910748,
+      3910936,
+      3910740
+    ]
+  },
+  "output_sha256": {
+    "possessions.csv": "2b1c26ad675bc55e4be25bdc63f3f5ba649011836d1ae826041c1c94f92f5c9e",
+    "summary.json": "2999e3488edc4dea1e827db5dfee1e8e9ab5b01405db04824365fa1ae53b9d66",
+    "possession-vs-threat.svg": "cac1044def8de6e969fe4f0a99de835364a4ed5f3b0b1cc99643f31b8eb9f58f",
+    "score_states.csv": "c1ed02c9d9d29ba844b65efd16f644387c0ed08c579844505712e4d817ce8c6c",
+    "team_matches.csv": "5d3de1fb571cd2f04f1e9e40b17c074b647fc18c894e1a7a12a60b671e9b4626",
+    "possession-vs-threat.png": "9bffedbb540d6d7919775b3e1880e8d00c86a32a6294d94522de3857d0ac798d",
+    "xt_model.json": "0077ab7e48ed5f8cdb1883375a2b269cbea43a7007cf40c7dc36abf15a1c8b79",
+    "findings.md": "35c8a68302ee9aad9989aa667e36c3d74eebc148b303d22d0242630259628a94",
+    "events.csv": "bee859b33b21547b43290e33c2a16d82839758d6f31f5b69b0a847add2b67b81",
+    "actions.csv": "a23d61c2fa554921ba4a3d45cfd0aa2188a9d9fe4d98c675ac89274f0964dfdf"
+  },
+  "presentation_code_sha256": {
+    "app.py": "21da92a842d14cbfa7dfd2701795d369cf4076445b5ae104471880ac39c167b4",
+    "possession_danger/report.py": "15a6af24372ae229ca89013ab672ac8b12d7b6f40498396f1a651634c3d4c5d1",
+    "possession_danger/viz.py": "7a3b36744f2067ea811e9b788f5f21d81590dc8019995aae3c48b56818663547",
+    ".streamlit/config.toml": "0859473d70f8bc04c0984faea7c8b98912ff1322accd7b102ba7ebea65221b9c"
+  },
+  "rendered_at": "2026-10-23T02:52:31.217745+00:00"
+}

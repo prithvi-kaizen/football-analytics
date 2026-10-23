@@ -1,0 +1,297 @@
+{
+  "sample": false,
+  "matches": 240,
+  "events": 835429,
+  "possessions": 70148,
+  "train_matches": 192,
+  "test_matches": 48,
+  "coverage": [
+    {
+      "competition": "Liga F",
+      "matches": 240,
+      "teams": 16
+    }
+  ],
+  "model": {
+    "grid": [
+      12,
+      8
+    ],
+    "iterations": 83,
+    "residual": 6.606311071105653e-11,
+    "training_actions": 342890,
+    "validation": {
+      "heldout_actions": 83472,
+      "unseen_cell_fraction": 0.0,
+      "shot_choice_brier": 0.009965932676443974,
+      "constant_shot_choice_brier": 0.014472022332660235,
+      "meaning": "One-step shot-choice diagnostic; not a validation of possession-goal probability or causal action value."
+    }
+  },
+  "barcelona_heldout": {
+    "matches": 6,
+    "mean_possession_pct": 68.42403609318085,
+    "mean_field_tilt": 94.00905448949699,
+    "mean_threat_share": 88.19441656306458,
+    "barca_xt_per_100": 3.170032530128552,
+    "opponent_xt_per_100": 0.4481542851496035,
+    "difference_xt_per_100": 2.7218782449789485,
+    "bootstrap_95_interval": [
+      2.418275811069016,
+      3.0149511267756632
+    ],
+    "interval_note": "Seed 2026; 2,000 paired fixture bootstrap resamples. Descriptive interval, limited by fixture count and schedule; no model-refit uncertainty."
+  },
+  "heldout_teams": [
+    {
+      "competition": "Liga F",
+      "team": "Barcelona WFC",
+      "matches": 6,
+      "mean_possession_pct": 68.4240360932,
+      "mean_field_tilt": 94.0090544895,
+      "mean_threat_share": 88.1944165631,
+      "positive_xt": 24.7579540603,
+      "net_xt": 17.8326680413,
+      "shots": 178,
+      "xg": 23.2223562413,
+      "possessions": 781,
+      "xt_per_100": 3.1700325301
+    },
+    {
+      "competition": "Liga F",
+      "team": "Real Madrid CF W",
+      "matches": 6,
+      "mean_possession_pct": 59.6950989245,
+      "mean_field_tilt": 68.1317859435,
+      "mean_threat_share": 67.3968657141,
+      "positive_xt": 13.2462319117,
+      "net_xt": 9.4696457228,
+      "shots": 97,
+      "xg": 9.6740819385,
+      "possessions": 812,
+      "xt_per_100": 1.6313093487
+    },
+    {
+      "competition": "Liga F",
+      "team": "Atletico Madrid W",
+      "matches": 6,
+      "mean_possession_pct": 58.0724628852,
+      "mean_field_tilt": 60.7869899603,
+      "mean_threat_share": 59.5844703416,
+      "positive_xt": 11.4799029598,
+      "net_xt": 8.6327213883,
+      "shots": 82,
+      "xg": 10.215868149,
+      "possessions": 781,
+      "xt_per_100": 1.4698979462
+    },
+    {
+      "competition": "Liga F",
+      "team": "Levante UD Femenino",
+      "matches": 6,
+      "mean_possession_pct": 58.4210984269,
+      "mean_field_tilt": 58.5921875396,
+      "mean_threat_share": 55.7304003952,
+      "positive_xt": 11.2772969475,
+      "net_xt": 8.5965583867,
+      "shots": 74,
+      "xg": 11.282963149,
+      "possessions": 830,
+      "xt_per_100": 1.3587104756
+    },
+    {
+      "competition": "Liga F",
+      "team": "Sevilla FC",
+      "matches": 6,
+      "mean_possession_pct": 49.6533145243,
+      "mean_field_tilt": 58.791292661,
+      "mean_threat_share": 52.9511128751,
+      "positive_xt": 10.7375963831,
+      "net_xt": 8.5134423424,
+      "shots": 76,
+      "xg": 5.9492383679,
+      "possessions": 832,
+      "xt_per_100": 1.2905764884
+    },
+    {
+      "competition": "Liga F",
+      "team": "Real Sociedad de Fútbol",
+      "matches": 6,
+      "mean_possession_pct": 52.3905855305,
+      "mean_field_tilt": 48.7020892853,
+      "mean_threat_share": 49.1049679306,
+      "positive_xt": 10.1992081373,
+      "net_xt": 7.8576673584,
+      "shots": 79,
+      "xg": 9.115653388,
+      "possessions": 850,
+      "xt_per_100": 1.1999068397
+    },
+    {
+      "competition": "Liga F",
+      "team": "Granada W",
+      "matches": 6,
+      "mean_possession_pct": 48.6863478259,
+      "mean_field_tilt": 40.0528386092,
+      "mean_threat_share": 43.1265196004,
+      "positive_xt": 9.3890852821,
+      "net_xt": 7.7508727245,
+      "shots": 67,
+      "xg": 7.4212537183,
+      "possessions": 872,
+      "xt_per_100": 1.0767299635
+    },
+    {
+      "competition": "Liga F",
+      "team": "Valencia CF",
+      "matches": 6,
+      "mean_possession_pct": 50.3565148485,
+      "mean_field_tilt": 48.115226325,
+      "mean_threat_share": 45.3529172574,
+      "positive_xt": 9.5583250465,
+      "net_xt": 7.0460880676,
+      "shots": 77,
+      "xg": 6.7422472255,
+      "possessions": 902,
+      "xt_per_100": 1.059681269
+    },
+    {
+      "competition": "Liga F",
+      "team": "Athletic Club Bilbao",
+      "matches": 6,
+      "mean_possession_pct": 51.8327073094,
+      "mean_field_tilt": 41.6623969238,
+      "mean_threat_share": 44.7988977596,
+      "positive_xt": 7.8696488965,
+      "net_xt": 5.7625161708,
+      "shots": 51,
+      "xg": 6.008148424,
+      "possessions": 762,
+      "xt_per_100": 1.0327623224
+    },
+    {
+      "competition": "Liga F",
+      "team": "Costa Adeje Tenerife",
+      "matches": 6,
+      "mean_possession_pct": 50.4168643736,
+      "mean_field_tilt": 49.1726071916,
+      "mean_threat_share": 55.1473348367,
+      "positive_xt": 9.4611762194,
+      "net_xt": 7.2804040906,
+      "shots": 70,
+      "xg": 5.8888475993,
+      "possessions": 920,
+      "xt_per_100": 1.0283887195
+    },
+    {
+      "competition": "Liga F",
+      "team": "Madrid CFF",
+      "matches": 6,
+      "mean_possession_pct": 49.228348005,
+      "mean_field_tilt": 40.455548759,
+      "mean_threat_share": 41.9601760678,
+      "positive_xt": 8.8334739644,
+      "net_xt": 6.5454878357,
+      "shots": 92,
+      "xg": 9.4390711742,
+      "possessions": 888,
+      "xt_per_100": 0.9947605816
+    },
+    {
+      "competition": "Liga F",
+      "team": "Real Betis Balompié",
+      "matches": 6,
+      "mean_possession_pct": 42.7699339588,
+      "mean_field_tilt": 39.3454240745,
+      "mean_threat_share": 38.3082445094,
+      "positive_xt": 7.5437877871,
+      "net_xt": 5.7969266144,
+      "shots": 65,
+      "xg": 5.4634514968,
+      "possessions": 860,
+      "xt_per_100": 0.8771846264
+    },
+    {
+      "competition": "Liga F",
+      "team": "Villarreal",
+      "matches": 6,
+      "mean_possession_pct": 42.8365731862,
+      "mean_field_tilt": 40.3440571893,
+      "mean_threat_share": 43.3439210147,
+      "positive_xt": 7.3539531741,
+      "net_xt": 5.8766564931,
+      "shots": 54,
+      "xg": 5.482339383,
+      "possessions": 861,
+      "xt_per_100": 0.8541176741
+    },
+    {
+      "competition": "Liga F",
+      "team": "SD Eibar",
+      "matches": 6,
+      "mean_possession_pct": 38.2067218995,
+      "mean_field_tilt": 36.4257493622,
+      "mean_threat_share": 39.5367743941,
+      "positive_xt": 7.5868505563,
+      "net_xt": 5.89813743,
+      "shots": 60,
+      "xg": 4.3970788817,
+      "possessions": 897,
+      "xt_per_100": 0.8458027376
+    },
+    {
+      "competition": "Liga F",
+      "team": "FC Levante Badalona",
+      "matches": 6,
+      "mean_possession_pct": 37.0458640697,
+      "mean_field_tilt": 40.1935200299,
+      "mean_threat_share": 39.6058408613,
+      "positive_xt": 7.1727596453,
+      "net_xt": 5.5205134192,
+      "shots": 66,
+      "xg": 8.4494160551,
+      "possessions": 857,
+      "xt_per_100": 0.8369614522
+    },
+    {
+      "competition": "Liga F",
+      "team": "CD Sporting de Huelva",
+      "matches": 6,
+      "mean_possession_pct": 41.963528139,
+      "mean_field_tilt": 35.2192316565,
+      "mean_threat_share": 35.857139879,
+      "positive_xt": 6.3590035741,
+      "net_xt": 4.9248733705,
+      "shots": 49,
+      "xg": 4.4209256398,
+      "possessions": 894,
+      "xt_per_100": 0.7112979389
+    }
+  ],
+  "cleaning": {
+    "tiny_negative_duration_repairs": 1,
+    "control_switches_within_provider_chain": 26018,
+    "controlled_events_outside_provider_starter": 31408,
+    "rule": "Durations in [-0.1, 0) seconds set to zero; raw duration retained. Larger negatives fail.",
+    "records": [
+      {
+        "match_id": 3911552,
+        "event_id": "d2aa5bb8-39f0-4f87-a1cf-47fb9e4adea5",
+        "index": 566,
+        "type": "Interception",
+        "raw_duration": -0.090642
+      }
+    ]
+  },
+  "checks": {
+    "score_reconciliations": 240,
+    "unique_event_ids": true,
+    "unique_sequences": true,
+    "train_test_disjoint": true,
+    "max_possession_share_error": 1.4210854715202004e-14,
+    "active_le_elapsed": true,
+    "pass_count_reconciles": true,
+    "shot_count_reconciles": true,
+    "shot_xg_reconciles": true
+  }
+}

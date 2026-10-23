@@ -1,0 +1,107 @@
+{
+  "sample": true,
+  "matches": 6,
+  "events": 22163,
+  "possessions": 1617,
+  "train_matches": 4,
+  "test_matches": 2,
+  "coverage": [
+    {
+      "competition": "Liga F",
+      "matches": 6,
+      "teams": 9
+    }
+  ],
+  "model": {
+    "grid": [
+      12,
+      8
+    ],
+    "iterations": 91,
+    "residual": 8.033526491604825e-11,
+    "training_actions": 7579,
+    "validation": {
+      "heldout_actions": 4129,
+      "unseen_cell_fraction": 0.0,
+      "shot_choice_brier": 0.011477769605302243,
+      "constant_shot_choice_brier": 0.01479461817164114,
+      "meaning": "One-step shot-choice diagnostic; not a validation of possession-goal probability or causal action value."
+    }
+  },
+  "barcelona_heldout": {
+    "matches": 2,
+    "mean_possession_pct": 70.8637687389431,
+    "mean_field_tilt": 91.7618568948186,
+    "mean_threat_share": 83.11892262888588,
+    "barca_xt_per_100": 1.753870980427966,
+    "opponent_xt_per_100": 0.38283475832631103,
+    "difference_xt_per_100": 1.371036222101655,
+    "bootstrap_95_interval": [
+      1.1533708573281545,
+      1.6043360857308633
+    ],
+    "interval_note": "Seed 2026; 2,000 paired fixture bootstrap resamples. Descriptive interval, limited by fixture count and schedule; no model-refit uncertainty."
+  },
+  "heldout_teams": [
+    {
+      "competition": "Liga F",
+      "team": "Barcelona WFC",
+      "matches": 2,
+      "mean_possession_pct": 70.8637687389,
+      "mean_field_tilt": 91.7618568948,
+      "mean_threat_share": 83.1189226289,
+      "positive_xt": 4.6477580981,
+      "net_xt": 2.5633397052,
+      "shots": 54,
+      "xg": 5.3920094484,
+      "possessions": 265,
+      "xt_per_100": 1.7538709804
+    },
+    {
+      "competition": "Liga F",
+      "team": "Valencia CF",
+      "matches": 1,
+      "mean_possession_pct": 32.4144602728,
+      "mean_field_tilt": 6.7988668555,
+      "mean_threat_share": 15.9959019652,
+      "positive_xt": 0.4917539449,
+      "net_xt": 0.3417874778,
+      "shots": 6,
+      "xg": 0.536491626,
+      "possessions": 119,
+      "xt_per_100": 0.4132386091
+    },
+    {
+      "competition": "Liga F",
+      "team": "CD Sporting de Huelva",
+      "matches": 1,
+      "mean_possession_pct": 25.8580022493,
+      "mean_field_tilt": 9.6774193548,
+      "mean_threat_share": 17.766252777,
+      "positive_xt": 0.446191213,
+      "net_xt": 0.3298408994,
+      "shots": 4,
+      "xg": 0.408931935,
+      "possessions": 126,
+      "xt_per_100": 0.3541200103
+    }
+  ],
+  "cleaning": {
+    "tiny_negative_duration_repairs": 0,
+    "control_switches_within_provider_chain": 542,
+    "controlled_events_outside_provider_starter": 672,
+    "rule": "Durations in [-0.1, 0) seconds set to zero; raw duration retained. Larger negatives fail.",
+    "records": []
+  },
+  "checks": {
+    "score_reconciliations": 6,
+    "unique_event_ids": true,
+    "unique_sequences": true,
+    "train_test_disjoint": true,
+    "max_possession_share_error": 0.0,
+    "active_le_elapsed": true,
+    "pass_count_reconciles": true,
+    "shot_count_reconciles": true,
+    "shot_xg_reconciles": true
+  }
+}

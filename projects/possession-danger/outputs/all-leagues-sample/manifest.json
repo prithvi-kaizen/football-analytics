@@ -1,0 +1,339 @@
+{
+  "revision": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+  "generated_at": "2026-10-22T16:28:03.722560+00:00",
+  "python": "3.14.2",
+  "dependencies": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "requests": "2.34.2",
+    "streamlit": "1.66.1",
+    "plotly": "6.9.0",
+    "mplsoccer": "1.8.1",
+    "matplotlib": "3.11.2"
+  },
+  "sample": true,
+  "split": {
+    "3910744": "train",
+    "3910745": "train",
+    "3910746": "train",
+    "3910748": "train",
+    "3910936": "test",
+    "3910740": "test",
+    "3912592": "train",
+    "3912593": "train",
+    "3912594": "train",
+    "3912595": "train",
+    "3912596": "test",
+    "3912597": "test",
+    "3910730": "train",
+    "3910731": "train",
+    "3910732": "train",
+    "3910733": "train",
+    "3910734": "test",
+    "3910735": "test",
+    "3910621": "train",
+    "3910623": "train",
+    "3910620": "train",
+    "3910622": "train",
+    "3910624": "test",
+    "3911869": "test",
+    "3881483": "train",
+    "3881484": "train",
+    "3881485": "train",
+    "3881486": "train",
+    "3881487": "test",
+    "3881488": "test"
+  },
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/competitions.json",
+      "sha256": "120ea45ec486eba81d489f9568675c210884ccd5470bd42f9b0c9c90963a62f3",
+      "bytes": 36168,
+      "retrieved_at": "2026-10-22T16:07:12.793507+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/matches/37/281.json",
+      "sha256": "dbcbf3d962ec1a47ec1eb2368e36adf6a4c561b35d9ed10024a9e79bbeda8020",
+      "bytes": 264479,
+      "retrieved_at": "2026-10-22T16:14:54.557796+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/matches/49/107.json",
+      "sha256": "3d5933a6c7887febeda07b86510ec6e0596e0d3d9d5701a4c8835335f637a82e",
+      "bytes": 285042,
+      "retrieved_at": "2026-10-22T16:14:59.161340+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/matches/131/281.json",
+      "sha256": "aba87a88a624ced9f89565dee51868fefbd69f6bda3a0f77827650f8d0f618f8",
+      "bytes": 260782,
+      "retrieved_at": "2026-10-22T16:14:57.906815+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/matches/135/281.json",
+      "sha256": "585ec89fde451db18610b18e3042734d1545b03f3d064aeaff551dd4b99a285d",
+      "bytes": 266102,
+      "retrieved_at": "2026-10-22T16:14:56.296665+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/matches/182/281.json",
+      "sha256": "ae62691c63e2c446b044fdce45df5a57a5a6c715763f16c2b5bccdc27c88eadb",
+      "bytes": 489370,
+      "retrieved_at": "2026-10-22T16:07:13.242053+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910744.json",
+      "sha256": "8a07a13b51db8fe23d25e9df1b591ff884b479829ce2b810cb0c293aa7a6f55e",
+      "bytes": 3684988,
+      "retrieved_at": "2026-10-22T16:07:15.693240+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910745.json",
+      "sha256": "cd1452b1b006955ff606ad9a4fae6458fba10e9a212448611357f49617bcf752",
+      "bytes": 3076240,
+      "retrieved_at": "2026-10-22T16:07:14.553182+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910746.json",
+      "sha256": "bd50c508b520c1f4ee94a3cb4aca622c72d4e2defc548c3e8eeafaab525c1e99",
+      "bytes": 3513600,
+      "retrieved_at": "2026-10-22T16:07:14.030564+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910748.json",
+      "sha256": "34ad39e29b33405e2d8897bb36907dabca4c92d773ac12c9dd530fd73f917c69",
+      "bytes": 3856058,
+      "retrieved_at": "2026-10-22T16:07:14.452571+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910936.json",
+      "sha256": "2734c40ebd0c552c4828245fa8be8ff8fa9cf9c13e126fd53d1173bcb3e49eb2",
+      "bytes": 3534580,
+      "retrieved_at": "2026-10-22T16:07:15.337754+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910740.json",
+      "sha256": "9773a8967e020d9cd6c6a69b400f71223f995d1489560cf2438f465668657478",
+      "bytes": 3945541,
+      "retrieved_at": "2026-10-22T16:07:15.802268+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912592.json",
+      "sha256": "9246783f1710809b74253cd454d68568428aa63c99c0e4f652c7a0fd873afcdf",
+      "bytes": 3340888,
+      "retrieved_at": "2026-10-22T16:15:00.573517+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912593.json",
+      "sha256": "fc8fe783752e59cbdf2148cf8f72268fe2a23027c835fb8eba0a3a9b9441fdec",
+      "bytes": 3853528,
+      "retrieved_at": "2026-10-22T16:15:05.389627+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912594.json",
+      "sha256": "6df5130864a10f0228b0b77466cff5484a945aedd0ad1e2e7973f0b777e13229",
+      "bytes": 2954842,
+      "retrieved_at": "2026-10-22T16:15:00.967051+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912595.json",
+      "sha256": "24784b787dd9aeecdfbc37f97e375a03f5ed323a8bc007c2e36d2634a42cc484",
+      "bytes": 3085953,
+      "retrieved_at": "2026-10-22T16:15:00.612791+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912596.json",
+      "sha256": "6c8297779654cf578d80a8aa6e90d8957a13fd95b23a3dc8fd1d8778909b91e2",
+      "bytes": 3689999,
+      "retrieved_at": "2026-10-22T16:15:05.383186+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912597.json",
+      "sha256": "1cd7c8d44e460aa7288be65ea39cd519170d44a05932d79a4377bf4b5f515a00",
+      "bytes": 3984041,
+      "retrieved_at": "2026-10-22T16:15:06.308970+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910730.json",
+      "sha256": "a6f1d445d9e05c2ab0c5a42ae3bfbc1b7648cf3c0899c485be6baba27cd3831d",
+      "bytes": 3911910,
+      "retrieved_at": "2026-10-22T16:15:05.181213+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910731.json",
+      "sha256": "5f3857c715d0f9e78caae4e71af66b82b91cb96a40c257ea937732de0cf0985f",
+      "bytes": 3087810,
+      "retrieved_at": "2026-10-22T16:15:05.046208+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910732.json",
+      "sha256": "04bb020b0428fd7f4878991dff6ff6129351eccaadac649e705e55c25dda85fa",
+      "bytes": 3190772,
+      "retrieved_at": "2026-10-22T16:15:05.445882+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910733.json",
+      "sha256": "6c4e46226032058115982322dd31cd0de9f8ff4cc9b799dfcb3e6e31c26671f1",
+      "bytes": 2954972,
+      "retrieved_at": "2026-10-22T16:15:08.451294+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910734.json",
+      "sha256": "83f215344a79c27ac82a1a9d5d007aaacb4894241fb55f490b24ea7dcba022d5",
+      "bytes": 3484849,
+      "retrieved_at": "2026-10-22T16:15:08.363725+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910735.json",
+      "sha256": "c6f1da43aaaee9f93f3d7e7b9e0f373132e9fa2267ba9194f8d0c512329257a2",
+      "bytes": 3350598,
+      "retrieved_at": "2026-10-22T16:15:08.645306+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910621.json",
+      "sha256": "e7615a59adb75653ed7ae72aacc53508c4872d81010b7a28b137feee2a70d558",
+      "bytes": 3442195,
+      "retrieved_at": "2026-10-22T16:15:08.642634+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910623.json",
+      "sha256": "081235f6d0630cc29cd6c0f20b881c9c208baa53a74fbfefc13f55aa18599a2b",
+      "bytes": 3151431,
+      "retrieved_at": "2026-10-22T16:15:09.158186+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910620.json",
+      "sha256": "690d8ed95e36183e0356d6b4a2c9b75ab7396ed10f37b8e44ce299d43dabed59",
+      "bytes": 2908227,
+      "retrieved_at": "2026-10-22T16:15:09.056736+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910622.json",
+      "sha256": "9cd7ad5bd09f4ec32a1143a39e8b5a717637b3d97b7eba149407093f2929ea96",
+      "bytes": 3078135,
+      "retrieved_at": "2026-10-22T16:15:11.056583+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3910624.json",
+      "sha256": "2c6f09ef455556a2c168d872be56947c11ca4faa9e705c2d65ec1ab31b5b89a1",
+      "bytes": 3378917,
+      "retrieved_at": "2026-10-22T16:15:11.154393+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3911869.json",
+      "sha256": "deb6d9cc9f393a4333546002fbbed88a3e97a5fbf9b3c8cfbdd9c638290c79f8",
+      "bytes": 3499496,
+      "retrieved_at": "2026-10-22T16:15:11.161039+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3881483.json",
+      "sha256": "8faa55a966d9bfbff64a16ee1bc6588160a113949b60f639142f4b59a4357fb9",
+      "bytes": 3230463,
+      "retrieved_at": "2026-10-22T16:15:11.293779+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3881484.json",
+      "sha256": "8d7eecd2b3090b07b802587b654830258b40bef073f89b2bff9402e9596ded12",
+      "bytes": 3512543,
+      "retrieved_at": "2026-10-22T16:15:13.139145+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3881485.json",
+      "sha256": "d0259b4c7ba873d357dfd7fd9ea14217404a9accd512bd0d37b8c8ba61f47598",
+      "bytes": 3201189,
+      "retrieved_at": "2026-10-22T16:15:11.588814+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3881486.json",
+      "sha256": "58b0903c577ffeae53ad6d7ff1e18bea1dcb4fc93c898949e21974de4cf5f0d2",
+      "bytes": 3472344,
+      "retrieved_at": "2026-10-22T16:15:14.007309+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3881487.json",
+      "sha256": "905d434573af1de4cc159af74e346d2e2bb0400c2a32911881a1ffe4723b00d6",
+      "bytes": 2847441,
+      "retrieved_at": "2026-10-22T16:15:13.956937+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3881488.json",
+      "sha256": "e1eaad558e4e559b1e0ada18e4548400ebd5a24253686823145d7fd52d8485b0",
+      "bytes": 3164527,
+      "retrieved_at": "2026-10-22T16:15:15.083498+00:00"
+    }
+  ],
+  "code_sha256": {
+    "possession_danger/__init__.py": "872f282ffcd03ee8dcebd659303dbc458f341a747117a6dfefd04379e1f54cc7",
+    "possession_danger/analysis.py": "dc1f6e27226ae2f2818955e01718225e18d12dce1bed0f55b877861a8e8b3050",
+    "possession_danger/cli.py": "95fce7b1b8985db3fda47890d895eba9b3bdee506c4c741fdb3ae8af29f1d025",
+    "possession_danger/data.py": "7f3b78c73aef4e12dec8e6bfdf85e2e0e5988a1b9734f08475b45221c6649d07",
+    "possession_danger/events.py": "ebc37da98858f28dffc358652f23131847adc43d87175c92e514c81e213b3b76",
+    "possession_danger/pipeline.py": "a62441b4fc5ba0327f6dc6daf8cadcaec7a1a5319e7ff2e82cb6162bcab4c756",
+    "possession_danger/report.py": "828c8978b59bca5a21b6d05f277ecab9f43fabf37efb50d294bc22fc316a02c9",
+    "possession_danger/viz.py": "ca87747987f11503ea6230c5403cd93ffb7c69454bf0feb8706f018fb9b3022c",
+    "possession_danger/xt.py": "b9770ddf5805b20d6f099777269f26ee33fccd4ac895eb382b48ca6b65f2f3bc",
+    "app.py": "3521ca87970782ebe319e212395bfaeaf16cd55f830cdf43bed1bf72d9f4fd62",
+    "pyproject.toml": "f4080f8fd96e611db79c326f31fb11395eee86499b8113df6f6ce180d219beb9",
+    "requirements-lock.txt": "0461775457578e5a586b9065c9cb11b741c3761065444e794dedf5b772329b7f",
+    ".streamlit/config.toml": "0859473d70f8bc04c0984faea7c8b98912ff1322accd7b102ba7ebea65221b9c"
+  },
+  "run_configuration": {
+    "test_fraction": 0.2,
+    "grid": [
+      12,
+      8
+    ],
+    "sample": true,
+    "match_ids": [
+      3910744,
+      3910745,
+      3910746,
+      3910748,
+      3910936,
+      3910740,
+      3912592,
+      3912593,
+      3912594,
+      3912595,
+      3912596,
+      3912597,
+      3910730,
+      3910731,
+      3910732,
+      3910733,
+      3910734,
+      3910735,
+      3910621,
+      3910623,
+      3910620,
+      3910622,
+      3910624,
+      3911869,
+      3881483,
+      3881484,
+      3881485,
+      3881486,
+      3881487,
+      3881488
+    ]
+  },
+  "output_sha256": {
+    "possessions.csv": "3ae362b144595fed8ae9d7b7eaefbb81f7bda1b73aa33236a8ab8afc35d5b1d5",
+    "summary.json": "f38c2673eae35189940628efda3e2402b26b5ce8470af998cd4a91cbe41481e1",
+    "possession-vs-threat.svg": "4c71d65dc570f2b753bc03c9c6cf1fd1fc58b28d38d494e28bc9fd9f4453dbc1",
+    "score_states.csv": "713bc2e16357e169fd442544dff15d4a31325f7a04abe3f088189c400b102ad4",
+    "team_matches.csv": "1a9372a30898dc671a7ad1e2172bc5962713e5d904f588541581d0bb547bb295",
+    "possession-vs-threat.png": "01a943e76be2a0ddc3b4f0ec404479316514e72dee7d803345763caf6f846452",
+    "xt_model.json": "007f33be4222c8848c7be96b6b538d29b4b16546c354737df1d4f5eae9a1966e",
+    "findings.md": "d80e4ff939062eddf8c970c825e83a2c6ae8355ca5326784e9e7d15d8163abb0",
+    "events.csv": "805b99fee389eb61b6541af67003536f7ecbe33d2a2b7f097ee60f35912158ee",
+    "actions.csv": "48e7889bcd381a530c19567431b22b10535461861e5da50411425a2fc513a850"
+  },
+  "presentation_code_sha256": {
+    "app.py": "21da92a842d14cbfa7dfd2701795d369cf4076445b5ae104471880ac39c167b4",
+    "possession_danger/report.py": "15a6af24372ae229ca89013ab672ac8b12d7b6f40498396f1a651634c3d4c5d1",
+    "possession_danger/viz.py": "7a3b36744f2067ea811e9b788f5f21d81590dc8019995aae3c48b56818663547",
+    ".streamlit/config.toml": "0859473d70f8bc04c0984faea7c8b98912ff1322accd7b102ba7ebea65221b9c"
+  },
+  "rendered_at": "2026-10-23T02:52:32.044439+00:00"
+}

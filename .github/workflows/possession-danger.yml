@@ -1,0 +1,35 @@
+name: Possession danger
+on:
+  push:
+    paths: ['projects/possession-danger/**', '.github/workflows/possession-danger.yml', 'scripts/build_website.py']
+  pull_request:
+    paths: ['projects/possession-danger/**', '.github/workflows/possession-danger.yml', 'scripts/build_website.py']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research-and-website:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/possession-danger
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: projects/possession-danger/pyproject.toml
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: pip install -e '.[test]'
+      - name: Fresh-clone unit tests and published release checks
+        run: python -m pytest -q -m 'not real_data'
+      - name: Real-data smoke download and offline reproduction
+        run: |
+          python -m possession_danger.cli download --sample 6
+          python -m possession_danger.cli run --sample 6 --offline
+          python -m pytest -q
+      - name: Static build without analytics downloads
+        run: python scripts/build_website.py --output /tmp/possession-site

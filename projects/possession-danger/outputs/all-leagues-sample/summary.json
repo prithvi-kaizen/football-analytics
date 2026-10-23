@@ -1,0 +1,351 @@
+{
+  "sample": true,
+  "matches": 30,
+  "events": 104348,
+  "possessions": 8479,
+  "train_matches": 20,
+  "test_matches": 10,
+  "coverage": [
+    {
+      "competition": "FA Women's Super League",
+      "matches": 6,
+      "teams": 12
+    },
+    {
+      "competition": "Frauen Bundesliga",
+      "matches": 6,
+      "teams": 12
+    },
+    {
+      "competition": "Liga F",
+      "matches": 6,
+      "teams": 9
+    },
+    {
+      "competition": "NWSL",
+      "matches": 6,
+      "teams": 12
+    },
+    {
+      "competition": "Serie A Women",
+      "matches": 6,
+      "teams": 10
+    }
+  ],
+  "model": {
+    "grid": [
+      12,
+      8
+    ],
+    "iterations": 85,
+    "residual": 7.091623815957959e-11,
+    "training_actions": 34609,
+    "validation": {
+      "heldout_actions": 18470,
+      "unseen_cell_fraction": 0.0,
+      "shot_choice_brier": 0.010792592461915003,
+      "constant_shot_choice_brier": 0.016241353870159753,
+      "meaning": "One-step shot-choice diagnostic; not a validation of possession-goal probability or causal action value."
+    }
+  },
+  "barcelona_heldout": {
+    "matches": 2,
+    "mean_possession_pct": 70.8637687389431,
+    "mean_field_tilt": 91.7618568948186,
+    "mean_threat_share": 83.22911880714005,
+    "barca_xt_per_100": 2.759096297082523,
+    "opponent_xt_per_100": 0.5844359346179662,
+    "difference_xt_per_100": 2.1746603624645573,
+    "bootstrap_95_interval": [
+      1.599042026676968,
+      2.7910860188731426
+    ],
+    "interval_note": "Seed 2026; 2,000 paired fixture bootstrap resamples. Descriptive interval, limited by fixture count and schedule; no model-refit uncertainty."
+  },
+  "heldout_teams": [
+    {
+      "competition": "Serie A Women",
+      "team": "AS Roma W",
+      "matches": 1,
+      "mean_possession_pct": 62.0117131036,
+      "mean_field_tilt": 80.9523809524,
+      "mean_threat_share": 79.6028441306,
+      "positive_xt": 4.5778135891,
+      "net_xt": 3.7167914694,
+      "shots": 38,
+      "xg": 5.188451086,
+      "possessions": 132,
+      "xt_per_100": 3.4680405978
+    },
+    {
+      "competition": "Liga F",
+      "team": "Barcelona WFC",
+      "matches": 2,
+      "mean_possession_pct": 70.8637687389,
+      "mean_field_tilt": 91.7618568948,
+      "mean_threat_share": 83.2291188071,
+      "positive_xt": 7.3116051873,
+      "net_xt": 4.6957931268,
+      "shots": 54,
+      "xg": 5.3920094484,
+      "possessions": 265,
+      "xt_per_100": 2.7590962971
+    },
+    {
+      "competition": "FA Women's Super League",
+      "team": "Chelsea FCW",
+      "matches": 1,
+      "mean_possession_pct": 56.1947479133,
+      "mean_field_tilt": 71.5083798883,
+      "mean_threat_share": 70.5092272708,
+      "positive_xt": 3.3669102516,
+      "net_xt": 2.4690120156,
+      "shots": 21,
+      "xg": 2.282546388,
+      "possessions": 130,
+      "xt_per_100": 2.5899309628
+    },
+    {
+      "competition": "Serie A Women",
+      "team": "FC Internazionale Milano W",
+      "matches": 1,
+      "mean_possession_pct": 70.3509551101,
+      "mean_field_tilt": 72.5806451613,
+      "mean_threat_share": 75.4234201748,
+      "positive_xt": 3.1815855003,
+      "net_xt": 2.3763939439,
+      "shots": 17,
+      "xg": 2.273959492,
+      "possessions": 133,
+      "xt_per_100": 2.3921695491
+    },
+    {
+      "competition": "Frauen Bundesliga",
+      "team": "VfL Wolfsburg WFC",
+      "matches": 1,
+      "mean_possession_pct": 59.6992299785,
+      "mean_field_tilt": 73.0434782609,
+      "mean_threat_share": 78.2563893094,
+      "positive_xt": 2.6796858785,
+      "net_xt": 2.0601684713,
+      "shots": 22,
+      "xg": 2.420055703,
+      "possessions": 149,
+      "xt_per_100": 1.7984468983
+    },
+    {
+      "competition": "FA Women's Super League",
+      "team": "Everton LFC",
+      "matches": 1,
+      "mean_possession_pct": 51.1137811995,
+      "mean_field_tilt": 50.3816793893,
+      "mean_threat_share": 65.0452605557,
+      "positive_xt": 2.3344753278,
+      "net_xt": 1.7031607968,
+      "shots": 16,
+      "xg": 1.1414083215,
+      "possessions": 152,
+      "xt_per_100": 1.5358390314
+    },
+    {
+      "competition": "NWSL",
+      "team": "Racing Louisville FC",
+      "matches": 1,
+      "mean_possession_pct": 45.7964522558,
+      "mean_field_tilt": 52.2123893805,
+      "mean_threat_share": 54.544370883,
+      "positive_xt": 1.9534225932,
+      "net_xt": 1.4764950841,
+      "shots": 18,
+      "xg": 1.485477526,
+      "possessions": 128,
+      "xt_per_100": 1.526111401
+    },
+    {
+      "competition": "Frauen Bundesliga",
+      "team": "Eintracht Frankfurt W",
+      "matches": 1,
+      "mean_possession_pct": 65.1133657963,
+      "mean_field_tilt": 71.7948717949,
+      "mean_threat_share": 63.9738406582,
+      "positive_xt": 2.262384386,
+      "net_xt": 1.7253789912,
+      "shots": 9,
+      "xg": 0.957036298,
+      "possessions": 158,
+      "xt_per_100": 1.4318888519
+    },
+    {
+      "competition": "NWSL",
+      "team": "Angel City",
+      "matches": 1,
+      "mean_possession_pct": 55.3262192917,
+      "mean_field_tilt": 63.6904761905,
+      "mean_threat_share": 56.4664177137,
+      "positive_xt": 2.1905538703,
+      "net_xt": 1.3937974131,
+      "shots": 11,
+      "xg": 1.267432053,
+      "possessions": 162,
+      "xt_per_100": 1.3521937471
+    },
+    {
+      "competition": "NWSL",
+      "team": "NJ/NY Gotham FC",
+      "matches": 1,
+      "mean_possession_pct": 44.6737807083,
+      "mean_field_tilt": 36.3095238095,
+      "mean_threat_share": 43.5335822863,
+      "positive_xt": 1.6888384464,
+      "net_xt": 1.2866770445,
+      "shots": 15,
+      "xg": 1.711028407,
+      "possessions": 127,
+      "xt_per_100": 1.3297940523
+    },
+    {
+      "competition": "NWSL",
+      "team": "Houston Dash",
+      "matches": 1,
+      "mean_possession_pct": 54.2035477442,
+      "mean_field_tilt": 47.7876106195,
+      "mean_threat_share": 45.455629117,
+      "positive_xt": 1.6279233122,
+      "net_xt": 1.1099635048,
+      "shots": 15,
+      "xg": 1.0508951665,
+      "possessions": 126,
+      "xt_per_100": 1.2920026287
+    },
+    {
+      "competition": "FA Women's Super League",
+      "team": "Tottenham Hotspur Women",
+      "matches": 1,
+      "mean_possession_pct": 43.8052520867,
+      "mean_field_tilt": 28.4916201117,
+      "mean_threat_share": 29.4907727292,
+      "positive_xt": 1.4082239853,
+      "net_xt": 0.8878456822,
+      "shots": 15,
+      "xg": 1.79976314,
+      "possessions": 123,
+      "xt_per_100": 1.144897549
+    },
+    {
+      "competition": "Serie A Women",
+      "team": "Como W",
+      "matches": 1,
+      "mean_possession_pct": 37.9882868964,
+      "mean_field_tilt": 19.0476190476,
+      "mean_threat_share": 20.3971558694,
+      "positive_xt": 1.1730030295,
+      "net_xt": 0.9576893953,
+      "shots": 9,
+      "xg": 1.110682611,
+      "possessions": 128,
+      "xt_per_100": 0.9164086168
+    },
+    {
+      "competition": "Frauen Bundesliga",
+      "team": "SGS Essen 19/68",
+      "matches": 1,
+      "mean_possession_pct": 34.8866342037,
+      "mean_field_tilt": 28.2051282051,
+      "mean_threat_share": 36.0261593418,
+      "positive_xt": 1.2740366929,
+      "net_xt": 0.9029677317,
+      "shots": 9,
+      "xg": 0.653636129,
+      "possessions": 150,
+      "xt_per_100": 0.8493577952
+    },
+    {
+      "competition": "FA Women's Super League",
+      "team": "Brighton & Hove Albion WFC",
+      "matches": 1,
+      "mean_possession_pct": 48.8862188005,
+      "mean_field_tilt": 49.6183206107,
+      "mean_threat_share": 34.9547394443,
+      "positive_xt": 1.2545260965,
+      "net_xt": 0.568749292,
+      "shots": 13,
+      "xg": 1.714584251,
+      "possessions": 156,
+      "xt_per_100": 0.8041833952
+    },
+    {
+      "competition": "Serie A Women",
+      "team": "Sampdoria W",
+      "matches": 1,
+      "mean_possession_pct": 29.6490448899,
+      "mean_field_tilt": 27.4193548387,
+      "mean_threat_share": 24.5765798252,
+      "positive_xt": 1.0367136605,
+      "net_xt": 0.861937918,
+      "shots": 9,
+      "xg": 0.4158804773,
+      "possessions": 129,
+      "xt_per_100": 0.8036540004
+    },
+    {
+      "competition": "Liga F",
+      "team": "Valencia CF",
+      "matches": 1,
+      "mean_possession_pct": 32.4144602728,
+      "mean_field_tilt": 6.7988668555,
+      "mean_threat_share": 14.3773617004,
+      "positive_xt": 0.7321258267,
+      "net_xt": 0.5071638922,
+      "shots": 6,
+      "xg": 0.536491626,
+      "possessions": 119,
+      "xt_per_100": 0.6152317871
+    },
+    {
+      "competition": "Liga F",
+      "team": "CD Sporting de Huelva",
+      "matches": 1,
+      "mean_possession_pct": 25.8580022493,
+      "mean_field_tilt": 9.6774193548,
+      "mean_threat_share": 19.1644006853,
+      "positive_xt": 0.6997422131,
+      "net_xt": 0.5028062568,
+      "shots": 4,
+      "xg": 0.408931935,
+      "possessions": 126,
+      "xt_per_100": 0.5553509628
+    },
+    {
+      "competition": "Frauen Bundesliga",
+      "team": "TSV Bayer 04 Leverkusen",
+      "matches": 1,
+      "mean_possession_pct": 40.3007700215,
+      "mean_field_tilt": 26.9565217391,
+      "mean_threat_share": 21.7436106906,
+      "positive_xt": 0.7445532183,
+      "net_xt": 0.4709881804,
+      "shots": 7,
+      "xg": 0.643837459,
+      "possessions": 137,
+      "xt_per_100": 0.5434695024
+    }
+  ],
+  "cleaning": {
+    "tiny_negative_duration_repairs": 0,
+    "control_switches_within_provider_chain": 2999,
+    "controlled_events_outside_provider_starter": 3583,
+    "rule": "Durations in [-0.1, 0) seconds set to zero; raw duration retained. Larger negatives fail.",
+    "records": []
+  },
+  "checks": {
+    "score_reconciliations": 30,
+    "unique_event_ids": true,
+    "unique_sequences": true,
+    "train_test_disjoint": true,
+    "max_possession_share_error": 1.4210854715202004e-14,
+    "active_le_elapsed": true,
+    "pass_count_reconciles": true,
+    "shot_count_reconciles": true,
+    "shot_xg_reconciles": true
+  }
+}

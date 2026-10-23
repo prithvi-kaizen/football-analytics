@@ -6,3 +6,7 @@ projects/invisible-runner/web/snapshot.json.gz linguist-generated=true
 projects/invisible-runner/outputs/** linguist-generated=true -whitespace
 # Preserve copied upstream documentation byte for byte.
 projects/invisible-runner/docs/source/** -whitespace
+projects/possession-danger/web/vendor/** linguist-vendored=true -whitespace
+projects/possession-danger/web/snapshot.json.gz linguist-generated=true
+projects/possession-danger/outputs/** linguist-generated=true -whitespace
+projects/possession-danger/docs/source/** -whitespace

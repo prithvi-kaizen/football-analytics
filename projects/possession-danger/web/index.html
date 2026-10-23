@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A reproducible study of possession, territory and expected threat in women's football, using StatsBomb Open Data.">
+  <title>Is possession actually dangerous? | Football analytics</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="vendor/plotly.min.js" defer></script>
+  <script src="metrics.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to analysis</a>
+<aside aria-label="Analysis scope">
+  <a class="portfolio" href="../">Football analytics</a>
+  <details id="scope-details" open>
+  <summary>Analysis filters</summary>
+  <h2>Analysis scope</h2>
+  <fieldset id="filters" disabled>
+    <label>Dataset<select id="dataset"></select></label>
+    <label>Match split<select id="split"><option value="test">Held-out matches</option><option value="train">Training matches</option><option value="all">All matches (descriptive)</option></select></label>
+    <label>Competition<select id="competition"></select></label>
+    <label>Focus team<select id="focus"></select></label>
+  </fieldset>
+  <p class="small">The xT grid is fitted on separate training matches. Latest 20% per competition held out.</p>
+  </details>
+  <img class="source-logo" src="statsbomb-logo.png" alt="Data: StatsBomb" width="185">
+  <a href="statsbomb-terms.pdf">Data terms</a>
+  <a href="https://github.com/prithvi-kaizen/football-analytics/tree/main/projects/possession-danger">Code, setup and methodology</a>
+  <p class="small">Public research dashboard. Derived results only; no raw event files, player records or event coordinates are hosted.</p>
+</aside>
+<main id="main">
+  <header>
+    <h1>Is possession actually dangerous?</h1>
+    <p>Possession volume, territory and attacking value in women's football.</p>
+    <p id="scope" class="small"></p>
+  </header>
+  <div id="status" role="status" aria-live="polite">Loading the verified research snapshot…</div>
+  <div id="warning" class="notice" role="status" hidden></div>
+  <div id="application" hidden>
+    <nav class="tabs" aria-label="Analysis views">
+      <button data-view="comparison" aria-pressed="true">Team comparison</button>
+      <button data-view="match" aria-pressed="false">Match lab</button>
+      <button data-view="methods" aria-pressed="false">Methods &amp; validation</button>
+    </nav>
+    <section id="comparison" aria-label="Team comparison">
+      <h2 id="focus-title"></h2>
+      <div id="metrics" class="metrics"></div>
+      <p class="small" id="metric-caption"></p>
+      <label class="inline-control">Compare possession with<select id="scatter-metric"><option value="threat_share">Threat creation</option><option value="field_tilt">Territorial control</option></select></label>
+      <div id="scatter" class="chart" aria-label="Possession versus threat scatterplot"></div>
+      <p class="small">One point per team and match. The dashed line marks equal shares. Active time is a proxy, not official possession. Positive move xT can count repeated advances.</p>
+      <h2>Threat per 100 possessions</h2>
+      <div id="ranking" class="chart"></div>
+      <p class="small">Rates divide summed positive xT by summed analytical possessions. Teams have different opponent schedules; no strength adjustment is applied.</p>
+      <div id="team-table"></div>
+      <button id="export-teams" class="export">Download team comparison CSV</button>
+      <h2>Same score state, different teams</h2>
+      <div id="states" class="chart"></div>
+      <p class="small">Positive move xT per active possession minute, using the score before each action. Blank cells have no observed exposure. A goal shot belongs to the pre-goal state.</p>
+      <details><summary>Inspect score-state exposures and rates</summary><div id="state-table"></div></details>
+    </section>
+    <section id="match" aria-label="Match lab" hidden>
+      <h2>Follow one match</h2>
+      <label>Match<select id="match-select"></select></label>
+      <p id="scoreline"></p>
+      <div class="controls">
+        <label>Clock window start (minutes)<input id="window-start" type="number" min="0" max="130" value="0" step="1"></label>
+        <label>Clock window end (minutes)<input id="window-end" type="number" min="1" max="140" value="120" step="1"></label>
+      </div>
+      <div id="timeline" class="chart"></div>
+      <p class="small">Elapsed playing clock concatenates periods, includes stoppage time and excludes halftime breaks. Cumulative xT is booked at sequence start.</p>
+      <h2>Long possessions with little immediate threat</h2>
+      <div class="controls">
+        <label>Minimum elapsed duration: <output id="duration-value">30</output>s<input id="duration" type="range" min="10" max="120" step="5" value="30"></label>
+        <label>Positive xT ceiling: <output id="ceiling-value">0.010</output><input id="ceiling" type="range" min="0.001" max="0.05" step="0.001" value="0.01"></label>
+      </div>
+      <div id="quiet-table"></div>
+      <p class="small">No shot and less than the selected xT ceiling. Low immediate threat does not mean tactically wasteful: lead protection and drawing opponents out cannot be established here.</p>
+      <h2>Interpretable possession styles</h2>
+      <div id="styles" class="chart"></div>
+      <p id="style-definition" class="small"></p>
+      <h2>Inspect a possession</h2>
+      <label>Analytical sequence<select id="sequence"></select></label>
+      <div id="sequence-detail"></div>
+      <p class="small">The hosted view shows derived possession summaries. Run the Python/Streamlit workbench for event-by-event pass and carry maps. No event coordinates are distributed in this website.</p>
+    </section>
+    <section id="methods" aria-label="Methods and validation" hidden>
+      <h2>What the metrics measure</h2>
+      <dl>
+        <dt>Analytical possession</dt><dd>Provider possession ID, bounded by period and split when the other team passes, carries, shoots, dribbles, miscontrols, is dispossessed or shields. The provider's possession_team names the chain starter; defensive pressures and tackles do not switch the analytical owner.</dd>
+        <dt>Elapsed and active duration</dt><dd>Elapsed span includes gaps between owner actions. Active duration unions recorded owner on-ball action intervals and counts overlaps once. Both stop at the next analytical sequence. Neither is a continuous ball-in-play clock.</dd>
+        <dt>Territory</dt><dd>Field tilt is each team's share of completed passes starting in the final third (x ≥ 80 on a 120 × 80 pitch). Progression is last controlled x minus first x, in coordinate units, not metres.</dd>
+        <dt>Expected threat</dt><dd>The 12 × 8 grid solves V = r + TV using training matches only. Reward is empirical non-penalty goals per eligible action. Completed pass/carry transitions are divided by all eligible actions, including failures. Failed moves and explicit losses absorb at zero; every shot terminates the model path. Unseen cells remain zero.</dd>
+        <dt>Move values</dt><dd>Signed xT is V(end) − V(start) on successful passes/carries. Positive xT sums increases only and can count repeated advances. It is not a calibrated possession-goal probability. Penalties are excluded from xT but remain in observed shot/xG totals.</dd>
+        <dt>Score state and validation</dt><dd>The score is reconstructed before each indexed action, with own goals counted once and shootouts excluded. All final scores, passes, shots and shot xG reconcile with source data. Match-separated holdout prevents event-level leakage. Shot-choice Brier score checks one-step shot choice, not full xT calibration.</dd>
+      </dl>
+      <div id="model" class="chart"></div>
+      <p class="small">Location-only xT surface fitted on separate training matches. Finishing luck, sparse cells and ignored off-ball context limit interpretation.</p>
+      <h2>Validation for this dataset</h2>
+      <pre id="validation"></pre>
+      <h2>Reproduce and inspect</h2>
+      <p>The full Liga F report and chart below refer to the 240-match release, regardless of current sample, league or team filters.</p>
+      <div class="download-links"><a href="findings.md" download>Download Liga F findings</a><a href="possession-vs-threat.png" download>Download chart PNG</a><a href="possession-vs-threat.svg" download>Download chart SVG</a><a href="source-audit.md" download>Read source audit</a></div>
+      <p>Data: <a href="https://github.com/hudl/open-data">StatsBomb Open Data</a>. Methods: <a href="https://karun.in/blog/expected-threat.html">Karun Singh's xT explanation</a> and <a href="https://socceraction.readthedocs.io/en/stable/documentation/valuing_actions/xT.html">socceraction reference</a>. Provider data and branding retain their original research-use terms; the code licence does not relicense them.</p>
+      <p>Low-threat possession can be useful. This event-only analysis cannot establish intent, fatigue, off-ball control or causality. The Barcelona bootstrap comparison has six held-out fixtures and omits model-refit uncertainty.</p>
+      <details><summary>Snapshot provenance</summary><pre id="provenance"></pre></details>
+    </section>
+  </div>
+  <footer><a href="https://github.com/prithvi-kaizen/football-analytics/tree/main/projects/possession-danger">Reproduce this project on GitHub</a><span>Data: StatsBomb · Independent research analysis</span></footer>
+</main>
+</body>
+</html>
