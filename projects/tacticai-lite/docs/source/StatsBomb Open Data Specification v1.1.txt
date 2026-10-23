@@ -1,1745 +1,1742 @@
- 
- 
-Page 1 of 45 
-StatsBomb Data Specification v1.1 
-[StatsBomb Data Specification - last updated 13 May 2019] 
-Change Log - Updates for Data Version 1.1 
-Competition Data Updates 
-- “Gender” added for all competitions. 
-Match Data Updates 
-- Team section now includes variables for: “Gender”, “Group”, “Country” and “Managers” 
-- “Match Week” added as an integer denoting the match week in the competition. 
-- “Competition Stage” added to reference the phase of the competition this particular match is in. 
-- “Stadium” updated from a name to an object with a name and corresponding country and id. 
-- “Referee” updated from a name to an object with a name and corresponding country and id. 
-- The data-version object is no longer displayed as a property of the match.  
-- Each match has a metadata object containing information about the structure/versions of various data attributes in the match. 
-This includes the data version. Note: the metadata tag can be empty for any match not in an “available” status. For matches 
-that are available the metadata will contain a data version and may contain other attributes.  
-Lineups Data Updates 
-- “Nickname” added for all players in the lineup. 
- 
- 
-Page 2 of 45 
-Event Data Updates 
-- “Carry” added as an event type. carry.end_location added as an additional variable to describe the ending location of a 
-carry event 
-- “counterpress”: an attribute on various defensive events, including: pressure, dribbled past, 50-50, duel, block, 
-interception, and foul committed (not offensive). These are pressing actions within 5 seconds of an open play turnover. 
-- “under_pressure”: the definition has been expanded to apply in more situations. So, events which are naturally performed 
-under pressure like duels, dribbles etc, all pick up the attribute, even in the absence of an actual pressure event. Carries 
-can be pressured not just by pressure events, but other defensive events (defined in change 2.) that happen during or at 
-the end of the carry. 
-- Enhancements to possession chain and counterattack logic. 
--  “off_camera” variable no longer only shows when TRUE, but is a boolean on every event. 
-- “out” boolean variable added for when the outcome of the event is a ball out of bounds. 
-- “body type” variable added for clearances. 
-- Additional body types including “No Touch” and “Drop Kick”. 
-- “technique” variable added for passes, including: “Inswinging”, “Outswinging”, “Straight” and “Through Ball”. 
-- “through_ball” variable for passes is now deprecated. 
-- “late-video-start” variable added for event type “Half Start” when the broadcast video starts after the kick off. 
-- “early-video-end” variable added for event type “Half End” when the broadcast video ends before the final whistle. 
-- “match-suspended” variable added for event type “Half End” when the match is suspended typically due to weather. 
-- “kick-off” is now an option for shot types. 
-- “Saved To Post” option for shot outcome when the goalkeeper saves the ball into a post. 
-- “Saved Off Target” option for shot outcome when the goalkeeper saves a shot that would have missed the frame. 
-- “No Touch” added as a possible attribute for the event type “Dribble” when the attacker fails to touch the ball. 
-- Additional “Outcome” options for event type “Goal Keeper” including: “Punched Out”, “Lost Out”, “Lost in Play”, “Success 
-Out”, and “Success In Play”.  
-- Shots, Freeze Frames, and other events paired to Shots have their locations specified more accurately for matches 
-collected at higher fidelity. 
- 
- 
- 
-Page 3 of 45 
-Table of Contents 
-Change Log - Updates for Data Version 1.1 1 
-StatsBomb Competition Data 5 
-StatsBomb Match Data 6 
-StatsBomb Lineup Data 8 
-StatsBomb Event Data – General Structure 8 
-StatsBomb Event Data General Attributes 9 
-StatsBomb Event Types 12 
-StatsBomb Event Specific Attributes 14 
-Event Name: 50/50. Event ID: 33. 14 
-Event Name: Bad Behaviour. Event ID: 24. 14 
-Event Name: Ball Receipt*. Event ID: 42. 15 
-Event Name: Ball Recovery. Event ID: 2. 15 
-Event Name: Block. Event ID: 6. 15 
-Event Name: Carry. Event ID: 43. 15 
-Event Name: Clearance. Event ID: 9. 16 
-Event Name: Dispossessed. Event ID: 3. 16 
-Event Name: Dribble. Event ID: 14. 16 
-Event Name: Dribbled Past. Event ID: 39. 17 
-Event Name: Duel. Event ID: 4. 17 
-Event Name: Error. Event ID: 37. 18 
-Event Name: Foul Committed. Event ID: 22. 18 
- 
- 
-Page 4 of 45 
-Event Name: Foul Won. Event ID: 21. 19 
-Event Name: Goal Keeper. Event ID: 23. 20 
-Event Name: Half End. Event ID: 34. 23 
-Event Name: Half Start. Event ID: 18. 23 
-Event Name: Injury Stoppage. Event ID: 40. 24 
-Event Name: Interception. Event ID: 10. 24 
-Event Name: Miscontrol. Event ID: 38. 25 
-Event Name: Offside. Event ID: 8. 25 
-Event Name: Own Goal Against. Event ID: 20. 25 
-Event Name: Own Goal For. Event ID: 25. 25 
-Event Name: Pass. Event ID: 30. 26 
-Event Name: Player Off. Event ID: 27. 28 
-Event Name: Player On. Event ID: 26. 28 
-Event Name: Pressure. Event ID: 17. 29 
-Event Name: Referee Ball Drop. Event ID: 41. 29 
-Event Name: Shield. Event ID: 28. 29 
-Event Name: Shot. Event ID: 16. 29 
-Event Name: Starting XI. Event ID: 35. 31 
-Event Name: Substitution. Event ID: 19. 32 
-Event Name: Tactical Shift. Event ID: 36. 32 
-Appendix 33 
-Appendix 1: Tactical Positions Guide: 33 
- 
- 
-Page 5 of 45 
-Appendix 2: Locations 34 
-Appendix 3: Shot Freeze Frame Objects 36 
-Appendix 4: Tactics Lineups Objects 37 
-Appendix 5: Cutback 38 
-Appendix 6: Cross 39 
-Appendix 7: Pressure 40 
-Appendix 8: Competition Stages 41 
-Appendix 9: Metadata History 42 
-Appendix 10: Shot Fidelity Version Change Log 42 
-Appendix 11: Data Version Change Log 43 
-Data Version 1.1 43 
-Data Version 1.0.3 44 
-Data Version 1.0.2 45 
-Data Version 1.0.1 45 
-Data Version 1.0.0 45 
-StatsBomb Competition Data 
-Competition information is included for all matches collected. The competition data contains the following information. 
-Variable Variable 
-Type 
-Variable Description Values 
-c o m p e titi o n _i d i nt e g e r T h e u n i q u e i d e n tifi e r f o r t h e c o m p e titi o n . e . g, 2 
-s e a s o n _ i d i nt e g e r T h e u n i q u e i d e n tifi e r f o r t h e s e a s o n . e . g., 1 
-c o m p e titi o n _ n a m e st ri n g T h e n a m e  o f t h e c o m p e titi o n . e . g., " P r e m i e r L e a g u e " 
- 
- 
-Page 6 of 45 
-c o m p e titi o n _ g e n d e r st ri n g T h e g e n d e r o f t h e p l a y e r s c o m p e ti n g i n t h e c o m p e titi o n . " m a l e " o r "f e m a l e " 
-c o u n t r y _ n a m e st ri n g T h e n a m e  o f t h e c o u n t r y t h e c o m p e titi o n  r el at e s t o ( o r r e gi o n f o r i n t e r n a ti o n al 
-c o m p e titi o n s) 
-e . g., " E n gl a n d " 
-s e a s o n _ n a m e st ri n g T h e n a m e  o f t h e s e a s o n . e . g., " 2 0 1 7 / 2 0 1 8 " 
-m a t c h _ u p d a t e d D a t e Ti m e T h e d a t e a n d  ti m e  at w h i c h  a m a t c h wi t h i n t hi s c o m p e titi o n  a n d  s e a s o n  w a s l a s t 
-u p d a t e d . 
-e . g., " 2 0 1 9-02-0 1 T 1 0 : 4 5 : 4 8. 3 0 4 " 
-m a t c h _ a v ail a b l e D a te Ti m e T h e d a t e a n d  ti m e  at w h i c h  a n  a v ail a b l e  m a t c h  w a s u p d a t e d , o r a m a t c h w a s m a d e  
-a v ail a b l e ( w h i c h e v e r is m o r e r e c e n t). 
-e . g., " 2 0 1 9-02-0 1 T 1 0 : 4 5 : 4 8. 3 0 4 " 
- 
-StatsBomb Match Data  
-StatsBomb records the match information for each match they collect, including competition and season information, stadium and referee 
-information, home and away team information as well as the data version the match was collected under. 
-Variable Variable Type Variable Description Values 
-match_id Integer The unique identifier for the match (required to request 
-events). 
-e.g., 2781 
-competition object (id (integer) / 
-name (string)) 
-The ID is the unique identifier for the competition and the 
-name is the name of the competition 
-e.g, 2 / "Premier League" 
-country_name String The name of the country the competition relates to (or region 
-for international competitions) 
-e.g., "England" 
-season object (id (integer) / 
-name (string)) 
-The ID is the unique identifier for the season and the name is 
-the name of the season 
-e.g., 1, "2017/2018" 
-match_date Date The date of the Match "2018-03-09" 
-kick_off Time The time of the Match "16:00:00.000" 
-stadium object (id (integer) / 
-name (string)) 
-The ID is the unique identifier for the stadium and the name is 
-the name of the stadium 
-e.g, 68 / "Stamford Bridge" 
-stadium_country String The name of the country the stadium is in. e.g., "England" 
-referee_name object (id (integer) / 
-name (string)) 
-The ID is the unique identifier for the referee and the name is 
-the name of the referee 
-e.g., 5 / "A. Marriner" 
-referee_country object (id (integer) / 
-name (string)) 
-The ID is the unique identifier for the country and the name is 
-the name of the country 
-e.g, 68/ "England" 
-home_team object (id (integer) / 
-name (string)) 
-The unique identifier integer and the name for the home team 
-in this match 
-e.g., 1 / "Arsenal" 
- 
- 
-Page 7 of 45 
-home_team_gender String Gender of the home team in the match. "male" 
-home_team_manager Data Frame Data frame of the manager for the home team with information 
-about the manager described with the variables listed below.   
-  id (integer) Unique ID number for the manager. 471 
-  name (string) Full name of the manager. Óscar Alexander Pareja Gómez 
-  nickname  (string) Nickname of the manager. Ó. Pareja 
-  dob (Date/String) Manager's date of birth 8/10/1968 
-  country (id (integer) / 
-name (string)) 
-ID/name of the manager's country of origin. 49 / "Colombia 
-home_team_group String Name of the group/conference of the team in the match. e.g., "Group A" 
-home_team_country object (id (integer) / 
-name (string)) 
-ID number and name corresponding to the origin country for 
-the home team in the match. 
-e.g, 68/ "England" 
-away_team object (id (integer) / 
-name (string)) 
-The unique identifier integer and the name for the away team 
-in this match 
-e.g., 1 / "Arsenal" 
-away_team_gender String Gender of the away team in the match. "male" 
-away_team_manager Data Frame Data frame of the manager for the away team with information 
-about the manager described with the variables listed below.   
-  id (integer) Unique ID number for the manager. 471 
-  name (string) Full name of the manager. Óscar Alexander Pareja Gómez 
-  nickname  (string) Nickname of the manager. Ó. Pareja 
-  dob (Date/String) Manager's date of birth 8/10/1968 
-  country (id (integer) / 
-name (string)) 
-ID/name of the manager's country of origin. 49 / "Colombia 
-away_team_group String Name of the group/conference of the team in the match. e.g., "Group A" 
-away_team_country object (id (integer) / 
-name (string)) 
-ID number and name corresponding to the origin country for 
-the away team in the match. 
-e.g, 68/ "England" 
-home_score Integer The final score of the home team e.g., 2 
-away_score Integer The final score of the away team e.g., 4 
-match_status String The current status of collection for this match. Only “available” 
-matches are present in the Open Data repository. 
-"available", "deleted", "scheduled" 
-match_week Integer Number corresponding to the weeks into the competition this 
-match is. 
-e.g., 25 
-competition_stage object (id (integer) / 
-name (string)) 
-id/name pair of the phase of the competition this match is in. e.g., 1 / "Regular Season" 
-last_updated DateTime The date and time at which this match information was last 
-updated. 
-e.g., "2018-08-08T15:44:27.375199" 
-metadata 
- 
-Object 
- 
-Contains a list of tags detailing the versions of various parts of 
-the event data for this match. 
-All child attributes are optional (and this object will 
-be empty for games not yet “Available”). 
- 
- 
-Page 8 of 45 
-data_version String The version number for the method in which the data was 
-collected. 
-"1.0.2", "1.0.3", "1.1.0" 
-StatsBomb Lineup Data  
-StatsBomb records the lineup information for the players, managers and referees involved with each match. The following variables are 
-collected in the lineups of each match. 
-Variable Variable Type Variable Description 
-t e a m _ i d In t e g e r T h e u n i q u e i d e n tifi e r f o r e a c h t e a m . 
-t e a m _ n a m e In t e g e r T h e n a m e  o f t h e t e a m . 
-li n e u p A r r a y A n  a rr a y o f pl a y e r s o n t h e t e a m  s h e e t f o r t hi s t e a m . S e e b el o w f o r t h e d et ail s o f t h e li n e u p  a rr a y. 
- 
-The lineup array is a nested data frame inside of the lineup object, the lineup array contains the following information for each team. 
-Variable Variable Type Variable Description 
-p l a y e r _i d In t e g e r T h e u n i q u e i d e n tifi e r f o r t hi s pl a y e r. 
-p l a y e r _ n a m e S t ri n g T h e n a m e  o f t h e p l a y e r. 
-p l a y e r _ ni c k n a m e S t ri n g T h e ni c k n a m e  o f t h e pl a y e r o n t h e t e a m . 
-je rs e y _ n u m b e r In t e g e r T h e n u m b e r o n t h e pl a y e r’s s hi rt f o r t hi s m a t c h . 
-c o u n t r y object (id (integer) / name (string)) T h e p l a y e r’s n a ti o n alit y, a c o u n t r y o b j e c t wit h u n i q u e c o u n t r y I D a n d  c o u n t r y n a m e . 
-StatsBomb Event Data – General Structure  
-StatsBomb Event Data comprises of general attributes and event specific attributes. General attributes defined in Section 1. are 
-recorded for most event types, depending only on applicability. The list of event types is defined in Section 2. Event specific 
-attributes can be found in Section 3 and these attributes help describe the event type in more detail as well as describe the 
- 
- 
-Page 9 of 45 
-outcome of the event type. The remainder of this document describes an exhaustive list of variables, descriptions, and potential 
-values. 
-StatsBomb Event Data General Attributes  
-The general attributes are the most common variables for each observation in StatsBomb event data. These attributes are recorded 
-depending on their applicability to the event type described in the next section. 
-Variable Variable Type Variable Description Values Value Description 
+Page 1 of 45
+StatsBomb Data Specification v1.1
+[StatsBomb Data Specification - last updated 13 May 2019]
+Change Log - Updates for Data Version 1.1
+Competition Data Updates
+- “Gender” added for all competitions.
+Match Data Updates
+- Team section now includes variables for: “Gender”, “Group”, “Country” and “Managers”
+- “Match Week” added as an integer denoting the match week in the competition.
+- “Competition Stage” added to reference the phase of the competition this particular match is in.
+- “Stadium” updated from a name to an object with a name and corresponding country and id.
+- “Referee” updated from a name to an object with a name and corresponding country and id.
+- The data-version object is no longer displayed as a property of the match.
+- Each match has a metadata object containing information about the structure/versions of various data attributes in the match.
+This includes the data version. Note: the metadata tag can be empty for any match not in an “available” status. For matches
+that are available the metadata will contain a data version and may contain other attributes.
+Lineups Data Updates
+- “Nickname” added for all players in the lineup.
+
+
+Page 2 of 45
+Event Data Updates
+- “Carry” added as an event type. carry.end_location added as an additional variable to describe the ending location of a
+carry event
+- “counterpress”: an attribute on various defensive events, including: pressure, dribbled past, 50-50, duel, block,
+interception, and foul committed (not offensive). These are pressing actions within 5 seconds of an open play turnover.
+- “under_pressure”: the definition has been expanded to apply in more situations. So, events which are naturally performed
+under pressure like duels, dribbles etc, all pick up the attribute, even in the absence of an actual pressure event. Carries
+can be pressured not just by pressure events, but other defensive events (defined in change 2.) that happen during or at
+the end of the carry.
+- Enhancements to possession chain and counterattack logic.
+-  “off_camera” variable no longer only shows when TRUE, but is a boolean on every event.
+- “out” boolean variable added for when the outcome of the event is a ball out of bounds.
+- “body type” variable added for clearances.
+- Additional body types including “No Touch” and “Drop Kick”.
+- “technique” variable added for passes, including: “Inswinging”, “Outswinging”, “Straight” and “Through Ball”.
+- “through_ball” variable for passes is now deprecated.
+- “late-video-start” variable added for event type “Half Start” when the broadcast video starts after the kick off.
+- “early-video-end” variable added for event type “Half End” when the broadcast video ends before the final whistle.
+- “match-suspended” variable added for event type “Half End” when the match is suspended typically due to weather.
+- “kick-off” is now an option for shot types.
+- “Saved To Post” option for shot outcome when the goalkeeper saves the ball into a post.
+- “Saved Off Target” option for shot outcome when the goalkeeper saves a shot that would have missed the frame.
+- “No Touch” added as a possible attribute for the event type “Dribble” when the attacker fails to touch the ball.
+- Additional “Outcome” options for event type “Goal Keeper” including: “Punched Out”, “Lost Out”, “Lost in Play”, “Success
+Out”, and “Success In Play”.
+- Shots, Freeze Frames, and other events paired to Shots have their locations specified more accurately for matches
+collected at higher fidelity.
+
+
+
+Page 3 of 45
+Table of Contents
+Change Log - Updates for Data Version 1.1 1
+StatsBomb Competition Data 5
+StatsBomb Match Data 6
+StatsBomb Lineup Data 8
+StatsBomb Event Data – General Structure 8
+StatsBomb Event Data General Attributes 9
+StatsBomb Event Types 12
+StatsBomb Event Specific Attributes 14
+Event Name: 50/50. Event ID: 33. 14
+Event Name: Bad Behaviour. Event ID: 24. 14
+Event Name: Ball Receipt*. Event ID: 42. 15
+Event Name: Ball Recovery. Event ID: 2. 15
+Event Name: Block. Event ID: 6. 15
+Event Name: Carry. Event ID: 43. 15
+Event Name: Clearance. Event ID: 9. 16
+Event Name: Dispossessed. Event ID: 3. 16
+Event Name: Dribble. Event ID: 14. 16
+Event Name: Dribbled Past. Event ID: 39. 17
+Event Name: Duel. Event ID: 4. 17
+Event Name: Error. Event ID: 37. 18
+Event Name: Foul Committed. Event ID: 22. 18
+
+
+Page 4 of 45
+Event Name: Foul Won. Event ID: 21. 19
+Event Name: Goal Keeper. Event ID: 23. 20
+Event Name: Half End. Event ID: 34. 23
+Event Name: Half Start. Event ID: 18. 23
+Event Name: Injury Stoppage. Event ID: 40. 24
+Event Name: Interception. Event ID: 10. 24
+Event Name: Miscontrol. Event ID: 38. 25
+Event Name: Offside. Event ID: 8. 25
+Event Name: Own Goal Against. Event ID: 20. 25
+Event Name: Own Goal For. Event ID: 25. 25
+Event Name: Pass. Event ID: 30. 26
+Event Name: Player Off. Event ID: 27. 28
+Event Name: Player On. Event ID: 26. 28
+Event Name: Pressure. Event ID: 17. 29
+Event Name: Referee Ball Drop. Event ID: 41. 29
+Event Name: Shield. Event ID: 28. 29
+Event Name: Shot. Event ID: 16. 29
+Event Name: Starting XI. Event ID: 35. 31
+Event Name: Substitution. Event ID: 19. 32
+Event Name: Tactical Shift. Event ID: 36. 32
+Appendix 33
+Appendix 1: Tactical Positions Guide: 33
+
+
+Page 5 of 45
+Appendix 2: Locations 34
+Appendix 3: Shot Freeze Frame Objects 36
+Appendix 4: Tactics Lineups Objects 37
+Appendix 5: Cutback 38
+Appendix 6: Cross 39
+Appendix 7: Pressure 40
+Appendix 8: Competition Stages 41
+Appendix 9: Metadata History 42
+Appendix 10: Shot Fidelity Version Change Log 42
+Appendix 11: Data Version Change Log 43
+Data Version 1.1 43
+Data Version 1.0.3 44
+Data Version 1.0.2 45
+Data Version 1.0.1 45
+Data Version 1.0.0 45
+StatsBomb Competition Data
+Competition information is included for all matches collected. The competition data contains the following information.
+Variable Variable
+Type
+Variable Description Values
+c o m p e titi o n _i d i nt e g e r T h e u n i q u e i d e n tifi e r f o r t h e c o m p e titi o n . e . g, 2
+s e a s o n _ i d i nt e g e r T h e u n i q u e i d e n tifi e r f o r t h e s e a s o n . e . g., 1
+c o m p e titi o n _ n a m e st ri n g T h e n a m e  o f t h e c o m p e titi o n . e . g., " P r e m i e r L e a g u e "
+
+
+Page 6 of 45
+c o m p e titi o n _ g e n d e r st ri n g T h e g e n d e r o f t h e p l a y e r s c o m p e ti n g i n t h e c o m p e titi o n . " m a l e " o r "f e m a l e "
+c o u n t r y _ n a m e st ri n g T h e n a m e  o f t h e c o u n t r y t h e c o m p e titi o n  r el at e s t o ( o r r e gi o n f o r i n t e r n a ti o n al
+c o m p e titi o n s)
+e . g., " E n gl a n d "
+s e a s o n _ n a m e st ri n g T h e n a m e  o f t h e s e a s o n . e . g., " 2 0 1 7 / 2 0 1 8 "
+m a t c h _ u p d a t e d D a t e Ti m e T h e d a t e a n d  ti m e  at w h i c h  a m a t c h wi t h i n t hi s c o m p e titi o n  a n d  s e a s o n  w a s l a s t
+u p d a t e d .
+e . g., " 2 0 1 9-02-0 1 T 1 0 : 4 5 : 4 8. 3 0 4 "
+m a t c h _ a v ail a b l e D a te Ti m e T h e d a t e a n d  ti m e  at w h i c h  a n  a v ail a b l e  m a t c h  w a s u p d a t e d , o r a m a t c h w a s m a d e
+a v ail a b l e ( w h i c h e v e r is m o r e r e c e n t).
+e . g., " 2 0 1 9-02-0 1 T 1 0 : 4 5 : 4 8. 3 0 4 "
+
+StatsBomb Match Data
+StatsBomb records the match information for each match they collect, including competition and season information, stadium and referee
+information, home and away team information as well as the data version the match was collected under.
+Variable Variable Type Variable Description Values
+match_id Integer The unique identifier for the match (required to request
+events).
+e.g., 2781
+competition object (id (integer) /
+name (string))
+The ID is the unique identifier for the competition and the
+name is the name of the competition
+e.g, 2 / "Premier League"
+country_name String The name of the country the competition relates to (or region
+for international competitions)
+e.g., "England"
+season object (id (integer) /
+name (string))
+The ID is the unique identifier for the season and the name is
+the name of the season
+e.g., 1, "2017/2018"
+match_date Date The date of the Match "2018-03-09"
+kick_off Time The time of the Match "16:00:00.000"
+stadium object (id (integer) /
+name (string))
+The ID is the unique identifier for the stadium and the name is
+the name of the stadium
+e.g, 68 / "Stamford Bridge"
+stadium_country String The name of the country the stadium is in. e.g., "England"
+referee_name object (id (integer) /
+name (string))
+The ID is the unique identifier for the referee and the name is
+the name of the referee
+e.g., 5 / "A. Marriner"
+referee_country object (id (integer) /
+name (string))
+The ID is the unique identifier for the country and the name is
+the name of the country
+e.g, 68/ "England"
+home_team object (id (integer) /
+name (string))
+The unique identifier integer and the name for the home team
+in this match
+e.g., 1 / "Arsenal"
+
+
+Page 7 of 45
+home_team_gender String Gender of the home team in the match. "male"
+home_team_manager Data Frame Data frame of the manager for the home team with information
+about the manager described with the variables listed below.
+  id (integer) Unique ID number for the manager. 471
+  name (string) Full name of the manager. Óscar Alexander Pareja Gómez
+  nickname  (string) Nickname of the manager. Ó. Pareja
+  dob (Date/String) Manager's date of birth 8/10/1968
+  country (id (integer) /
+name (string))
+ID/name of the manager's country of origin. 49 / "Colombia
+home_team_group String Name of the group/conference of the team in the match. e.g., "Group A"
+home_team_country object (id (integer) /
+name (string))
+ID number and name corresponding to the origin country for
+the home team in the match.
+e.g, 68/ "England"
+away_team object (id (integer) /
+name (string))
+The unique identifier integer and the name for the away team
+in this match
+e.g., 1 / "Arsenal"
+away_team_gender String Gender of the away team in the match. "male"
+away_team_manager Data Frame Data frame of the manager for the away team with information
+about the manager described with the variables listed below.
+  id (integer) Unique ID number for the manager. 471
+  name (string) Full name of the manager. Óscar Alexander Pareja Gómez
+  nickname  (string) Nickname of the manager. Ó. Pareja
+  dob (Date/String) Manager's date of birth 8/10/1968
+  country (id (integer) /
+name (string))
+ID/name of the manager's country of origin. 49 / "Colombia
+away_team_group String Name of the group/conference of the team in the match. e.g., "Group A"
+away_team_country object (id (integer) /
+name (string))
+ID number and name corresponding to the origin country for
+the away team in the match.
+e.g, 68/ "England"
+home_score Integer The final score of the home team e.g., 2
+away_score Integer The final score of the away team e.g., 4
+match_status String The current status of collection for this match. Only “available”
+matches are present in the Open Data repository.
+"available", "deleted", "scheduled"
+match_week Integer Number corresponding to the weeks into the competition this
+match is.
+e.g., 25
+competition_stage object (id (integer) /
+name (string))
+id/name pair of the phase of the competition this match is in. e.g., 1 / "Regular Season"
+last_updated DateTime The date and time at which this match information was last
+updated.
+e.g., "2018-08-08T15:44:27.375199"
+metadata
+
+Object
+
+Contains a list of tags detailing the versions of various parts of
+the event data for this match.
+All child attributes are optional (and this object will
+be empty for games not yet “Available”).
+
+
+Page 8 of 45
+data_version String The version number for the method in which the data was
+collected.
+"1.0.2", "1.0.3", "1.1.0"
+StatsBomb Lineup Data
+StatsBomb records the lineup information for the players, managers and referees involved with each match. The following variables are
+collected in the lineups of each match.
+Variable Variable Type Variable Description
+t e a m _ i d In t e g e r T h e u n i q u e i d e n tifi e r f o r e a c h t e a m .
+t e a m _ n a m e In t e g e r T h e n a m e  o f t h e t e a m .
+li n e u p A r r a y A n  a rr a y o f pl a y e r s o n t h e t e a m  s h e e t f o r t hi s t e a m . S e e b el o w f o r t h e d et ail s o f t h e li n e u p  a rr a y.
+
+The lineup array is a nested data frame inside of the lineup object, the lineup array contains the following information for each team.
+Variable Variable Type Variable Description
+p l a y e r _i d In t e g e r T h e u n i q u e i d e n tifi e r f o r t hi s pl a y e r.
+p l a y e r _ n a m e S t ri n g T h e n a m e  o f t h e p l a y e r.
+p l a y e r _ ni c k n a m e S t ri n g T h e ni c k n a m e  o f t h e pl a y e r o n t h e t e a m .
+je rs e y _ n u m b e r In t e g e r T h e n u m b e r o n t h e pl a y e r’s s hi rt f o r t hi s m a t c h .
+c o u n t r y object (id (integer) / name (string)) T h e p l a y e r’s n a ti o n alit y, a c o u n t r y o b j e c t wit h u n i q u e c o u n t r y I D a n d  c o u n t r y n a m e .
+StatsBomb Event Data – General Structure
+StatsBomb Event Data comprises of general attributes and event specific attributes. General attributes defined in Section 1. are
+recorded for most event types, depending only on applicability. The list of event types is defined in Section 2. Event specific
+attributes can be found in Section 3 and these attributes help describe the event type in more detail as well as describe the
+
+
+Page 9 of 45
+outcome of the event type. The remainder of this document describes an exhaustive list of variables, descriptions, and potential
+values.
+StatsBomb Event Data General Attributes
+The general attributes are the most common variables for each observation in StatsBomb event data. These attributes are recorded
+depending on their applicability to the event type described in the next section.
+Variable Variable Type Variable Description Values Value Description
 id uuid The unique identifier for each event e.g. “0052d1b5-e2b0-4629-
-bbea-c18c884ab103” 
-  
-index integer Sequence notation for the ordering of 
-events within each match. 
-e.g. 1-# of events   
-period integer The part of the match the timestamp 
-relates to. 
-1 1st Half 
-2 2nd Half 
-3 3rd Period 
-4 4th Period 
-5 Penalty Shootout 
-timestamp timestamp Time in the match the event takes 
-place, recorded to the millisecond. 
-e.g., 00:00:06.293   
-minute integer The minutes on the clock at the time 
+bbea-c18c884ab103”
+
+index integer Sequence notation for the ordering of
+events within each match.
+e.g. 1-# of events
+period integer The part of the match the timestamp
+relates to.
+1 1st Half
+2 2nd Half
+3 3rd Period
+4 4th Period
+5 Penalty Shootout
+timestamp timestamp Time in the match the event takes
+place, recorded to the millisecond.
+e.g., 00:00:06.293
+minute integer The minutes on the clock at the time
 of this event. Resets to 45 at half-
-time, 90 at the start of extra time etc. 
-e.g., 40   
-second integer The second part of the timestamp e.g., 15   
-type  object (id (integer) / 
-name (text)) 
-The type of event the corresponds to.  See the second on Event 
-attributes for a thorough list. 
-  
-possession integer Indicates the current unique 
-possession in the game. A single 
-possession denotes a period of play 
-in which the ball is in play and a 
-single team is in control of the ball. 
-e.g., 1 - # of unique 
-possessions 
- New possession are triggered after a team 
-demonstrate they've established control of the 
-ball. A new possession can begin even if the 
-same team has possession of the ball for 
-example, a blocked pass goes out for a throw in 
-for the same team, this would be a new 
-possession for the same attacking team. 
- 
- 
-Page 10 of 45 
-possession_team object (id (integer) / 
-name (text)) 
-The ID and name of the team that 
-started this possession in control of 
-the ball. Note that this will appear 
-even on opposition events like 
-tackles attempted during the 
-possession. 
-e.g., 1 / "Arsenal"   
-play_pattern object (id (integer) / 
-name (text)) 
-Id /name of the play pattern relevant 
-to this event. 
-1 / Regular Play The event was not part of any of the following 
-play_patterns 
-2 / “From Corner” The event was part of the passage of play 
-following a corner. 
-3 / “From Free Kick” The event was part of the passage of play 
-following a free-kick. 
-4 / “From Throw In” The event was part of the passage of play 
-following a throw-in. 
-5 / “Other”   
-6 / “From Counter” The event was part of a counter attack: 
-● The possession started with an open play 
-turnover outside the counter-attacking 
-team’s final third. 
-● The possession was at least 75% direct 
-towards goal (as measured by our 
-possession chain metrics) 
-● The counterattack travelled at least 18 
-yards towards goal. 
-● This definition is not part of collection and is 
-derived from the logic above. 
-7 / “From Goal Kick” The event was part of the passage of play 
-following a goal kick. 
-8 / “From Keeper” The event was part of the passage of play 
-following a keeper distribution. 
- 
- 
-Page 11 of 45 
-9 / “From Kick Off” The event was part of the passage of play 
-following the kick off. 
-team object (id (integer) / 
-name (text)) 
-Id / Name of the team this event 
-relates to. Team object will only 
-display if the event is tied to a 
-specific team. 
-e.g., 1 / “Arsenal”   
-player object (id (integer) / 
-name (text)) 
-Id / Name of the player this event 
-relates to (player object will only 
-display if the event is tied to a 
-specific player). 
-e.g., 5079 / "Zlatan 
-Ibrahimovic" 
-  
-position object (id (integer) / 
-name (text)) 
-Id / Name of the position the player 
-was in at the time of this event.. 
-e.g., 1 / “Goal Keeper” See Appendix 1 below for more information. 
-location array [x,y] Array containing two integer values. 
-These are the x and y coordinates of 
-the event (this only displays if the 
-event has pitch coordinates). 
-e.g., the center of the field is 
-(60,40) 
-See Appendix 2 below for more information. 
-duration decimal If relevant, the length in seconds the 
-event lasted. 
-Time in seconds.   
-under_pressure boolean The action was performed while 
-being pressured by an opponent. 
-TRUE See Appendix 7 for more information on 
-pressure. 
-off_camera boolean The event occurred while the camera 
-was off. 
-FALSE, TRUE Thus, data accuracy is not guaranteed and 
-information is logically inferred by collectors. 
-out boolean Added if the outcome of the event is 
-the ball going out of bounds. 
-TRUE   
-related_events array[uuid,uuid,uuid,...] A comma separated list of the Ids of 
-related events. For example, a shot 
-might be related to the Goalkeeper 
-event, and a Block Event. The 
-corresponding events will have the Id 
-of the shot in their related_events 
-column. 
+time, 90 at the start of extra time etc.
+e.g., 40
+second integer The second part of the timestamp e.g., 15
+type  object (id (integer) /
+name (text))
+The type of event the corresponds to.  See the second on Event
+attributes for a thorough list.
+
+possession integer Indicates the current unique
+possession in the game. A single
+possession denotes a period of play
+in which the ball is in play and a
+single team is in control of the ball.
+e.g., 1 - # of unique
+possessions
+ New possession are triggered after a team
+demonstrate they've established control of the
+ball. A new possession can begin even if the
+same team has possession of the ball for
+example, a blocked pass goes out for a throw in
+for the same team, this would be a new
+possession for the same attacking team.
+
+
+Page 10 of 45
+possession_team object (id (integer) /
+name (text))
+The ID and name of the team that
+started this possession in control of
+the ball. Note that this will appear
+even on opposition events like
+tackles attempted during the
+possession.
+e.g., 1 / "Arsenal"
+play_pattern object (id (integer) /
+name (text))
+Id /name of the play pattern relevant
+to this event.
+1 / Regular Play The event was not part of any of the following
+play_patterns
+2 / “From Corner” The event was part of the passage of play
+following a corner.
+3 / “From Free Kick” The event was part of the passage of play
+following a free-kick.
+4 / “From Throw In” The event was part of the passage of play
+following a throw-in.
+5 / “Other”
+6 / “From Counter” The event was part of a counter attack:
+● The possession started with an open play
+turnover outside the counter-attacking
+team’s final third.
+● The possession was at least 75% direct
+towards goal (as measured by our
+possession chain metrics)
+● The counterattack travelled at least 18
+yards towards goal.
+● This definition is not part of collection and is
+derived from the logic above.
+7 / “From Goal Kick” The event was part of the passage of play
+following a goal kick.
+8 / “From Keeper” The event was part of the passage of play
+following a keeper distribution.
+
+
+Page 11 of 45
+9 / “From Kick Off” The event was part of the passage of play
+following the kick off.
+team object (id (integer) /
+name (text))
+Id / Name of the team this event
+relates to. Team object will only
+display if the event is tied to a
+specific team.
+e.g., 1 / “Arsenal”
+player object (id (integer) /
+name (text))
+Id / Name of the player this event
+relates to (player object will only
+display if the event is tied to a
+specific player).
+e.g., 5079 / "Zlatan
+Ibrahimovic"
+
+position object (id (integer) /
+name (text))
+Id / Name of the position the player
+was in at the time of this event..
+e.g., 1 / “Goal Keeper” See Appendix 1 below for more information.
+location array [x,y] Array containing two integer values.
+These are the x and y coordinates of
+the event (this only displays if the
+event has pitch coordinates).
+e.g., the center of the field is
+(60,40)
+See Appendix 2 below for more information.
+duration decimal If relevant, the length in seconds the
+event lasted.
+Time in seconds.
+under_pressure boolean The action was performed while
+being pressured by an opponent.
+TRUE See Appendix 7 for more information on
+pressure.
+off_camera boolean The event occurred while the camera
+was off.
+FALSE, TRUE Thus, data accuracy is not guaranteed and
+information is logically inferred by collectors.
+out boolean Added if the outcome of the event is
+the ball going out of bounds.
+TRUE
+related_events array[uuid,uuid,uuid,...] A comma separated list of the Ids of
+related events. For example, a shot
+might be related to the Goalkeeper
+event, and a Block Event. The
+corresponding events will have the Id
+of the shot in their related_events
+column.
 e.g., "2b7d06c7-9bcb-4bbf-
-a6e5-08e54e1303ac" or 
+a6e5-08e54e1303ac" or
 ("2b7d06c7-9bcb-4bbf-a6e5-
 08e54e1303ac", "03b001b6-
 bf44-4691-ae47-
-e279f5a9b38c") 
-  
- 
- 
-Page 12 of 45 
-StatsBomb Event Types 
-Each observation in StatsBomb event data has a “Type”. This type is the type of observation, more commonly known as the event type. The 
-following list of event types compose all of StatsBomb data. Their description and their prominence in the data is presented below. 
-Event Type Event 
-Type ID Event Description 
-Average Percent 
-of Events 
-50/50 33 2 players challenging to recover a loose ball. 0.05% 
-Bad Behaviour 24 When a player receives a card due to an infringement outside of play.   0.02% 
-Ball Receipt* 42 The receipt or intended receipt of a pass. 25.84% 
-Ball Recovery 2 An attempt to recover a loose ball 2.95% 
-Block 6 Blocking the ball by standing in its path. 1.08% 
-Camera off: Deprecated 
-in version 1.03 
-29 Video broadcast leaves gameplay and show a replay or video is cut.  
-Camera On: Deprecated 
-in version 1.03 
-5 Signals the stop of the camera to capture gameplay for a replay/video cut. 
- 
-Carry 43 A player controls the ball at their feet while moving or standing still. 23.11% 
-Clearance 9 Action by a defending player to clear the danger without an intention to deliver it to a teammate. 0.92% 
-Dispossessed 3 Player loses ball to an opponent as a result of being tackled by a defender without attempting a dribble 0.68% 
-Dribble 14 An attempt by a player to beat an opponent  0.94% 
-Dribbled Past 39 Player is dribbled past by an opponent. 0.62% 
-Duel 4 A duel is an 50-50 contest between two players of opposing sides in the match. 1.37% 
-Error 37 When a player is judged to make an on-the-ball mistake that leads to a shot on goal. 0.02% 
-Foul Committed 22 Any infringement that is penalised as foul play by a referee. Offside are not tagged as a foul committed. 0.84% 
-Foul Won 21 A foul won is defined as where a player wins a free-kick or penalty for their team after being fouled by an 
-opposing player. 0.79% 
-Goal Keeper 23 Actions that can be done by the goalkeeper. 0.95% 
-Half End 34 Signals the referee whistle to finish a match part. 0.12% 
-Half Start 18 Signals referee whistle to start a match period. 0.12% 
-Injury Stoppage 40 A stop in play due to an injury. 0.1% 
-Interception 10 Preventing an opponent's pass from reaching their teammates by moving to the passing lane/reacting to 
-intercept it. 0.7% 
-Miscontrol 38 Player loses ball due to bad touch 0.79% 
- 
- 
-Page 13 of 45 
-Offside 8 Offside infringement. Cases resulting from a shot or clearance (non-pass). For passes resulting in an offside 
-check pass outcomes section 0.02% 
-Own Goal Against 20 An own goal scored against the team 0% 
-Own Goal For 25 An own goal scored for the team. 0% 
-Pass 30 An intended kick from one player to his teammate 28.71% 
-Player Off 27 A player goes/ is carried out of the pitch without a substitution. 0.03% 
-Player On 26 A player returns to the pitch after a Player Off event. 0.03% 
-Pressure 17 Field Position and player 1 must always have a value (Field position shows the spot where the player 
-started to apply pressure & the duration of the event shows the duration that he kept applying pressure) 8.1% 
-Referee Ball-Drop 41 Referee drops the ball to continue the game after an injury stoppage. 0.02% 
-Shield 28 Player shields ball going out of bounds to prevent opponent from keeping it in play. 0.03% 
-Shot 16 An attempt to score a goal, made with any (legal) part of the body. 0.79% 
-Starting XI 35 Indicates the players in the starting 11, their position and the team’s formation. 0.06% 
-Substitution 19  A player is substituted off the field for various reasons. 0.17% 
-Tactical Shift 36 Indicates a tactical shift made by the team, shows the players’ new positions and the team’s new 
-formation. 0.05% 
- 
-  
- 
- 
-Page 14 of 45 
-StatsBomb Event Specific Attributes 
-Additional attributes are recorded depending on the event type. Below is a list of all the event types (in alphabetical order) with 
-the additional attributes for that event type. Attribute values listed are all possible values for that attribute, or when the list of 
-possible values is exorbitant an example of an attribute value is given. Some attributes are pairs of values representing an object, 
-for example the outcome “Card” has a pair of recordings for the unique id number and the name of the Card given. The 
-“Constraints” for that attribute defines when those attributes are present. 
-Event Name: 50/50. Event ID: 33. 
-50/50s are usually recorded for each competitor in the 50/50 event and these two events are paired by a related_event.  
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-Outcome object (id (integer) / name 
-(text)) 
-Outcome of the 50/50 Event. 108 / “Won” The player wins the 50/50 contest 
-and regain possession 
-Recorded for all 50/50 
-events. 
-109 / “Lost” The player loses the 50/50 contest 
-147 / “Success To 
-Team” 
-The player wins the 50/50 contest 
-and knocks the ball for their team’s 
-possession 
-148 / “Success To 
-Opposition” 
-The player wins the 50/50 contest but 
-knocks the ball for their opponent’s 
-possession 
-counterpress Boolean Pressing actions within 5 
-seconds of an open play 
-turnover. 
-TRUE  Recorded only when true. 
-Event Name: Bad Behaviour. Event ID: 24. 
-Bad Behaviour events are recorded when a referee needs to discipline a player aside from committing fouls.  
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-Card object (id (integer) / 
-name (text)) 
-Id / Name for the attribute option specifying the 
-Card. 
-65 / “Yellow Card” A yellow card was issued to this 
-player. 
-Not recorded for all Bad 
-Behaviour events. 
-66 / “Second 
-Yellow" 
-A second yellow card was 
-issued to this player. 
-  
-67 / “Red Card” A straight red card was issued 
-to this player. 
-  
- 
- 
-Page 15 of 45 
-Event Name: Ball Receipt*. Event ID: 42. 
-Ball Receipt* events describe the location or intended location of a pass and who that recipient was. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-outcome object (id (integer) / name 
-(text)) 
-Outcome of the ball receipt 
-Event. 
-"Incomplete"   Recorded only for 
-incomplete Ball Receipt* 
-events. 
-Event Name: Ball Recovery. Event ID: 2. 
-Ball Recovery events typically describe a loose ball being recovered following a miscontrol or a clearance. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-offensive boolean Recorded if the ball recovery 
-event was by the team 
-originally in possession of 
-the ball 
-TRUE   Recorded only when true. 
-recovery_failure boolean Recorded if the ball recovery 
-attempt failed 
-TRUE   Recorded only when true. 
-Event Name: Block. Event ID: 6. 
-Block events typically follow a pass or a shot. They can also be offensive.  
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-counterpress Boolean Pressing actions within 5 
-seconds of an open play 
-turnover. 
-TRUE  Recorded only when true. 
-deflection boolean Recorded if the block was 
-only a deflection 
-TRUE   Recorded only when true. 
-offensive boolean Recorded if the block was by 
-the offensive team 
-TRUE   Recorded only when true. 
-save_block boolean Recorded if the block 
-definitely prevented an on 
-target shot 
-TRUE   Recorded only when true. 
-Event Name: Carry. Event ID: 43. 
-Carry events are typically by the attacking team and describe a player possessing the ball at their feet, either moving with the ball or standing 
-still. 
- 
- 
-Page 16 of 45 
- 
- 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-end_location Array [x, y] Recorded for all carry events, 
-describes where the carry 
-ends. 
-(100, 40)  End location of the carry. Recorded for all carries. 
-Event Name: Clearance. Event ID: 9. 
-Clearance events are typically by the defending team and describe a ball getting cleared away without any intended recipient of the ball as a 
-pass has. 
- 
- 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-aerial_won boolean Recorded if the clearance was 
-accomplished by winning an 
-aerial 
-TRUE   Recorded only when true. 
-body_part object (id (integer) / name 
-(text)) 
-ID / Name of the body part 
-used to shoot. 
-37 / “Head” Shot attempted with head Recorded for every event in 
-Data Version 1.1.0 and 
-newer. If aerial_won is TRUE 
-then the body part must be 
-“Head” 
-38 / “Left Foot” Shot attempted with the left foot 
-70 / “Other” Other body parts (i.e knee, chest, etc) 
-40 / “Right Foot” Shot attempted with right foot 
-Event Name: Dispossessed. Event ID: 3. 
-Dispossessed events describe an attacking player who had possession of the ball and where and when they lose possession of it. 
-Dispossession events are almost always paired to a Duel or a Goalkeeper Smother via a related event. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-No additional attributes 
-Event Name: Dribble. Event ID: 14. 
-Dribble events describe when an attacker with the ball takes on another attacker. Dribble events do not describe every time a player is 
-dribbling the ball, this will be added in an upgrade of StatsBomb data when we derive “Carry” events. Dribble events can be used to see 
-successful/unsuccessful dribbles and when they are unsuccessful, they describe where the ball was lost. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
- 
- 
-Page 17 of 45 
-outcome object (id (integer) / name 
-(text)) 
-Outcome of the dribble event "Complete" Attacker successfully dribbled past 
-the defender. 
-Recorded for all dribble 
-events. 
-"Incomplete" Attacker failed to dribble past the 
-defender 
-nutmeg boolean Added when the dribble went 
-through an opposing players 
-legs. 
-TRUE   Recorded only when true. 
-overrun boolean Added when a dribble goes 
-past the original defender into 
-the possession of another 
-player 
-TRUE   Recorded only when true. 
-No Touch boolean If the player attempted to do 
-the dribble by passing the ball 
-past the opponent instead of 
-receiving it. 
-TRUE   Recorded only when true. 
-Event Name: Dribbled Past. Event ID: 39. 
-Dribbled Past events describe the player who gets dribbled past when a dribbler takes them on. Almost every dribbled past event has a 
-related id for a dribble event, but not every dribble event has a related dribbled past event (Incomplete dribbles). Dribbled Past events can 
-also imply defensive pressure. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-counterpress Boolean Pressing actions within 5 
-seconds of an open play 
-turnover. 
-TRUE  Recorded only when true. 
-Event Name: Duel. Event ID: 4. 
-Duel events describe when a defender challenges an attacker in some way. It can be to win a tackle or challenge an aerial ball. Duel of type 
-Aerial Lost are paired with clearance.aerial_won, miscontrol.aerial_won, shot (usually of body part head). 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-counterpress Boolean Pressing actions within 5 
-seconds of an open play 
-turnover. 
-TRUE  Recorded only when true. 
-type object (id (integer) / name 
-(text)) 
-The type of the duel event. 10 / “Aerial Lost” Challenging for an aerial duel and 
-not winning the ball 
-Recorded for all duel events. 
-11 / “Tackle” Dispossessing opposing team player  
- 
- 
-Page 18 of 45 
-outcome object (id (integer) / name 
-(text)) 
-The outcome of the duel 
-event. 
-4 / “Won” A tackle that ended up in possession 
-of the tackler 
-Recorded only for Duel 
-Events with a type of 
-"Tackle" 13 / “Lost In Play” A tackle that knocked the ball to an 
-opponent 
-14 / “Lost Out” A tackle that knocked the ball out of 
-bounds in favor of opposition 
-15 / “Success”   
-16 / “Success In Play” A tackle that knocked the ball to a 
-teammate 
-17 / “Success Out” A tackle that knocked the ball out of 
-bounds in favor of tackler’s team 
-Event Name: Error. Event ID: 37. 
-Errors are rarely recorded, but they represent obviously unintended errors by players. Most commonly follows a failed clearance or ball 
-recovery. The following event is often a ball recovery, shot or goalkeeper event. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-No additional attributes 
-Event Name: Foul Committed. Event ID: 22. 
-Foul Committed events describe who committed a foul resulting in a free kick or penalty kick. They are recorded at the location and time of 
-the foul regardless of whether or not advantage was played. For fouls that have advantage played and then called back, the location can be 
-slightly different, so the foul committed and foul won are recorded at the original time and then recorded again if the advantage gets called 
-back. One can actually see how long advantage gets played out if they want to do that. 
-•           Not every foul committed event has a foul won related events. 
-•           There are more foul committed events than foul won events. 
-•           The advantage foul committed are never related to the non-advantage foul committed. 
-•           Therefore, we have to combine them into one event based on time or player etc. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-advantage boolean Added when the referee calls 
-advantage and allows play to 
-continue. 
-TRUE   Recorded only when true. 
-counterpress Boolean Pressing actions within 5 
-seconds of an open play 
-turnover. 
-TRUE  Recorded only when true. 
- 
- 
-Page 19 of 45 
-offensive boolean Added if the foul was 
-committed while in 
-possession of the ball. 
-TRUE   Recorded only when true. 
-penalty boolean Added if a penalty was 
-awarded as a result of the foul 
-committed. 
-TRUE   Recorded only when true. 
-card object (id (integer) / name 
-(text)) 
-Id / Name for the card 
-awarded to the player 
-committing the foul 
-5 / “Yellow Card”   Recorded only when a card is 
-awarded. 6 / “Second Yellow" 
-7 / “Red Card” 
-type object (id (integer) / name 
-(text)) 
-Id / Name for the type of foul 
-committed 
-19 / "6 seconds" Foul called due to 6 second 
-infringement 
-Recorded only when a card is 
-awarded. 
-20 / "Backpass Pick" Foul called due to back-pass pick up 
-infringement 
-21 / "Dangerous Play" Foul called due to dangerous play 
-22 / "Dive" Foul committed due to simulation 
-23 / "Foul Out" Foul called due to foul out 
-infringement 
-24 / "Handball" Foul called due to handball 
-infringement 
-Event Name: Foul Won. Event ID: 21. 
-Describe the scenario when a player wins a foul, for more information see the Event Name: Foul Committed. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-advantage boolean Added when the referee calls 
-advantage and allows play to 
-continue. 
-TRUE   Recorded only when true. 
-defensive boolean Added if the foul was won 
-while defending. 
-TRUE   Recorded only when true. 
-penalty boolean Added if a penalty was 
-awarded as a result of the foul 
-won. 
-TRUE   Recorded only when true. 
- 
- 
-Page 20 of 45 
-Event Name: Goal Keeper. Event ID: 23. 
-Goalkeeper events describe a number of different things. Coming to collect crosses, smothering through balls, making saves, etc. They are 
-recorded whenever a goalkeeper attempts a given action and not necessarily succeeds. For example, if a goalkeeper attempts to punch a ball 
-away and never actually makes contact with the ball, it is still recorded. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-position object (id (integer) / name 
-(text)) 
-Id / Name for the attribute 
-option of goalkeeper’s 
-positioning before a shot. 
-42 / “Moving” Keeper was moving when the shot 
-was taken 
-Recorded for most 
-goalkeeper events. Never 
-recorded for goalkeeper 
-events of type "Keeper 
-Sweeper" nor "Smother". 
- 43 / “Prone” Keeper was on the ground when the 
-shot was taken 
- 44 / “Set” Keeper was stationary when the shot 
-was taken 
-technique object (id (integer) / name 
-(text)) 
-Id/ Name for the attribute 
-option specifying the 
-goalkeeper technique used. 
-45 / “Diving” Keeper left his feet in order to make 
-the save 
-Recorded for most 
-goalkeeper events. 
-46 / “Standing” Keeper made the save from a 
-standing position 
-body_part object (id (integer) / name 
-(text)) 
-Id / Name for the attribute 
-option specifying the body 
-part used during this 
-goalkeeper action. 
-35 / “Both Hands” Save with both hands Recorded for most 
-goalkeeper events. Never 
-recorded for goalkeeper 
-events of type "Keeper 
-Sweeper" nor "Punch". 
-36 / “Chest” Save with chest 
-37 / “Head” Save with head  
-38 / “Left Foot” Save was made with left foot 
-39 / “Left Hand” Save with left hand 
-40 / “Right Foot” Save was made with right foot 
-41 / “Right Hand” Save with right hand 
-type object (id (integer) / name 
-(text)) 
-Id / Name for the type of 
-goalkeeper action. 
-(See Table Below) Recorded for all "Goal Keeper" 
-events. 
-(See Table Below) 
-outcome object (id (integer) / name 
-(text)) 
-Id / Name for the outcome of 
-the goalkeeper action. 
-(See Table Below) Recorded for all "Goal Keeper" 
-events except "Shot Faced" 
-goalkeeper types. 
-(See Table Below) 
- 
-Goalkeeper event have a complicated structure, of which certain goalkeeper types only take certain goalkeeper outcomes. Because of this 
-complicated structure, we present the goalkeeper types with their corresponding possible outcomes in a separate table below. 
-Type Values Type Description Possible 
-Outcome Values 
-Outcome Descriptions Constraints 
-Collected / 25 Keeper coming out to collect a ball 15 / "Success" Successfully collected Outcome is recorded for all Collected 
-goalkeeper event types 
- 
- 
-Page 21 of 45 
-49 / "Collected 
-Twice" 
-Keeper collected the ball in multiple 
-tries after fumbling first collect 
-50 / "Fail" Unsuccessful action 
-Goal Conceded / 
-26 
-Goalkeeper concedes a goal 15 / "Success" The goal was conceded Outcome is not recorded for all Goal Conceded 
-goalkeeper event types. 55 / "No Touch" Goal conceded without keeper 
-touching the ball 
-58 / "Touched In" Goal conceded despite keeper 
-touching the ball 
-Keeper Sweeper / 
-27 
-When keeper comes off his line and/or out of 
-his box to clear the ball 
-4 / "Won" Retained possession Outcome is not recorded for all Keeper Sweeper 
-goalkeeper event types. 15 / "Success" Successfully cleared away from 
-danger 
-47 / "Claim" Keeper sweeper action where keeper 
-collects the ball 
-48 / "Clear" Keeper sweeper action where keeper 
-clears the ball 
-Penalty 
-Conceded / 28 
-Goalkeeper concedes a goal from a penalty 
-kick 
-15 / "Success" The goal was conceded Outcome is not recorded for all Penalty 
-Conceded goalkeeper event types. 55 / "No Touch" Goal conceded without keeper 
-touching the ball 
-58 / "Touched In" Goal conceded despite keeper 
-touching the ball 
-Penalty Saved / 
-29 
-Save from a penalty kick 15 / "Success" The penalty was saved Outcome is recorded for all Penalty Saved 
-goalkeeper event types 52 / "In Play 
-Danger" 
-Goalkeeper save where shot is 
-parried to opposing team player 
-53 / "In Play Safe" Goalkeeper save where shot is 
-parried to teammate 
-56 / "Saved 
-Twice" 
-Keeper made the save in multiple 
-tries after fumbling the first save 
-59 / "Touched 
-Out" 
-Keeper touched the ball out of 
-bounds 
-Punch / 30 Keeper punch away (similar to clear) 15 / "Success" Successful punch away from danger. Outcome is recorded for all Punch goalkeeper 
-event types 
-50 / "Fail" Unsuccessful punch. 
-52 / "In Play 
-Danger" 
-Punch is directed to opposing team 
-player 
-53 / "In Play Safe" Punch is directed to a teammate 
- 
- 
-Page 22 of 45 
-117 / “Punched 
-Out”  
-The keeper punches the ball out of 
-boundaries 
-Penalty Saved To 
-Post / 109 
-Goalkeeper saved a shot into the post 53 / "In Play Safe" Goalkeeper save where shot is 
-parried to teammate 
-Outcome is recorded for all Penalty Saved To 
-Post goalkeeper event types 
-56 / "Saved 
-Twice" 
-Keeper made the save in multiple 
-tries after fumbling the first save 
-59 / "Touched 
-Out" 
-Keeper touched the ball out of 
-bounds 
-Save / 31 Keeper save from a non-shot (for example, 
-an errant pass from a teammate).  
-15 / "Success" The save was made successfully. Outcome is recorded for all Punch goalkeeper 
-event types 52 / "In Play 
-Danger" 
-Goalkeeper save is parried to 
-opposing team player 
-53 / "In Play Safe" Goalkeeper save is parried to 
-teammate 
-56 / "Saved 
-Twice" 
-Keeper made the save in multiple 
-tries after fumbling the first save 
-59 / "Touched 
-Out" 
-Keeper touched the ball out of 
-bounds 
-Saved to Post / 
-110 
-Keeper save from a non-shot (for example, 
-an errant pass from a teammate).  
-15 / "Success" The save was made successfully. Outcome is recorded for all Saved To Post 
-goalkeeper event types 
-52 / "In Play 
-Danger" 
-Goalkeeper save is parried to 
-opposing team player 
-53 / "In Play Safe" Goalkeeper save is parried to 
-teammate 
-56 / "Saved 
-Twice" 
-Keeper made the save in multiple 
-tries after fumbling the first save 
-59 / "Touched 
-Out" 
-Keeper touched the ball out of 
-bounds 
-Shot Faced / 32 A shot faced that did not lead to a save or 
-goal conceded 
-No outcome recorded for this goalkeeper type. 
-Shot Saved / 33 Keeper save from opposing team shot 15 / "Success" The penalty was saved Outcome is recorded for all Shot Saved 
-goalkeeper event types 
-52 / "In Play 
-Danger" 
-Goalkeeper save where shot is 
-parried to opposing team player 
-53 / "In Play Safe" Goalkeeper save where shot is 
-parried to teammate 
- 
- 
-Page 23 of 45 
-56 / "Saved 
-Twice" 
-Keeper made the save in multiple 
-tries after fumbling the first save 
-59 / "Touched 
-Out" 
-Keeper touched the ball out of 
-bounds 
-Shot Saved Off T 
-/ 113 
-Goalkeeper saved a shot that would have 
-missed the frame 
-15 / "Success" The shot was saved Outcome is recorded for all Shot Saved Off T 
-goalkeeper event types 53 / "In Play Safe" Goalkeeper save where shot is 
-parried to teammate 
-56 / "Saved 
-Twice" 
-Keeper made the save in multiple 
-tries after fumbling the first save 
-56 / "Saved 
-Twice" 
-Keeper made the save in multiple 
-tries after fumbling the first save 
-59 / "Touched 
-Out" 
-Keeper touched the ball out of 
-bounds 
-Shot Saved To 
-Post / 114 
-Goalkeeper saved a shot into the post 53 / "In Play Safe" Goalkeeper save where shot is 
-parried to teammate 
-Outcome is recorded for all Shot Saved To Post 
-goalkeeper event types 
-56 / "Saved 
-Twice" 
-Keeper made the save in multiple 
-tries after fumbling the first save 
-59 / "Touched 
-Out" 
-Keeper touched the ball out of 
-bounds 
-Smother / 34 Equivalent to a tackle for an outfield player, 
-keeper coming out to dispossess a player. 
-1 / "Lost" Failed to dispossess the attacker. Outcome is recorded for all Smother goalkeeper 
-event types 4 / "Won" Successfully claimed 
-15 / "Success" Successfully claimed 
-Event Name: Half End. Event ID: 34. 
-Half End records when a period comes to an end. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-early_video_end boolean Added if the match video 
-wasn’t complete and it 
-ended before the period 
-final whistle 
-TRUE   Recorded only when true. 
-match_suspended boolean Referee decides to end or 
-postpone the match 
-TRUE   Recorded only when true. 
-Event Name: Half Start. Event ID: 18. 
-Half Start events describe when a period begins. 
- 
- 
-Page 24 of 45 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-late_video_start boolean Added if the match video 
-wasn’t complete and started 
-after Kick Off 
-TRUE   Recorded only when true. 
-Event Name: Injury Stoppage. Event ID: 40. 
-These events describe a stoppage in game play do to an injury. They can be used to explain long breaks in the game time.  
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-in_chain boolean Added if the ball was in the 
-injured player’s team’s 
-possession before the 
-stoppage began. 
-TRUE   Recorded only when true. 
-Event Name: Interception. Event ID: 10. 
-These events are recorded when a defender intercepts the ball from the attacking team. There are also some passes that are of type 
-“interception” and are interceptions that are a one-time pass. If you need to define all interceptions, you must look for both events. There are 
-also attempted interceptions that fail. You must clearly discern the successful interceptions from the unsuccessful ones, if you are only 
-concerned with actions that gain possession of the ball. Similarly, look at the pass outcome for the pass type of interception. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-outcome object (id (integer) / name 
-(text)) 
-Id / Name for the attribute 
-option specifying the 
-outcome of the interception 
-1 / “Lost” Incomplete interception resulting in 
-the attacking team maintaining 
-possession 
-Recorded for almost every 
-interception 
-13 / “Lost In Play” An interception by the defending 
-team that knocked the ball to an 
-attacker 
-14 / “Lost Out” An interception by the defending 
-team that knocked the ball out of 
-bounds in favor of the attacking team 
-15 / “Success” Successfully gained possession 
-through the interception 
-16 / “Success In Play” An interception that knocked the ball 
-to a teammate 
- 
- 
-Page 25 of 45 
-17 / ”Success Out” An interception that knocked the ball 
-out of bounds in favor of the 
-intercepting team 
-4 / “Won” An interception that ended up in 
-possession of the intercepting team 
-Event Name: Miscontrol. Event ID: 38. 
-These events are typically followed by a pass often of type recovery or a ball recovery (usually offensive). Some miscontrols are the result of 
-an aerial win. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-aerial_won boolean Added if a miscontrol event 
-was an aerial. 
-TRUE   Recorded only when true. 
-Event Name: Offside. Event ID: 8. 
-These events define when an offside takes place. If interested in all offsides also look at Pass events with outcome Offside. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-No additional attributes 
-Event Name: Own Goal Against. Event ID: 20. 
-Easy way of seeing when own goals are conceded since there is no Shot event. The own goal is also recorded as goal conceded under the 
-goalkeeper outcome extra. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-No additional attributes 
-Event Name: Own Goal For. Event ID: 25. 
-Easy way of seeing when own goals are scored since there is no Shot event.  
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-No additional attributes 
- 
- 
-Page 26 of 45 
-Event Name: Pass. Event ID: 30. 
-Passes are the most prominent event type in the data. They are the most common action in football and have several different types. When 
-using passes it is important to look at the pass type and the pass outcome to see what occurred. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-recipient object (id (integer) / name 
-(text)) 
-Id / Name specifying the 
-player id of the recipient of 
-the pass, or for whom an 
-incomplete pass was 
-intended. 
-e.g., 2934 / "Érik 
-Lamela" 
-  Recorded whenever the 
-recipient of the pass is clear, 
-regardless of whether or not 
-the pass was complete. 
-length decimal The length in yards of the 
-pass, from its origin to its 
-destination. 
-e.g., 16.03   Recorded for all passes. 
-angle decimal The angle of the pass in 
-radians, with 0 pointing 
-towards the team's attacking 
-goal, positive values between 
-0 and π indicating an angle 
-clockwise, and negative 
-values between 0 and -π 
+e279f5a9b38c")
+
+
+
+Page 12 of 45
+StatsBomb Event Types
+Each observation in StatsBomb event data has a “Type”. This type is the type of observation, more commonly known as the event type. The
+following list of event types compose all of StatsBomb data. Their description and their prominence in the data is presented below.
+Event Type Event
+Type ID Event Description
+Average Percent
+of Events
+50/50 33 2 players challenging to recover a loose ball. 0.05%
+Bad Behaviour 24 When a player receives a card due to an infringement outside of play.   0.02%
+Ball Receipt* 42 The receipt or intended receipt of a pass. 25.84%
+Ball Recovery 2 An attempt to recover a loose ball 2.95%
+Block 6 Blocking the ball by standing in its path. 1.08%
+Camera off: Deprecated
+in version 1.03
+29 Video broadcast leaves gameplay and show a replay or video is cut.
+Camera On: Deprecated
+in version 1.03
+5 Signals the stop of the camera to capture gameplay for a replay/video cut.
+
+Carry 43 A player controls the ball at their feet while moving or standing still. 23.11%
+Clearance 9 Action by a defending player to clear the danger without an intention to deliver it to a teammate. 0.92%
+Dispossessed 3 Player loses ball to an opponent as a result of being tackled by a defender without attempting a dribble 0.68%
+Dribble 14 An attempt by a player to beat an opponent  0.94%
+Dribbled Past 39 Player is dribbled past by an opponent. 0.62%
+Duel 4 A duel is an 50-50 contest between two players of opposing sides in the match. 1.37%
+Error 37 When a player is judged to make an on-the-ball mistake that leads to a shot on goal. 0.02%
+Foul Committed 22 Any infringement that is penalised as foul play by a referee. Offside are not tagged as a foul committed. 0.84%
+Foul Won 21 A foul won is defined as where a player wins a free-kick or penalty for their team after being fouled by an
+opposing player. 0.79%
+Goal Keeper 23 Actions that can be done by the goalkeeper. 0.95%
+Half End 34 Signals the referee whistle to finish a match part. 0.12%
+Half Start 18 Signals referee whistle to start a match period. 0.12%
+Injury Stoppage 40 A stop in play due to an injury. 0.1%
+Interception 10 Preventing an opponent's pass from reaching their teammates by moving to the passing lane/reacting to
+intercept it. 0.7%
+Miscontrol 38 Player loses ball due to bad touch 0.79%
+
+
+Page 13 of 45
+Offside 8 Offside infringement. Cases resulting from a shot or clearance (non-pass). For passes resulting in an offside
+check pass outcomes section 0.02%
+Own Goal Against 20 An own goal scored against the team 0%
+Own Goal For 25 An own goal scored for the team. 0%
+Pass 30 An intended kick from one player to his teammate 28.71%
+Player Off 27 A player goes/ is carried out of the pitch without a substitution. 0.03%
+Player On 26 A player returns to the pitch after a Player Off event. 0.03%
+Pressure 17 Field Position and player 1 must always have a value (Field position shows the spot where the player
+started to apply pressure & the duration of the event shows the duration that he kept applying pressure) 8.1%
+Referee Ball-Drop 41 Referee drops the ball to continue the game after an injury stoppage. 0.02%
+Shield 28 Player shields ball going out of bounds to prevent opponent from keeping it in play. 0.03%
+Shot 16 An attempt to score a goal, made with any (legal) part of the body. 0.79%
+Starting XI 35 Indicates the players in the starting 11, their position and the team’s formation. 0.06%
+Substitution 19  A player is substituted off the field for various reasons. 0.17%
+Tactical Shift 36 Indicates a tactical shift made by the team, shows the players’ new positions and the team’s new
+formation. 0.05%
+
+
+
+
+Page 14 of 45
+StatsBomb Event Specific Attributes
+Additional attributes are recorded depending on the event type. Below is a list of all the event types (in alphabetical order) with
+the additional attributes for that event type. Attribute values listed are all possible values for that attribute, or when the list of
+possible values is exorbitant an example of an attribute value is given. Some attributes are pairs of values representing an object,
+for example the outcome “Card” has a pair of recordings for the unique id number and the name of the Card given. The
+“Constraints” for that attribute defines when those attributes are present.
+Event Name: 50/50. Event ID: 33.
+50/50s are usually recorded for each competitor in the 50/50 event and these two events are paired by a related_event.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+Outcome object (id (integer) / name
+(text))
+Outcome of the 50/50 Event. 108 / “Won” The player wins the 50/50 contest
+and regain possession
+Recorded for all 50/50
+events.
+109 / “Lost” The player loses the 50/50 contest
+147 / “Success To
+Team”
+The player wins the 50/50 contest
+and knocks the ball for their team’s
+possession
+148 / “Success To
+Opposition”
+The player wins the 50/50 contest but
+knocks the ball for their opponent’s
+possession
+counterpress Boolean Pressing actions within 5
+seconds of an open play
+turnover.
+TRUE  Recorded only when true.
+Event Name: Bad Behaviour. Event ID: 24.
+Bad Behaviour events are recorded when a referee needs to discipline a player aside from committing fouls.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+Card object (id (integer) /
+name (text))
+Id / Name for the attribute option specifying the
+Card.
+65 / “Yellow Card” A yellow card was issued to this
+player.
+Not recorded for all Bad
+Behaviour events.
+66 / “Second
+Yellow"
+A second yellow card was
+issued to this player.
+
+67 / “Red Card” A straight red card was issued
+to this player.
+
+
+
+Page 15 of 45
+Event Name: Ball Receipt*. Event ID: 42.
+Ball Receipt* events describe the location or intended location of a pass and who that recipient was.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+outcome object (id (integer) / name
+(text))
+Outcome of the ball receipt
+Event.
+"Incomplete"   Recorded only for
+incomplete Ball Receipt*
+events.
+Event Name: Ball Recovery. Event ID: 2.
+Ball Recovery events typically describe a loose ball being recovered following a miscontrol or a clearance.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+offensive boolean Recorded if the ball recovery
+event was by the team
+originally in possession of
+the ball
+TRUE   Recorded only when true.
+recovery_failure boolean Recorded if the ball recovery
+attempt failed
+TRUE   Recorded only when true.
+Event Name: Block. Event ID: 6.
+Block events typically follow a pass or a shot. They can also be offensive.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+counterpress Boolean Pressing actions within 5
+seconds of an open play
+turnover.
+TRUE  Recorded only when true.
+deflection boolean Recorded if the block was
+only a deflection
+TRUE   Recorded only when true.
+offensive boolean Recorded if the block was by
+the offensive team
+TRUE   Recorded only when true.
+save_block boolean Recorded if the block
+definitely prevented an on
+target shot
+TRUE   Recorded only when true.
+Event Name: Carry. Event ID: 43.
+Carry events are typically by the attacking team and describe a player possessing the ball at their feet, either moving with the ball or standing
+still.
+
+
+Page 16 of 45
+
+
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+end_location Array [x, y] Recorded for all carry events,
+describes where the carry
+ends.
+(100, 40)  End location of the carry. Recorded for all carries.
+Event Name: Clearance. Event ID: 9.
+Clearance events are typically by the defending team and describe a ball getting cleared away without any intended recipient of the ball as a
+pass has.
+
+
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+aerial_won boolean Recorded if the clearance was
+accomplished by winning an
+aerial
+TRUE   Recorded only when true.
+body_part object (id (integer) / name
+(text))
+ID / Name of the body part
+used to shoot.
+37 / “Head” Shot attempted with head Recorded for every event in
+Data Version 1.1.0 and
+newer. If aerial_won is TRUE
+then the body part must be
+“Head”
+38 / “Left Foot” Shot attempted with the left foot
+70 / “Other” Other body parts (i.e knee, chest, etc)
+40 / “Right Foot” Shot attempted with right foot
+Event Name: Dispossessed. Event ID: 3.
+Dispossessed events describe an attacking player who had possession of the ball and where and when they lose possession of it.
+Dispossession events are almost always paired to a Duel or a Goalkeeper Smother via a related event.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+No additional attributes
+Event Name: Dribble. Event ID: 14.
+Dribble events describe when an attacker with the ball takes on another attacker. Dribble events do not describe every time a player is
+dribbling the ball, this will be added in an upgrade of StatsBomb data when we derive “Carry” events. Dribble events can be used to see
+successful/unsuccessful dribbles and when they are unsuccessful, they describe where the ball was lost.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+
+
+Page 17 of 45
+outcome object (id (integer) / name
+(text))
+Outcome of the dribble event "Complete" Attacker successfully dribbled past
+the defender.
+Recorded for all dribble
+events.
+"Incomplete" Attacker failed to dribble past the
+defender
+nutmeg boolean Added when the dribble went
+through an opposing players
+legs.
+TRUE   Recorded only when true.
+overrun boolean Added when a dribble goes
+past the original defender into
+the possession of another
+player
+TRUE   Recorded only when true.
+No Touch boolean If the player attempted to do
+the dribble by passing the ball
+past the opponent instead of
+receiving it.
+TRUE   Recorded only when true.
+Event Name: Dribbled Past. Event ID: 39.
+Dribbled Past events describe the player who gets dribbled past when a dribbler takes them on. Almost every dribbled past event has a
+related id for a dribble event, but not every dribble event has a related dribbled past event (Incomplete dribbles). Dribbled Past events can
+also imply defensive pressure.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+counterpress Boolean Pressing actions within 5
+seconds of an open play
+turnover.
+TRUE  Recorded only when true.
+Event Name: Duel. Event ID: 4.
+Duel events describe when a defender challenges an attacker in some way. It can be to win a tackle or challenge an aerial ball. Duel of type
+Aerial Lost are paired with clearance.aerial_won, miscontrol.aerial_won, shot (usually of body part head).
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+counterpress Boolean Pressing actions within 5
+seconds of an open play
+turnover.
+TRUE  Recorded only when true.
+type object (id (integer) / name
+(text))
+The type of the duel event. 10 / “Aerial Lost” Challenging for an aerial duel and
+not winning the ball
+Recorded for all duel events.
+11 / “Tackle” Dispossessing opposing team player
+
+
+Page 18 of 45
+outcome object (id (integer) / name
+(text))
+The outcome of the duel
+event.
+4 / “Won” A tackle that ended up in possession
+of the tackler
+Recorded only for Duel
+Events with a type of
+"Tackle" 13 / “Lost In Play” A tackle that knocked the ball to an
+opponent
+14 / “Lost Out” A tackle that knocked the ball out of
+bounds in favor of opposition
+15 / “Success”
+16 / “Success In Play” A tackle that knocked the ball to a
+teammate
+17 / “Success Out” A tackle that knocked the ball out of
+bounds in favor of tackler’s team
+Event Name: Error. Event ID: 37.
+Errors are rarely recorded, but they represent obviously unintended errors by players. Most commonly follows a failed clearance or ball
+recovery. The following event is often a ball recovery, shot or goalkeeper event.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+No additional attributes
+Event Name: Foul Committed. Event ID: 22.
+Foul Committed events describe who committed a foul resulting in a free kick or penalty kick. They are recorded at the location and time of
+the foul regardless of whether or not advantage was played. For fouls that have advantage played and then called back, the location can be
+slightly different, so the foul committed and foul won are recorded at the original time and then recorded again if the advantage gets called
+back. One can actually see how long advantage gets played out if they want to do that.
+•           Not every foul committed event has a foul won related events.
+•           There are more foul committed events than foul won events.
+•           The advantage foul committed are never related to the non-advantage foul committed.
+•           Therefore, we have to combine them into one event based on time or player etc.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+advantage boolean Added when the referee calls
+advantage and allows play to
+continue.
+TRUE   Recorded only when true.
+counterpress Boolean Pressing actions within 5
+seconds of an open play
+turnover.
+TRUE  Recorded only when true.
+
+
+Page 19 of 45
+offensive boolean Added if the foul was
+committed while in
+possession of the ball.
+TRUE   Recorded only when true.
+penalty boolean Added if a penalty was
+awarded as a result of the foul
+committed.
+TRUE   Recorded only when true.
+card object (id (integer) / name
+(text))
+Id / Name for the card
+awarded to the player
+committing the foul
+5 / “Yellow Card”   Recorded only when a card is
+awarded. 6 / “Second Yellow"
+7 / “Red Card”
+type object (id (integer) / name
+(text))
+Id / Name for the type of foul
+committed
+19 / "6 seconds" Foul called due to 6 second
+infringement
+Recorded only when a card is
+awarded.
+20 / "Backpass Pick" Foul called due to back-pass pick up
+infringement
+21 / "Dangerous Play" Foul called due to dangerous play
+22 / "Dive" Foul committed due to simulation
+23 / "Foul Out" Foul called due to foul out
+infringement
+24 / "Handball" Foul called due to handball
+infringement
+Event Name: Foul Won. Event ID: 21.
+Describe the scenario when a player wins a foul, for more information see the Event Name: Foul Committed.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+advantage boolean Added when the referee calls
+advantage and allows play to
+continue.
+TRUE   Recorded only when true.
+defensive boolean Added if the foul was won
+while defending.
+TRUE   Recorded only when true.
+penalty boolean Added if a penalty was
+awarded as a result of the foul
+won.
+TRUE   Recorded only when true.
+
+
+Page 20 of 45
+Event Name: Goal Keeper. Event ID: 23.
+Goalkeeper events describe a number of different things. Coming to collect crosses, smothering through balls, making saves, etc. They are
+recorded whenever a goalkeeper attempts a given action and not necessarily succeeds. For example, if a goalkeeper attempts to punch a ball
+away and never actually makes contact with the ball, it is still recorded.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+position object (id (integer) / name
+(text))
+Id / Name for the attribute
+option of goalkeeper’s
+positioning before a shot.
+42 / “Moving” Keeper was moving when the shot
+was taken
+Recorded for most
+goalkeeper events. Never
+recorded for goalkeeper
+events of type "Keeper
+Sweeper" nor "Smother".
+ 43 / “Prone” Keeper was on the ground when the
+shot was taken
+ 44 / “Set” Keeper was stationary when the shot
+was taken
+technique object (id (integer) / name
+(text))
+Id/ Name for the attribute
+option specifying the
+goalkeeper technique used.
+45 / “Diving” Keeper left his feet in order to make
+the save
+Recorded for most
+goalkeeper events.
+46 / “Standing” Keeper made the save from a
+standing position
+body_part object (id (integer) / name
+(text))
+Id / Name for the attribute
+option specifying the body
+part used during this
+goalkeeper action.
+35 / “Both Hands” Save with both hands Recorded for most
+goalkeeper events. Never
+recorded for goalkeeper
+events of type "Keeper
+Sweeper" nor "Punch".
+36 / “Chest” Save with chest
+37 / “Head” Save with head
+38 / “Left Foot” Save was made with left foot
+39 / “Left Hand” Save with left hand
+40 / “Right Foot” Save was made with right foot
+41 / “Right Hand” Save with right hand
+type object (id (integer) / name
+(text))
+Id / Name for the type of
+goalkeeper action.
+(See Table Below) Recorded for all "Goal Keeper"
+events.
+(See Table Below)
+outcome object (id (integer) / name
+(text))
+Id / Name for the outcome of
+the goalkeeper action.
+(See Table Below) Recorded for all "Goal Keeper"
+events except "Shot Faced"
+goalkeeper types.
+(See Table Below)
+
+Goalkeeper event have a complicated structure, of which certain goalkeeper types only take certain goalkeeper outcomes. Because of this
+complicated structure, we present the goalkeeper types with their corresponding possible outcomes in a separate table below.
+Type Values Type Description Possible
+Outcome Values
+Outcome Descriptions Constraints
+Collected / 25 Keeper coming out to collect a ball 15 / "Success" Successfully collected Outcome is recorded for all Collected
+goalkeeper event types
+
+
+Page 21 of 45
+49 / "Collected
+Twice"
+Keeper collected the ball in multiple
+tries after fumbling first collect
+50 / "Fail" Unsuccessful action
+Goal Conceded /
+26
+Goalkeeper concedes a goal 15 / "Success" The goal was conceded Outcome is not recorded for all Goal Conceded
+goalkeeper event types. 55 / "No Touch" Goal conceded without keeper
+touching the ball
+58 / "Touched In" Goal conceded despite keeper
+touching the ball
+Keeper Sweeper /
+27
+When keeper comes off his line and/or out of
+his box to clear the ball
+4 / "Won" Retained possession Outcome is not recorded for all Keeper Sweeper
+goalkeeper event types. 15 / "Success" Successfully cleared away from
+danger
+47 / "Claim" Keeper sweeper action where keeper
+collects the ball
+48 / "Clear" Keeper sweeper action where keeper
+clears the ball
+Penalty
+Conceded / 28
+Goalkeeper concedes a goal from a penalty
+kick
+15 / "Success" The goal was conceded Outcome is not recorded for all Penalty
+Conceded goalkeeper event types. 55 / "No Touch" Goal conceded without keeper
+touching the ball
+58 / "Touched In" Goal conceded despite keeper
+touching the ball
+Penalty Saved /
+29
+Save from a penalty kick 15 / "Success" The penalty was saved Outcome is recorded for all Penalty Saved
+goalkeeper event types 52 / "In Play
+Danger"
+Goalkeeper save where shot is
+parried to opposing team player
+53 / "In Play Safe" Goalkeeper save where shot is
+parried to teammate
+56 / "Saved
+Twice"
+Keeper made the save in multiple
+tries after fumbling the first save
+59 / "Touched
+Out"
+Keeper touched the ball out of
+bounds
+Punch / 30 Keeper punch away (similar to clear) 15 / "Success" Successful punch away from danger. Outcome is recorded for all Punch goalkeeper
+event types
+50 / "Fail" Unsuccessful punch.
+52 / "In Play
+Danger"
+Punch is directed to opposing team
+player
+53 / "In Play Safe" Punch is directed to a teammate
+
+
+Page 22 of 45
+117 / “Punched
+Out”
+The keeper punches the ball out of
+boundaries
+Penalty Saved To
+Post / 109
+Goalkeeper saved a shot into the post 53 / "In Play Safe" Goalkeeper save where shot is
+parried to teammate
+Outcome is recorded for all Penalty Saved To
+Post goalkeeper event types
+56 / "Saved
+Twice"
+Keeper made the save in multiple
+tries after fumbling the first save
+59 / "Touched
+Out"
+Keeper touched the ball out of
+bounds
+Save / 31 Keeper save from a non-shot (for example,
+an errant pass from a teammate).
+15 / "Success" The save was made successfully. Outcome is recorded for all Punch goalkeeper
+event types 52 / "In Play
+Danger"
+Goalkeeper save is parried to
+opposing team player
+53 / "In Play Safe" Goalkeeper save is parried to
+teammate
+56 / "Saved
+Twice"
+Keeper made the save in multiple
+tries after fumbling the first save
+59 / "Touched
+Out"
+Keeper touched the ball out of
+bounds
+Saved to Post /
+110
+Keeper save from a non-shot (for example,
+an errant pass from a teammate).
+15 / "Success" The save was made successfully. Outcome is recorded for all Saved To Post
+goalkeeper event types
+52 / "In Play
+Danger"
+Goalkeeper save is parried to
+opposing team player
+53 / "In Play Safe" Goalkeeper save is parried to
+teammate
+56 / "Saved
+Twice"
+Keeper made the save in multiple
+tries after fumbling the first save
+59 / "Touched
+Out"
+Keeper touched the ball out of
+bounds
+Shot Faced / 32 A shot faced that did not lead to a save or
+goal conceded
+No outcome recorded for this goalkeeper type.
+Shot Saved / 33 Keeper save from opposing team shot 15 / "Success" The penalty was saved Outcome is recorded for all Shot Saved
+goalkeeper event types
+52 / "In Play
+Danger"
+Goalkeeper save where shot is
+parried to opposing team player
+53 / "In Play Safe" Goalkeeper save where shot is
+parried to teammate
+
+
+Page 23 of 45
+56 / "Saved
+Twice"
+Keeper made the save in multiple
+tries after fumbling the first save
+59 / "Touched
+Out"
+Keeper touched the ball out of
+bounds
+Shot Saved Off T
+/ 113
+Goalkeeper saved a shot that would have
+missed the frame
+15 / "Success" The shot was saved Outcome is recorded for all Shot Saved Off T
+goalkeeper event types 53 / "In Play Safe" Goalkeeper save where shot is
+parried to teammate
+56 / "Saved
+Twice"
+Keeper made the save in multiple
+tries after fumbling the first save
+56 / "Saved
+Twice"
+Keeper made the save in multiple
+tries after fumbling the first save
+59 / "Touched
+Out"
+Keeper touched the ball out of
+bounds
+Shot Saved To
+Post / 114
+Goalkeeper saved a shot into the post 53 / "In Play Safe" Goalkeeper save where shot is
+parried to teammate
+Outcome is recorded for all Shot Saved To Post
+goalkeeper event types
+56 / "Saved
+Twice"
+Keeper made the save in multiple
+tries after fumbling the first save
+59 / "Touched
+Out"
+Keeper touched the ball out of
+bounds
+Smother / 34 Equivalent to a tackle for an outfield player,
+keeper coming out to dispossess a player.
+1 / "Lost" Failed to dispossess the attacker. Outcome is recorded for all Smother goalkeeper
+event types 4 / "Won" Successfully claimed
+15 / "Success" Successfully claimed
+Event Name: Half End. Event ID: 34.
+Half End records when a period comes to an end.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+early_video_end boolean Added if the match video
+wasn’t complete and it
+ended before the period
+final whistle
+TRUE   Recorded only when true.
+match_suspended boolean Referee decides to end or
+postpone the match
+TRUE   Recorded only when true.
+Event Name: Half Start. Event ID: 18.
+Half Start events describe when a period begins.
+
+
+Page 24 of 45
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+late_video_start boolean Added if the match video
+wasn’t complete and started
+after Kick Off
+TRUE   Recorded only when true.
+Event Name: Injury Stoppage. Event ID: 40.
+These events describe a stoppage in game play do to an injury. They can be used to explain long breaks in the game time.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+in_chain boolean Added if the ball was in the
+injured player’s team’s
+possession before the
+stoppage began.
+TRUE   Recorded only when true.
+Event Name: Interception. Event ID: 10.
+These events are recorded when a defender intercepts the ball from the attacking team. There are also some passes that are of type
+“interception” and are interceptions that are a one-time pass. If you need to define all interceptions, you must look for both events. There are
+also attempted interceptions that fail. You must clearly discern the successful interceptions from the unsuccessful ones, if you are only
+concerned with actions that gain possession of the ball. Similarly, look at the pass outcome for the pass type of interception.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+outcome object (id (integer) / name
+(text))
+Id / Name for the attribute
+option specifying the
+outcome of the interception
+1 / “Lost” Incomplete interception resulting in
+the attacking team maintaining
+possession
+Recorded for almost every
+interception
+13 / “Lost In Play” An interception by the defending
+team that knocked the ball to an
+attacker
+14 / “Lost Out” An interception by the defending
+team that knocked the ball out of
+bounds in favor of the attacking team
+15 / “Success” Successfully gained possession
+through the interception
+16 / “Success In Play” An interception that knocked the ball
+to a teammate
+
+
+Page 25 of 45
+17 / ”Success Out” An interception that knocked the ball
+out of bounds in favor of the
+intercepting team
+4 / “Won” An interception that ended up in
+possession of the intercepting team
+Event Name: Miscontrol. Event ID: 38.
+These events are typically followed by a pass often of type recovery or a ball recovery (usually offensive). Some miscontrols are the result of
+an aerial win.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+aerial_won boolean Added if a miscontrol event
+was an aerial.
+TRUE   Recorded only when true.
+Event Name: Offside. Event ID: 8.
+These events define when an offside takes place. If interested in all offsides also look at Pass events with outcome Offside.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+No additional attributes
+Event Name: Own Goal Against. Event ID: 20.
+Easy way of seeing when own goals are conceded since there is no Shot event. The own goal is also recorded as goal conceded under the
+goalkeeper outcome extra.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+No additional attributes
+Event Name: Own Goal For. Event ID: 25.
+Easy way of seeing when own goals are scored since there is no Shot event.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+No additional attributes
+
+
+Page 26 of 45
+Event Name: Pass. Event ID: 30.
+Passes are the most prominent event type in the data. They are the most common action in football and have several different types. When
+using passes it is important to look at the pass type and the pass outcome to see what occurred.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+recipient object (id (integer) / name
+(text))
+Id / Name specifying the
+player id of the recipient of
+the pass, or for whom an
+incomplete pass was
+intended.
+e.g., 2934 / "Érik
+Lamela"
+  Recorded whenever the
+recipient of the pass is clear,
+regardless of whether or not
+the pass was complete.
+length decimal The length in yards of the
+pass, from its origin to its
+destination.
+e.g., 16.03   Recorded for all passes.
+angle decimal The angle of the pass in
+radians, with 0 pointing
+towards the team's attacking
+goal, positive values between
+0 and π indicating an angle
+clockwise, and negative
+values between 0 and -π
 representing an angle anti-
-clockwise. 
-e.g., -2.49   Recorded for all passes. 
-height object (id (integer) / name 
-(text)) 
-Id / Name specifying the 
-height of the pass. 
-1 / “Ground Pass” Ball doesn’t come off the ground. Recorded for all passes. 
-2 / “Low Pass” Ball comes off the ground but is 
-under shoulder level at peak 
-height. 
-3 / “High Pass” Ball goes above shoulder level at 
-peak height. 
-end_location array [x,y] Array containing two integer 
-values. These are the x and y 
-coordinates at which the pass 
-ended. 
-e.g., (100,45)   Recorded for all passes. 
-assisted_shot_id uuid Reference to the shot this 
-pass assisted. 
+clockwise.
+e.g., -2.49   Recorded for all passes.
+height object (id (integer) / name
+(text))
+Id / Name specifying the
+height of the pass.
+1 / “Ground Pass” Ball doesn’t come off the ground. Recorded for all passes.
+2 / “Low Pass” Ball comes off the ground but is
+under shoulder level at peak
+height.
+3 / “High Pass” Ball goes above shoulder level at
+peak height.
+end_location array [x,y] Array containing two integer
+values. These are the x and y
+coordinates at which the pass
+ended.
+e.g., (100,45)   Recorded for all passes.
+assisted_shot_id uuid Reference to the shot this
+pass assisted.
 e.g. “0052d1b5-e2b0-
 4629-bbea-
-c18c884ab103” 
-See Appendix 2 for more 
-information on location 
-coordinates. 
-Recorded for all passes that 
-assist a shot. 
-backheel boolean Added if the pass was made 
-by using a backheel. 
-TRUE   Recorded only when true. 
- 
- 
-Page 27 of 45 
-deflected boolean Added if the pass was 
-deflected. 
-TRUE Pass was deflected, can occur on 
-complete and incomplete passes. 
-Recorded only when true. 
-miscommunication boolean Added if the pass was a 
-miscommunication. 
-TRUE Pass was accurate but receiving 
-player misread the pass OR the run 
-from the receiving player was 
-correct and passer played in his 
-previous position 
-Recorded only when true. 
-cross boolean Added if the pass was a cross. TRUE See Appendix 6 for more on how 
-crosses are defined 
-Recorded only when true. 
-cut_back boolean Added if the pass was a "cut 
-back" (ball passed low 
-backwards, within the 
-opposition's penalty box). 
-TRUE See Appendix 5 for more 
-information on how cut backs are 
-depicted. 
-Recorded only when true. 
-switch boolean Added if the pass was a switch 
-(ball transitioned at least 50% 
-of the pitch vertically). 
-TRUE Whether or not the passer 
-switched the ball to the other side 
-of the pitch. A switch is any pass 
-that travels more than 40 yards of 
-the width of the pitch. 
-Recorded only when true. 
-shot_assist boolean Added if the pass was an 
-assist to a shot (that did not 
-score a goal). 
-TRUE   Recorded only when true. 
-goal-assist boolean Added if the pass was an 
-assist to a goal. 
-TRUE   Recorded only when true. 
-body_part object (id (integer) / name 
-(text)) 
-Id /Name of the body part 
-used to make this pass. 
-68 / “Drop Kick” Pass is a keeper drop kick Recorded for most passes. 
-37 / “Head” Pass with head 
-69 / “Keeper Arm” Pass thrown from keepers hands  
-38 / “Left Foot” Pass with left foot 
-70 / “Other” Other body part (chest,back, etc.) 
-40 / “Right Foot” Pass with right foot 
-106 / “No Touch” A player deliberately let the pass 
-go past him instead of receiving it 
-to deliver it to a teammate behind 
-him. (Also known as a “dummy”). 
-type object (id (integer) / name 
-(text)) 
-Id / Name for the attribute 
-option specifying the type of 
-pass. 
-61 / “Corner” A pass from a corner kick Recorded for all passes with 
-one of the special types 
-listed to the left. Passes 
-missing a "type" are 
-62 / “Free Kick” A pass from a free kick 
-63 / “Goal Kick” A pass from a goal kick 
-64 / “Interception” One touch pass off an interception  
- 
- 
-Page 28 of 45 
-65 / “Kick Off” A pass from a kick off at the 
-beginning of a match or after 
-scoring 
-standard passes in the run of 
-play. 
-66 / “Recovery” One touch pass off a loose ball 
-recovery 
-67 / “Throw-in” A pass from a throw-in 
-outcome object (id (integer) / name 
-(text)) 
-ID / Name of the outcome of 
-the pass. 
-9 / “Incomplete” Ball does not reach a teammate 
-and is still in play 
-Recorded for all passes that 
-are incomplete for a specific 
-reason or their outcome is 
-unknown. Passes missing an 
-"outcome" are completed 
-passes. 
-74 / “Injury Clearance” Ball is played out of bounds to stop 
-play for an injury 
-75 / “Out” Ball goes out of bounds 
-76 / “Pass Offside” Ball reaches teammate but pass is 
-judged offside 
-77 / “Unknown” Outcome is unknown (i.e. foul was 
-called while in mid-flight) 
-Technique object (id (integer) / name 
-(text)) 
-ID / Name of the technique of 
-the pass. 
-104 / “Inswinging” For inswinging corner kicks. Recorded only for corner 
-kicks of low or high height. 
-105 / “Outswinging” For outswinging corner kicks. 
-107 / “Straight” For neither inswinging nor 
-outswinging corner kicks. 
-108 / “Through Ball” Pass cuts last line of defence Recorded only when true. 
-Event Name: Player Off. Event ID: 27. 
-This event describes the time and player coming off the pitch without a sub for any given reason (usually injury). This does not describe a 
-player being substituted off the pitch. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-Permanent boolean Added if the player left the 
-game permanently. For 
-scenarios where no subs are 
-left but the player cannot 
-return to pitch due to injury 
-    Recorded only when true. 
-Event Name: Player On. Event ID: 26. 
-This event describes the time a player returns to the pitch after coming off for some reason. 
- 
- 
-Page 29 of 45 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-No additional attributes 
-Event Name: Pressure. Event ID: 17. 
-Pressure events are unique to StatsBomb data and define a player pressuring an attacking player. They have a timestamp, location and 
-duration. These pressure events can be used to measure player activity and can also be used to see consequences of pressure. For more 
-information on how pressures are defined please see Appendix 7. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-counterpress Boolean Pressing actions within 5 
-seconds of an open play 
-turnover. 
-TRUE  Recorded only when true. 
-Event Name: Referee Ball Drop. Event ID: 41. 
-Typically following an injury stoppage, this event describes when the referee drops a ball to restart play. Sometimes there are two events 
-recorded at the same time, one for each team. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-No additional attributes 
-Event Name: Shield. Event ID: 28. 
-Shield events describe when a player is purposely shielding a ball without any movement. Shield events typically follow a Ball Receipt* event. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-No additional attributes 
-Event Name: Shot. Event ID: 16. 
-Shot events are recorded every time a player attempts to take a shot, regardless of whether or not they successfully took the shot. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-key_pass_id uuid Reference to the shot this 
-pass assisted. 
+c18c884ab103”
+See Appendix 2 for more
+information on location
+coordinates.
+Recorded for all passes that
+assist a shot.
+backheel boolean Added if the pass was made
+by using a backheel.
+TRUE   Recorded only when true.
+
+
+Page 27 of 45
+deflected boolean Added if the pass was
+deflected.
+TRUE Pass was deflected, can occur on
+complete and incomplete passes.
+Recorded only when true.
+miscommunication boolean Added if the pass was a
+miscommunication.
+TRUE Pass was accurate but receiving
+player misread the pass OR the run
+from the receiving player was
+correct and passer played in his
+previous position
+Recorded only when true.
+cross boolean Added if the pass was a cross. TRUE See Appendix 6 for more on how
+crosses are defined
+Recorded only when true.
+cut_back boolean Added if the pass was a "cut
+back" (ball passed low
+backwards, within the
+opposition's penalty box).
+TRUE See Appendix 5 for more
+information on how cut backs are
+depicted.
+Recorded only when true.
+switch boolean Added if the pass was a switch
+(ball transitioned at least 50%
+of the pitch vertically).
+TRUE Whether or not the passer
+switched the ball to the other side
+of the pitch. A switch is any pass
+that travels more than 40 yards of
+the width of the pitch.
+Recorded only when true.
+shot_assist boolean Added if the pass was an
+assist to a shot (that did not
+score a goal).
+TRUE   Recorded only when true.
+goal-assist boolean Added if the pass was an
+assist to a goal.
+TRUE   Recorded only when true.
+body_part object (id (integer) / name
+(text))
+Id /Name of the body part
+used to make this pass.
+68 / “Drop Kick” Pass is a keeper drop kick Recorded for most passes.
+37 / “Head” Pass with head
+69 / “Keeper Arm” Pass thrown from keepers hands
+38 / “Left Foot” Pass with left foot
+70 / “Other” Other body part (chest,back, etc.)
+40 / “Right Foot” Pass with right foot
+106 / “No Touch” A player deliberately let the pass
+go past him instead of receiving it
+to deliver it to a teammate behind
+him. (Also known as a “dummy”).
+type object (id (integer) / name
+(text))
+Id / Name for the attribute
+option specifying the type of
+pass.
+61 / “Corner” A pass from a corner kick Recorded for all passes with
+one of the special types
+listed to the left. Passes
+missing a "type" are
+62 / “Free Kick” A pass from a free kick
+63 / “Goal Kick” A pass from a goal kick
+64 / “Interception” One touch pass off an interception
+
+
+Page 28 of 45
+65 / “Kick Off” A pass from a kick off at the
+beginning of a match or after
+scoring
+standard passes in the run of
+play.
+66 / “Recovery” One touch pass off a loose ball
+recovery
+67 / “Throw-in” A pass from a throw-in
+outcome object (id (integer) / name
+(text))
+ID / Name of the outcome of
+the pass.
+9 / “Incomplete” Ball does not reach a teammate
+and is still in play
+Recorded for all passes that
+are incomplete for a specific
+reason or their outcome is
+unknown. Passes missing an
+"outcome" are completed
+passes.
+74 / “Injury Clearance” Ball is played out of bounds to stop
+play for an injury
+75 / “Out” Ball goes out of bounds
+76 / “Pass Offside” Ball reaches teammate but pass is
+judged offside
+77 / “Unknown” Outcome is unknown (i.e. foul was
+called while in mid-flight)
+Technique object (id (integer) / name
+(text))
+ID / Name of the technique of
+the pass.
+104 / “Inswinging” For inswinging corner kicks. Recorded only for corner
+kicks of low or high height.
+105 / “Outswinging” For outswinging corner kicks.
+107 / “Straight” For neither inswinging nor
+outswinging corner kicks.
+108 / “Through Ball” Pass cuts last line of defence Recorded only when true.
+Event Name: Player Off. Event ID: 27.
+This event describes the time and player coming off the pitch without a sub for any given reason (usually injury). This does not describe a
+player being substituted off the pitch.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+Permanent boolean Added if the player left the
+game permanently. For
+scenarios where no subs are
+left but the player cannot
+return to pitch due to injury
+    Recorded only when true.
+Event Name: Player On. Event ID: 26.
+This event describes the time a player returns to the pitch after coming off for some reason.
+
+
+Page 29 of 45
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+No additional attributes
+Event Name: Pressure. Event ID: 17.
+Pressure events are unique to StatsBomb data and define a player pressuring an attacking player. They have a timestamp, location and
+duration. These pressure events can be used to measure player activity and can also be used to see consequences of pressure. For more
+information on how pressures are defined please see Appendix 7.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+counterpress Boolean Pressing actions within 5
+seconds of an open play
+turnover.
+TRUE  Recorded only when true.
+Event Name: Referee Ball Drop. Event ID: 41.
+Typically following an injury stoppage, this event describes when the referee drops a ball to restart play. Sometimes there are two events
+recorded at the same time, one for each team.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+No additional attributes
+Event Name: Shield. Event ID: 28.
+Shield events describe when a player is purposely shielding a ball without any movement. Shield events typically follow a Ball Receipt* event.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+No additional attributes
+Event Name: Shot. Event ID: 16.
+Shot events are recorded every time a player attempts to take a shot, regardless of whether or not they successfully took the shot.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+key_pass_id uuid Reference to the shot this
+pass assisted.
 e.g. “0052d1b5-e2b0-
 4629-bbea-
-c18c884ab103” 
-  Recorded for shots resulting 
-from a key pass. 
-end_location array [x,y] or [x,y,z] End location of the shot. e.g., (120, 50) or (120, 
-32.5, 1.2) 
-See Appendix 2 for more information Recorded for all shots. 
- 
- 
-Page 30 of 45 
-aerial_won boolean Added if the shot resulted 
-from an aerial win 
-TRUE   Recorded only when true. 
-follows_dribble boolean Added if the shot followed a 
-dribble 
-TRUE Whether or not this shot comes after 
-a successful dribble by the shooter. 
-Recorded only when true. 
-first_time boolean Added if the shot was first 
-touch. 
-TRUE   Recorded only when true. 
-freeze_frame array Each shot includes an object called freeze_frame which 
-is an array containing information about relevant 
-players at the time of the shot. Each freezeframe object 
-is a data frame with a row for each player including 
-their location, team, id, name and position id and 
-name.  
-Data from the JSON format will have 
-a data frame nested within each shot 
-event. (see Appendix 3 for more 
-documentation) 
-Recorded only when true. 
-open_goal boolean Added if the shot was taken 
-with an open goal. 
-TRUE   Recorded only when true. 
-statsbomb_xg numeric The StatsBomb expected 
-goals value calculated for the 
-shot. 
-e.g., 0.15 Calculated from StatsBomb's own xG 
-model, visit StatsBomb.com and 
-search for articles on the calculation 
-of xG 
-Recorded for all shots. 
-deflected boolean Added if the shot was 
-deflected 
-TRUE Shot was redirected by another 
-player’s touch. 
-Recorded only when true. 
-technique object (id (integer) / name 
-(text)) 
-ID / Name of the technique 
-used for the shot. 
-89 / “Backheel” A shot that was taken with the heel Recorded for all shots. 
-90 / “Diving Header” Shot attempted with header while 
-player diving in front of him to reach 
-the ball 
-91 / “Half Volley” Contact was made off the ground 
-and after a bounce 
-92 / “Lob” A shot that had a high arc trajectory 
-in order to pass over the opposition 
-player 
-93 / “Normal” A shot that does not fall into any 
-other technique 
-94 / “Overhead Kick” Player’s back was to goal when 
-taking the shot 
-95 / “Volley” The ball never touched the ground 
-prior to the shot 
-body_part object (id (integer) / name 
-(text)) 
-ID / Name of the body part 
-used to shoot. 
-37 / “Head” Shot attempted with head Recorded for all shots. 
-38 / “Left Foot” Shot attempted with the left foot 
- 
- 
-Page 31 of 45 
-70 / “Other” Other body parts (i.e knee, chest, etc) 
-40 / “Right Foot” Shot attempted with right foot 
-type object (id (integer) / name 
-(text)) 
-Id / Name for the attribute 
-option specifying the type of 
-shot. 
-61 / “Corner” Shot direct from a corner kick Recorded for all shots. 
-62 / “Free Kick” Shot is from a direct free kick 
-87 / “Open Play” Shot is not directly from a set-piece 
-88 / “Penalty” Shot is a penalty kick 
-65 / “Kick Off” Shot directly from kick off 
-outcome object (id (integer) / name 
-(text)) 
-Id / Name for the attribute 
-option specifying the 
-outcome of the shot. 
-96 / “Blocked” A shot that was stopped from 
-continuing by a defender 
-Recorded for all shots. 
-97 / “Goal” A shot that was deemed to cross the 
-goal-line by officials 
-98 / “Off T” A shot that’s initial trajectory ended 
-outside the posts  
-99 / “Post” A shot that hit one of the three posts 
-100 / “Saved” A shot that was saved by the 
-opposing team’s keeper 
-101 / “Wayward” An unthreatening shot that was way 
-off target or did not have enough 
-power to reach the goal line (or a 
-miskick where the player didn’t make 
-contact with the ball) 
-115 / “Saved Off T” A shot that was saved by the 
-goalkeeper but was not on target. 
-116 / “Saved To Post” If the keeper saves the shot and it 
-bounces off the goal frame 
-Event Name: Starting XI. Event ID: 35. 
-Starting XI events describe the starting lineup and formation for each team at the start of a period. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-tactics.formation integer The formation item describes 
-the formation being used. e.g., 343 e.g., three defenders four 
-midfielders and three strikers. 
-Recorded for almost all 
-Starting XI events.  
-tactics.lineup array 
-The lineups array describes 
-the players and their 
-positions. 
-See Appendix 4 for more information. 
-Recorded for almost all 
-Starting XI events.  
- 
- 
-Page 32 of 45 
-Event Name: Substitution. Event ID: 19. 
-Substitution events describe the player coming on the pitch, the player coming off the pitch and the reason why. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-replacement object (id (integer) / name 
-(text)) 
-For a substitution, the id / 
-name of the player coming 
-on the pitch. The player 
-details (main event) describe 
-the player coming off. 
-e.g., 3049 / "Aaron 
-Ramsey" 
-Player coming onto the pitch Recorded for all Substiution 
-events.  
-outcome object (id (integer) / name 
-(text)) 
-Id / Name for the attribute 
-option specifying the type of 
-substitution. 
-102 / “Injury” Substitution is because of an injury. Recorded for almost all 
-Substiution events.  103 / “Tactical” Substitution is because of tactical 
-reasons. 
-Event Name: Tactical Shift. Event ID: 36. 
-Tactical Shift events describe any time the team changes their tactics, whether it be a change in lineup or formation. 
-Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints 
-tactics.formation integer The formation item describes 
-the formation being used. 
-e.g., 343 e.g., three defenders four 
-midfielders and three strikers. 
-Recorded for almost all 
-Tactical Shift events.  
-tactics.lineup array The lineups array describes 
-the players and their 
-positions. 
-See Appendix 4 for more information. Recorded for almost all 
-Tactical Shift events.  
- 
-Position 
-Number 
-Position 
-Abbreviation 
-Position Name 
-1 GK Goalkeeper 
-2 RB Right Back 
-3 RCB Right Center Back 
-4 CB Center Back 
-5 LCB Left Center Back 
-6 LB  Left Back 
-7 RWB Right Wing Back 
-8 LWB Left Wing Back 
- 
- 
-Page 33 of 45 
-Appendix 
-Appendix 1: Tactical Positions Guide: 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-  
-9 RDM Right Defensive Midfield 
-10 CDM Center Defensive Midfield 
-11 LDM Left Defensive Midfield 
-12 RM Right Midfield 
-13 RCM Right Center Midfield 
-14 CM Center Midfield 
-15 LCM Left Center Midfield 
-16 LM Left Midfield 
-17 RW Right Wing 
-18 RAM Right Attacking Midfield 
-19 CAM Center Attacking Midfield 
-20 LAM Left Attacking Midfield 
-21 LW Left Wing 
-22 RCF Right Center Forward 
-23 ST Striker 
-24 LCF Left Center Forward 
-25 SS Secondary Striker 
+c18c884ab103”
+  Recorded for shots resulting
+from a key pass.
+end_location array [x,y] or [x,y,z] End location of the shot. e.g., (120, 50) or (120,
+32.5, 1.2)
+See Appendix 2 for more information Recorded for all shots.
 
- 
- 
-Page 34 of 45 
-Appendix 2: Locations 
-Pitch Coordinates - Coordinates specified as (x, y). 
- 
-  
 
- 
- 
-Page 35 of 45 
-Goal Coordinates - Coordinates specified as (x, y, z) 
- 
- 
-  
+Page 30 of 45
+aerial_won boolean Added if the shot resulted
+from an aerial win
+TRUE   Recorded only when true.
+follows_dribble boolean Added if the shot followed a
+dribble
+TRUE Whether or not this shot comes after
+a successful dribble by the shooter.
+Recorded only when true.
+first_time boolean Added if the shot was first
+touch.
+TRUE   Recorded only when true.
+freeze_frame array Each shot includes an object called freeze_frame which
+is an array containing information about relevant
+players at the time of the shot. Each freezeframe object
+is a data frame with a row for each player including
+their location, team, id, name and position id and
+name.
+Data from the JSON format will have
+a data frame nested within each shot
+event. (see Appendix 3 for more
+documentation)
+Recorded only when true.
+open_goal boolean Added if the shot was taken
+with an open goal.
+TRUE   Recorded only when true.
+statsbomb_xg numeric The StatsBomb expected
+goals value calculated for the
+shot.
+e.g., 0.15 Calculated from StatsBomb's own xG
+model, visit StatsBomb.com and
+search for articles on the calculation
+of xG
+Recorded for all shots.
+deflected boolean Added if the shot was
+deflected
+TRUE Shot was redirected by another
+player’s touch.
+Recorded only when true.
+technique object (id (integer) / name
+(text))
+ID / Name of the technique
+used for the shot.
+89 / “Backheel” A shot that was taken with the heel Recorded for all shots.
+90 / “Diving Header” Shot attempted with header while
+player diving in front of him to reach
+the ball
+91 / “Half Volley” Contact was made off the ground
+and after a bounce
+92 / “Lob” A shot that had a high arc trajectory
+in order to pass over the opposition
+player
+93 / “Normal” A shot that does not fall into any
+other technique
+94 / “Overhead Kick” Player’s back was to goal when
+taking the shot
+95 / “Volley” The ball never touched the ground
+prior to the shot
+body_part object (id (integer) / name
+(text))
+ID / Name of the body part
+used to shoot.
+37 / “Head” Shot attempted with head Recorded for all shots.
+38 / “Left Foot” Shot attempted with the left foot
 
- 
- 
-Page 36 of 45 
-Appendix 3: Shot Freeze Frame Objects 
-Each shot includes an object called freeze_frame which is an array containing information about relevant players at the time of the shot. Each 
-freezeframe object is structured as follows: 
-Column Type Child Child Type 
-location array [x,y]   
-player object id /name integer / 
-text 
-position object id / name integer / 
-text 
-teammate boolean   
-  
- 
- 
-Page 37 of 45 
-Appendix 4: Tactics Lineups Objects 
-At the beginning of each match, an event is recorded for the tactics and lineups for each team. Each tactics lineups object is structured as 
-follows: 
- 
-Column Type Child Child Type 
-jersey_number integer   
-player object id / name integer / 
-text 
-position object id / name integer / 
-text 
- 
- 
- 
- 
-Page 38 of 45 
-Appendix 5: Cutback  
-Cutbacks are low or ground passes that originate in zone A (on either side of the pitch) and end in zone B. 
- 
-  
 
- 
- 
-Page 39 of 45 
+Page 31 of 45
+70 / “Other” Other body parts (i.e knee, chest, etc)
+40 / “Right Foot” Shot attempted with right foot
+type object (id (integer) / name
+(text))
+Id / Name for the attribute
+option specifying the type of
+shot.
+61 / “Corner” Shot direct from a corner kick Recorded for all shots.
+62 / “Free Kick” Shot is from a direct free kick
+87 / “Open Play” Shot is not directly from a set-piece
+88 / “Penalty” Shot is a penalty kick
+65 / “Kick Off” Shot directly from kick off
+outcome object (id (integer) / name
+(text))
+Id / Name for the attribute
+option specifying the
+outcome of the shot.
+96 / “Blocked” A shot that was stopped from
+continuing by a defender
+Recorded for all shots.
+97 / “Goal” A shot that was deemed to cross the
+goal-line by officials
+98 / “Off T” A shot that’s initial trajectory ended
+outside the posts
+99 / “Post” A shot that hit one of the three posts
+100 / “Saved” A shot that was saved by the
+opposing team’s keeper
+101 / “Wayward” An unthreatening shot that was way
+off target or did not have enough
+power to reach the goal line (or a
+miskick where the player didn’t make
+contact with the ball)
+115 / “Saved Off T” A shot that was saved by the
+goalkeeper but was not on target.
+116 / “Saved To Post” If the keeper saves the shot and it
+bounces off the goal frame
+Event Name: Starting XI. Event ID: 35.
+Starting XI events describe the starting lineup and formation for each team at the start of a period.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+tactics.formation integer The formation item describes
+the formation being used. e.g., 343 e.g., three defenders four
+midfielders and three strikers.
+Recorded for almost all
+Starting XI events.
+tactics.lineup array
+The lineups array describes
+the players and their
+positions.
+See Appendix 4 for more information.
+Recorded for almost all
+Starting XI events.
+
+
+Page 32 of 45
+Event Name: Substitution. Event ID: 19.
+Substitution events describe the player coming on the pitch, the player coming off the pitch and the reason why.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+replacement object (id (integer) / name
+(text))
+For a substitution, the id /
+name of the player coming
+on the pitch. The player
+details (main event) describe
+the player coming off.
+e.g., 3049 / "Aaron
+Ramsey"
+Player coming onto the pitch Recorded for all Substiution
+events.
+outcome object (id (integer) / name
+(text))
+Id / Name for the attribute
+option specifying the type of
+substitution.
+102 / “Injury” Substitution is because of an injury. Recorded for almost all
+Substiution events.  103 / “Tactical” Substitution is because of tactical
+reasons.
+Event Name: Tactical Shift. Event ID: 36.
+Tactical Shift events describe any time the team changes their tactics, whether it be a change in lineup or formation.
+Attribute Attribute Type Attribute Description Attribute Values Value Descriptions Constraints
+tactics.formation integer The formation item describes
+the formation being used.
+e.g., 343 e.g., three defenders four
+midfielders and three strikers.
+Recorded for almost all
+Tactical Shift events.
+tactics.lineup array The lineups array describes
+the players and their
+positions.
+See Appendix 4 for more information. Recorded for almost all
+Tactical Shift events.
+
+Position
+Number
+Position
+Abbreviation
+Position Name
+1 GK Goalkeeper
+2 RB Right Back
+3 RCB Right Center Back
+4 CB Center Back
+5 LCB Left Center Back
+6 LB  Left Back
+7 RWB Right Wing Back
+8 LWB Left Wing Back
+
+
+Page 33 of 45
+Appendix
+Appendix 1: Tactical Positions Guide:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9 RDM Right Defensive Midfield
+10 CDM Center Defensive Midfield
+11 LDM Left Defensive Midfield
+12 RM Right Midfield
+13 RCM Right Center Midfield
+14 CM Center Midfield
+15 LCM Left Center Midfield
+16 LM Left Midfield
+17 RW Right Wing
+18 RAM Right Attacking Midfield
+19 CAM Center Attacking Midfield
+20 LAM Left Attacking Midfield
+21 LW Left Wing
+22 RCF Right Center Forward
+23 ST Striker
+24 LCF Left Center Forward
+25 SS Secondary Striker
+
+
+
+Page 34 of 45
+Appendix 2: Locations
+Pitch Coordinates - Coordinates specified as (x, y).
+
+
+
+
+
+Page 35 of 45
+Goal Coordinates - Coordinates specified as (x, y, z)
+
+
+
+
+
+
+Page 36 of 45
+Appendix 3: Shot Freeze Frame Objects
+Each shot includes an object called freeze_frame which is an array containing information about relevant players at the time of the shot. Each
+freezeframe object is structured as follows:
+Column Type Child Child Type
+location array [x,y]
+player object id /name integer /
+text
+position object id / name integer /
+text
+teammate boolean
+
+
+
+Page 37 of 45
+Appendix 4: Tactics Lineups Objects
+At the beginning of each match, an event is recorded for the tactics and lineups for each team. Each tactics lineups object is structured as
+follows:
+
+Column Type Child Child Type
+jersey_number integer
+player object id / name integer /
+text
+position object id / name integer /
+text
+
+
+
+
+Page 38 of 45
+Appendix 5: Cutback
+Cutbacks are low or ground passes that originate in zone A (on either side of the pitch) and end in zone B.
+
+
+
+
+
+Page 39 of 45
 Appendix 6: Cross
-A pass is marked as a cross if it originates from any of the following 
+A pass is marked as a cross if it originates from any of the following
 attacking zones  (on either side of the pitch):
-And intersects the following zone: 
- 
- 
- 
- 
- 
- 
-Page 40 of 45 
-Appendix 7: Pressure 
-Calculated as every on-the-ball event that overlaps the duration of a pressure event. For example, if a pressure event appears before a pass, 
-and the pressure’s timestamp plus its duration encompasses the pass’s timestamp, that pass is said to have been made under pressure. If a 
-pressure event occurs after a pass, but before the end of the pass (as calculated by using its duration), that pass is said to have been received 
-under pressure. 
- 
-To see a video of how pressure is recorded, please visit: https://data.statsbombservices.com/faq. 
- 
-  
- 
- 
- 
- 
- 
-Page 41 of 45 
-Appendix 8: Competition Stages 
-Competition Stage 
-ID 
-Competition Stage Name 
-1 Regular Season 
-2 Play-In Round 
-6 Europa League Play-offs - Semi-finals 
-8 MLS Cup - Conference Semi-finals 
-9 3rd Qualifying Round 
-10 Group Stage 
-11 Quarter-finals 
-12 Europa League Play-offs - Finals 
-13 16th Finals 
-14 Promotion Play-offs - Final 
-15 Semi-finals 
-18 Promotion Play-offs - Semi-finals 
-19 Preliminary Round 
-20 2nd Round 
-21 Europa League Play-offs - Quarter-finals 
-22 2nd Qualifying Round 
-23 MLS Cup - Conference Finals 
-24 Promotion Play-offs - 1st Round 
-25 3rd Place Final 
-26 Final 
-27 Promotion Play-offs - 2nd Round 
-28 Play-offs 
-29 1st Qualifying Round 
-31 Preliminary Round - Semi-finals 
-33 8th Finals 
- 
- 
- 
- 
- 
-Page 42 of 45 
-34 1st Phase 
-35 Preliminary Round - Final 
- 
-Appendix 9: Metadata History 
-Metadata Item Version Note 
-data_version 1.1.0 See Appendix 11 for details 
-data_version 1.0.3 See Appendix 11 for details 
-data_version 1.0.2 See Appendix 11 for details 
-data_version 1.0.1 See Appendix 11 for details 
-data_version 1.0.0 See Appendix 11 for details 
-shot_fidelity_version 2 See Appendix 11 for details 
-shot_fidelity_version 1 [tag not specified in 
-metadata object] 
- 
-Appendix 10: Shot Fidelity Version Change Log 
-Shot fidelity version is found in match files. Here is a list of all event data changes between data versions. 
-Shot Fidelity Version 2 
-- Shots, freeze frames and events paired to shots use high fidelity x,y coordinates 
-Shot Fidelity Version 1 
-- All events and freeze frames use standard location granularity. 
- 
- 
- 
- 
- 
-Page 43 of 45 
-Appendix 11: Data Version Change Log 
-Data version is found in match files. Here is a list of all event data changes between data versions. 
-Data Version 1.1 
-Competition Data Updates 
-- “Gender” added for all competitions. 
-Match Data Updates 
-- Team section now includes variables for: “Gender”, “Group”, “Country” and “Managers” 
-- “Match Week” added as an integer denoting the match week in the competition. 
-- “Competition Stage” added to reference the phase of the competition this particular match is in. 
-- “Stadium” updated from a name to an object with a name and corresponding country and id. 
-- “Referee” updated from a name to an object with a name and corresponding country and id. 
-- The data-version object is no longer displayed as a property of the match.  
-- Each match has a metadata object containing information about the structure/versions of various data attributes in the match. This 
-includes the data version. Note: the metadata tag can be empty for any match not in an “available” status. For matches that are 
-available the metadata will contain a data version and may contain other attributes.  
-Lineups Data Updates 
-- “Gender” added for all players in the lineup. 
-- “Height” added for all players in the lineup. 
-- “Weight” added for all players in the lineup. 
-- “Nickname” added for all players in the lineup. 
- 
- 
- 
- 
- 
-Page 44 of 45 
-Event Data Updates 
-- “Carry” added as an event type. carry.end_location added as an additional variable to describe the ending location of a carry event 
-- “counterpress”: an attribute on various defensive events, including: pressure, dribbled past, 50-50, duel, block, interception, and foul 
-committed (not offensive). These are pressing actions within 5 seconds of an open play turnover. 
-- “under_pressure”: the definition has been expanded to apply in more situations. So, events which are naturally performed under 
-pressure like duels, dribbles etc, all pick up the attribute, even in the absence of an actual pressure event. Carries can be pressured 
-not just by pressure events, but other defensive events (defined in change 2.) that happen during or at the end of the carry. 
-- Enhancements to possession chain and counterattack logic. 
--  “off_camera” variable no longer only shows when TRUE, but is a boolean on every event. 
-- “out” boolean variable added for when the outcome of the event is a ball out of bounds. 
-- “body type” variable added for clearances. 
-- Additional body types including “No Touch” and “Drop Kick”. 
-- “technique” variable added for passes, including: “Inswinging”, “Outswinging”, “Straight” and “Through Ball”. 
-- “through_ball” variable for passes is now deprecated. 
-- “late-video-start” variable added for event type “Half Start” when the broadcast video starts after the kick off. 
-- “early-video-end” variable added for event type “Half End” when the broadcast video ends before the final whistle. 
-- “match-suspended” variable added for event type “Half End” when the match is suspended typically due to weather. 
-- “kick-off” is now an option for shot types. 
-- “Saved To Post” option for shot outcome when the goalkeeper saves the ball into a post. 
-- “Saved Off Target” option for shot outcome when the goalkeeper saves a shot that would have missed the frame. 
-- “No Touch” added as a possible attribute for the event type “Dribble” when the attacker fails to touch the ball. 
-- Additional “Outcome” options for event type “Goal Keeper” including: “Punched Out”, “Lost Out”, “Lost in Play”, “Success Out”, and 
-“Success In Play”.  
-- Shots, Freeze Frames, and other events paired to Shots have their locations specified more accurately for matches collected at higher 
-fidelity. 
-Data Version 1.0.3 
-- “off_camera” variable added. 
-- “camera_on” and “camera_off” event-types are now deprecated. 
- 
- 
- 
- 
- 
-Page 45 of 45 
-Data Version 1.0.2 
-- Bug fixes and QA improvements. 
-Data Version 1.0.1 
-- Pressure events all have a Duration. 
-Data Version 1.0.0 
-- Initial version of StatsBomb Data 
- 
- 
- 
- 
-[End of Document] 
- 
+And intersects the following zone:
+
+
+
+
+
+
+Page 40 of 45
+Appendix 7: Pressure
+Calculated as every on-the-ball event that overlaps the duration of a pressure event. For example, if a pressure event appears before a pass,
+and the pressure’s timestamp plus its duration encompasses the pass’s timestamp, that pass is said to have been made under pressure. If a
+pressure event occurs after a pass, but before the end of the pass (as calculated by using its duration), that pass is said to have been received
+under pressure.
+
+To see a video of how pressure is recorded, please visit: https://data.statsbombservices.com/faq.
+
+
+
+
+
+
+
+Page 41 of 45
+Appendix 8: Competition Stages
+Competition Stage
+ID
+Competition Stage Name
+1 Regular Season
+2 Play-In Round
+6 Europa League Play-offs - Semi-finals
+8 MLS Cup - Conference Semi-finals
+9 3rd Qualifying Round
+10 Group Stage
+11 Quarter-finals
+12 Europa League Play-offs - Finals
+13 16th Finals
+14 Promotion Play-offs - Final
+15 Semi-finals
+18 Promotion Play-offs - Semi-finals
+19 Preliminary Round
+20 2nd Round
+21 Europa League Play-offs - Quarter-finals
+22 2nd Qualifying Round
+23 MLS Cup - Conference Finals
+24 Promotion Play-offs - 1st Round
+25 3rd Place Final
+26 Final
+27 Promotion Play-offs - 2nd Round
+28 Play-offs
+29 1st Qualifying Round
+31 Preliminary Round - Semi-finals
+33 8th Finals
+
+
+
+
+
+Page 42 of 45
+34 1st Phase
+35 Preliminary Round - Final
+
+Appendix 9: Metadata History
+Metadata Item Version Note
+data_version 1.1.0 See Appendix 11 for details
+data_version 1.0.3 See Appendix 11 for details
+data_version 1.0.2 See Appendix 11 for details
+data_version 1.0.1 See Appendix 11 for details
+data_version 1.0.0 See Appendix 11 for details
+shot_fidelity_version 2 See Appendix 11 for details
+shot_fidelity_version 1 [tag not specified in
+metadata object]
+
+Appendix 10: Shot Fidelity Version Change Log
+Shot fidelity version is found in match files. Here is a list of all event data changes between data versions.
+Shot Fidelity Version 2
+- Shots, freeze frames and events paired to shots use high fidelity x,y coordinates
+Shot Fidelity Version 1
+- All events and freeze frames use standard location granularity.
+
+
+
+
+
+Page 43 of 45
+Appendix 11: Data Version Change Log
+Data version is found in match files. Here is a list of all event data changes between data versions.
+Data Version 1.1
+Competition Data Updates
+- “Gender” added for all competitions.
+Match Data Updates
+- Team section now includes variables for: “Gender”, “Group”, “Country” and “Managers”
+- “Match Week” added as an integer denoting the match week in the competition.
+- “Competition Stage” added to reference the phase of the competition this particular match is in.
+- “Stadium” updated from a name to an object with a name and corresponding country and id.
+- “Referee” updated from a name to an object with a name and corresponding country and id.
+- The data-version object is no longer displayed as a property of the match.
+- Each match has a metadata object containing information about the structure/versions of various data attributes in the match. This
+includes the data version. Note: the metadata tag can be empty for any match not in an “available” status. For matches that are
+available the metadata will contain a data version and may contain other attributes.
+Lineups Data Updates
+- “Gender” added for all players in the lineup.
+- “Height” added for all players in the lineup.
+- “Weight” added for all players in the lineup.
+- “Nickname” added for all players in the lineup.
+
+
+
+
+
+Page 44 of 45
+Event Data Updates
+- “Carry” added as an event type. carry.end_location added as an additional variable to describe the ending location of a carry event
+- “counterpress”: an attribute on various defensive events, including: pressure, dribbled past, 50-50, duel, block, interception, and foul
+committed (not offensive). These are pressing actions within 5 seconds of an open play turnover.
+- “under_pressure”: the definition has been expanded to apply in more situations. So, events which are naturally performed under
+pressure like duels, dribbles etc, all pick up the attribute, even in the absence of an actual pressure event. Carries can be pressured
+not just by pressure events, but other defensive events (defined in change 2.) that happen during or at the end of the carry.
+- Enhancements to possession chain and counterattack logic.
+-  “off_camera” variable no longer only shows when TRUE, but is a boolean on every event.
+- “out” boolean variable added for when the outcome of the event is a ball out of bounds.
+- “body type” variable added for clearances.
+- Additional body types including “No Touch” and “Drop Kick”.
+- “technique” variable added for passes, including: “Inswinging”, “Outswinging”, “Straight” and “Through Ball”.
+- “through_ball” variable for passes is now deprecated.
+- “late-video-start” variable added for event type “Half Start” when the broadcast video starts after the kick off.
+- “early-video-end” variable added for event type “Half End” when the broadcast video ends before the final whistle.
+- “match-suspended” variable added for event type “Half End” when the match is suspended typically due to weather.
+- “kick-off” is now an option for shot types.
+- “Saved To Post” option for shot outcome when the goalkeeper saves the ball into a post.
+- “Saved Off Target” option for shot outcome when the goalkeeper saves a shot that would have missed the frame.
+- “No Touch” added as a possible attribute for the event type “Dribble” when the attacker fails to touch the ball.
+- Additional “Outcome” options for event type “Goal Keeper” including: “Punched Out”, “Lost Out”, “Lost in Play”, “Success Out”, and
+“Success In Play”.
+- Shots, Freeze Frames, and other events paired to Shots have their locations specified more accurately for matches collected at higher
+fidelity.
+Data Version 1.0.3
+- “off_camera” variable added.
+- “camera_on” and “camera_off” event-types are now deprecated.
+
+
+
+
+
+Page 45 of 45
+Data Version 1.0.2
+- Bug fixes and QA improvements.
+Data Version 1.0.1
+- Pressure events all have a Duration.
+Data Version 1.0.0
+- Initial version of StatsBomb Data
+
+
+
+
+[End of Document]
