@@ -1,0 +1,26 @@
+name: Rest defence analyzer
+
+on:
+  push:
+    paths: ['projects/rest-defence-analyzer/**', '.github/workflows/rest-defence.yml']
+  pull_request:
+    paths: ['projects/rest-defence-analyzer/**', '.github/workflows/rest-defence.yml']
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/rest-defence-analyzer
+    env:
+      MPLCONFIGDIR: /tmp/rest-defence-matplotlib
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e '.[test]'
+      - run: python -m rest_defence --bundled
+      - run: pytest -q
+      - run: python -m rest_defence.report --result outputs/J03WPY
+      - run: python scripts/build_website.py

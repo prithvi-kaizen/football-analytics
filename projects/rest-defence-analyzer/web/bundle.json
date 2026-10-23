@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "snapshot": {
+    "archive": "snapshot.json.gz",
+    "archive_sha256": "d599b284a09aac84c055ad1538fac8794c6bb35f56b9854e3e577cef3656a2b3",
+    "sha256": "d433bc3aa25827f7068983a0e111111a22adb325c4e97e952a051a9bbc166622",
+    "path": "snapshot.d433bc3aa25827f7.json.gz"
+  },
+  "assets": {
+    "index.html": "cf861451e93774fa6bf0a7e41aef457fe85c1e50ffa6b2372a765d92148a7ec4",
+    "style.css": "fbd3a7b636dabd437b838d6c01e3f494d854e8fc9f04523f9eadf4d15ed2b518",
+    "app.js": "58eeee7107a1dd3f8ea710d55dd0a21e19bbe6961e3137cb857742b41757b913"
+  },
+  "transitions": 293
+}

@@ -1,0 +1,60 @@
+{
+  "match_id": "J03WPY",
+  "analysis_code_sha256": "47a18ce93bd8196b344e954173a2481d4bd3c2c28fcb046e2d709ba179fe5732",
+  "scope": "first 180 seconds of available tracking",
+  "source": {
+    "meta": {
+      "file": "J03WPY_meta.xml",
+      "sha256": "566dd5e4c86e124ab90fcdba51100881f0436e22afa71832945a451a2d95a420"
+    },
+    "events": {
+      "file": "J03WPY_events.xml",
+      "sha256": "e440a3adf9a38d3e4ce4289343a59a3b5f76018a78e97c765114f7817591fb3c"
+    },
+    "tracking": {
+      "file": "J03WPY_tracking_sample.xml",
+      "sha256": "0199cebcd30f9c976699c120d2813c2d4aa5dbaa68ea7fa6d7f6a29bf77ba203"
+    }
+  },
+  "parser": {
+    "source_rows": 103523,
+    "invalid_coordinates": 0,
+    "unknown_entities": 0,
+    "inactive_ball_rows": 749,
+    "player_rows": 19822,
+    "ball_rows": 4501,
+    "stride": 5,
+    "metadata_sha256": "566dd5e4c86e124ab90fcdba51100881f0436e22afa71832945a451a2d95a420",
+    "cache_sha256": {
+      "players": "74ab9db4998144a9ecd1c458fa6c12f94e16b32b5a26d546dd6091acec6bf231",
+      "ball": "c241c3067a566759f951319ca3c34c3b3f4cd5e7e85db7a424655222b7c2345f"
+    }
+  },
+  "analysis": {
+    "candidates": 17,
+    "accepted": 17,
+    "rejected": {}
+  },
+  "stable_seconds": 0.4,
+  "sensitivity": [
+    {
+      "persistence_s": 0.4,
+      "candidates": 17
+    },
+    {
+      "persistence_s": 0.8,
+      "candidates": 13
+    },
+    {
+      "persistence_s": 1.2,
+      "candidates": 11
+    }
+  ],
+  "outputs": {
+    "transitions.csv": "0091ff39f7e373229d87f057c1b9b852bd3610f16688ce07250551d91e5d0263",
+    "snapshots.parquet": "b55fe6f5d1dcee8d545b28aadd08217313e3776437e4c3659f48c54ceba38c1c",
+    "replays.parquet": "345a49737a370947dddbf4f02add41635abc12295422697d78d3f58962b128d9",
+    "timeline.parquet": "d275a97cd115166af85f33c96235b6d26cd42da248143ec6f681eb656e5bb66b",
+    "metadata.json": "de079189a922204cfdd94aaa77aff6f8d3cba6acdc667d12e17c7d9bd56927e7"
+  }
+}

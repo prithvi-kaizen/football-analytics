@@ -1,0 +1,45 @@
+{
+  "n": 168,
+  "progressed": 94,
+  "shots": 1,
+  "rho": 7.509602979761315e-05,
+  "censored": 0,
+  "unscored": 1,
+  "corroborated": 120,
+  "bins": [
+    {
+      "score_bin": "0–33⅓",
+      "n": 11,
+      "advanced": 7,
+      "shots": 0
+    },
+    {
+      "score_bin": "33⅓–66⅔",
+      "n": 149,
+      "advanced": 82,
+      "shots": 1
+    },
+    {
+      "score_bin": "66⅔–100",
+      "n": 8,
+      "advanced": 5,
+      "shots": 0
+    }
+  ],
+  "teams": [
+    {
+      "team_name": "1. FC Nürnberg",
+      "n": 87,
+      "advanced": 47,
+      "shots": 0,
+      "median_behind": 9.0
+    },
+    {
+      "team_name": "Fortuna Düsseldorf",
+      "n": 81,
+      "advanced": 47,
+      "shots": 1,
+      "median_behind": 8.0
+    }
+  ]
+}

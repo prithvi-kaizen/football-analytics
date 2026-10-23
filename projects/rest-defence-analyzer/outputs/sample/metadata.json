@@ -1,0 +1,280 @@
+{
+  "match_id": "J03WPY",
+  "title": "Fortuna D\u00fcsseldorf:1. FC N\u00fcrnberg",
+  "length": 105.0,
+  "width": 68.0,
+  "teams": {
+    "DFL-CLU-000005": {
+      "name": "1. FC N\u00fcrnberg",
+      "role": "guest"
+    },
+    "DFL-CLU-00000P": {
+      "name": "Fortuna D\u00fcsseldorf",
+      "role": "home"
+    }
+  },
+  "players": {
+    "DFL-OBJ-0001BX": {
+      "team": "DFL-CLU-000005",
+      "name": "E. Valentini",
+      "number": "22",
+      "is_gk": false
+    },
+    "DFL-OBJ-00008F": {
+      "team": "DFL-CLU-000005",
+      "name": "Christopher Schindler",
+      "number": "16",
+      "is_gk": false
+    },
+    "DFL-OBJ-0000EJ": {
+      "team": "DFL-CLU-000005",
+      "name": "J. Geis",
+      "number": "5",
+      "is_gk": false
+    },
+    "DFL-OBJ-0001HW": {
+      "team": "DFL-CLU-000005",
+      "name": "C. Mathenia",
+      "number": "26",
+      "is_gk": true
+    },
+    "DFL-OBJ-0001LJ": {
+      "team": "DFL-CLU-000005",
+      "name": "Jan Gyamerah",
+      "number": "28",
+      "is_gk": false
+    },
+    "DFL-OBJ-00265W": {
+      "team": "DFL-CLU-000005",
+      "name": "P. K\u00f6pke",
+      "number": "20",
+      "is_gk": false
+    },
+    "DFL-OBJ-002595": {
+      "team": "DFL-CLU-000005",
+      "name": "M. M\u00f8ller D\u00e6hli",
+      "number": "10",
+      "is_gk": false
+    },
+    "DFL-OBJ-002G5E": {
+      "team": "DFL-CLU-000005",
+      "name": "C. Klaus",
+      "number": "1",
+      "is_gk": false
+    },
+    "DFL-OBJ-0026IA": {
+      "team": "DFL-CLU-000005",
+      "name": "E. Wekesser",
+      "number": "13",
+      "is_gk": false
+    },
+    "DFL-OBJ-00286U": {
+      "team": "DFL-CLU-000005",
+      "name": "Manuel Wintzheimer",
+      "number": "18",
+      "is_gk": false
+    },
+    "DFL-OBJ-J0178P": {
+      "team": "DFL-CLU-000005",
+      "name": "Kwadwo Duah",
+      "number": "23",
+      "is_gk": false
+    },
+    "DFL-OBJ-0028BZ": {
+      "team": "DFL-CLU-000005",
+      "name": "C. Daferner",
+      "number": "33",
+      "is_gk": false
+    },
+    "DFL-OBJ-0028T3": {
+      "team": "DFL-CLU-000005",
+      "name": "L. Tempelmann",
+      "number": "6",
+      "is_gk": false
+    },
+    "DFL-OBJ-002G68": {
+      "team": "DFL-CLU-000005",
+      "name": "James Lawrence",
+      "number": "4",
+      "is_gk": false
+    },
+    "DFL-OBJ-002FYC": {
+      "team": "DFL-CLU-000005",
+      "name": "F. N\u00fcrnberger",
+      "number": "15",
+      "is_gk": false
+    },
+    "DFL-OBJ-002G78": {
+      "team": "DFL-CLU-000005",
+      "name": "L. Schleimer",
+      "number": "36",
+      "is_gk": false
+    },
+    "DFL-OBJ-002GG4": {
+      "team": "DFL-CLU-000005",
+      "name": "J. Castrop",
+      "number": "17",
+      "is_gk": false
+    },
+    "DFL-OBJ-002GLC": {
+      "team": "DFL-CLU-000005",
+      "name": "E. Shuranov",
+      "number": "11",
+      "is_gk": false
+    },
+    "DFL-OBJ-J01IUM": {
+      "team": "DFL-CLU-000005",
+      "name": "Bryang Kayo",
+      "number": "34",
+      "is_gk": false
+    },
+    "DFL-OBJ-J01K2L": {
+      "team": "DFL-CLU-000005",
+      "name": "S. Fofana",
+      "number": "3",
+      "is_gk": false
+    },
+    "DFL-OBJ-00008K": {
+      "team": "DFL-CLU-00000P",
+      "name": "R. Hennings",
+      "number": "28",
+      "is_gk": false
+    },
+    "DFL-OBJ-000170": {
+      "team": "DFL-CLU-00000P",
+      "name": "R. Wolf",
+      "number": "1",
+      "is_gk": false
+    },
+    "DFL-OBJ-0000NZ": {
+      "team": "DFL-CLU-00000P",
+      "name": "Matthias Zimmermann",
+      "number": "25",
+      "is_gk": false
+    },
+    "DFL-OBJ-0000F8": {
+      "team": "DFL-CLU-00000P",
+      "name": "F. Klaus",
+      "number": "11",
+      "is_gk": false
+    },
+    "DFL-OBJ-00028V": {
+      "team": "DFL-CLU-00000P",
+      "name": "M. Sobottka",
+      "number": "31",
+      "is_gk": false
+    },
+    "DFL-OBJ-002FXT": {
+      "team": "DFL-CLU-00000P",
+      "name": "Dawid Kownacki",
+      "number": "9",
+      "is_gk": false
+    },
+    "DFL-OBJ-0026RH": {
+      "team": "DFL-CLU-00000P",
+      "name": "E. Iyoha",
+      "number": "19",
+      "is_gk": false
+    },
+    "DFL-OBJ-0028FW": {
+      "team": "DFL-CLU-00000P",
+      "name": "F. Kastenmeier",
+      "number": "33",
+      "is_gk": true
+    },
+    "DFL-OBJ-J01CP5": {
+      "team": "DFL-CLU-00000P",
+      "name": "N. Gavory",
+      "number": "34",
+      "is_gk": false
+    },
+    "DFL-OBJ-002G5J": {
+      "team": "DFL-CLU-00000P",
+      "name": "Shinta Appelkamp",
+      "number": "23",
+      "is_gk": false
+    },
+    "DFL-OBJ-J01D0C": {
+      "team": "DFL-CLU-00000P",
+      "name": "N. Vukan\u010di\u0107",
+      "number": "47",
+      "is_gk": false
+    },
+    "DFL-OBJ-002GMO": {
+      "team": "DFL-CLU-00000P",
+      "name": "Tim Oberdorf",
+      "number": "15",
+      "is_gk": false
+    },
+    "DFL-OBJ-002GM1": {
+      "team": "DFL-CLU-00000P",
+      "name": "Kristoffer Peterson",
+      "number": "7",
+      "is_gk": false
+    },
+    "DFL-OBJ-002GM9": {
+      "team": "DFL-CLU-00000P",
+      "name": "C. Klarer",
+      "number": "5",
+      "is_gk": false
+    },
+    "DFL-OBJ-J01H9X": {
+      "team": "DFL-CLU-00000P",
+      "name": "A. Tanaka",
+      "number": "4",
+      "is_gk": false
+    },
+    "DFL-OBJ-J01JQC": {
+      "team": "DFL-CLU-00000P",
+      "name": "D. Bunk",
+      "number": "35",
+      "is_gk": false
+    },
+    "DFL-OBJ-J01KJ5": {
+      "team": "DFL-CLU-00000P",
+      "name": "M. Karbownik",
+      "number": "8",
+      "is_gk": false
+    },
+    "DFL-OBJ-J01L1F": {
+      "team": "DFL-CLU-00000P",
+      "name": "Kwadwo Baah",
+      "number": "14",
+      "is_gk": false
+    },
+    "DFL-OBJ-J01NQ8": {
+      "team": "DFL-CLU-00000P",
+      "name": "E. Fernandes Neto",
+      "number": "46",
+      "is_gk": false
+    },
+    "DFL-OBJ-J01PRX": {
+      "team": "DFL-CLU-00000P",
+      "name": "T. Geerkens",
+      "number": "45",
+      "is_gk": false
+    }
+  },
+  "possession_map": {
+    "1": "DFL-CLU-00000P",
+    "2": "DFL-CLU-000005"
+  },
+  "halves": {
+    "firstHalf": {
+      "start": 1665831688.31,
+      "left": "DFL-CLU-000005",
+      "right": "DFL-CLU-00000P",
+      "end": 1665834451.0
+    },
+    "secondHalf": {
+      "start": 1665835409.01,
+      "left": "DFL-CLU-00000P",
+      "right": "DFL-CLU-000005",
+      "end": 1665838481.0
+    }
+  },
+  "possession_share": {
+    "DFL-CLU-00000P": 0.6649786780383795,
+    "DFL-CLU-000005": 0.3350213219616205
+  }
+}

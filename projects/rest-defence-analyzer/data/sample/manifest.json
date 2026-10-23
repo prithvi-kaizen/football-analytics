@@ -1,0 +1,18 @@
+{
+  "source": "DFL; Bassek et al. (2025), doi:10.1038/s41597-025-04505-y",
+  "license": "CC BY 4.0",
+  "files": {
+    "tracking": {
+      "gzip_sha256": "cfe714433425a987e8798b0c972ad73643c8a87448010dccc8041e5cc6c43882",
+      "xml_sha256": "0199cebcd30f9c976699c120d2813c2d4aa5dbaa68ea7fa6d7f6a29bf77ba203"
+    },
+    "meta": {
+      "gzip_sha256": "2f3d003ae18c7f46fd5d5f31c99a186f5dbc1acc0286d10d470cfb6c7c22768e",
+      "xml_sha256": "566dd5e4c86e124ab90fcdba51100881f0436e22afa71832945a451a2d95a420"
+    },
+    "events": {
+      "gzip_sha256": "fc2349604c1582ad0d88811e3bbffa8926bdc97fb9de4a6606cf7e8c268751c5",
+      "xml_sha256": "e440a3adf9a38d3e4ce4289343a59a3b5f76018a78e97c765114f7817591fb3c"
+    }
+  }
+}

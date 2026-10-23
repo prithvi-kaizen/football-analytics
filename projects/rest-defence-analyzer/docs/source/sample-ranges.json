@@ -1,0 +1,152 @@
+{
+  "url": "https://ndownloader.figshare.com/files/51643526",
+  "source_size": 371688499,
+  "source_md5": "e56ff1336a334f8da51110fbe7cab764",
+  "prefix": "<PutDataRequest><Positions>\n",
+  "suffix": "</Positions></PutDataRequest>\n",
+  "ranges": [
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-00000P\" PersonId=\"DFL-OBJ-0000NZ\">\n",
+      "start": 490,
+      "end": 481413,
+      "sha256": "518b60fec3fa7ac5b4225d89addf89ac54373d1f6b7a3fa98d943d9544bafdaa"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-00000P\" PersonId=\"DFL-OBJ-0000F8\">\n",
+      "start": 7449668,
+      "end": 7933154,
+      "sha256": "39714f6d9d27c6347362af4194c8d5ca45f11d2e5d2533edad999949461622c1"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-00000P\" PersonId=\"DFL-OBJ-00028V\">\n",
+      "start": 14918103,
+      "end": 15398886,
+      "sha256": "c8f80038c153cc69acbf4e4c4e304061bef92091c0c714fcc248dba340046006"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-00000P\" PersonId=\"DFL-OBJ-002FXT\">\n",
+      "start": 22366651,
+      "end": 22850838,
+      "sha256": "7f7849610c665fe84aab8123dcb9be5cb35998480d1b7999ca2d6ae672af3c65"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-00000P\" PersonId=\"DFL-OBJ-0026RH\">\n",
+      "start": 29856577,
+      "end": 30343110,
+      "sha256": "5880cbbf3a5b908d05f2fc7725824c77f6ae8e0371c00ef400a68b056c8fb069"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-00000P\" PersonId=\"DFL-OBJ-0028FW\">\n",
+      "start": 37376980,
+      "end": 37855187,
+      "sha256": "72f124339a6921adbb6262af3c0272506e056d9d748e454889d171952b2b10a7"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-00000P\" PersonId=\"DFL-OBJ-002G5J\">\n",
+      "start": 44773059,
+      "end": 45255363,
+      "sha256": "d39a9968cdc1a94e7d6dc9bae0838e619a48bdb22ee906ea1a299e751a543153"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-00000P\" PersonId=\"DFL-OBJ-002GMO\">\n",
+      "start": 52258015,
+      "end": 52737848,
+      "sha256": "c0a78addb280131d603dc8ee83ebc272d9bd37c0b1ffdc55c6aa6b8ad9833d15"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-00000P\" PersonId=\"DFL-OBJ-002GM9\">\n",
+      "start": 59692398,
+      "end": 60175872,
+      "sha256": "4cbdb19e45da703759033083d8d950dd7b0aa9e218ea5ddfd784713a69fa2022"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-00000P\" PersonId=\"DFL-OBJ-J01H9X\">\n",
+      "start": 67160407,
+      "end": 67642470,
+      "sha256": "b0312c37413ef0919bfd65dcf689bda5bf48e2a7470137c64b7b83f1c5e354f6"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-00000P\" PersonId=\"DFL-OBJ-J01KJ5\">\n",
+      "start": 74619499,
+      "end": 75104155,
+      "sha256": "c05caf82db956118950bc43c2779bbd34337dbc544829c7b6087fc463b49362c"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-000005\" PersonId=\"DFL-OBJ-00008F\">\n",
+      "start": 82141363,
+      "end": 82626180,
+      "sha256": "0e724a618a219da7fb21e5a1fffff691a4f4e63dcbdad911fc1df723c066d582"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-000005\" PersonId=\"DFL-OBJ-0000EJ\">\n",
+      "start": 89639480,
+      "end": 90122615,
+      "sha256": "5300073c478c989b922319da37a2d10c6543b8afddf031c2335fb26fe2c32be3"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-000005\" PersonId=\"DFL-OBJ-0001HW\">\n",
+      "start": 97112803,
+      "end": 97594659,
+      "sha256": "092010481d99a4714450ecbda33251745556fb43b7b7759cc23c47087aa20471"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-000005\" PersonId=\"DFL-OBJ-0001LJ\">\n",
+      "start": 104570802,
+      "end": 105058842,
+      "sha256": "3a5c1f6aca6744ce076dfbaa8bc4662cf15b234255c333a67a2e1f41d1180808"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-000005\" PersonId=\"DFL-OBJ-002595\">\n",
+      "start": 112105144,
+      "end": 112587380,
+      "sha256": "dc06639bcab15cda29f60eedee9a2d905ac8c5dab3316f6ebfc95bcf39ddbb73"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-000005\" PersonId=\"DFL-OBJ-J0178P\">\n",
+      "start": 119574698,
+      "end": 120056709,
+      "sha256": "0d24a477c96960b15183eb2fab23de543cf524d6b86158c38da1e9b5c177aac7"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-000005\" PersonId=\"DFL-OBJ-0028BZ\">\n",
+      "start": 127021848,
+      "end": 127502252,
+      "sha256": "f798d3076bb4368e9b2d51035ed4deb12b6b55aad7cca58b6cc00b01eca7a855"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-000005\" PersonId=\"DFL-OBJ-0028T3\">\n",
+      "start": 134462953,
+      "end": 134946367,
+      "sha256": "421f0e772112978781a137a8dafd0e70efa0d302db4fbc3ad4ff8a535a07e3e4"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-000005\" PersonId=\"DFL-OBJ-002G68\">\n",
+      "start": 141932517,
+      "end": 142416267,
+      "sha256": "cd62a1caaf1293f9656e4e888eba89e8310b6c50e9203af36d3efe2cddc7c285"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-000005\" PersonId=\"DFL-OBJ-002FYC\">\n",
+      "start": 149408549,
+      "end": 149892596,
+      "sha256": "3e4ec070c74caa6255c3e5ff884fcf9185816cfd274bee804155ede85fae155d"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"DFL-CLU-000005\" PersonId=\"DFL-OBJ-002GG4\">\n",
+      "start": 156883314,
+      "end": 157369640,
+      "sha256": "4bac81c6ef1dd8f4cb8be7bdd64906a8e5f1dcbcca4bbcc749ad908f312c1183"
+    },
+    {
+      "header": "<FrameSet GameSection=\"firstHalf\" MatchId=\"DFL-MAT-J03WPY\" TeamId=\"BALL\" PersonId=\"DFL-OBJ-0000XT\">\n",
+      "start": 164405286,
+      "end": 165083444,
+      "sha256": "58b272da9aef20baf5f5e43b4d9dbcebc975d3124f6aac2589544af024af69fe"
+    }
+  ],
+  "first_frame": 10000,
+  "last_frame": 14500,
+  "sample_sha256": "0199cebcd30f9c976699c120d2813c2d4aa5dbaa68ea7fa6d7f6a29bf77ba203",
+  "seconds": 180,
+  "total_range_bytes": 11304666
+}

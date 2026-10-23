@@ -2,7 +2,7 @@
 
 Football projects built around specific tactical questions, reproducible data processing and interactive analysis.
 
-**Live projects:** [Pressing trap detector](https://football-analytics-self.vercel.app) · [The Invisible Runner](https://football-analytics-self.vercel.app/invisible-runner/)
+**Live projects:** [Pressing trap detector](https://football-analytics-self.vercel.app) · [The Invisible Runner](https://football-analytics-self.vercel.app/invisible-runner/) · [Rest Defence Analyzer](https://football-analytics-self.vercel.app/rest-defence/)
 
 ## Projects
 
@@ -10,6 +10,7 @@ Football projects built around specific tactical questions, reproducible data pr
 | --- | --- | --- | --- |
 | [Pressing trap detector](projects/pressing-trap-detector/) | Where does Spain actually win the ball, and which opposition passing patterns precede pressure? | StatsBomb Open Data, Euro 2024, all 51 matches | Working dashboard and reproducible analysis |
 | [The Invisible Runner](projects/invisible-runner/) | How can we measure players who create space without touching the ball? | SkillCorner open A-League 2024/25 tracking; one complete match validated | Python pipeline, Streamlit app and published browser replay |
+| [Rest Defence Analyzer](projects/rest-defence-analyzer/) | How vulnerable is a team to counterattacks while it attacks? | DFL open 2022/23 tracking and events; one complete match validated | Python/Streamlit workbench, independent XML audit and browser replay |
 
 The first project includes pressure and recovery maps, event-level replays, team comparisons, an exploratory xT model, automated tests and a written investigation. It identifies patterns consistent with pressing traps; event data alone cannot prove intent.
 
@@ -26,7 +27,7 @@ python3 scripts/build_website.py
 python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
 ```
 
-Open [Pressing trap detector](http://127.0.0.1:4173/) or [The Invisible Runner](http://127.0.0.1:4173/invisible-runner/). The build verifies and restores both published releases without downloading raw data or installing analytics dependencies. Keep the server running while using the websites.
+Open [Pressing trap detector](http://127.0.0.1:4173/), [The Invisible Runner](http://127.0.0.1:4173/invisible-runner/) or [Rest Defence Analyzer](http://127.0.0.1:4173/rest-defence/). The build verifies and restores the published releases without downloading raw data or installing analytics dependencies. Keep the server running while using the websites.
 
 ## Reproduce the analysis
 
@@ -34,9 +35,11 @@ See the [project README](projects/pressing-trap-detector/README.md) for the down
 
 For tracking analysis, use the [Invisible Runner setup](projects/invisible-runner/README.md). It supports a small download for a smoke test and additional explicit match IDs. The full Python/Streamlit app recalculates thresholds; the published browser version uses reviewed profiles at 4.5, 5.0 and 5.5 m/s. No paid API or account is required to run either project locally.
 
+Rest defence: see the [project setup](projects/rest-defence-analyzer/README.md) and [findings](projects/rest-defence-analyzer/outputs/J03WPY/findings.md). All 293 published behind-ball counts were independently checked. The fixed score has approximately zero correlation with subsequent ball movement in this match; it is an exploratory diagnostic.
+
 ## Deployment
 
-The websites are deployed at [football-analytics-self.vercel.app](https://football-analytics-self.vercel.app) through the repository's Vercel GitHub integration. Pushes to `main` update production; other branches create previews. The root `vercel.json` runs `python3 scripts/build_website.py` and serves `dist/`: the existing pressing dashboard at `/`, and the run analyzer at `/invisible-runner/`. No environment variables or server functions are required. See the [Invisible Runner hosting guide](projects/invisible-runner/docs/deployment.md) and [pressing release guide](projects/pressing-trap-detector/docs/deployment.md).
+The websites are deployed at [football-analytics-self.vercel.app](https://football-analytics-self.vercel.app) through the repository's Vercel GitHub integration. Pushes to `main` update production; other branches create previews. The root `vercel.json` runs `python3 scripts/build_website.py` and serves `dist/`: the existing pressing dashboard at `/`, the run analyzer at `/invisible-runner/`, and rest-defence inspection at `/rest-defence/`. No environment variables or server functions are required. See the [Invisible Runner hosting guide](projects/invisible-runner/docs/deployment.md) and [pressing release guide](projects/pressing-trap-detector/docs/deployment.md).
 
 ## Repository conventions
 
@@ -45,3 +48,5 @@ Each project lives in `projects/<project-name>/` with its own README, methods, s
 Data sources keep their original terms. The first project's data is supplied by [StatsBomb Open Data](https://github.com/hudl/open-data); its licence and attribution are included in that project. Third-party runtime code in the compiled dashboard is not claimed as original project code or relicensed by this repository.
 
 The Invisible Runner uses [SkillCorner Open Data](https://github.com/SkillCorner/opendata), published with PySport under its supplied MIT notice. The source revision, field audit, license, methods and output hashes are retained in the project. Raw tracking and machine-local caches are excluded from Git; the published replay snapshot contains only the fields needed by the browser.
+
+The Rest Defence Analyzer uses the DFL open dataset, authorized under CC BY 4.0 with DFL and Bassek et al. (2025) attribution. Its browser release serves reviewed historical results; the Python/Streamlit app supports reproduction and new match runs. See its [hosting guide](projects/rest-defence-analyzer/docs/deployment.md).
