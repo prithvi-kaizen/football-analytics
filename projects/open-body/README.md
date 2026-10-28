@@ -4,7 +4,7 @@
 
 Adding orientation reduced held-out log loss in both match directions, but both conditional uncertainty intervals include zero. The predeclared pilot criterion was **not met**. The midfield-only result is mixed. This is a measurement and evaluation project, not evidence that opening the body causes better play.
 
-[Open the offline interactive viewer](outputs/viewer.html) · [Watch the 30-second demo](outputs/open-body-demo.mp4) · [Read the results](docs/results.md)
+[Open the live viewer](https://open-body-seven.vercel.app) · [Offline viewer](outputs/viewer.html) · [Watch the 30-second demo](outputs/open-body-demo.mp4) · [Read the results](docs/results.md)
 
 ![Paired held-out log-loss changes and conditional intervals](outputs/results.png)
 
@@ -85,3 +85,5 @@ To preview over HTTP if your browser restricts local HTML, run `.venv/bin/python
 Core modules are small and independent: `data.py`, `orientation.py`, `models.py`, `baseline.py`, `experiment.py`, `viewer.py`. Tests check geometry, causal timing, schema edge cases, train-only transforms and independent reconciliation of real labels, coordinates and held-out losses.
 
 The analysis and offline viewer are ready to inspect and reproduce. Deployment instructions are in `docs/deployment.md`; the LinkedIn/X drafts remain unpublished.
+
+The concise [LinkedIn post draft](docs/linkedin-post.md) follows the project owner’s preferred format and includes the published links.
