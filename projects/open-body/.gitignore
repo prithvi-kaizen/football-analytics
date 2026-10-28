@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+data/raw/
+outputs/cache/
+docs/source/*.html
+outputs/qa/
+site/
+.vercel/

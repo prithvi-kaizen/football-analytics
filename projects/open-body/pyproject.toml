@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-body"
+version = "0.1.0"
+description = "A reception-centred body-orientation pilot on SkillCorner open data"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2,<3", "pandas>=2.2,<4", "scikit-learn>=1.5,<2", "matplotlib>=3.9,<4", "pillow>=12,<14", "orjson>=3.10,<4"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+include = ["open_body*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+markers = ["real_data: requires downloaded full match data"]

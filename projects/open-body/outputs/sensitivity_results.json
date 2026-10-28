@@ -1,0 +1,2668 @@
+[
+  {
+    "train_match": 1925299,
+    "test_match": 1996435,
+    "train_n": 627,
+    "constant": {
+      "n": 587,
+      "positives": 159,
+      "prevalence": 0.2708688245315162,
+      "log_loss": 0.5853990629639204,
+      "brier": 0.19798576851134642,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 587,
+          "predicted": 0.24880382775119617,
+          "observed": 0.2708688245315162
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 587,
+      "positives": 159,
+      "prevalence": 0.2708688245315162,
+      "log_loss": 0.5857536289838922,
+      "brier": 0.1959702368487192,
+      "auroc": 0.6129724328454711,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 294,
+          "predicted": 0.12387547548180569,
+          "observed": 0.19727891156462585
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 234,
+          "predicted": 0.2802692329415595,
+          "observed": 0.31196581196581197
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 58,
+          "predicted": 0.4573233415675835,
+          "observed": 0.4827586206896552
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 1,
+          "predicted": 0.6593388521406796,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 587,
+      "positives": 159,
+      "prevalence": 0.2708688245315162,
+      "log_loss": 0.5700504586202456,
+      "brier": 0.1907401827187408,
+      "auroc": 0.6660935755010874,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 331,
+          "predicted": 0.113399107274175,
+          "observed": 0.17220543806646527
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 176,
+          "predicted": 0.2878733654741943,
+          "observed": 0.39204545454545453
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 75,
+          "predicted": 0.47300318598510643,
+          "observed": 0.41333333333333333
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 5,
+          "predicted": 0.6150976774202953,
+          "observed": 0.4
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "delta_log_loss": -0.015703170363646508,
+    "delta_brier": -0.005230054129978417,
+    "delta_log_loss_95ci": {
+      "low": -0.03175894483303223,
+      "high": 0.0030237476557622464,
+      "blocks": 20,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.208471016841322,
+      "abs_y": -0.2819005532763338,
+      "nearest_opponent_m": 0.10661305270875293,
+      "opponents_within_5m": -0.18197841106211243,
+      "pre_speed_mps": -0.3718176511650034,
+      "facing_attack_cos": 0.5061532129620541,
+      "facing_attack_sin": -0.15404790352216507,
+      "facing_ball_cos": -0.06743490803420436,
+      "facing_opponent_cos": -0.12679057954192036,
+      "pre_turn_abs_rad_s": 0.0341888139877849,
+      "turn_missing": 0.04161370002492089
+    },
+    "case": "error_10cm",
+    "overrides": {
+      "shoulder_error_cm": 10
+    },
+    "feature_cutoff_shift_s": 0,
+    "noise_degrees": 0
+  },
+  {
+    "train_match": 1996435,
+    "test_match": 1925299,
+    "train_n": 587,
+    "constant": {
+      "n": 627,
+      "positives": 156,
+      "prevalence": 0.24880382775119617,
+      "log_loss": 0.5622719001065936,
+      "brier": 0.18738734713046482,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 627,
+          "predicted": 0.27086882453151606,
+          "observed": 0.24880382775119617
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 627,
+      "positives": 156,
+      "prevalence": 0.24880382775119617,
+      "log_loss": 0.5346540499585983,
+      "brier": 0.17826580011126525,
+      "auroc": 0.6520768686373781,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 135,
+          "predicted": 0.15114094298260916,
+          "observed": 0.08148148148148149
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 423,
+          "predicted": 0.2988148659865424,
+          "observed": 0.28368794326241137
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 69,
+          "predicted": 0.4323974977310793,
+          "observed": 0.36231884057971014
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 627,
+      "positives": 156,
+      "prevalence": 0.24880382775119617,
+      "log_loss": 0.5230659311431151,
+      "brier": 0.17545436503627646,
+      "auroc": 0.6847814252272851,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 196,
+          "predicted": 0.13785636710791807,
+          "observed": 0.07142857142857142
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 273,
+          "predicted": 0.30083498943711795,
+          "observed": 0.31868131868131866
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 156,
+          "predicted": 0.46374488526878455,
+          "observed": 0.3525641025641026
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 2,
+          "predicted": 0.6324016440203557,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "delta_log_loss": -0.011588118815483212,
+    "delta_brier": -0.002811435074988736,
+    "delta_log_loss_95ci": {
+      "low": -0.020552701877051376,
+      "high": -0.0030432899138845898,
+      "blocks": 21,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.3950904411030921,
+      "abs_y": 0.04057843261325197,
+      "nearest_opponent_m": -0.07911768727159663,
+      "opponents_within_5m": -0.04736355475196772,
+      "pre_speed_mps": -0.3119971813138916,
+      "facing_attack_cos": 0.5162672517288295,
+      "facing_attack_sin": -0.028929108394721702,
+      "facing_ball_cos": -0.047318878321685756,
+      "facing_opponent_cos": 0.017294850483790678,
+      "pre_turn_abs_rad_s": 0.013079308369508246,
+      "turn_missing": 0.028304060555128352
+    },
+    "case": "error_10cm",
+    "overrides": {
+      "shoulder_error_cm": 10
+    },
+    "feature_cutoff_shift_s": 0,
+    "noise_degrees": 0
+  },
+  {
+    "train_match": 1925299,
+    "test_match": 1996435,
+    "train_n": 671,
+    "constant": {
+      "n": 654,
+      "positives": 173,
+      "prevalence": 0.26452599388379205,
+      "log_loss": 0.5793585647807815,
+      "brier": 0.19515644448575886,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 654,
+          "predicted": 0.23994038748137111,
+          "observed": 0.26452599388379205
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 654,
+      "positives": 173,
+      "prevalence": 0.26452599388379205,
+      "log_loss": 0.5793504879892281,
+      "brier": 0.19280143106064646,
+      "auroc": 0.624265439294341,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 358,
+          "predicted": 0.11812093051619596,
+          "observed": 0.18994413407821228
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 237,
+          "predicted": 0.28228505943507737,
+          "observed": 0.32489451476793246
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 58,
+          "predicted": 0.45905052279232456,
+          "observed": 0.4827586206896552
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 1,
+          "predicted": 0.6577051814414192,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 654,
+      "positives": 173,
+      "prevalence": 0.26452599388379205,
+      "log_loss": 0.5626576472574342,
+      "brier": 0.1873920488246017,
+      "auroc": 0.6746301659596456,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 392,
+          "predicted": 0.1095508772542011,
+          "observed": 0.18112244897959184
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 184,
+          "predicted": 0.2870972486941386,
+          "observed": 0.3858695652173913
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 76,
+          "predicted": 0.47818190065211913,
+          "observed": 0.39473684210526316
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 2,
+          "predicted": 0.6268787390689718,
+          "observed": 0.5
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "delta_log_loss": -0.016692840731793866,
+    "delta_brier": -0.0054093822360447835,
+    "delta_log_loss_95ci": {
+      "low": -0.031560903080434154,
+      "high": 0.0006452915520401243,
+      "blocks": 20,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.18422904134909243,
+      "abs_y": -0.28889003925065637,
+      "nearest_opponent_m": 0.1106780334249823,
+      "opponents_within_5m": -0.23716876333353454,
+      "pre_speed_mps": -0.36647782710362903,
+      "facing_attack_cos": 0.49846176152333665,
+      "facing_attack_sin": -0.11649897978447787,
+      "facing_ball_cos": -0.02925821821422759,
+      "facing_opponent_cos": -0.12152995963669884,
+      "pre_turn_abs_rad_s": 0.06327554140732937,
+      "turn_missing": 0.03055921315492941
+    },
+    "case": "error_20cm",
+    "overrides": {
+      "shoulder_error_cm": 20
+    },
+    "feature_cutoff_shift_s": 0,
+    "noise_degrees": 0
+  },
+  {
+    "train_match": 1996435,
+    "test_match": 1925299,
+    "train_n": 654,
+    "constant": {
+      "n": 671,
+      "positives": 161,
+      "prevalence": 0.2399403874813711,
+      "log_loss": 0.5525972851858417,
+      "brier": 0.18297344997883536,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 671,
+          "predicted": 0.26452599388379205,
+          "observed": 0.2399403874813711
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 671,
+      "positives": 161,
+      "prevalence": 0.2399403874813711,
+      "log_loss": 0.523574463007876,
+      "brier": 0.17369692957099717,
+      "auroc": 0.6582024113993423,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 160,
+          "predicted": 0.1457809243668819,
+          "observed": 0.06875
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 438,
+          "predicted": 0.2982876747279754,
+          "observed": 0.2808219178082192
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 73,
+          "predicted": 0.43417763848141583,
+          "observed": 0.3698630136986301
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 671,
+      "positives": 161,
+      "prevalence": 0.2399403874813711,
+      "log_loss": 0.5123571666294334,
+      "brier": 0.17118661522544185,
+      "auroc": 0.6927658019729631,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 225,
+          "predicted": 0.13595175055497752,
+          "observed": 0.06666666666666667
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 288,
+          "predicted": 0.29757412099246383,
+          "observed": 0.3159722222222222
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 156,
+          "predicted": 0.4659769875510709,
+          "observed": 0.3525641025641026
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 2,
+          "predicted": 0.6413964640321146,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "delta_log_loss": -0.011217296378442657,
+    "delta_brier": -0.002510314345555296,
+    "delta_log_loss_95ci": {
+      "low": -0.020169085696996138,
+      "high": -0.0025774490880201037,
+      "blocks": 21,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.39308301750702623,
+      "abs_y": 0.004688224938398238,
+      "nearest_opponent_m": -0.09138919843630514,
+      "opponents_within_5m": -0.07774665508194806,
+      "pre_speed_mps": -0.34165332511995894,
+      "facing_attack_cos": 0.5289563982279019,
+      "facing_attack_sin": -0.02949715701162763,
+      "facing_ball_cos": -0.011804463435311571,
+      "facing_opponent_cos": -0.015064961878490947,
+      "pre_turn_abs_rad_s": 0.014873152784230554,
+      "turn_missing": -0.08736272635114947
+    },
+    "case": "error_20cm",
+    "overrides": {
+      "shoulder_error_cm": 20
+    },
+    "feature_cutoff_shift_s": 0,
+    "noise_degrees": 0
+  },
+  {
+    "train_match": 1925299,
+    "test_match": 1996435,
+    "train_n": 671,
+    "constant": {
+      "n": 652,
+      "positives": 172,
+      "prevalence": 0.26380368098159507,
+      "log_loss": 0.5785257334101083,
+      "brier": 0.19478075565883377,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 652,
+          "predicted": 0.2399403874813711,
+          "observed": 0.26380368098159507
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 652,
+      "positives": 172,
+      "prevalence": 0.26380368098159507,
+      "log_loss": 0.576340831764509,
+      "brier": 0.19158846935316964,
+      "auroc": 0.6293241279069768,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 354,
+          "predicted": 0.11758687600971908,
+          "observed": 0.18361581920903955
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 241,
+          "predicted": 0.28254538232393817,
+          "observed": 0.33195020746887965
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 56,
+          "predicted": 0.46106806758655666,
+          "observed": 0.48214285714285715
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 1,
+          "predicted": 0.6580384770586247,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 652,
+      "positives": 172,
+      "prevalence": 0.26380368098159507,
+      "log_loss": 0.5606697274424017,
+      "brier": 0.1863615568978422,
+      "auroc": 0.6774951550387597,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 389,
+          "predicted": 0.10712230113133682,
+          "observed": 0.17223650385604114
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 183,
+          "predicted": 0.28334253882906224,
+          "observed": 0.3879781420765027
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 77,
+          "predicted": 0.4767677189677484,
+          "observed": 0.42857142857142855
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 3,
+          "predicted": 0.6132088053322816,
+          "observed": 0.3333333333333333
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "delta_log_loss": -0.01567110432210732,
+    "delta_brier": -0.005226912455327428,
+    "delta_log_loss_95ci": {
+      "low": -0.030035561281963843,
+      "high": 0.0013540262158071817,
+      "blocks": 20,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.17236220804031788,
+      "abs_y": -0.2853592993883601,
+      "nearest_opponent_m": 0.11081147710038956,
+      "opponents_within_5m": -0.24439438241232042,
+      "pre_speed_mps": -0.35592687748587387,
+      "facing_attack_cos": 0.5084917080459594,
+      "facing_attack_sin": -0.13713794858090317,
+      "facing_ball_cos": -0.028986692615778804,
+      "facing_opponent_cos": -0.10556228626828797,
+      "pre_turn_abs_rad_s": 0.06561953589417667,
+      "turn_missing": 0.04758241736151137
+    },
+    "case": "no_smoothing",
+    "overrides": {
+      "smooth_seconds": 0.0
+    },
+    "feature_cutoff_shift_s": 0,
+    "noise_degrees": 0
+  },
+  {
+    "train_match": 1996435,
+    "test_match": 1925299,
+    "train_n": 652,
+    "constant": {
+      "n": 671,
+      "positives": 161,
+      "prevalence": 0.2399403874813711,
+      "log_loss": 0.552507268697214,
+      "brier": 0.18293845471333844,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 671,
+          "predicted": 0.263803680981595,
+          "observed": 0.2399403874813711
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 671,
+      "positives": 161,
+      "prevalence": 0.2399403874813711,
+      "log_loss": 0.5226499251795996,
+      "brier": 0.1733435177877074,
+      "auroc": 0.6618804043356472,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 162,
+          "predicted": 0.14500492723827274,
+          "observed": 0.07407407407407407
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 432,
+          "predicted": 0.298153905076611,
+          "observed": 0.27546296296296297
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 77,
+          "predicted": 0.4349706317487064,
+          "observed": 0.38961038961038963
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 671,
+      "positives": 161,
+      "prevalence": 0.2399403874813711,
+      "log_loss": 0.5110227361196257,
+      "brier": 0.1705490092536368,
+      "auroc": 0.6947753014249178,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 219,
+          "predicted": 0.1335142577518641,
+          "observed": 0.0502283105022831
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 288,
+          "predicted": 0.29924667225349855,
+          "observed": 0.3263888888888889
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 162,
+          "predicted": 0.46475592615542416,
+          "observed": 0.345679012345679
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 2,
+          "predicted": 0.6340095573001739,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "delta_log_loss": -0.011627189059974018,
+    "delta_brier": -0.002794508534070574,
+    "delta_log_loss_95ci": {
+      "low": -0.021312255487220707,
+      "high": -0.0029999201559318843,
+      "blocks": 21,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.3987902532778287,
+      "abs_y": -0.00963488332872692,
+      "nearest_opponent_m": -0.10092838536372253,
+      "opponents_within_5m": -0.08281901224027,
+      "pre_speed_mps": -0.3014419530506107,
+      "facing_attack_cos": 0.526638405686777,
+      "facing_attack_sin": -0.050517857340039954,
+      "facing_ball_cos": 0.016142136669572933,
+      "facing_opponent_cos": 0.031593839087182184,
+      "pre_turn_abs_rad_s": 0.020787083227664475,
+      "turn_missing": -0.040158634144377675
+    },
+    "case": "no_smoothing",
+    "overrides": {
+      "smooth_seconds": 0.0
+    },
+    "feature_cutoff_shift_s": 0,
+    "noise_degrees": 0
+  },
+  {
+    "train_match": 1925299,
+    "test_match": 1996435,
+    "train_n": 669,
+    "constant": {
+      "n": 653,
+      "positives": 173,
+      "prevalence": 0.2649310872894334,
+      "log_loss": 0.57972885342075,
+      "brier": 0.19533180370191092,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 653,
+          "predicted": 0.2406576980568012,
+          "observed": 0.2649310872894334
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 653,
+      "positives": 173,
+      "prevalence": 0.2649310872894334,
+      "log_loss": 0.5793520120593733,
+      "brier": 0.19294728307542375,
+      "auroc": 0.6240847784200386,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 352,
+          "predicted": 0.11820107225199541,
+          "observed": 0.1903409090909091
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 240,
+          "predicted": 0.28050351069198454,
+          "observed": 0.325
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 60,
+          "predicted": 0.457331075541038,
+          "observed": 0.4666666666666667
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 1,
+          "predicted": 0.6580315611648936,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 653,
+      "positives": 173,
+      "prevalence": 0.2649310872894334,
+      "log_loss": 0.5665173743031412,
+      "brier": 0.18925225223748904,
+      "auroc": 0.6646796724470134,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 378,
+          "predicted": 0.11099037547123466,
+          "observed": 0.18253968253968253
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 200,
+          "predicted": 0.280612637981744,
+          "observed": 0.365
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 73,
+          "predicted": 0.4736202017920762,
+          "observed": 0.4246575342465753
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 2,
+          "predicted": 0.6276207996115752,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "delta_log_loss": -0.012834637756232116,
+    "delta_brier": -0.003695030837934709,
+    "delta_log_loss_95ci": {
+      "low": -0.026672911721637244,
+      "high": 0.002947295556596152,
+      "blocks": 20,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.1697866268180698,
+      "abs_y": -0.2976635745764632,
+      "nearest_opponent_m": 0.1340375357530639,
+      "opponents_within_5m": -0.24256366832816906,
+      "pre_speed_mps": -0.35510432493082283,
+      "facing_attack_cos": 0.3969525530845117,
+      "facing_attack_sin": -0.08883813959005647,
+      "facing_ball_cos": -0.015083770088766974,
+      "facing_opponent_cos": -0.08811415811041837,
+      "pre_turn_abs_rad_s": 0.10489677321576833,
+      "turn_missing": 0.09490534771505493
+    },
+    "case": "smooth_240ms",
+    "overrides": {
+      "smooth_seconds": 0.24
+    },
+    "feature_cutoff_shift_s": 0,
+    "noise_degrees": 0
+  },
+  {
+    "train_match": 1996435,
+    "test_match": 1925299,
+    "train_n": 653,
+    "constant": {
+      "n": 669,
+      "positives": 161,
+      "prevalence": 0.2406576980568012,
+      "log_loss": 0.5533808848873037,
+      "brier": 0.1833307678476416,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 669,
+          "predicted": 0.2649310872894333,
+          "observed": 0.2406576980568012
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 669,
+      "positives": 161,
+      "prevalence": 0.2406576980568012,
+      "log_loss": 0.5240531480876214,
+      "brier": 0.17395939493461318,
+      "auroc": 0.6590942436543259,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 164,
+          "predicted": 0.14609836539890617,
+          "observed": 0.07317073170731707
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 427,
+          "predicted": 0.298485577041104,
+          "observed": 0.2786885245901639
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 78,
+          "predicted": 0.43506033456650695,
+          "observed": 0.38461538461538464
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 669,
+      "positives": 161,
+      "prevalence": 0.2406576980568012,
+      "log_loss": 0.5192333598319203,
+      "brier": 0.17402750452729226,
+      "auroc": 0.6801731305325965,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 223,
+          "predicted": 0.13609838241377245,
+          "observed": 0.06278026905829596
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 294,
+          "predicted": 0.29579879943006643,
+          "observed": 0.3299319727891156
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 149,
+          "predicted": 0.47014624933094235,
+          "observed": 0.33557046979865773
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 3,
+          "predicted": 0.6371849297142423,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "delta_log_loss": -0.004819788255700925,
+    "delta_brier": 6.810959267910009e-05,
+    "delta_log_loss_95ci": {
+      "low": -0.01484697629305776,
+      "high": 0.004960297528459336,
+      "blocks": 21,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.4029058154667342,
+      "abs_y": 0.013122053041590661,
+      "nearest_opponent_m": -0.0771644564271929,
+      "opponents_within_5m": -0.08754472426771395,
+      "pre_speed_mps": -0.3476959479915432,
+      "facing_attack_cos": 0.50148451835655,
+      "facing_attack_sin": -0.013674719664475522,
+      "facing_ball_cos": -0.049230110526376,
+      "facing_opponent_cos": 0.002630248992516855,
+      "pre_turn_abs_rad_s": -0.006211645331815708,
+      "turn_missing": -0.11573905609359614
+    },
+    "case": "smooth_240ms",
+    "overrides": {
+      "smooth_seconds": 0.24
+    },
+    "feature_cutoff_shift_s": 0,
+    "noise_degrees": 0
+  },
+  {
+    "train_match": 1925299,
+    "test_match": 1996435,
+    "train_n": 665,
+    "constant": {
+      "n": 650,
+      "positives": 173,
+      "prevalence": 0.26615384615384613,
+      "log_loss": 0.5809380637137697,
+      "brier": 0.1958943106754741,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 650,
+          "predicted": 0.2421052631578947,
+          "observed": 0.26615384615384613
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 650,
+      "positives": 173,
+      "prevalence": 0.26615384615384613,
+      "log_loss": 0.5801608036873139,
+      "brier": 0.1933163054696093,
+      "auroc": 0.624241102264878,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 345,
+          "predicted": 0.11817667680074678,
+          "observed": 0.18840579710144928
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 244,
+          "predicted": 0.28008166702761655,
+          "observed": 0.32786885245901637
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 60,
+          "predicted": 0.4574737268888176,
+          "observed": 0.4666666666666667
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 1,
+          "predicted": 0.6584601808831569,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 650,
+      "positives": 173,
+      "prevalence": 0.26615384615384613,
+      "log_loss": 0.5667511398453995,
+      "brier": 0.1895257582645001,
+      "auroc": 0.6616134074962736,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 367,
+          "predicted": 0.1133790655829893,
+          "observed": 0.18528610354223432
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 209,
+          "predicted": 0.2784881852830099,
+          "observed": 0.3588516746411483
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 73,
+          "predicted": 0.47025066071464494,
+          "observed": 0.410958904109589
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 1,
+          "predicted": 0.6555882474135999,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "delta_log_loss": -0.013409663841914471,
+    "delta_brier": -0.0037905472051091727,
+    "delta_log_loss_95ci": {
+      "low": -0.024885767012588742,
+      "high": -0.0004936786845231573,
+      "blocks": 20,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.16147056389512104,
+      "abs_y": -0.30347487593436856,
+      "nearest_opponent_m": 0.14975484044653029,
+      "opponents_within_5m": -0.24185646551672016,
+      "pre_speed_mps": -0.36967955138679365,
+      "facing_attack_cos": 0.34310326588863876,
+      "facing_attack_sin": -0.07050719075594324,
+      "facing_ball_cos": -0.0014163479590261609,
+      "facing_opponent_cos": -0.06874950972721529,
+      "pre_turn_abs_rad_s": 0.07131603310259473,
+      "turn_missing": 0.059396773289466256
+    },
+    "case": "cutoff_100ms_earlier",
+    "overrides": {},
+    "feature_cutoff_shift_s": -0.1,
+    "noise_degrees": 0
+  },
+  {
+    "train_match": 1996435,
+    "test_match": 1925299,
+    "train_n": 650,
+    "constant": {
+      "n": 665,
+      "positives": 161,
+      "prevalence": 0.24210526315789474,
+      "log_loss": 0.5550050574432673,
+      "brier": 0.1840686390532544,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 665,
+          "predicted": 0.26615384615384613,
+          "observed": 0.24210526315789474
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 665,
+      "positives": 161,
+      "prevalence": 0.24210526315789474,
+      "log_loss": 0.5252696432274585,
+      "brier": 0.17449332817698762,
+      "auroc": 0.6609114660356897,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 161,
+          "predicted": 0.14658621504069932,
+          "observed": 0.07453416149068323
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 419,
+          "predicted": 0.2978469478708984,
+          "observed": 0.27684964200477324
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 85,
+          "predicted": 0.4358666489982973,
+          "observed": 0.38823529411764707
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 665,
+      "positives": 161,
+      "prevalence": 0.24210526315789474,
+      "log_loss": 0.5204998617877681,
+      "brier": 0.17445859983804254,
+      "auroc": 0.681886522725032,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 224,
+          "predicted": 0.141314475371318,
+          "observed": 0.07142857142857142
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 284,
+          "predicted": 0.29831019313065704,
+          "observed": 0.3274647887323944
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 155,
+          "predicted": 0.46950213506538147,
+          "observed": 0.33548387096774196
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 2,
+          "predicted": 0.6503581960511273,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "delta_log_loss": -0.004769781439690285,
+    "delta_brier": -3.4728338945062986e-05,
+    "delta_log_loss_95ci": {
+      "low": -0.013247668538697643,
+      "high": 0.00310766879197425,
+      "blocks": 21,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.40346403791365665,
+      "abs_y": 0.013954670993058855,
+      "nearest_opponent_m": -0.0708994317495326,
+      "opponents_within_5m": -0.09664592869592506,
+      "pre_speed_mps": -0.36814362491348007,
+      "facing_attack_cos": 0.4766513011280175,
+      "facing_attack_sin": 0.006808163273780975,
+      "facing_ball_cos": -0.07466528711646339,
+      "facing_opponent_cos": -0.015609609211656526,
+      "pre_turn_abs_rad_s": 0.008684146560945278,
+      "turn_missing": 0.0016868327244797443
+    },
+    "case": "cutoff_100ms_earlier",
+    "overrides": {},
+    "feature_cutoff_shift_s": -0.1,
+    "noise_degrees": 0
+  },
+  {
+    "train_match": 1925299,
+    "test_match": 1996435,
+    "train_n": 665,
+    "constant": {
+      "n": 647,
+      "positives": 170,
+      "prevalence": 0.26275115919629055,
+      "log_loss": 0.5770550129628069,
+      "brier": 0.1941392405605244,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 647,
+          "predicted": 0.24210526315789474,
+          "observed": 0.26275115919629055
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 647,
+      "positives": 170,
+      "prevalence": 0.26275115919629055,
+      "log_loss": 0.5750963548935546,
+      "brier": 0.19128714124374765,
+      "auroc": 0.626908373412258,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 349,
+          "predicted": 0.11862128206156736,
+          "observed": 0.1833810888252149
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 238,
+          "predicted": 0.2802200048588171,
+          "observed": 0.3277310924369748
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 59,
+          "predicted": 0.45716890376924624,
+          "observed": 0.4745762711864407
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 1,
+          "predicted": 0.6564616591970319,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 647,
+      "positives": 170,
+      "prevalence": 0.26275115919629055,
+      "log_loss": 0.5643922332447684,
+      "brier": 0.1875552065138103,
+      "auroc": 0.6695770131952152,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 382,
+          "predicted": 0.10713051537459299,
+          "observed": 0.1649214659685864
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 182,
+          "predicted": 0.2870025491189135,
+          "observed": 0.4065934065934066
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 78,
+          "predicted": 0.47479218493578385,
+          "observed": 0.41025641025641024
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 5,
+          "predicted": 0.6317507801513619,
+          "observed": 0.2
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "delta_log_loss": -0.010704121648786234,
+    "delta_brier": -0.003731934729937352,
+    "delta_log_loss_95ci": {
+      "low": -0.023681817512644313,
+      "high": 0.0038075385196715806,
+      "blocks": 20,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.18003002007448074,
+      "abs_y": -0.3033417516552743,
+      "nearest_opponent_m": 0.1095678210982095,
+      "opponents_within_5m": -0.235339506008638,
+      "pre_speed_mps": -0.4065769964064557,
+      "facing_attack_cos": 0.5096489776988354,
+      "facing_attack_sin": -0.13504009952095583,
+      "facing_ball_cos": -0.05772392830991529,
+      "facing_opponent_cos": -0.11084351617472193,
+      "pre_turn_abs_rad_s": -0.12319853567578619,
+      "turn_missing": 0.013579160638930596
+    },
+    "case": "noise_15deg",
+    "overrides": {},
+    "feature_cutoff_shift_s": 0,
+    "noise_degrees": 15
+  },
+  {
+    "train_match": 1996435,
+    "test_match": 1925299,
+    "train_n": 647,
+    "constant": {
+      "n": 665,
+      "positives": 161,
+      "prevalence": 0.24210526315789474,
+      "log_loss": 0.5546141745417787,
+      "brier": 0.18391655773236953,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 665,
+          "predicted": 0.26275115919629055,
+          "observed": 0.24210526315789474
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 665,
+      "positives": 161,
+      "prevalence": 0.24210526315789474,
+      "log_loss": 0.5255935693230244,
+      "brier": 0.17459844667186877,
+      "auroc": 0.6584220644779651,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 163,
+          "predicted": 0.1464134808441423,
+          "observed": 0.0736196319018405
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 428,
+          "predicted": 0.2981097824979419,
+          "observed": 0.2827102803738318
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 74,
+          "predicted": 0.43508596133928373,
+          "observed": 0.3783783783783784
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 665,
+      "positives": 161,
+      "prevalence": 0.24210526315789474,
+      "log_loss": 0.5176634904387968,
+      "brier": 0.1733400094302799,
+      "auroc": 0.6837104406980183,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 220,
+          "predicted": 0.13575129661911592,
+          "observed": 0.06363636363636363
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 293,
+          "predicted": 0.29567447323824947,
+          "observed": 0.32764505119453924
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 150,
+          "predicted": 0.4695218517063457,
+          "observed": 0.34
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 2,
+          "predicted": 0.6360780399141529,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "delta_log_loss": -0.007930078884227504,
+    "delta_brier": -0.0012584372415888466,
+    "delta_log_loss_95ci": {
+      "low": -0.016111183158186486,
+      "high": 3.865625201324739e-05,
+      "blocks": 21,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.4058572909929577,
+      "abs_y": 0.022225782760773437,
+      "nearest_opponent_m": -0.058531876942746495,
+      "opponents_within_5m": -0.07539177029314931,
+      "pre_speed_mps": -0.27413309845514644,
+      "facing_attack_cos": 0.47791717900805025,
+      "facing_attack_sin": -0.05090329977392433,
+      "facing_ball_cos": 0.05025241656360227,
+      "facing_opponent_cos": 0.025637445600983494,
+      "pre_turn_abs_rad_s": 0.08068566343459531,
+      "turn_missing": -0.09906436393466984
+    },
+    "case": "noise_15deg",
+    "overrides": {},
+    "feature_cutoff_shift_s": 0,
+    "noise_degrees": 15
+  },
+  {
+    "train_match": 1925299,
+    "test_match": 1996435,
+    "train_n": 665,
+    "constant": {
+      "n": 647,
+      "positives": 170,
+      "prevalence": 0.26275115919629055,
+      "log_loss": 0.5770550129628069,
+      "brier": 0.1941392405605244,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 647,
+          "predicted": 0.24210526315789474,
+          "observed": 0.26275115919629055
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 647,
+      "positives": 170,
+      "prevalence": 0.26275115919629055,
+      "log_loss": 0.5750963548935546,
+      "brier": 0.19128714124374765,
+      "auroc": 0.626908373412258,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 349,
+          "predicted": 0.11862128206156736,
+          "observed": 0.1833810888252149
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 238,
+          "predicted": 0.2802200048588171,
+          "observed": 0.3277310924369748
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 59,
+          "predicted": 0.45716890376924624,
+          "observed": 0.4745762711864407
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 1,
+          "predicted": 0.6564616591970319,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 647,
+      "positives": 170,
+      "prevalence": 0.26275115919629055,
+      "log_loss": 0.5718525660594826,
+      "brier": 0.18945921144041106,
+      "auroc": 0.6542360340362561,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 382,
+          "predicted": 0.10860434552026672,
+          "observed": 0.18324607329842932
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 180,
+          "predicted": 0.28675930339703526,
+          "observed": 0.35555555555555557
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 79,
+          "predicted": 0.46617821468395904,
+          "observed": 0.4430379746835443
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 6,
+          "predicted": 0.6425278627739708,
+          "observed": 0.16666666666666666
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "delta_log_loss": -0.00324378883407196,
+    "delta_brier": -0.0018279298033366165,
+    "delta_log_loss_95ci": {
+      "low": -0.016479846846100384,
+      "high": 0.012553703745595501,
+      "blocks": 20,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.16125843116771937,
+      "abs_y": -0.32031680551110003,
+      "nearest_opponent_m": 0.13740975376262554,
+      "opponents_within_5m": -0.24612786858807797,
+      "pre_speed_mps": -0.3853534083831183,
+      "facing_attack_cos": 0.45718071458589504,
+      "facing_attack_sin": -0.1462473215467712,
+      "facing_ball_cos": -0.041511427146771265,
+      "facing_opponent_cos": -0.09436672301761738,
+      "pre_turn_abs_rad_s": -0.21526031292776668,
+      "turn_missing": -0.0037471158914178433
+    },
+    "case": "noise_30deg",
+    "overrides": {},
+    "feature_cutoff_shift_s": 0,
+    "noise_degrees": 30
+  },
+  {
+    "train_match": 1996435,
+    "test_match": 1925299,
+    "train_n": 647,
+    "constant": {
+      "n": 665,
+      "positives": 161,
+      "prevalence": 0.24210526315789474,
+      "log_loss": 0.5546141745417787,
+      "brier": 0.18391655773236953,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 665,
+          "predicted": 0.26275115919629055,
+          "observed": 0.24210526315789474
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 665,
+      "positives": 161,
+      "prevalence": 0.24210526315789474,
+      "log_loss": 0.5255935693230244,
+      "brier": 0.17459844667186877,
+      "auroc": 0.6584220644779651,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 163,
+          "predicted": 0.1464134808441423,
+          "observed": 0.0736196319018405
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 428,
+          "predicted": 0.2981097824979419,
+          "observed": 0.2827102803738318
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 74,
+          "predicted": 0.43508596133928373,
+          "observed": 0.3783783783783784
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 665,
+      "positives": 161,
+      "prevalence": 0.24210526315789474,
+      "log_loss": 0.51936745839411,
+      "brier": 0.17330369159122547,
+      "auroc": 0.6810608301291532,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 212,
+          "predicted": 0.1408049094916144,
+          "observed": 0.07547169811320754
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 317,
+          "predicted": 0.29687552603326123,
+          "observed": 0.3028391167192429
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 134,
+          "predicted": 0.46527366244961094,
+          "observed": 0.3656716417910448
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 2,
+          "predicted": 0.6294662286235037,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "delta_log_loss": -0.006226110928914224,
+    "delta_brier": -0.0012947550806433,
+    "delta_log_loss_95ci": {
+      "low": -0.013292328130268122,
+      "high": 0.001350270193974205,
+      "blocks": 21,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.3922998830256029,
+      "abs_y": 0.01957089349163892,
+      "nearest_opponent_m": -0.028605701515309067,
+      "opponents_within_5m": -0.09708225264484692,
+      "pre_speed_mps": -0.27619789475899964,
+      "facing_attack_cos": 0.3902243227621025,
+      "facing_attack_sin": -0.05923111060093314,
+      "facing_ball_cos": 0.0470092235292373,
+      "facing_opponent_cos": 0.028247794694992195,
+      "pre_turn_abs_rad_s": 0.0790732219089409,
+      "turn_missing": -0.09218811038354284
+    },
+    "case": "noise_30deg",
+    "overrides": {},
+    "feature_cutoff_shift_s": 0,
+    "noise_degrees": 30
+  },
+  {
+    "train_match": 1925299,
+    "test_match": 1996435,
+    "train_n": 181,
+    "constant": {
+      "n": 237,
+      "positives": 68,
+      "prevalence": 0.2869198312236287,
+      "log_loss": 0.5993710008832955,
+      "brier": 0.20459698079312943,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 237,
+          "predicted": 0.287292817679558,
+          "observed": 0.2869198312236287
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 237,
+      "positives": 68,
+      "prevalence": 0.2869198312236287,
+      "log_loss": 0.5972139558020192,
+      "brier": 0.20202375239569711,
+      "auroc": 0.5856247824573617,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 66,
+          "predicted": 0.15975367131271082,
+          "observed": 0.25757575757575757
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 136,
+          "predicted": 0.27257896604753945,
+          "observed": 0.27205882352941174
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 30,
+          "predicted": 0.4670400105970518,
+          "observed": 0.36666666666666664
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 5,
+          "predicted": 0.7118202625003371,
+          "observed": 0.6
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 237,
+      "positives": 68,
+      "prevalence": 0.2869198312236287,
+      "log_loss": 0.6127808577352062,
+      "brier": 0.20670854462116706,
+      "auroc": 0.6160807518273581,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 96,
+          "predicted": 0.11637223921966755,
+          "observed": 0.22916666666666666
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 87,
+          "predicted": 0.30245498116744846,
+          "observed": 0.26436781609195403
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 41,
+          "predicted": 0.4951128663941757,
+          "observed": 0.4146341463414634
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 11,
+          "predicted": 0.6949125701296951,
+          "observed": 0.45454545454545453
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 2,
+          "predicted": 0.8492733555393942,
+          "observed": 0.5
+        }
+      ]
+    },
+    "delta_log_loss": 0.015566901933187003,
+    "delta_brier": 0.004684792225469908,
+    "delta_log_loss_95ci": {
+      "low": -0.013895559513275835,
+      "high": 0.048306433694100745,
+      "blocks": 20,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.32646867016296516,
+      "abs_y": -0.10629669646537859,
+      "nearest_opponent_m": 0.45345779722057716,
+      "opponents_within_5m": 0.0056671055694815725,
+      "pre_speed_mps": 0.2361553167478389,
+      "facing_attack_cos": 0.6662704671921135,
+      "facing_attack_sin": -0.26309798237673027,
+      "facing_ball_cos": 0.08397184646078172,
+      "facing_opponent_cos": -0.1403627188426657,
+      "pre_turn_abs_rad_s": 0.15865801708644955,
+      "turn_missing": -0.05936934336825887
+    },
+    "case": "midfield_only"
+  },
+  {
+    "train_match": 1996435,
+    "test_match": 1925299,
+    "train_n": 237,
+    "constant": {
+      "n": 181,
+      "positives": 52,
+      "prevalence": 0.287292817679558,
+      "log_loss": 0.599710224592402,
+      "brier": 0.20475579370819455,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 181,
+          "predicted": 0.2869198312236287,
+          "observed": 0.287292817679558
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 181,
+      "positives": 52,
+      "prevalence": 0.287292817679558,
+      "log_loss": 0.5876263227302806,
+      "brier": 0.19948124761620115,
+      "auroc": 0.6164281454979129,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 34,
+          "predicted": 0.16573887567267426,
+          "observed": 0.23529411764705882
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 134,
+          "predicted": 0.28971852549165905,
+          "observed": 0.29850746268656714
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 13,
+          "predicted": 0.4429541666995507,
+          "observed": 0.3076923076923077
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 181,
+      "positives": 52,
+      "prevalence": 0.287292817679558,
+      "log_loss": 0.5729032185449036,
+      "brier": 0.19455921281653019,
+      "auroc": 0.6645796064400714,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 48,
+          "predicted": 0.16012632848150646,
+          "observed": 0.10416666666666667
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 116,
+          "predicted": 0.3006043497982949,
+          "observed": 0.3620689655172414
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 17,
+          "predicted": 0.4384672438002698,
+          "observed": 0.29411764705882354
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "delta_log_loss": -0.014723104185377024,
+    "delta_brier": -0.004922034799670948,
+    "delta_log_loss_95ci": {
+      "low": -0.031052361281176204,
+      "high": 4.2212361932250644e-05,
+      "blocks": 21,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.2382239843205769,
+      "abs_y": 0.13486682293839708,
+      "nearest_opponent_m": 0.2571380103693918,
+      "opponents_within_5m": 0.036998847093612425,
+      "pre_speed_mps": -0.14558267626455845,
+      "facing_attack_cos": 0.322133385381681,
+      "facing_attack_sin": 0.04444922491431037,
+      "facing_ball_cos": 0.02455563859748145,
+      "facing_opponent_cos": -0.0428771625167789,
+      "pre_turn_abs_rad_s": 0.0879638935368086,
+      "turn_missing": 0.12558264411288209
+    },
+    "case": "midfield_only"
+  }
+]

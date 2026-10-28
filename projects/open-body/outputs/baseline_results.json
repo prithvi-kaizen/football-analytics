@@ -1,0 +1,192 @@
+[
+  {
+    "train_match": 1925299,
+    "test_match": 1996435,
+    "train_n": 689,
+    "baseline": {
+      "n": 662,
+      "positives": 175,
+      "prevalence": 0.26435045317220546,
+      "log_loss": 0.5791604001899207,
+      "brier": 0.19259838529689496,
+      "auroc": 0.6246993253153418,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 365,
+          "predicted": 0.11819448223766237,
+          "observed": 0.1917808219178082
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 240,
+          "predicted": 0.2825373173712332,
+          "observed": 0.325
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 56,
+          "predicted": 0.4575767112047355,
+          "observed": 0.48214285714285715
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 1,
+          "predicted": 0.6494372329398458,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "constant": {
+      "n": 662,
+      "positives": 175,
+      "prevalence": 0.26435045317220546,
+      "log_loss": 0.5798696308243675,
+      "brier": 0.19532351363434963,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 662,
+          "predicted": 0.2351233671988389,
+          "observed": 0.26435045317220546
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    }
+  },
+  {
+    "train_match": 1996435,
+    "test_match": 1925299,
+    "train_n": 662,
+    "baseline": {
+      "n": 689,
+      "positives": 162,
+      "prevalence": 0.2351233671988389,
+      "log_loss": 0.5186302116446683,
+      "brier": 0.1713762718041863,
+      "auroc": 0.6615597254433434,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 170,
+          "predicted": 0.1444289427178061,
+          "observed": 0.07058823529411765
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 445,
+          "predicted": 0.2977420624268056,
+          "observed": 0.27415730337078653
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 74,
+          "predicted": 0.4342332122716108,
+          "observed": 0.3783783783783784
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "constant": {
+      "n": 689,
+      "positives": 162,
+      "prevalence": 0.2351233671988389,
+      "log_loss": 0.5476450615391358,
+      "brier": 0.1806945919504134,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 689,
+          "predicted": 0.2643504531722054,
+          "observed": 0.2351233671988389
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    }
+  }
+]

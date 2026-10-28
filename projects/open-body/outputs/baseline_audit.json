@@ -1,0 +1,47 @@
+{
+  "1925299": {
+    "all_events": 5222,
+    "pass_receptions": 743,
+    "goalkeeper": 22,
+    "unmatched_start": 19,
+    "label_eligible": 702,
+    "tracking": {
+      "outside_period_frames": 19,
+      "frames": 61282,
+      "period_1_frames": 30231,
+      "period_2_frames": 31051
+    },
+    "baseline_eligible": 689,
+    "join_residual_before_gate_quantiles_m": [
+      1.1941891330729306e-06,
+      0.18027758916536668,
+      0.48458271761105576,
+      11.243330003348433,
+      16.29515903417537
+    ],
+    "residual_gate_m": 3
+  },
+  "1996435": {
+    "all_events": 5171,
+    "pass_receptions": 712,
+    "unmatched_start": 9,
+    "goalkeeper": 35,
+    "unknown_outcome": 2,
+    "label_eligible": 666,
+    "tracking": {
+      "outside_period_frames": 19,
+      "frames": 57602,
+      "period_1_frames": 28011,
+      "period_2_frames": 29591
+    },
+    "baseline_eligible": 662,
+    "join_residual_before_gate_quantiles_m": [
+      1.6296393830774432e-07,
+      0.16643307923601514,
+      0.39723903979542263,
+      0.9727819902999388,
+      51.74189461516069
+    ],
+    "residual_gate_m": 3
+  }
+}

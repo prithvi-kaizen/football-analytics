@@ -1,0 +1,90 @@
+{
+  "github_revision": "4340d274572876239c154c90bc507a9b3250a656",
+  "huggingface_revision": "a62e1ec1e3b82952042a7f7fa9dafd77c0e0822a",
+  "files": [
+    {
+      "file": "data/raw/1925299_match.json",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1925299/1925299_match.json",
+      "bytes": 28396,
+      "sha256": "f4345b32c0fdd7c9990df70050b3a74f57b1992cf762e20f2a4d309bd2fba7d2"
+    },
+    {
+      "file": "data/raw/1925299_dynamic_events.csv",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1925299/1925299_dynamic_events.csv",
+      "bytes": 5043601,
+      "sha256": "2557acbdcba6547d764b9f7c277c3d7e81a4d58692d6c20c2bfa28625ae0cce3"
+    },
+    {
+      "file": "data/raw/1925299_tracking_extrapolated.jsonl",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1925299/1925299_tracking_extrapolated.jsonl",
+      "bytes": 97091519,
+      "sha256": "48528be40ad82fa3e2b232e1af8d311705f7d6d119925ef199d2b59ea36fd3c9"
+    },
+    {
+      "file": "data/raw/1925299_phases_of_play.csv",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1925299/1925299_phases_of_play.csv",
+      "bytes": 131104,
+      "sha256": "a1682a736a9cf1c311cb799f0a949f7e023dca4ebaa9dd294b138e8929271274"
+    },
+    {
+      "file": "data/raw/1925299.jsonl.zip",
+      "url": "https://huggingface.co/datasets/SkillCorner/opendata-bodypose/resolve/a62e1ec1e3b82952042a7f7fa9dafd77c0e0822a/raw/1925299.jsonl.zip",
+      "bytes": 623408231,
+      "sha256": "0415665098d594fb5681815000f7a6312037788a3237910a9f41bb8de5c336a0"
+    },
+    {
+      "file": "data/raw/1996435_match.json",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1996435/1996435_match.json",
+      "bytes": 27830,
+      "sha256": "f54179645d3c3f308a7094086283277f2a7c99da5f3919302e622cbd82f9d065"
+    },
+    {
+      "file": "data/raw/1996435_dynamic_events.csv",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1996435/1996435_dynamic_events.csv",
+      "bytes": 4964532,
+      "sha256": "379e5bbd90df47d2358a2bfc5b741f7626b934db780ff33d3337a8b1d5efc87c"
+    },
+    {
+      "file": "data/raw/1996435_tracking_extrapolated.jsonl",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1996435/1996435_tracking_extrapolated.jsonl",
+      "bytes": 88634016,
+      "sha256": "f42764d8bde290e8f738fa21141cadbed75408314b0b337bbf1d5a3444540a02"
+    },
+    {
+      "file": "data/raw/1996435_phases_of_play.csv",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1996435/1996435_phases_of_play.csv",
+      "bytes": 120335,
+      "sha256": "ff7ed406c900ad98bd48b6b9913e088c40bf176a3915f061430c1af7405ccb09"
+    },
+    {
+      "file": "data/raw/1996435.jsonl.zip",
+      "url": "https://huggingface.co/datasets/SkillCorner/opendata-bodypose/resolve/a62e1ec1e3b82952042a7f7fa9dafd77c0e0822a/raw/1996435.jsonl.zip",
+      "bytes": 644327811,
+      "sha256": "64bcab2be9776172d062521d9a97e0e6f391fc9cacb331f9e42a6fe88cf8434b"
+    },
+    {
+      "file": "docs/source/pose_tutorial.ipynb",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/notebooks/tutorials/05_Body_Pose/Part1_Getting_Started_with_Body_Pose.ipynb",
+      "bytes": 167939,
+      "sha256": "863045498d180e42a05d2cd557f3d9e3eeaf923827bba92a60c5fae64ecea30f"
+    },
+    {
+      "file": "docs/source/MANIFEST.json",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/bodypose/MANIFEST.json",
+      "bytes": 1278,
+      "sha256": "2e82e7b72e6e8cfd562fe5a706ac6fc4eabee93e97e8256b1bfb1587fbc84224"
+    },
+    {
+      "file": "docs/source/data_LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/LICENSE",
+      "bytes": 1097,
+      "sha256": "3384cc66ffd008209759af5e6328677eabded72756fb1f56f4f82e68e9b3c6eb"
+    },
+    {
+      "file": "docs/source/sample.jsonl.gz",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/bodypose/sample_1925299_phase406.jsonl.gz",
+      "bytes": 1926895,
+      "sha256": "eb10f537c5c3b3c80018d5670f16cb788b14a3529d0be0b36a077bd1b41aeb4a"
+    }
+  ]
+}

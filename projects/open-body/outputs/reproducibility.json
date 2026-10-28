@@ -1,0 +1,15 @@
+{
+  "identical_rerun": true,
+  "sha256": {
+    "baseline_results.json": "b351cf1c3ff9517e5d037775843b6565e98a1337c755408bd9376ab5e4a77866",
+    "baseline_audit.json": "3b9b1ffc464acbf5d7a238317b72dce381277dee7cfddd2a2d8c1a2a7c7e95d2",
+    "receptions_baseline.csv": "1349fe5cb5a93e3eb86244ffc266faabd902343ed0dd7d890ffbd2ba0c470450",
+    "receptions_orientation.csv": "69f20255506a6206f543c2ae22519dde0a7dae0ff7372c4e43808b5e6193e5f4",
+    "heldout_predictions.csv": "60bb2ad03ea0ac5879bac4ddad11e46fe85aabb6fa00da5c2d6a34e4d600a6e8",
+    "results.json": "e0490a04bb281f7a024bef296724fa15dd13f6bde1eb90ad0fd2d6813ce20abc",
+    "coverage.json": "83e7166d1e2f265755e62c454ce538fcbd06548b8e0db21e2b47eafded54101b",
+    "sensitivity_results.json": "ea766d47f8fa82f6a41fde72eb31de9cf6362bfd89efe4f2efb95ccaa73e116b",
+    "orientation_categories.csv": "a2c7d77379fb332fdd6052190c8733c433ec68924be691000cc949b441801511",
+    "viewer_data.json": "cba51ca798eb05cfe8207a26fd1441d864b2c542dd91ef9ce17c7665282b6c55"
+  }
+}

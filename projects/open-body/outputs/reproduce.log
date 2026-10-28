@@ -1,0 +1,590 @@
+[
+  {
+    "train_match": 1925299,
+    "test_match": 1996435,
+    "train_n": 689,
+    "baseline": {
+      "n": 662,
+      "positives": 175,
+      "prevalence": 0.26435045317220546,
+      "log_loss": 0.5791604001899207,
+      "brier": 0.19259838529689496,
+      "auroc": 0.6246993253153418,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 365,
+          "predicted": 0.11819448223766237,
+          "observed": 0.1917808219178082
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 240,
+          "predicted": 0.2825373173712332,
+          "observed": 0.325
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 56,
+          "predicted": 0.4575767112047355,
+          "observed": 0.48214285714285715
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 1,
+          "predicted": 0.6494372329398458,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "constant": {
+      "n": 662,
+      "positives": 175,
+      "prevalence": 0.26435045317220546,
+      "log_loss": 0.5798696308243675,
+      "brier": 0.19532351363434963,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 662,
+          "predicted": 0.2351233671988389,
+          "observed": 0.26435045317220546
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    }
+  },
+  {
+    "train_match": 1996435,
+    "test_match": 1925299,
+    "train_n": 662,
+    "baseline": {
+      "n": 689,
+      "positives": 162,
+      "prevalence": 0.2351233671988389,
+      "log_loss": 0.5186302116446683,
+      "brier": 0.1713762718041863,
+      "auroc": 0.6615597254433434,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 170,
+          "predicted": 0.1444289427178061,
+          "observed": 0.07058823529411765
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 445,
+          "predicted": 0.2977420624268056,
+          "observed": 0.27415730337078653
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 74,
+          "predicted": 0.4342332122716108,
+          "observed": 0.3783783783783784
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "constant": {
+      "n": 689,
+      "positives": 162,
+      "prevalence": 0.2351233671988389,
+      "log_loss": 0.5476450615391358,
+      "brier": 0.1806945919504134,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 689,
+          "predicted": 0.2643504531722054,
+          "observed": 0.2351233671988389
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    }
+  }
+]
+{
+  "question": "successful_pass_gain_5m_within_2s",
+  "primary": {
+    "train_match": 1925299,
+    "test_match": 1996435,
+    "train_n": 665,
+    "constant": {
+      "n": 647,
+      "positives": 170,
+      "prevalence": 0.26275115919629055,
+      "log_loss": 0.5770550129628069,
+      "brier": 0.1941392405605244,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 647,
+          "predicted": 0.24210526315789474,
+          "observed": 0.26275115919629055
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 647,
+      "positives": 170,
+      "prevalence": 0.26275115919629055,
+      "log_loss": 0.5750963548935546,
+      "brier": 0.19128714124374765,
+      "auroc": 0.626908373412258,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 349,
+          "predicted": 0.11862128206156736,
+          "observed": 0.1833810888252149
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 238,
+          "predicted": 0.2802200048588171,
+          "observed": 0.3277310924369748
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 59,
+          "predicted": 0.45716890376924624,
+          "observed": 0.4745762711864407
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 1,
+          "predicted": 0.6564616591970319,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 647,
+      "positives": 170,
+      "prevalence": 0.26275115919629055,
+      "log_loss": 0.559905102788832,
+      "brier": 0.1863574343502013,
+      "auroc": 0.6745098039215687,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 385,
+          "predicted": 0.10962227853522113,
+          "observed": 0.17662337662337663
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 186,
+          "predicted": 0.2870367771212242,
+          "observed": 0.3817204301075269
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 73,
+          "predicted": 0.4768325582548991,
+          "observed": 0.410958904109589
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 3,
+          "predicted": 0.6175170887543717,
+          "observed": 0.3333333333333333
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "delta_log_loss": -0.01519125210472274,
+    "delta_brier": -0.004929706893546394,
+    "delta_log_loss_95ci": {
+      "low": -0.02911716175837101,
+      "high": 0.0009031545751776528,
+      "blocks": 20,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.1790688797388097,
+      "abs_y": -0.2843769198198059,
+      "nearest_opponent_m": 0.11304241743796344,
+      "opponents_within_5m": -0.23305954125316627,
+      "pre_speed_mps": -0.36303584121987975,
+      "facing_attack_cos": 0.48651143528497487,
+      "facing_attack_sin": -0.11289672939720179,
+      "facing_ball_cos": -0.03167085573219315,
+      "facing_opponent_cos": -0.11664391897690488,
+      "pre_turn_abs_rad_s": 0.0638718145107618,
+      "turn_missing": 0.0665368169468557
+    }
+  },
+  "reverse_diagnostic": {
+    "train_match": 1996435,
+    "test_match": 1925299,
+    "train_n": 647,
+    "constant": {
+      "n": 665,
+      "positives": 161,
+      "prevalence": 0.24210526315789474,
+      "log_loss": 0.5546141745417787,
+      "brier": 0.18391655773236953,
+      "auroc": 0.5,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 665,
+          "predicted": 0.26275115919629055,
+          "observed": 0.24210526315789474
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "baseline": {
+      "n": 665,
+      "positives": 161,
+      "prevalence": 0.24210526315789474,
+      "log_loss": 0.5255935693230244,
+      "brier": 0.17459844667186877,
+      "auroc": 0.6584220644779651,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 163,
+          "predicted": 0.1464134808441423,
+          "observed": 0.0736196319018405
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 428,
+          "predicted": 0.2981097824979419,
+          "observed": 0.2827102803738318
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 74,
+          "predicted": 0.43508596133928373,
+          "observed": 0.3783783783783784
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "orientation": {
+      "n": 665,
+      "positives": 161,
+      "prevalence": 0.24210526315789474,
+      "log_loss": 0.5167851389410805,
+      "brier": 0.17325289436319297,
+      "auroc": 0.6859163955437247,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 224,
+          "predicted": 0.13356261263501087,
+          "observed": 0.06696428571428571
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 288,
+          "predicted": 0.29708934443104,
+          "observed": 0.3263888888888889
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6000000000000001,
+          "n": 150,
+          "predicted": 0.4694548479386034,
+          "observed": 0.3466666666666667
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.8,
+          "n": 3,
+          "predicted": 0.6299090269292084,
+          "observed": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "predicted": null,
+          "observed": null
+        }
+      ]
+    },
+    "delta_log_loss": -0.008808430381943842,
+    "delta_brier": -0.001345552308675763,
+    "delta_log_loss_95ci": {
+      "low": -0.019084220044600288,
+      "high": 0.001659009363093477,
+      "blocks": 21,
+      "repetitions": 2000,
+      "conditional_on": "one held-out match and fitted training model; not a new-match confidence interval"
+    },
+    "coefficients": {
+      "x": -0.4104916578613444,
+      "abs_y": 0.01199226821996773,
+      "nearest_opponent_m": -0.08029882758550282,
+      "opponents_within_5m": -0.07093270469945599,
+      "pre_speed_mps": -0.3196779204846343,
+      "facing_attack_cos": 0.5264466726725416,
+      "facing_attack_sin": -0.03435567801985104,
+      "facing_ball_cos": -0.01509858499980051,
+      "facing_opponent_cos": 0.004471754490036558,
+      "pre_turn_abs_rad_s": 0.010763301007310593,
+      "turn_missing": -0.11925165486020481
+    }
+  },
+  "pilot_criterion_met": false,
+  "two_match_generalisation_limit": true,
+  "baseline_features": [
+    "x",
+    "abs_y",
+    "nearest_opponent_m",
+    "opponents_within_5m",
+    "pre_speed_mps"
+  ],
+  "orientation_features": [
+    "facing_attack_cos",
+    "facing_attack_sin",
+    "facing_ball_cos",
+    "facing_opponent_cos",
+    "pre_turn_abs_rad_s",
+    "turn_missing"
+  ],
+  "configuration": {
+    "train_match": 1925299,
+    "test_match": 1996435,
+    "matches": [
+      1925299,
+      1996435
+    ],
+    "primary_outcome": "successful_pass_gain_5m_within_2s",
+    "release_seconds": 2.0,
+    "progress_metres": 5.0,
+    "shoulder_error_cm": 15.0,
+    "shoulder_width_min_m": 0.2,
+    "shoulder_width_max_m": 0.7,
+    "smooth_seconds": 0.12,
+    "max_latest_age_seconds": 0.08,
+    "minimum_pose_samples": 3,
+    "minimum_resultant": 0.8,
+    "turn_lookback_seconds": 0.4,
+    "ridge_lambda": 1.0,
+    "bootstrap_repetitions": 2000,
+    "bootstrap_block_seconds": 300,
+    "seed": 20261028,
+    "sensitivity_error_cm": [
+      10,
+      20
+    ],
+    "sensitivity_smooth_seconds": [
+      0.0,
+      0.24
+    ],
+    "sensitivity_timing_seconds": [
+      -0.1
+    ],
+    "sensitivity_angle_noise_degrees": [
+      15,
+      30
+    ],
+    "baseline_features": [
+      "x",
+      "abs_y",
+      "nearest_opponent_m",
+      "opponents_within_5m",
+      "pre_speed_mps"
+    ],
+    "orientation_features": [
+      "facing_attack_cos",
+      "facing_attack_sin",
+      "facing_ball_cos",
+      "facing_opponent_cos",
+      "pre_turn_abs_rad_s",
+      "turn_missing"
+    ]
+  }
+}
+Wrote offline viewer with 2 real clips

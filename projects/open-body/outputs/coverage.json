@@ -1,0 +1,226 @@
+{
+  "1925299": {
+    "pose": {
+      "frames": 153252,
+      "outside_period_frames": 47,
+      "roster_player_frames": 4902560,
+      "active_player_frames": 3370402,
+      "exact_aligned_frames_checked": 30642,
+      "player_frames_with_pose": 1540715,
+      "active_player_frames_with_pose": 1540699,
+      "valid_shoulder_roster_player_frames": 1497354,
+      "valid_shoulder_active_player_frames": 1497345,
+      "frames_with_any_pose": 106757,
+      "pose_despite_xy_not_detected": 2,
+      "period_frames": {
+        "1": 75578,
+        "2": 77627
+      },
+      "period_frame_ranges": {
+        "1": [
+          25,
+          75602
+        ],
+        "2": [
+          75625,
+          153251
+        ]
+      },
+      "shoulder_gates": {
+        "no_pose": 3361845,
+        "valid": 1497354,
+        "error": 39759,
+        "width": 3602
+      },
+      "joint_count_distribution": {
+        "29": 1540715
+      },
+      "maximum_exact_alignment_clock_error_s": 0.0,
+      "exact_alignment_xy_residual_quantiles_m": [
+        0.0,
+        0.2668335986580158,
+        1.1833846229040894,
+        9.742946985884402,
+        55.718401548265476
+      ],
+      "exact_alignment_player_comparisons": 527318,
+      "exact_alignment_player_residual_above_2m": 30641
+    },
+    "reception_feature_gates": {
+      "valid": 665,
+      "insufficient_samples": 23,
+      "direction_context_missing": 1
+    },
+    "reception_window_sample_gates": {
+      "valid": 14584,
+      "error": 147,
+      "no_pose": 628,
+      "width": 5,
+      "native_tracking_misalignment": 134
+    },
+    "baseline_n": 689,
+    "orientation_n": 665,
+    "orientation_reception_coverage": 0.965166908563135,
+    "selection": [
+      {
+        "pose_eligible": true,
+        "n": 665,
+        "prevalence": 0.24210526315789474,
+        "mean_x_m": 0.6579549019245949,
+        "mean_nearest_opponent_m": 7.716865151986144,
+        "receiver_detected_fraction": 0.9984962406015038
+      },
+      {
+        "pose_eligible": false,
+        "n": 24,
+        "prevalence": 0.041666666666666664,
+        "mean_x_m": 13.935833354791006,
+        "mean_nearest_opponent_m": 5.217232182621956,
+        "receiver_detected_fraction": 0.8333333333333334
+      }
+    ],
+    "feature_coverage_by_role": [
+      {
+        "position_group": "Center Forward",
+        "count": 40,
+        "sum": 39,
+        "mean": 0.975
+      },
+      {
+        "position_group": "Central Defender",
+        "count": 192,
+        "sum": 189,
+        "mean": 0.984375
+      },
+      {
+        "position_group": "Full Back",
+        "count": 149,
+        "sum": 147,
+        "mean": 0.9865771812080537
+      },
+      {
+        "position_group": "Midfield",
+        "count": 185,
+        "sum": 181,
+        "mean": 0.9783783783783784
+      },
+      {
+        "position_group": "Wide Attacker",
+        "count": 123,
+        "sum": 109,
+        "mean": 0.8861788617886179
+      }
+    ]
+  },
+  "1996435": {
+    "pose": {
+      "frames": 144052,
+      "outside_period_frames": 47,
+      "roster_player_frames": 4320150,
+      "active_player_frames": 3168006,
+      "exact_aligned_frames_checked": 28802,
+      "player_frames_with_pose": 1571830,
+      "active_player_frames_with_pose": 1571536,
+      "valid_shoulder_roster_player_frames": 1542906,
+      "valid_shoulder_active_player_frames": 1542617,
+      "frames_with_any_pose": 95605,
+      "pose_despite_xy_not_detected": 1357,
+      "period_frames": {
+        "1": 70028,
+        "2": 73977
+      },
+      "period_frame_ranges": {
+        "1": [
+          25,
+          70052
+        ],
+        "2": [
+          70075,
+          144051
+        ]
+      },
+      "shoulder_gates": {
+        "no_pose": 2748320,
+        "valid": 1542906,
+        "error": 26924,
+        "width": 2000
+      },
+      "joint_count_distribution": {
+        "29": 1571830
+      },
+      "maximum_exact_alignment_clock_error_s": 0.0,
+      "exact_alignment_xy_residual_quantiles_m": [
+        0.0,
+        0.20248451550491817,
+        0.64194991895686,
+        5.039558872703776,
+        51.741894856552726
+      ],
+      "exact_alignment_player_comparisons": 478918,
+      "exact_alignment_player_residual_above_2m": 11385
+    },
+    "reception_feature_gates": {
+      "valid": 647,
+      "insufficient_samples": 15
+    },
+    "reception_window_sample_gates": {
+      "valid": 14498,
+      "error": 62,
+      "no_pose": 325,
+      "width": 1
+    },
+    "baseline_n": 662,
+    "orientation_n": 647,
+    "orientation_reception_coverage": 0.9773413897280967,
+    "selection": [
+      {
+        "pose_eligible": true,
+        "n": 647,
+        "prevalence": 0.26275115919629055,
+        "mean_x_m": 1.0543894828045295,
+        "mean_nearest_opponent_m": 6.412577147277466,
+        "receiver_detected_fraction": 1.0
+      },
+      {
+        "pose_eligible": false,
+        "n": 15,
+        "prevalence": 0.3333333333333333,
+        "mean_x_m": -9.44266676902771,
+        "mean_nearest_opponent_m": 6.91946591536204,
+        "receiver_detected_fraction": 0.6
+      }
+    ],
+    "feature_coverage_by_role": [
+      {
+        "position_group": "Center Forward",
+        "count": 24,
+        "sum": 23,
+        "mean": 0.9583333333333334
+      },
+      {
+        "position_group": "Central Defender",
+        "count": 139,
+        "sum": 135,
+        "mean": 0.9712230215827338
+      },
+      {
+        "position_group": "Full Back",
+        "count": 120,
+        "sum": 117,
+        "mean": 0.975
+      },
+      {
+        "position_group": "Midfield",
+        "count": 241,
+        "sum": 237,
+        "mean": 0.983402489626556
+      },
+      {
+        "position_group": "Wide Attacker",
+        "count": 138,
+        "sum": 135,
+        "mean": 0.9782608695652174
+      }
+    ]
+  }
+}
