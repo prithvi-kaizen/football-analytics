@@ -10,6 +10,7 @@ OUTPUT = ROOT / "dist"
 for project, target in [("pressing-trap-detector", OUTPUT), ("invisible-runner", OUTPUT / "invisible-runner"), ("rest-defence-analyzer", OUTPUT / "rest-defence"),
                         ("pass-decision-lab", OUTPUT / "pass-decision-lab"),
                         ("possession-danger", OUTPUT / "possession-danger"),
-                        ("tacticai-lite", OUTPUT / "tacticai-lite")]:
+                        ("tacticai-lite", OUTPUT / "tacticai-lite"),
+                        ("lane-obstruction", OUTPUT / "lane-obstruction")]:
     subprocess.run([sys.executable, str(ROOT / "projects" / project / "scripts/build_website.py"),
                     "--output", str(target)], check=True)
