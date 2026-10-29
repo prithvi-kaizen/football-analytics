@@ -1,0 +1,14 @@
+{
+  "github_url": "https://github.com/prithvi-kaizen/football-analytics/tree/main/projects/marking-handoffs",
+  "research_commit": "7e2e0de475f974b6aa3bc52305c225c540654280",
+  "github_status": "published and README verified through connected GitHub",
+  "live_url": "https://marking-handoffs.vercel.app",
+  "deployment_url": "https://marking-handoffs-bg949r50v-prithvirajs-projects-b40fa6af.vercel.app",
+  "deployment_dashboard": "https://vercel.com/prithvirajs-projects-b40fa6af/marking-handoffs/Bs8yzB8hWy7yuTNwUzqm86yooLpq",
+  "deployment_status": "Vercel CLI completed build and deployment; alias assigned",
+  "command": "vercel deploy --yes --name marking-handoffs (no production flag)",
+  "initial_project_behavior": "Vercel CLI automatically promoted the first deployment to production and assigned the project domain",
+  "web_index_sha256": "f2f2a4c1c472558eff343cef2fd4ad3c6e020a57069d533bd3a7d089a4e57a22",
+  "writing_review": "Manual human-tone review; audit.py helper not present in installed skill",
+  "linkedin_status": "Draft only; not posted to LinkedIn"
+}

@@ -6,6 +6,10 @@ A Python research pilot for retrieving candidate defensive handoffs from SkillCo
 
 The output is **candidate handoffs**, never known coaching assignments. Geometry cannot establish that two defenders thought someone else was responsible.
 
+Live project: [marking-handoffs.vercel.app](https://marking-handoffs.vercel.app).
+
+GitHub and methodology: [Marking Handoffs](https://github.com/prithvi-kaizen/football-analytics/tree/main/projects/marking-handoffs).
+
 ## Evidence first
 
 The [feasibility assessment](docs/feasibility.md) records actual schema, upstream inventory/licence, measured data-quality issues, the football question and the evaluation protocol before detector implementation. [Related work](docs/related-work.md) covers five published methods/public implementations and the project's modest contribution.
@@ -71,3 +75,9 @@ For the optional figure, install `matplotlib==3.11.2` and run `scripts/plot_resu
 Data: [SkillCorner Open Data](https://github.com/SkillCorner/opendata), revision `4340d274572876239c154c90bc507a9b3250a656`. Preserve [SkillCorner's MIT notice](docs/source/LICENSE.skillcorner) when sharing derived material. The same notice is copied beside the demonstration. Raw data are ignored by Git and downloaded from pinned public URLs with hash verification. No broadcast footage is included.
 
 Suggested publication drafts are in [publication.md](docs/publication.md). They include the failed real-data hypothesis and distinguish synthetic geometry from real tactical validation. No post has been published by these scripts.
+
+The short LinkedIn draft with the live links is [linkedin-post.txt](docs/linkedin-post.txt).
+
+## Static deployment
+
+Run `python3 scripts/package_website.py` to copy the validated viewer, demonstration and SkillCorner licence into the ignored `web/` directory. Deploy that directory with Vercel CLI. The deployment needs no Python runtime or paid API; all analytics are computed ahead of time.
