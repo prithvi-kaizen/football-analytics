@@ -1,0 +1,6 @@
+data/raw/
+.venv/
+__pycache__/
+**/__pycache__/
+outputs/viewer-desktop.png
+outputs/viewer-mobile.png

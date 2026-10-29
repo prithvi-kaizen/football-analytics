@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "scope": "development match only",
+  "n": 442,
+  "min": 0.0,
+  "max": 0.875,
+  "mean": 0.21532984988867343,
+  "audit": {
+    "source_frames": 59061,
+    "null_period_frames": 19,
+    "player_rows": 956037,
+    "detected_player_rows": 566778,
+    "ball_detected_frames": 35750,
+    "unknown_carrier_frames": 48555,
+    "frames_without_22_players": 15623,
+    "invalid_coordinate_rows": 39,
+    "periods": {
+      "1": [
+        10,
+        27790,
+        27781
+      ],
+      "2": [
+        27800,
+        59060,
+        31261
+      ]
+    },
+    "match_id": 1886347,
+    "match": "Auckland FC vs Newcastle",
+    "date": "2024-11-30T04:00:00Z",
+    "event_rows": 5115,
+    "event_columns": 322,
+    "event_types": {
+      "passing_option": 2573,
+      "player_possession": 990,
+      "on_ball_engagement": 957,
+      "off_ball_run": 595
+    },
+    "possession_rows": 990,
+    "missing_ease": 80,
+    "missing_pressure": 80,
+    "eligible_starts": 442,
+    "exclusions": {
+      "carrier_not_confirmed": 520,
+      "ball_not_low": 6,
+      "ball_far_from_carrier": 3,
+      "no_matching_in_play_phase": 19
+    },
+    "all_detected_starts": 0
+  },
+  "config_sha256": "7ff9b446e053f1de008f47c7ba33f70b0b9aa1970673bd4cd17c04837d4552fe",
+  "sources": [
+    {
+      "file": "1886347_match.json",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1886347/1886347_match.json",
+      "sha256": "30c608e78663e9f490b3545479a3ce67b171f418c5133d5609cb249a2466abb2",
+      "bytes": 27541
+    },
+    {
+      "file": "1886347_dynamic_events.csv",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1886347/1886347_dynamic_events.csv",
+      "sha256": "b21368b9b94eb8f83032fe14a2a8da88ab7eda048b4f8078c06d0e6955d12bfb",
+      "bytes": 4918599
+    },
+    {
+      "file": "1886347_phases_of_play.csv",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1886347/1886347_phases_of_play.csv",
+      "sha256": "d1c3066f7ed0598069d0d1b317bb30261eca3d7786fd9d540985f395e4c8aea9",
+      "bytes": 121864
+    },
+    {
+      "file": "1886347_tracking_extrapolated.jsonl",
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1886347/1886347_tracking_extrapolated.jsonl",
+      "sha256": "3577e2803da95390f8b2f85d47829eb55fbbfee6211c94adc65db0dc78e46b41",
+      "bytes": 89280839
+    }
+  ]
+}
