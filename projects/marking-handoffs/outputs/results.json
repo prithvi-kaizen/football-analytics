@@ -1,0 +1,133 @@
+{
+  "config_sha256": "6a053c4769645f2c1de7939d6bdcb0ffb5c859fea7b3c915e14576ec62cce823",
+  "splits": {
+    "development": {
+      "match_id": 1925299,
+      "nearest": {
+        "eligible_attacker_frames": 125850,
+        "eligible_attacker_minutes": 209.75,
+        "segments": 2430,
+        "direct_switches": 1783,
+        "short_assignment_runs": 59,
+        "switches_per_attacker_minute": 8.500595947556615,
+        "short_runs_per_attacker_minute": 0.28128724672228844,
+        "assigned_fraction": 1.0,
+        "identity_changes_including_unassigned": 1783,
+        "identity_changes_per_attacker_minute": 8.500595947556615,
+        "assigned_without_entry_geometry_fraction": 0.44346444179578864,
+        "geometric_cover_fraction": 0.5971950735001986
+      },
+      "proposed": {
+        "eligible_attacker_frames": 125850,
+        "eligible_attacker_minutes": 209.75,
+        "segments": 2430,
+        "direct_switches": 382,
+        "short_assignment_runs": 67,
+        "switches_per_attacker_minute": 1.8212157330154946,
+        "short_runs_per_attacker_minute": 0.31942789034564956,
+        "assigned_fraction": 0.570425109257052,
+        "identity_changes_including_unassigned": 692,
+        "identity_changes_per_attacker_minute": 3.299165673420739,
+        "assigned_without_entry_geometry_fraction": 0.0785925224271466,
+        "geometric_cover_fraction": 0.5971950735001986
+      },
+      "disagreement_when_proposed_assigned": 0.10756672424360618,
+      "candidate_counts": {
+        "continuous": 390,
+        "brief_gap": 31,
+        "gap": 74
+      },
+      "all_involved_detected_candidates": 336
+    },
+    "heldout": {
+      "match_id": 1996435,
+      "nearest": {
+        "eligible_attacker_frames": 105492,
+        "eligible_attacker_minutes": 175.82000000000002,
+        "segments": 2380,
+        "direct_switches": 1467,
+        "short_assignment_runs": 54,
+        "switches_per_attacker_minute": 8.343760664315777,
+        "short_runs_per_attacker_minute": 0.30713229439199174,
+        "assigned_fraction": 1.0,
+        "identity_changes_including_unassigned": 1467,
+        "identity_changes_per_attacker_minute": 8.343760664315777,
+        "assigned_without_entry_geometry_fraction": 0.46191180373867213,
+        "geometric_cover_fraction": 0.5729060023508892
+      },
+      "proposed": {
+        "eligible_attacker_frames": 105492,
+        "eligible_attacker_minutes": 175.82000000000002,
+        "segments": 2380,
+        "direct_switches": 233,
+        "short_assignment_runs": 62,
+        "switches_per_attacker_minute": 1.3252189739506313,
+        "short_runs_per_attacker_minute": 0.35263337504265724,
+        "assigned_fraction": 0.5358984567550146,
+        "identity_changes_including_unassigned": 462,
+        "identity_changes_per_attacker_minute": 2.62768740757593,
+        "assigned_without_entry_geometry_fraction": 0.07882121946473741,
+        "geometric_cover_fraction": 0.5729060023508892
+      },
+      "disagreement_when_proposed_assigned": 0.1005961120053774,
+      "candidate_counts": {
+        "continuous": 226,
+        "brief_gap": 36,
+        "gap": 44
+      },
+      "all_involved_detected_candidates": 237,
+      "phase_bootstrap": {
+        "clusters": 301,
+        "replicates": 2000,
+        "seed": 20261028,
+        "interpretation": "95% percentile intervals from paired phase resampling within one held-out match; not between-match uncertainty",
+        "identity_changes_per_attacker_minute": {
+          "proposed_minus_nearest": -5.716073256739851,
+          "low": -6.2230803122198495,
+          "high": -5.288580780741471
+        },
+        "short_runs_per_attacker_minute": {
+          "proposed_minus_nearest": 0.045501080650665486,
+          "low": -0.09365979853579758,
+          "high": 0.1765385087258235
+        }
+      },
+      "strict_observed_sensitivity": {
+        "definition": "Attacker and all ten defenders detected at current and previous three frames; reset at every failed frame",
+        "nearest": {
+          "eligible_attacker_frames": 39547,
+          "eligible_attacker_minutes": 65.91166666666666,
+          "segments": 1287,
+          "direct_switches": 546,
+          "short_assignment_runs": 16,
+          "switches_per_attacker_minute": 8.283814195767063,
+          "short_runs_per_attacker_minute": 0.24274913394189193,
+          "assigned_fraction": 1.0,
+          "identity_changes_including_unassigned": 546,
+          "identity_changes_per_attacker_minute": 8.283814195767063,
+          "assigned_without_entry_geometry_fraction": 0.42673274837535086,
+          "geometric_cover_fraction": 0.6144840316585329
+        },
+        "proposed": {
+          "eligible_attacker_frames": 39547,
+          "eligible_attacker_minutes": 65.91166666666666,
+          "segments": 1287,
+          "direct_switches": 80,
+          "short_assignment_runs": 27,
+          "switches_per_attacker_minute": 1.2137456697094597,
+          "short_runs_per_attacker_minute": 0.40963916352694263,
+          "assigned_fraction": 0.5435810554530053,
+          "identity_changes_including_unassigned": 165,
+          "identity_changes_per_attacker_minute": 2.5033504437757608,
+          "assigned_without_entry_geometry_fraction": 0.06698609108247662,
+          "geometric_cover_fraction": 0.6144840316585329
+        },
+        "candidate_counts": {
+          "continuous": 73,
+          "brief_gap": 10,
+          "gap": 15
+        }
+      }
+    }
+  }
+}

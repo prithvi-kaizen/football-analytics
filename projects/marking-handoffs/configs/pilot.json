@@ -1,0 +1,22 @@
+{
+  "development_match": 1925299,
+  "heldout_match": 1996435,
+  "fps": 10,
+  "phase_types": ["build_up", "create", "finish"],
+  "radius_m": 6.0,
+  "release_radius_m": 7.5,
+  "graph_radius_m": 8.0,
+  "goal_tolerance_m": 1.5,
+  "prediction_s": 0.4,
+  "prediction_radius_m": 8.0,
+  "motion_weight_s": 0.35,
+  "structure_weight": 0.12,
+  "switch_margin_m": 0.75,
+  "confirm_frames": 5,
+  "min_stable_frames": 5,
+  "max_bridge_frames": 20,
+  "gap_frames": 4,
+  "min_attacker_movement_m": 2.0,
+  "bootstrap_replicates": 2000,
+  "seed": 20261028
+}

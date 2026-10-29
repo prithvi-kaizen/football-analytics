@@ -1,0 +1,47 @@
+{
+  "revision": "4340d274572876239c154c90bc507a9b3250a656",
+  "files": [
+    {
+      "file": "data/raw/1925299_match.json",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1925299/1925299_match.json",
+      "bytes": 28396,
+      "sha256": "f4345b32c0fdd7c9990df70050b3a74f57b1992cf762e20f2a4d309bd2fba7d2",
+      "verified": true
+    },
+    {
+      "file": "data/raw/1925299_phases_of_play.csv",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1925299/1925299_phases_of_play.csv",
+      "bytes": 131104,
+      "sha256": "a1682a736a9cf1c311cb799f0a949f7e023dca4ebaa9dd294b138e8929271274",
+      "verified": true
+    },
+    {
+      "file": "data/raw/1925299_tracking_extrapolated.jsonl",
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1925299/1925299_tracking_extrapolated.jsonl",
+      "bytes": 97091519,
+      "sha256": "48528be40ad82fa3e2b232e1af8d311705f7d6d119925ef199d2b59ea36fd3c9",
+      "verified": true
+    },
+    {
+      "file": "data/raw/1996435_match.json",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1996435/1996435_match.json",
+      "bytes": 27830,
+      "sha256": "f54179645d3c3f308a7094086283277f2a7c99da5f3919302e622cbd82f9d065",
+      "verified": true
+    },
+    {
+      "file": "data/raw/1996435_phases_of_play.csv",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1996435/1996435_phases_of_play.csv",
+      "bytes": 120335,
+      "sha256": "ff7ed406c900ad98bd48b6b9913e088c40bf176a3915f061430c1af7405ccb09",
+      "verified": true
+    },
+    {
+      "file": "data/raw/1996435_tracking_extrapolated.jsonl",
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1996435/1996435_tracking_extrapolated.jsonl",
+      "bytes": 88634016,
+      "sha256": "f42764d8bde290e8f738fa21141cadbed75408314b0b337bbf1d5a3444540a02",
+      "verified": true
+    }
+  ]
+}
