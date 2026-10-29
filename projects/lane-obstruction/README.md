@@ -2,6 +2,8 @@
 
 An open-data research pilot for measuring passing-lane obstruction before a pass is attempted. It compares finite-corridor geometry with approximate defender arrival times and exports a **Defensive Lane Obstruction (DLO)** indicator, interactive pitch replays and a 30-second demonstration.
 
+**[Open the Vercel preview](https://football-analytics-git-cod-ae6a65-prithvirajs-projects-b40fa6af.vercel.app/lane-obstruction/)** · [Deployment record](docs/deployment.md) · [LinkedIn draft](outputs/linkedin-post.txt)
+
 **The added complexity did not improve agreement in this pilot.** On 832 labelled starts from two pipeline-held-out matches, Spearman association with SkillCorner passing difficulty was **0.293 for geometry** and **0.062 for arrival time**. The paired difference was **−0.230**, with a conditional phase-cluster bootstrap 95% interval of **[−0.305, −0.153]**. This is a negative result against dependent provider categories, not independent football accuracy. Parameters were not retuned to reverse it.
 
 [Feasibility assessment and five related methods](docs/feasibility.md) · [Executed results](outputs/results.md) · [Methodology](docs/methodology.md) · [Limitations](docs/limitations.md) · [Public-post draft](outputs/public-post.md)

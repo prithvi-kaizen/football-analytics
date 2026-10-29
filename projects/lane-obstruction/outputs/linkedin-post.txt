@@ -1,0 +1,21 @@
+How can we measure a defender’s contribution without counting tackles or interceptions?
+
+I built The Defender Nobody Notices to explore passing-lane obstruction using SkillCorner’s open tracking and event data.
+
+It finds possible passing targets, compares lane geometry with defender arrival times and lets you replay each situation on an interactive pitch.
+
+Across 832 labelled possession starts in two held-out matches, simple geometry agreed more closely with SkillCorner’s passing-difficulty categories than the arrival-time model.
+
+⛳️ My main learnings:
+➤ A more complex model isn’t automatically a better one.
+➤ Estimated off-camera positions matter when interpreting defensive positioning.
+➤ Agreement with provider categories isn’t independent validation. An obstructed lane doesn’t prove a pass was prevented.
+
+Built with Python, NumPy and pandas, with a browser version deployed on Vercel.
+
+Live project : https://football-analytics-git-cod-ae6a65-prithvirajs-projects-b40fa6af.vercel.app/lane-obstruction/
+GitHub and methodology : https://github.com/prithvi-kaizen/football-analytics/tree/codex/lane-obstruction-publication/projects/lane-obstruction
+
+I’d welcome feedback on how to validate passing-lane obstruction independently.
+
+#FootballAnalytics #SportsAnalytics #Python
