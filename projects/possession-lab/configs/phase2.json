@@ -1,0 +1,16 @@
+{
+  "trials": [22001, 22002, 22003, 22004, 22005, 22006, 22007, 22008, 22009, 22010, 22011, 22012],
+  "world_families": ["episodes", "renewal"],
+  "regimes": {
+    "moderate": {},
+    "occluded": {},
+    "corrupt": {"missing_rate": 0.45, "false_events_per_s": 0.12, "category_error": 0.4, "unknown_team": 0.45, "wrong_team": 0.45, "offset_s": 1.2, "duplicate_rate": 0.5, "conflict_rate": 0.35},
+    "delayed": {"missing_rate": 0.25, "category_error": 0.15, "delay_s": 2.0, "width_s": 4.0},
+    "shared_view": {"shared_view_loss": 0.8}
+  },
+  "twin_kinds": ["static", "invisible"],
+  "twin_regimes": ["moderate", "shared_view"],
+  "fusion": {"stop_probability": 0.85, "restart_probability": 0.8, "team_probability": 0.65, "context_s": 6.0, "pre_restart_s": 3.0, "power": 0.35, "max_log_odds": 2.0, "event_coverage": true},
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 2701
+}

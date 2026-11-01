@@ -1,0 +1,63 @@
+{
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 2701,
+  "fusion": {
+    "context_s": 6.0,
+    "event_coverage": true,
+    "max_log_odds": 2.0,
+    "power": 0.35,
+    "pre_restart_s": 3.0,
+    "restart_probability": 0.8,
+    "stop_probability": 0.85,
+    "team_probability": 0.65
+  },
+  "regimes": {
+    "corrupt": {
+      "category_error": 0.4,
+      "conflict_rate": 0.35,
+      "duplicate_rate": 0.5,
+      "false_events_per_s": 0.12,
+      "missing_rate": 0.45,
+      "offset_s": 1.2,
+      "unknown_team": 0.45,
+      "wrong_team": 0.45
+    },
+    "delayed": {
+      "category_error": 0.15,
+      "delay_s": 2.0,
+      "missing_rate": 0.25,
+      "width_s": 4.0
+    },
+    "moderate": {},
+    "occluded": {},
+    "shared_view": {
+      "shared_view_loss": 0.8
+    }
+  },
+  "trials": [
+    22001,
+    22002,
+    22003,
+    22004,
+    22005,
+    22006,
+    22007,
+    22008,
+    22009,
+    22010,
+    22011,
+    22012
+  ],
+  "twin_kinds": [
+    "static",
+    "invisible"
+  ],
+  "twin_regimes": [
+    "moderate",
+    "shared_view"
+  ],
+  "world_families": [
+    "episodes",
+    "renewal"
+  ]
+}

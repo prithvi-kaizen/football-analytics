@@ -1,0 +1,41 @@
+name: Possession Lab
+on:
+  push:
+    paths: ['projects/possession-lab/**', '.github/workflows/possession-lab.yml', 'scripts/build_website.py']
+  pull_request:
+    paths: ['projects/possession-lab/**', '.github/workflows/possession-lab.yml', 'scripts/build_website.py']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: projects/possession-lab
+    env:
+      MPLBACKEND: Agg
+      MPLCONFIGDIR: /tmp/possession-lab-matplotlib
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pinned public official source, scorer and baseline sanity files
+        uses: actions/checkout@v4
+        with:
+          repository: metrica-sports/more-than-a-hack-2027
+          ref: f8f2629ff1e0985f81d7e59d8413678514ee1530
+          path: projects/more-than-a-hack-2027
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+          cache-dependency-path: projects/possession-lab/requirements.lock.txt
+      - run: python -m pip install -r requirements.lock.txt
+      - run: python -m pip install --no-build-isolation --no-deps -e .
+      - name: Restore exact synthetic benchmark history
+        run: python scripts/restore_benchmarks.py
+      - name: Research reproduction and publication checks
+        run: python -m pytest -q
+      - name: Offline portfolio build
+        working-directory: .
+        run: python scripts/build_website.py

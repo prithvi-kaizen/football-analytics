@@ -1,0 +1,9 @@
+{
+  "HMM_live_D_fraction": 0.8892631578947369,
+  "SM_live_D_fraction": 0.8951578947368422,
+  "control_overwritten_D": 2000,
+  "live_frames": 2375,
+  "live_out_of_bounds": 0,
+  "live_stationarity_fraction": 0.8934736842105263,
+  "scenario": "old stationary_live, seed 101"
+}
