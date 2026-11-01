@@ -1,0 +1,254 @@
+[
+  {
+    "path": "app.js",
+    "http_status": 200,
+    "bytes": 19280,
+    "sha256": "511c2fcecf70462f7f144a783443d89b1745557c3ec58d1ec348bb2af3c89046",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "data/clean.json",
+    "http_status": 200,
+    "bytes": 1230261,
+    "sha256": "34769f3a226732be5fdff46172f468f66ff7b99ff23823a37a54c9d41f57d801",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "data/contested.json",
+    "http_status": 200,
+    "bytes": 1229547,
+    "sha256": "f1363c43df46c3b160c74acc4f049cfee07d49cd85c8c1cfe97a247d5b2326d9",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "data/default.json",
+    "http_status": 200,
+    "bytes": 1228532,
+    "sha256": "779a34f9f7fddf8f08b60d3cb4ee4e5294181c0bcc9a3a5cd4d4ed241be8a22f",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "data/identity_switches.json",
+    "http_status": 200,
+    "bytes": 1229613,
+    "sha256": "27572c4f6eb368baaa33c127cebd09173cf613f24c3a5e80247754b66d048ab9",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "data/observability_invisible_independent.json",
+    "http_status": 200,
+    "bytes": 364567,
+    "sha256": "098a03dc153d6837cb3b88c271922b99a0a136ad0ac31de6cbdd62abcb851186",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "data/observability_invisible_none.json",
+    "http_status": 200,
+    "bytes": 364383,
+    "sha256": "8704c87399a3498ebd54f221250afcb062dd0b00845e8eafa2cd14fe8f6bc773",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "data/observability_invisible_null.json",
+    "http_status": 200,
+    "bytes": 364483,
+    "sha256": "c630bd10bc0ea403399c0312c989d4b70f20470bf5334733b10484997801a879",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "data/observability_static_independent.json",
+    "http_status": 200,
+    "bytes": 365997,
+    "sha256": "137addb55f82e6a8b931c6a544500a7f3d2c9b3686407eed382b330b28e4988b",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "data/observability_static_none.json",
+    "http_status": 200,
+    "bytes": 365750,
+    "sha256": "0cb3a4238e33e8d0ab76f03c4642b9559796f3af2cebb9c1995a79d03965f688",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "data/observability_static_null.json",
+    "http_status": 200,
+    "bytes": 365850,
+    "sha256": "4f49b913a05591af494675c9cf63f48664f3ad95ee9464cbbb21b91f64c4ef0a",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "data/player_gaps.json",
+    "http_status": 200,
+    "bytes": 1157564,
+    "sha256": "7ff09e2e92f0941573a2a75eb74c1b76876892f6201a2126c9c8d716423d0199",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "data/public1.json",
+    "http_status": 200,
+    "bytes": 486410,
+    "sha256": "b3f17af5b5753c6994148bceb3762ba1ba36f6bae15c1e70b8f8f4400c984e08",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "data/public2.json",
+    "http_status": 200,
+    "bytes": 460067,
+    "sha256": "77b21384004ec3dc52a1a6c103dc41962ff6ec33a2726bc955545a3402e5fd29",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "data/stationary_live.json",
+    "http_status": 200,
+    "bytes": 1229288,
+    "sha256": "fb1225716553334d32a6b84d607c46ae3a4ce36da62a9cc8a54beece9027fe1b",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "index.html",
+    "http_status": 200,
+    "bytes": 12682,
+    "sha256": "c3832de0696c29347e4b8b5d5b70aad3eebaf1f69f6bc9197ec68e133bb7710a",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "provenance.json",
+    "http_status": 200,
+    "bytes": 4578,
+    "sha256": "47dafd192ba64ce5aafc0afc6e0948b43a5d78241a0e1d43000a8bd4b2ee0212",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "requests.js",
+    "http_status": 200,
+    "bytes": 1448,
+    "sha256": "38c9f79b872b0c092e525a71a4268794f444bd876ced3aff6af59ab9ba16f493",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "research-python.zip",
+    "http_status": 200,
+    "bytes": 79366,
+    "sha256": "6572c06184642f7fcd9ab4d749c5ef01a895e64e2c3d2fdd28d91c0fac0c41dc",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "research/phase0.md",
+    "http_status": 200,
+    "bytes": 13672,
+    "sha256": "febdda56dcd751dd3e0802c4aafe7f78d6f99f33483c2057fc1c200d627e8f9c",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "research/phase1.md",
+    "http_status": 200,
+    "bytes": 5353,
+    "sha256": "684b2e5763347a4da3bb68406802a2b046e7aa80d4f539d331c2bf8deea4de59",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "research/phase2.md",
+    "http_status": 200,
+    "bytes": 7017,
+    "sha256": "aee9365a972143b0559440cd935f3c37440da9c3aa3c18d66073168b5a94fc3f",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "runtime/PYODIDE-LICENSE.txt",
+    "http_status": 200,
+    "bytes": 16725,
+    "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "runtime/SHA256.json",
+    "http_status": 200,
+    "bytes": 1221,
+    "sha256": "e6cf6041286934aa4383b077accb446f7f7b2287ca955f1e1d049353f9fe307e",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "runtime/numpy-2.2.5-cp313-cp313-pyodide_2025_0_wasm32.whl",
+    "http_status": 200,
+    "bytes": 3103966,
+    "sha256": "6eaab6a7bb658d71ebe702911a3deab715323642462eb41b65565ca6a7cc23f1",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "runtime/pandas-2.3.3-cp313-cp313-pyodide_2025_0_wasm32.whl",
+    "http_status": 200,
+    "bytes": 4493384,
+    "sha256": "5b1c0acfc8555be16057e8609e9eb7f279037c2469032bcc23e2a691380a50ae",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "runtime/pyodide-lock.json",
+    "http_status": 200,
+    "bytes": 120010,
+    "sha256": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "runtime/pyodide.asm.js",
+    "http_status": 200,
+    "bytes": 1074322,
+    "sha256": "3a8657ad4a902da2bd49eac9296959ad7f4401e58b272392f8784700a90288b3",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "runtime/pyodide.asm.wasm",
+    "http_status": 200,
+    "bytes": 8647684,
+    "sha256": "4ba24b3c4d03f47074fa91f833769d81108dbca40c22fb104030a48fce95c95d",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "runtime/pyodide.js",
+    "http_status": 200,
+    "bytes": 18597,
+    "sha256": "6b825ee8b24b1d3b4822c0d4cb440ce30e8e31ac60ee5073d85237c1a4db7279",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "runtime/python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+    "http_status": 200,
+    "bytes": 229892,
+    "sha256": "ddca13fc1046572701872b9517622b57f847c77eea4bf9fdc995256e6c82beaf",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "runtime/python_stdlib.zip",
+    "http_status": 200,
+    "bytes": 2423988,
+    "sha256": "18950b4ee5e9e75b16e58d73c2c069c588ff5b613794057a9854d91a8c332628",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "runtime/pytz-2025.2-py2.py3-none-any.whl",
+    "http_status": 200,
+    "bytes": 509225,
+    "sha256": "5a9c9286f6c03a4d16ee4ced15d511097568e1e41329d3499b597ecd7f1d317e",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "runtime/six-1.17.0-py2.py3-none-any.whl",
+    "http_status": 200,
+    "bytes": 11050,
+    "sha256": "1f715fc699e802b31e53290ead6c16a4d6a8da462a225d2e06097fce45ab70b9",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "style.css",
+    "http_status": 200,
+    "bytes": 8263,
+    "sha256": "6b654f624b3e5b0c2d70983ff432c3d243261d849f81491583d1e75b619d9280",
+    "matches_reviewed_release": true
+  },
+  {
+    "path": "worker.js",
+    "http_status": 200,
+    "bytes": 2238,
+    "sha256": "5ba5c0f59290fb00380de651182e8230f5a809c7bfc0a16dd8890dddcf8a10ba",
+    "matches_reviewed_release": true
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "synthetic_model_outputs_independently_scored": 276,
+  "metric_fields_checked_per_output": 8,
+  "public_samples": [
+    {
+      "fixture": "public1.json",
+      "models_withheld": 14,
+      "frames": 1000
+    },
+    {
+      "fixture": "public2.json",
+      "models_withheld": 14,
+      "frames": 1000
+    }
+  ],
+  "null_pair_cases": [
+    "observability_invisible_none.json",
+    "observability_invisible_null.json",
+    "observability_static_none.json",
+    "observability_static_null.json"
+  ],
+  "nearest_distance_max_error_metres_after_coordinate_rounding": 0.0016114603014560913,
+  "all_checks_passed": true
+}

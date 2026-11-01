@@ -41,3 +41,5 @@ jobs:
       - name: Offline portfolio build
         working-directory: .
         run: python scripts/build_website.py
+      - name: Independently reconstruct public demo metrics and geometry
+        run: python scripts/audit_fixture_metrics.py --data ../../dist/possession-lab/data

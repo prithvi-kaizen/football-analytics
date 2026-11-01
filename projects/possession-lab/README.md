@@ -122,6 +122,9 @@ Five additional publication checks cover safe archive restoration and release in
 Four Node regression checks cover shared fixture requests, caching, recoverable
 HTTP failures and timeouts: `node --test explorer/tests/requests.test.cjs`.
 
+The [live-demo audit](docs/explorer/LIVE_AUDIT.md) independently checks the served
+assets, prediction sequences, metric calculations and browser behaviour.
+
 The release builder verifies its source fingerprint, archive checksum and every
 restored asset. Historical benchmark files are preserved byte-for-byte in a separate
 archive. See the [explorer verification report](docs/explorer/REPORT.md) and
