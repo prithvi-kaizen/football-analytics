@@ -66,3 +66,25 @@ Reasons for colour, layout, typography, motion and spacing are in explorer/DESIG
 - R-29 PASS: paper/ink plus team blue/orange, field green and neutral D/X have explicit semantic roles.
 - R-30 PASS: no copied product identity or recognisable template.
 - R-31 PASS: reasons for all major visual choices recorded in DESIGN.md.
+
+## Motion v2 follow-up, 2026-11-02
+
+- R-03 PASS: added descriptive source names initially exposed mobile form overflow;
+  fixed select/grid minimum widths and stacked the phone form. Browser measurements
+  after the fix: document width 375 at viewport 390; 360 at viewport 375, including
+  reserved scrollbars. Both public and synthetic selections checked.
+- R-26/R-27 PASS: public interventions and v2 generation completed through actual
+  browser Python; ready/computing/complete messages appeared. Source changes enable
+  synthetic mechanisms only for synthetic data. Moving observability pair and
+  independent-cue selection were exercised; playback advanced public source frames.
+- R-17/R-36/R-38 PASS: public accuracy remains unavailable; scripted v2 scope,
+  measurement corruption, legacy fixtures and historical-score separation are explicit.
+- R-34 PASS: phone dark/light switching visually reviewed; viewport override reset.
+- R-35 PASS: 199 Python tests and four Node request tests; 25-case fixture release
+  independently checked. All seven portfolio routes built.
+- Purpose/liveliness/craft PASS: same documented colours, type, pitch/time motif and
+  2/2/1 dials retained. Source selection serves provenance; motion depicts observations
+  under user playback. No decorative interface expansion.
+
+The earlier full gate remains the design baseline. See ../MOTION_V2.md for precise
+research limitations and separately reported outcomes.

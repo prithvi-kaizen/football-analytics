@@ -14,6 +14,9 @@ Original Possession Lab software is released under the MIT licence in LICENSE.
   Only the first 1,000 frames of each public CSV sample match are included in the
   static demonstration. Full source-file hashes and coordinate conventions are
   recorded in provenance.json. No trusted possession truth accompanies these clips.
+  The playground additionally carries full-precision adapter outputs for those same
+  excerpts so observation corruption is applied before display rounding. Loss and
+  noise are simulated interventions, not defects attributed to the source dataset.
 - Browser Python runs through Pyodide 0.29.2 and its pinned package distribution,
   https://pyodide.org/en/0.29.2/. Pyodide and its numerical dependencies retain
   their own licences. Runtime files are vendored from the version-pinned jsDelivr

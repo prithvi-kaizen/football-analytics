@@ -14,7 +14,7 @@ def package(source):
     source = Path(source)
     allowed = {'index.html', 'app.js', 'style.css', 'worker.js', 'requests.js', 'provenance.json', 'research-python.zip'}
     entries = {name: source / name for name in allowed}
-    for directory in ('data', 'research', 'runtime'):
+    for directory in ('data', 'research', 'runtime', 'public-inputs'):
         for path in (source / directory).rglob('*'):
             if path.is_file():
                 entries[str(path.relative_to(source))] = path

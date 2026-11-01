@@ -14,7 +14,7 @@ Football projects built around specific tactical questions, reproducible data pr
 | [Rest Defence Analyzer](projects/rest-defence-analyzer/) | How vulnerable is a team to counterattacks while it attacks? | DFL open 2022/23 tracking and events; one complete match validated | Python/Streamlit workbench, independent XML audit and browser replay |
 | [Is possession actually dangerous?](projects/possession-danger/) | Does Barcelona's possession create more danger than its rivals? | StatsBomb women's leagues; full Liga F 2023/24 and five-league samples | Python/Streamlit workbench, tested xT model, public browser dashboard and reproducible findings |
 | [TacticAI Lite](projects/tacticai-lite/) | Which corner-kick patterns are associated with shot creation? | StatsBomb Euro 2024 and Women’s Euro 2025; all 82 matches | Validated Python/Streamlit project, match-held-out baseline and public aggregate explorer |
-| [Possession Lab](projects/possession-lab/) | Who has possession when the ball disappears from the tracking? | Deterministic synthetic trials and two unlabelled public Metrica sample excerpts | Tested Python research package, browser inference playground and paired observability explorer |
+| [Possession Lab](projects/possession-lab/) | Who has possession when the ball disappears from the tracking? | Continuous scripted synthetic motion and two unlabelled public Metrica sample excerpts | Tested Python research package, observation-failure playground and paired observability explorer |
 
 The first project includes pressure and recovery maps, event-level replays, team comparisons, an exploratory xT model, automated tests and a written investigation. It identifies patterns consistent with pressing traps; event data alone cannot prove intent.
 
@@ -47,7 +47,7 @@ Possession research: the [Possession danger setup](projects/possession-danger/RE
 
 For corner-kick research, see the [TacticAI Lite setup](projects/tacticai-lite/README.md), [findings](projects/tacticai-lite/reports/findings.md) and [deployment guide](projects/tacticai-lite/docs/deployment.md). Its public site contains aggregate analysis; raw events and player frames remain local under the provider’s terms.
 
-Possession-state inference: see the [Possession Lab setup](projects/possession-lab/README.md), [tracking-only findings](projects/possession-lab/docs/phase1/REPORT.md) and [event-evidence findings](projects/possession-lab/docs/phase2/REPORT.md). Its browser explorer compares models, runs deterministic tracking failures on the visitor’s device and shows identical-observation counterexamples. Synthetic scores are diagnostic; accuracy is withheld for the two public Metrica excerpts. Original benchmarks and scorer remain unchanged.
+Possession-state inference: see the [Possession Lab setup](projects/possession-lab/README.md), [tracking-only findings](projects/possession-lab/docs/phase1/REPORT.md) and [event-evidence findings](projects/possession-lab/docs/phase2/REPORT.md). Its browser explorer compares models, applies observation failures to public movement or continuous synthetic motion, and shows identical-observation counterexamples. The [motion v2 results](projects/possession-lab/docs/MOTION_V2.md) are separate from historical benchmarks. Synthetic scores are diagnostic; accuracy is withheld for the two public Metrica excerpts. Original benchmarks and scorer remain unchanged.
 
 ## Deployment
 

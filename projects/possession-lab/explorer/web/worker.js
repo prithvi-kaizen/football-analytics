@@ -2,6 +2,7 @@
 const INDEX_URL = new URL('./runtime/', self.location.href).href;
 let runtime;
 let queue = Promise.resolve();
+const publicSources = new Map();
 
 async function initialize() {
   self.postMessage({type: 'status', message: 'Loading browser Python'});
@@ -23,7 +24,7 @@ async function initialize() {
   const response = await fetch('./research-python.zip');
   if (!response.ok) throw new Error('The research source bundle could not be loaded.');
   python.unpackArchive(await response.arrayBuffer(), 'zip', {extractDir: '/research'});
-  python.runPython("import sys\nsys.path.insert(0, '/research')\nfrom possession_lab.explorer_api import run_json");
+  python.runPython("import sys\nsys.path.insert(0, '/research')\nfrom possession_lab.explorer_api import run_json\nfrom possession_lab.explorer_v2 import run_json as run_v2_json");
   self.postMessage({type: 'ready'});
   return python;
 }
@@ -34,10 +35,22 @@ self.onmessage = ({data}) => {
       runtime ||= initialize();
       const python = await runtime;
       if (data.type === 'initialize') return;
-      if (!['scenario', 'observability'].includes(data.mode)) throw new Error('Unsupported research operation.');
+      if (!['scenario', 'observability', 'scenario_v2', 'observability_v2', 'public_demo'].includes(data.mode)) throw new Error('Unsupported research operation.');
       python.globals.set('_explorer_mode', data.mode);
       python.globals.set('_explorer_request', JSON.stringify(data.parameters || {}));
-      const result = python.runPython('run_json(_explorer_mode, _explorer_request)');
+      let expression = 'run_json(_explorer_mode, _explorer_request)';
+      if (data.mode === 'public_demo') {
+        const source = data.parameters?.source;
+        if (!['public1', 'public2'].includes(source)) throw new Error('Unknown public sample.');
+        if (!publicSources.has(source)) {
+          const response = await fetch(`public-inputs/sample${source.slice(-1)}.json`);
+          if (!response.ok) throw new Error('The public sample input could not be loaded.');
+          publicSources.set(source, await response.text());
+        }
+        python.globals.set('_explorer_public_input', publicSources.get(source));
+        expression = 'run_v2_json(_explorer_mode, _explorer_request, _explorer_public_input)';
+      } else if (data.mode.endsWith('_v2')) expression = 'run_v2_json(_explorer_mode, _explorer_request)';
+      const result = python.runPython(expression);
       self.postMessage({type: 'result', id: data.id, result: JSON.parse(result)});
     } catch (error) {
       self.postMessage({type: 'error', id: data.id, message: String(error.message || error)});

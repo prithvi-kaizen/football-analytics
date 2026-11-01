@@ -1,0 +1,1402 @@
+[
+  {
+    "mechanism": "ordinary",
+    "method": "nearest",
+    "metric": "spell_f1",
+    "mean": 0.09346031746031747,
+    "low": 0.08828571428571427,
+    "high": 0.09895238095238094,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "nearest",
+    "metric": "macro_f1",
+    "mean": 0.5427664221226732,
+    "low": 0.5371129774658684,
+    "high": 0.5491009963571374,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "nearest",
+    "metric": "D_precision",
+    "mean": null,
+    "low": null,
+    "high": null,
+    "defined_trials": 0,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "nearest",
+    "metric": "D_recall",
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "nearest",
+    "metric": "boundary_mae_frames",
+    "mean": 22.9,
+    "low": 21.4,
+    "high": 24.3,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "nearest",
+    "metric": "boundary_missed",
+    "mean": 7.2,
+    "low": 6.4,
+    "high": 8.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "nearest",
+    "metric": "boundary_spurious",
+    "mean": 74.8,
+    "low": 64.4,
+    "high": 92.8,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "state_machine",
+    "metric": "spell_f1",
+    "mean": 0.7780606060606061,
+    "low": 0.6647272727272727,
+    "high": 0.8893666666666665,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "state_machine",
+    "metric": "macro_f1",
+    "mean": 0.6644205924426414,
+    "low": 0.6342870357690898,
+    "high": 0.694554149116193,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "state_machine",
+    "metric": "D_precision",
+    "mean": 1.0,
+    "low": 1.0,
+    "high": 1.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "state_machine",
+    "metric": "D_recall",
+    "mean": 0.09866666666666665,
+    "low": 0.04933333333333333,
+    "high": 0.15076666666666613,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "state_machine",
+    "metric": "boundary_mae_frames",
+    "mean": 7.4333333333333345,
+    "low": 5.966666666666667,
+    "high": 8.900000000000002,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "state_machine",
+    "metric": "boundary_missed",
+    "mean": 4.8,
+    "low": 4.2,
+    "high": 5.4,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "state_machine",
+    "metric": "boundary_spurious",
+    "mean": 8.0,
+    "low": 5.2,
+    "high": 10.8,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "hmm",
+    "metric": "spell_f1",
+    "mean": 0.45881006864988566,
+    "low": 0.3648512585812358,
+    "high": 0.5136842105263157,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "hmm",
+    "metric": "macro_f1",
+    "mean": 0.6581289768735837,
+    "low": 0.6195521185810964,
+    "high": 0.6988782129815461,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "hmm",
+    "metric": "D_precision",
+    "mean": 0.9813953488372092,
+    "low": 0.9441860465116279,
+    "high": 1.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "hmm",
+    "metric": "D_recall",
+    "mean": 0.11399999999999999,
+    "low": 0.05133333333333333,
+    "high": 0.176,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "hmm",
+    "metric": "boundary_mae_frames",
+    "mean": 13.213333333333335,
+    "low": 10.52,
+    "high": 15.820000000000002,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "hmm",
+    "metric": "boundary_missed",
+    "mean": 5.6,
+    "low": 4.6,
+    "high": 6.8,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "hmm",
+    "metric": "boundary_spurious",
+    "mean": 21.6,
+    "low": 19.0,
+    "high": 24.4,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "hierarchical",
+    "metric": "spell_f1",
+    "mean": 0.5519999999999999,
+    "low": 0.5359999999999999,
+    "high": 0.5599999999999999,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "hierarchical",
+    "metric": "macro_f1",
+    "mean": 0.608689582760295,
+    "low": 0.6063554711432969,
+    "high": 0.6102702628792745,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "hierarchical",
+    "metric": "D_precision",
+    "mean": null,
+    "low": null,
+    "high": null,
+    "defined_trials": 0,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "hierarchical",
+    "metric": "D_recall",
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "hierarchical",
+    "metric": "boundary_mae_frames",
+    "mean": 16.5,
+    "low": 15.0,
+    "high": 18.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "hierarchical",
+    "metric": "boundary_missed",
+    "mean": 6.4,
+    "low": 6.0,
+    "high": 7.2,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "ordinary",
+    "method": "hierarchical",
+    "metric": "boundary_spurious",
+    "mean": 2.4,
+    "low": 2.0,
+    "high": 3.2,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "nearest",
+    "metric": "spell_f1",
+    "mean": 0.11533727366544703,
+    "low": 0.10679425837320575,
+    "high": 0.1228708133971292,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "nearest",
+    "metric": "macro_f1",
+    "mean": 0.5461412386718831,
+    "low": 0.5399126661103202,
+    "high": 0.5529262591069026,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "nearest",
+    "metric": "D_precision",
+    "mean": null,
+    "low": null,
+    "high": null,
+    "defined_trials": 0,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "nearest",
+    "metric": "D_recall",
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "nearest",
+    "metric": "boundary_mae_frames",
+    "mean": 22.9,
+    "low": 21.4,
+    "high": 24.2,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "nearest",
+    "metric": "boundary_missed",
+    "mean": 7.2,
+    "low": 6.4,
+    "high": 8.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "nearest",
+    "metric": "boundary_spurious",
+    "mean": 67.6,
+    "low": 60.4,
+    "high": 77.6,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "state_machine",
+    "metric": "spell_f1",
+    "mean": 0.7772494172494173,
+    "low": 0.6599160839160839,
+    "high": 0.884923076923077,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "state_machine",
+    "metric": "macro_f1",
+    "mean": 0.6274629843189093,
+    "low": 0.6055092059921154,
+    "high": 0.649445564438279,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "state_machine",
+    "metric": "D_precision",
+    "mean": 0.12323581893432171,
+    "low": 0.06232204050482457,
+    "high": 0.18414959736381892,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "state_machine",
+    "metric": "D_recall",
+    "mean": 0.09866666666666665,
+    "low": 0.04666666666666667,
+    "high": 0.15066666666666667,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "state_machine",
+    "metric": "boundary_mae_frames",
+    "mean": 7.4333333333333345,
+    "low": 5.966666666666667,
+    "high": 8.9,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "state_machine",
+    "metric": "boundary_missed",
+    "mean": 4.8,
+    "low": 4.2,
+    "high": 5.4,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "state_machine",
+    "metric": "boundary_spurious",
+    "mean": 7.2,
+    "low": 4.6,
+    "high": 9.8,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "hmm",
+    "metric": "spell_f1",
+    "mean": 0.46644291889143147,
+    "low": 0.3627322654462243,
+    "high": 0.5338011695906433,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "hmm",
+    "metric": "macro_f1",
+    "mean": 0.6219767937959195,
+    "low": 0.5911431116533528,
+    "high": 0.6515449119051493,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "hmm",
+    "metric": "D_precision",
+    "mean": 0.19247698678568853,
+    "low": 0.10164281067013663,
+    "high": 0.2833111629012405,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "hmm",
+    "metric": "D_recall",
+    "mean": 0.11399999999999999,
+    "low": 0.05133333333333333,
+    "high": 0.176,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "hmm",
+    "metric": "boundary_mae_frames",
+    "mean": 14.520000000000001,
+    "low": 12.266666666666666,
+    "high": 16.720000000000002,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "hmm",
+    "metric": "boundary_missed",
+    "mean": 6.0,
+    "low": 4.8,
+    "high": 7.2,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "hmm",
+    "metric": "boundary_spurious",
+    "mean": 21.2,
+    "low": 18.2,
+    "high": 25.009999999999945,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "hierarchical",
+    "metric": "spell_f1",
+    "mean": 0.5519999999999999,
+    "low": 0.5359999999999999,
+    "high": 0.5599999999999999,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "hierarchical",
+    "metric": "macro_f1",
+    "mean": 0.6082691842363739,
+    "low": 0.6059839767542771,
+    "high": 0.6097587190472268,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "hierarchical",
+    "metric": "D_precision",
+    "mean": null,
+    "low": null,
+    "high": null,
+    "defined_trials": 0,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "hierarchical",
+    "metric": "D_recall",
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "hierarchical",
+    "metric": "boundary_mae_frames",
+    "mean": 15.8,
+    "low": 13.6,
+    "high": 18.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "hierarchical",
+    "metric": "boundary_missed",
+    "mean": 6.8,
+    "low": 6.0,
+    "high": 7.6,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "stationary_live",
+    "method": "hierarchical",
+    "metric": "boundary_spurious",
+    "mean": 2.8,
+    "low": 2.0,
+    "high": 3.6,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "nearest",
+    "metric": "spell_f1",
+    "mean": 0.09394725588025658,
+    "low": 0.08495652173913044,
+    "high": 0.10459016393442622,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "nearest",
+    "metric": "macro_f1",
+    "mean": 0.5429146245267896,
+    "low": 0.537312277030616,
+    "high": 0.5492311809521078,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "nearest",
+    "metric": "D_precision",
+    "mean": null,
+    "low": null,
+    "high": null,
+    "defined_trials": 0,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "nearest",
+    "metric": "D_recall",
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "nearest",
+    "metric": "boundary_mae_frames",
+    "mean": 22.9,
+    "low": 21.397499999999997,
+    "high": 24.3,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "nearest",
+    "metric": "boundary_missed",
+    "mean": 7.2,
+    "low": 6.4,
+    "high": 8.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "nearest",
+    "metric": "boundary_spurious",
+    "mean": 75.6,
+    "low": 65.2,
+    "high": 91.2,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "state_machine",
+    "metric": "spell_f1",
+    "mean": 0.7727272727272728,
+    "low": 0.6613333333333333,
+    "high": 0.8873939393939393,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "state_machine",
+    "metric": "macro_f1",
+    "mean": 0.6625151294557629,
+    "low": 0.6342870357690898,
+    "high": 0.6907432231424359,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "state_machine",
+    "metric": "D_precision",
+    "mean": 1.0,
+    "low": 1.0,
+    "high": 1.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "state_machine",
+    "metric": "D_recall",
+    "mean": 0.09866666666666665,
+    "low": 0.04666666666666667,
+    "high": 0.15066666666666667,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "state_machine",
+    "metric": "boundary_mae_frames",
+    "mean": 7.4333333333333345,
+    "low": 5.866666666666667,
+    "high": 8.900000000000002,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "state_machine",
+    "metric": "boundary_missed",
+    "mean": 4.8,
+    "low": 4.2,
+    "high": 5.4,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "state_machine",
+    "metric": "boundary_spurious",
+    "mean": 8.0,
+    "low": 5.2,
+    "high": 10.8,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "hmm",
+    "metric": "spell_f1",
+    "mean": 0.45881006864988566,
+    "low": 0.3680091533180779,
+    "high": 0.5136842105263157,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "hmm",
+    "metric": "macro_f1",
+    "mean": 0.6595857447894534,
+    "low": 0.6202932765973609,
+    "high": 0.6970413154648132,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "hmm",
+    "metric": "D_precision",
+    "mean": 0.9813953488372092,
+    "low": 0.9441860465116279,
+    "high": 1.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "hmm",
+    "metric": "D_recall",
+    "mean": 0.11399999999999999,
+    "low": 0.05133333333333333,
+    "high": 0.17666666666666667,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "hmm",
+    "metric": "boundary_mae_frames",
+    "mean": 13.213333333333335,
+    "low": 10.62,
+    "high": 15.807,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "hmm",
+    "metric": "boundary_missed",
+    "mean": 5.6,
+    "low": 4.6,
+    "high": 6.804999999999972,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "hmm",
+    "metric": "boundary_spurious",
+    "mean": 21.6,
+    "low": 19.2,
+    "high": 24.4,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "hierarchical",
+    "metric": "spell_f1",
+    "mean": 0.5519999999999999,
+    "low": 0.5359999999999999,
+    "high": 0.5599999999999999,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "hierarchical",
+    "metric": "macro_f1",
+    "mean": 0.608689582760295,
+    "low": 0.6063554711432969,
+    "high": 0.6102258007188237,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "hierarchical",
+    "metric": "D_precision",
+    "mean": null,
+    "low": null,
+    "high": null,
+    "defined_trials": 0,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "hierarchical",
+    "metric": "D_recall",
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "hierarchical",
+    "metric": "boundary_mae_frames",
+    "mean": 16.5,
+    "low": 15.0,
+    "high": 18.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "hierarchical",
+    "metric": "boundary_missed",
+    "mean": 6.4,
+    "low": 6.0,
+    "high": 7.2,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "contested",
+    "method": "hierarchical",
+    "metric": "boundary_spurious",
+    "mean": 2.4,
+    "low": 2.0,
+    "high": 3.2,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "nearest",
+    "metric": "spell_f1",
+    "mean": 0.08455524185958967,
+    "low": 0.06906832298136646,
+    "high": 0.09763636363636362,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "nearest",
+    "metric": "macro_f1",
+    "mean": 0.5299533970296165,
+    "low": 0.5260705509116586,
+    "high": 0.5337638148589479,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "nearest",
+    "metric": "D_precision",
+    "mean": null,
+    "low": null,
+    "high": null,
+    "defined_trials": 0,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "nearest",
+    "metric": "D_recall",
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "nearest",
+    "metric": "boundary_mae_frames",
+    "mean": 22.9,
+    "low": 21.4,
+    "high": 24.2,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "nearest",
+    "metric": "boundary_missed",
+    "mean": 7.2,
+    "low": 6.4,
+    "high": 8.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "nearest",
+    "metric": "boundary_spurious",
+    "mean": 77.2,
+    "low": 64.4,
+    "high": 100.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "state_machine",
+    "metric": "spell_f1",
+    "mean": 0.772,
+    "low": 0.6666666666666667,
+    "high": 0.8866666666666667,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "state_machine",
+    "metric": "macro_f1",
+    "mean": 0.656280661454738,
+    "low": 0.6184064106258055,
+    "high": 0.6941549122836702,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "state_machine",
+    "metric": "D_precision",
+    "mean": 1.0,
+    "low": 1.0,
+    "high": 1.0,
+    "defined_trials": 4,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "state_machine",
+    "metric": "D_recall",
+    "mean": 0.092,
+    "low": 0.033999999999999996,
+    "high": 0.15,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "state_machine",
+    "metric": "boundary_mae_frames",
+    "mean": 7.473333333333334,
+    "low": 5.966666666666667,
+    "high": 8.986666666666666,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "state_machine",
+    "metric": "boundary_missed",
+    "mean": 4.8,
+    "low": 4.2,
+    "high": 5.4,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "state_machine",
+    "metric": "boundary_spurious",
+    "mean": 8.4,
+    "low": 5.8,
+    "high": 10.8,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "hmm",
+    "metric": "spell_f1",
+    "mean": 0.44996796338672773,
+    "low": 0.3669565217391305,
+    "high": 0.5126315789473684,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "hmm",
+    "metric": "macro_f1",
+    "mean": 0.6596022126575335,
+    "low": 0.6219840385505512,
+    "high": 0.6972203867645157,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "hmm",
+    "metric": "D_precision",
+    "mean": 0.9789473684210528,
+    "low": 0.9368421052631579,
+    "high": 1.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "hmm",
+    "metric": "D_recall",
+    "mean": 0.11733333333333333,
+    "low": 0.06133333333333334,
+    "high": 0.17333333333333328,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "hmm",
+    "metric": "boundary_mae_frames",
+    "mean": 13.766666666666666,
+    "low": 11.153333333333332,
+    "high": 16.380000000000003,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "hmm",
+    "metric": "boundary_missed",
+    "mean": 5.2,
+    "low": 4.2,
+    "high": 6.8,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "hmm",
+    "metric": "boundary_spurious",
+    "mean": 21.6,
+    "low": 18.8,
+    "high": 24.8,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "hierarchical",
+    "metric": "spell_f1",
+    "mean": 0.5519999999999999,
+    "low": 0.5359999999999999,
+    "high": 0.5599999999999999,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "hierarchical",
+    "metric": "macro_f1",
+    "mean": 0.6082691842363739,
+    "low": 0.6061264047506525,
+    "high": 0.6097564980600015,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "hierarchical",
+    "metric": "D_precision",
+    "mean": null,
+    "low": null,
+    "high": null,
+    "defined_trials": 0,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "hierarchical",
+    "metric": "D_recall",
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "hierarchical",
+    "metric": "boundary_mae_frames",
+    "mean": 15.8,
+    "low": 13.6,
+    "high": 18.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "hierarchical",
+    "metric": "boundary_missed",
+    "mean": 6.8,
+    "low": 6.0,
+    "high": 7.6,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "player_gaps",
+    "method": "hierarchical",
+    "metric": "boundary_spurious",
+    "mean": 2.8,
+    "low": 2.0,
+    "high": 3.6,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "nearest",
+    "metric": "spell_f1",
+    "mean": 0.09346031746031747,
+    "low": 0.08828571428571427,
+    "high": 0.09863492063492063,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "nearest",
+    "metric": "macro_f1",
+    "mean": 0.5427664221226732,
+    "low": 0.5371129774658684,
+    "high": 0.5489858733045065,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "nearest",
+    "metric": "D_precision",
+    "mean": null,
+    "low": null,
+    "high": null,
+    "defined_trials": 0,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "nearest",
+    "metric": "D_recall",
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "nearest",
+    "metric": "boundary_mae_frames",
+    "mean": 22.9,
+    "low": 21.4,
+    "high": 24.2,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "nearest",
+    "metric": "boundary_missed",
+    "mean": 7.2,
+    "low": 6.4,
+    "high": 8.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "nearest",
+    "metric": "boundary_spurious",
+    "mean": 74.8,
+    "low": 64.4,
+    "high": 92.8,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "state_machine",
+    "metric": "spell_f1",
+    "mean": 0.7780606060606061,
+    "low": 0.6666666666666667,
+    "high": 0.8873939393939393,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "state_machine",
+    "metric": "macro_f1",
+    "mean": 0.6644205924426414,
+    "low": 0.6342870357690898,
+    "high": 0.694554149116193,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "state_machine",
+    "metric": "D_precision",
+    "mean": 1.0,
+    "low": 1.0,
+    "high": 1.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "state_machine",
+    "metric": "D_recall",
+    "mean": 0.09866666666666665,
+    "low": 0.04666666666666667,
+    "high": 0.15066666666666667,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "state_machine",
+    "metric": "boundary_mae_frames",
+    "mean": 7.4333333333333345,
+    "low": 5.8,
+    "high": 8.900000000000002,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "state_machine",
+    "metric": "boundary_missed",
+    "mean": 4.8,
+    "low": 4.2,
+    "high": 5.4,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "state_machine",
+    "metric": "boundary_spurious",
+    "mean": 8.0,
+    "low": 5.2,
+    "high": 10.8,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "hmm",
+    "metric": "spell_f1",
+    "mean": 0.45881006864988566,
+    "low": 0.3669565217391305,
+    "high": 0.5136842105263157,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "hmm",
+    "metric": "macro_f1",
+    "mean": 0.6581289768735837,
+    "low": 0.6173797407656214,
+    "high": 0.6988782129815461,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "hmm",
+    "metric": "D_precision",
+    "mean": 0.9813953488372092,
+    "low": 0.9441860465116279,
+    "high": 1.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "hmm",
+    "metric": "D_recall",
+    "mean": 0.11399999999999999,
+    "low": 0.05133333333333333,
+    "high": 0.1766666666666667,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "hmm",
+    "metric": "boundary_mae_frames",
+    "mean": 13.213333333333335,
+    "low": 10.620000000000001,
+    "high": 15.820000000000002,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "hmm",
+    "metric": "boundary_missed",
+    "mean": 5.6,
+    "low": 4.6,
+    "high": 6.8,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "hmm",
+    "metric": "boundary_spurious",
+    "mean": 21.6,
+    "low": 19.0,
+    "high": 24.4,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "hierarchical",
+    "metric": "spell_f1",
+    "mean": 0.5519999999999999,
+    "low": 0.5359999999999999,
+    "high": 0.5599999999999999,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "hierarchical",
+    "metric": "macro_f1",
+    "mean": 0.608689582760295,
+    "low": 0.606357692130522,
+    "high": 0.6102702628792744,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "hierarchical",
+    "metric": "D_precision",
+    "mean": null,
+    "low": null,
+    "high": null,
+    "defined_trials": 0,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "hierarchical",
+    "metric": "D_recall",
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "hierarchical",
+    "metric": "boundary_mae_frames",
+    "mean": 16.5,
+    "low": 15.0,
+    "high": 18.0,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "hierarchical",
+    "metric": "boundary_missed",
+    "mean": 6.4,
+    "low": 6.0,
+    "high": 7.2,
+    "defined_trials": 5,
+    "trials": 5
+  },
+  {
+    "mechanism": "identity_switches",
+    "method": "hierarchical",
+    "metric": "boundary_spurious",
+    "mean": 2.4,
+    "low": 2.0,
+    "high": 3.2,
+    "defined_trials": 5,
+    "trials": 5
+  }
+]

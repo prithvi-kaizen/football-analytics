@@ -12,6 +12,7 @@ from possession_lab.adapters.metrica_csv import MetricaCSVAdapter
 from possession_lab.explorer_api import describe_batch, scenario, observability
 from possession_lab.official import DEFAULT_OFFICIAL, sha256, verify
 from possession_lab.phase2_experiments import verify_phase1_freeze
+from possession_lab import explorer_v2
 
 SITE = ROOT / "explorer"
 DIST = SITE / "dist"
@@ -49,6 +50,16 @@ def export():
     for kind in ("static", "invisible"):
         for evidence in ("none", "independent", "null"):
             write_json(data_dir / f"observability_{kind}_{evidence}.json", observability({"kind": kind, "evidence": evidence}))
+    motion_presets = {"default": {}, "clean": {"noise": 0, "loss": 0, "gap_duration": 0},
+                      "stationary_live": {"mechanism": "stationary_live", "noise": .08, "loss": 0, "gap_duration": 0},
+                      "contested": {"mechanism": "contested", "gap_duration": 0},
+                      "player_gaps": {"mechanism": "player_gaps", "gap_duration": 0},
+                      "identity_switches": {"mechanism": "identity_switches", "gap_duration": 0}}
+    for name, settings in motion_presets.items():
+        write_json(data_dir / f"motion_{name}.json", explorer_v2.scenario(settings))
+    for evidence in ("none", "independent", "null"):
+        write_json(data_dir / f"observability_moving_{evidence}.json", explorer_v2.observability({"evidence": evidence}))
+    (DIST / "public-inputs").mkdir(exist_ok=True)
     sample_sources = []
     for game in (1, 2):
         folder = ROOT.parent / "public-sample-data" / "data" / f"Sample_Game_{game}"
@@ -62,6 +73,10 @@ def export():
                                  "licensing": "Public sample use per source README; dataset is not relicensed under the code MIT licence"})
         result = describe_batch(batch, None, f"Metrica public Sample Game {game}")
         write_json(data_dir / f"public{game}.json", result)
+        payload = explorer_v2.public_payload(batch, game)
+        write_json(DIST / "public-inputs" / f"sample{game}.json", payload)
+        write_json(data_dir / f"public{game}_degraded.json", explorer_v2.public_demo(
+            {"source": f"public{game}", "noise": 0, "loss": 0}, payload))
         sample_sources.append(batch.provenance)
     entries = {str(p.relative_to(ROOT / "src")): p.read_bytes() for p in (ROOT / "src").rglob("*.py")}
     entries.update({"explorer_metrics.py": (DEFAULT_OFFICIAL / "evaluation/possession_metrics.py").read_bytes(),

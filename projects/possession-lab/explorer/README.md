@@ -48,6 +48,18 @@ are diagnostics for that scenario, not estimates of real-match generalization.
 The paired observability demonstration uses hypothetical independent cues;
 it does not claim they exist in a real tracking or tagging product.
 
+The playground defaults to public Metrica movement with simulated ball loss. Its
+`public-inputs/` payloads preserve full-precision adapted coordinates for Python
+inference; display coordinates alone are rounded. Zero-intervention predictions
+match the original public demonstration for all 14 variants. No trusted public
+possession labels or accuracy metrics are introduced.
+
+The separate `motion_v2` generator powers continuous synthetic examples. The
+original generators and models remain frozen; legacy fixtures are still selectable.
+`explorer_v2.run_json` handles bounded `scenario_v2`, `public_demo` and
+`observability_v2` requests. The worker only loads the two allowlisted public clips.
+See [motion methodology and validation](../docs/MOTION_V2.md).
+
 ## Free static hosting
 
 Publish only `dist/` to GitHub Pages, Cloudflare Pages or another static host.

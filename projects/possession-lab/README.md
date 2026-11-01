@@ -4,7 +4,7 @@
 
 Who has the ball when the ball disappears? A football possession inference research
 project with independent Python modules and an interactive pitch explorer. Compare
-models, change synthetic tracking failures and inspect cases where exactly the same
+models, change tracking failures and inspect cases where exactly the same
 observations support different hidden possession states.
 
 The public demo uses deterministic synthetic scenarios and excerpts from two
@@ -41,9 +41,10 @@ loading retries before the manual retry control is offered.
 - **Model comparison:** physical pitch playback, a shared frame timeline, model
   transitions, error inspection and whole-scenario metrics. Four core baselines,
   four unchanged official reference votes and six historical ablations are available.
-- **Tracking failure playground:** change the seed, missing-ball interval, noise,
-  random visibility loss or selected failure mechanisms. The original Python
-  models run in a Web Worker; the hidden synthetic possession schedule stays fixed.
+- **Tracking failure playground:** apply simulated observation loss and noise to
+  real public Metrica movement, or use continuous synthetic motion v2 with separate
+  player roles, bounded speed and acceleration, passes and repositioning. Original
+  Python models run in a Web Worker. Public clips have no accuracy evaluation.
 - **Observability explorer:** paired synthetic worlds with identical tracking and
   opposing hidden states. Optional noisy event cues and shared uninformative tags
   demonstrate the difference between additional information and temporal smoothing.
@@ -89,7 +90,15 @@ check. They are never training, tuning or model-selection data.
 
 ## Findings and evaluation
 
-Phase 1 evaluated **1,680 method runs across 14 scenarios**, with 12 synthetic
+The [motion v2 update](docs/MOTION_V2.md) replaces synchronized toy motion in the
+default illustration. Across 25 exploratory trials, its largest noise-free player
+step was 0.280 m at 25 fps, compared with 63.091 m in the legacy clean fixture.
+This checks continuity, not tactical realism. The state machine often outperforms
+the hierarchy on these new scenarios; hierarchy dead-ball recall remains zero.
+See the [separate v2 results and uncertainty intervals](reports/motion-v2/comparison.md).
+Old fixtures remain available as explicitly labelled legacy stress tests.
+
+The frozen Phase 1 study evaluated **1,680 method runs across 14 scenarios**, with 12 synthetic
 trials per scenario and whole-trial uncertainty intervals. On stationary-live
 trials, the hierarchy achieved possession-spell F1 **0.851 [0.802, 0.897]** versus
 **0.041** for the original HMM. The HMM remained better under some visibility
@@ -115,15 +124,18 @@ of generalization or trial uncertainty.
 
 ## Validation and reproduction
 
-**170 tests pass locally**, including the original **165 Python tests** covering research behaviour, public baseline
+**199 tests pass locally**, including the original **165 Python tests** covering research behaviour, public baseline
 reproduction, missing observations, period boundaries, physical normalization,
 H/A/D/X semantics, CSV output, exact-observation twins and the browser JSON interface.
-Five additional publication checks cover safe archive restoration and release integrity.
+Five publication checks cover safe archive restoration and release integrity;
+29 motion v2 checks cover continuity, actual receiver contact, independent observation
+corruption, moving counterexamples and unlabelled public-input parity.
 Four Node regression checks cover shared fixture requests, caching, recoverable
 HTTP failures and timeouts: `node --test explorer/tests/requests.test.cjs`.
 
 The [live-demo audit](docs/explorer/LIVE_AUDIT.md) independently checks the served
-assets, prediction sequences, metric calculations and browser behaviour.
+assets, prediction sequences, metric calculations and browser behaviour of the
+pre-v2 release. The [v2 validation](docs/MOTION_V2.md) records the new checks.
 
 The release builder verifies its source fingerprint, archive checksum and every
 restored asset. Historical benchmark files are preserved byte-for-byte in a separate

@@ -8,7 +8,7 @@ DIST = Path(__file__).resolve().parents[1] / 'dist'
 
 def main():
     cases = list((DIST / 'data').glob('*.json'))
-    assert len(cases) == 14, len(cases)
+    assert len(cases) == 25, len(cases)
     for path in cases:
         data = json.loads(path.read_text())
         worlds = data.get('worlds', [data])
