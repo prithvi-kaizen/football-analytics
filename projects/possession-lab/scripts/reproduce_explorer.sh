@@ -10,3 +10,5 @@ mkdir -p outputs/explorer
 .venv/bin/python explorer/scripts/verify_bundle.py
 node --check explorer/web/app.js
 node --check explorer/web/worker.js
+
+node --test explorer/tests/requests.test.cjs

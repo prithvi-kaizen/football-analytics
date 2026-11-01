@@ -1,10 +1,11 @@
 {
   "schema_version": 1,
   "classification": "Synthetic experiments and attributed public Metrica excerpts; no restricted assets or public competition labels",
-  "archive_sha256": "e2fde6403bb126e800c08b38db714f0fce529af97e14e7e05eb444db2feab219",
+  "archive_sha256": "8ee7496e8a6212387c84c6002fb7a36980fba5964b6e65b461e720b3faf3f5ab",
   "source_files_sha256": {
-    "explorer/web/app.js": "15794ff4ed55734c282c9250ce5e9dc31382b708417a2bbcd43112ef1589532b",
-    "explorer/web/index.html": "8da3c4d918a5d3bc8481276e8b61922fcd63adf47a3de5f094ee6e21417c886b",
+    "explorer/web/app.js": "511c2fcecf70462f7f144a783443d89b1745557c3ec58d1ec348bb2af3c89046",
+    "explorer/web/index.html": "c3832de0696c29347e4b8b5d5b70aad3eebaf1f69f6bc9197ec68e133bb7710a",
+    "explorer/web/requests.js": "38c9f79b872b0c092e525a71a4268794f444bd876ced3aff6af59ab9ba16f493",
     "explorer/web/style.css": "6b654f624b3e5b0c2d70983ff432c3d243261d849f81491583d1e75b619d9280",
     "explorer/web/worker.js": "5ba5c0f59290fb00380de651182e8230f5a809c7bfc0a16dd8890dddcf8a10ba",
     "src/possession_lab/__init__.py": "bccf7601fafd21f1edb1d92b22eb08ff6b9179a6edba41682f483a5ac50792eb",
@@ -35,7 +36,7 @@
     "src/possession_lab/tagging_interface.py": "981eb38aca34b4ab67fc0cd7f3206c81b8588ac6601506c3b5f7d0230d4aeb14"
   },
   "files": {
-    "app.js": "15794ff4ed55734c282c9250ce5e9dc31382b708417a2bbcd43112ef1589532b",
+    "app.js": "511c2fcecf70462f7f144a783443d89b1745557c3ec58d1ec348bb2af3c89046",
     "data/clean.json": "34769f3a226732be5fdff46172f468f66ff7b99ff23823a37a54c9d41f57d801",
     "data/contested.json": "f1363c43df46c3b160c74acc4f049cfee07d49cd85c8c1cfe97a247d5b2326d9",
     "data/default.json": "779a34f9f7fddf8f08b60d3cb4ee4e5294181c0bcc9a3a5cd4d4ed241be8a22f",
@@ -50,8 +51,9 @@
     "data/public1.json": "b3f17af5b5753c6994148bceb3762ba1ba36f6bae15c1e70b8f8f4400c984e08",
     "data/public2.json": "77b21384004ec3dc52a1a6c103dc41962ff6ec33a2726bc955545a3402e5fd29",
     "data/stationary_live.json": "fb1225716553334d32a6b84d607c46ae3a4ce36da62a9cc8a54beece9027fe1b",
-    "index.html": "8da3c4d918a5d3bc8481276e8b61922fcd63adf47a3de5f094ee6e21417c886b",
+    "index.html": "c3832de0696c29347e4b8b5d5b70aad3eebaf1f69f6bc9197ec68e133bb7710a",
     "provenance.json": "47dafd192ba64ce5aafc0afc6e0948b43a5d78241a0e1d43000a8bd4b2ee0212",
+    "requests.js": "38c9f79b872b0c092e525a71a4268794f444bd876ced3aff6af59ab9ba16f493",
     "research-python.zip": "6572c06184642f7fcd9ab4d749c5ef01a895e64e2c3d2fdd28d91c0fac0c41dc",
     "research/phase0.md": "febdda56dcd751dd3e0802c4aafe7f78d6f99f33483c2057fc1c200d627e8f9c",
     "research/phase1.md": "684b2e5763347a4da3bb68406802a2b046e7aa80d4f539d331c2bf8deea4de59",

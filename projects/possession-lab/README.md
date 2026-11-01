@@ -119,6 +119,8 @@ of generalization or trial uncertainty.
 reproduction, missing observations, period boundaries, physical normalization,
 H/A/D/X semantics, CSV output, exact-observation twins and the browser JSON interface.
 Five additional publication checks cover safe archive restoration and release integrity.
+Four Node regression checks cover shared fixture requests, caching, recoverable
+HTTP failures and timeouts: `node --test explorer/tests/requests.test.cjs`.
 
 The release builder verifies its source fingerprint, archive checksum and every
 restored asset. Historical benchmark files are preserved byte-for-byte in a separate

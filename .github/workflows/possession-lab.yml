@@ -36,6 +36,8 @@ jobs:
         run: python scripts/restore_benchmarks.py
       - name: Research reproduction and publication checks
         run: python -m pytest -q
+      - name: Browser fixture loading regression checks
+        run: node --test explorer/tests/requests.test.cjs
       - name: Offline portfolio build
         working-directory: .
         run: python scripts/build_website.py

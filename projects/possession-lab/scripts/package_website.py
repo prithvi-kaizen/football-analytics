@@ -12,13 +12,13 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def package(source):
     source = Path(source)
-    allowed = {'index.html', 'app.js', 'style.css', 'worker.js', 'provenance.json', 'research-python.zip'}
+    allowed = {'index.html', 'app.js', 'style.css', 'worker.js', 'requests.js', 'provenance.json', 'research-python.zip'}
     entries = {name: source / name for name in allowed}
     for directory in ('data', 'research', 'runtime'):
         for path in (source / directory).rglob('*'):
             if path.is_file():
                 entries[str(path.relative_to(source))] = path
-    for name in ('index.html', 'app.js', 'style.css', 'worker.js'):
+    for name in ('index.html', 'app.js', 'style.css', 'worker.js', 'requests.js'):
         entries[name] = ROOT / 'explorer/web' / name
     for name in ('public1', 'public2'):
         data = json.loads(entries[f'data/{name}.json'].read_text())
@@ -43,7 +43,7 @@ def package(source):
                     with path.open('rb') as content:
                         archive.addfile(info, content)
     tracked = [*list((ROOT / 'src').rglob('*.py')),
-               *[ROOT / 'explorer/web' / name for name in ('index.html', 'app.js', 'style.css', 'worker.js')]]
+               *[ROOT / 'explorer/web' / name for name in ('index.html', 'app.js', 'style.css', 'worker.js', 'requests.js')]]
     manifest = {'schema_version': 1,
                 'classification': 'Synthetic experiments and attributed public Metrica excerpts; no restricted assets or public competition labels',
                 'archive_sha256': sha256(archive_path),
