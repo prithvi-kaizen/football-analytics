@@ -1,0 +1,16 @@
+{
+  "source": "https://cdn.jsdelivr.net/pyodide/v0.29.2/full/",
+  "files": {
+    "PYODIDE-LICENSE.txt": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+    "numpy-2.2.5-cp313-cp313-pyodide_2025_0_wasm32.whl": "6eaab6a7bb658d71ebe702911a3deab715323642462eb41b65565ca6a7cc23f1",
+    "pandas-2.3.3-cp313-cp313-pyodide_2025_0_wasm32.whl": "5b1c0acfc8555be16057e8609e9eb7f279037c2469032bcc23e2a691380a50ae",
+    "pyodide-lock.json": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac",
+    "pyodide.asm.js": "3a8657ad4a902da2bd49eac9296959ad7f4401e58b272392f8784700a90288b3",
+    "pyodide.asm.wasm": "4ba24b3c4d03f47074fa91f833769d81108dbca40c22fb104030a48fce95c95d",
+    "pyodide.js": "6b825ee8b24b1d3b4822c0d4cb440ce30e8e31ac60ee5073d85237c1a4db7279",
+    "python_dateutil-2.9.0.post0-py2.py3-none-any.whl": "ddca13fc1046572701872b9517622b57f847c77eea4bf9fdc995256e6c82beaf",
+    "python_stdlib.zip": "18950b4ee5e9e75b16e58d73c2c069c588ff5b613794057a9854d91a8c332628",
+    "pytz-2025.2-py2.py3-none-any.whl": "5a9c9286f6c03a4d16ee4ced15d511097568e1e41329d3499b597ecd7f1d317e",
+    "six-1.17.0-py2.py3-none-any.whl": "1f715fc699e802b31e53290ead6c16a4d6a8da462a225d2e06097fce45ab70b9"
+  }
+}

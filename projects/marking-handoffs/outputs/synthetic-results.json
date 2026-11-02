@@ -1,0 +1,61 @@
+{
+  "nearest": {
+    "tp": 200,
+    "fp": 3916,
+    "fn": 0,
+    "precision": 0.04859086491739553,
+    "recall": 1.0,
+    "f1": 0.09267840593141798,
+    "excess_switches": 3916,
+    "median_signed_latency_s": -0.6499999999999999,
+    "median_absolute_latency_s": 0.6499999999999999
+  },
+  "proposed": {
+    "tp": 195,
+    "fp": 5,
+    "fn": 5,
+    "precision": 0.975,
+    "recall": 0.975,
+    "f1": 0.975,
+    "excess_switches": 0,
+    "median_signed_latency_s": 0.5,
+    "median_absolute_latency_s": 0.5
+  },
+  "geometric_gap": {
+    "mean_absolute_longest_gap_error_s": 0.081,
+    "scenarios": 100
+  },
+  "hypothesis": {
+    "clauses": {
+      "excess_switch_reduction_at_least_25pct": true,
+      "recall_loss_at_most_005": true,
+      "median_latency_at_most_1s": true
+    },
+    "all_pass": true,
+    "excess_switch_reduction": 1.0
+  },
+  "protocol": {
+    "noise_sd_m": 0.15,
+    "seeds": [
+      1000,
+      1099
+    ],
+    "trajectories": 400,
+    "tolerance_s": 1.5,
+    "truth": "Noiseless instantaneous nearest within 6 m; missing interval resets identity",
+    "warning": "Controlled geometric simulation, not tactical or communication labels"
+  },
+  "seed_cluster_bootstrap": {
+    "replicates": 2000,
+    "clusters": 100,
+    "recall_delta_95pct": [
+      -0.04512500000000003,
+      -0.0050000000000000044
+    ],
+    "proposed_precision_95pct": [
+      0.9548749999999999,
+      0.995
+    ],
+    "scope": "Noise-seed resampling for these four specified geometric scenarios only"
+  }
+}

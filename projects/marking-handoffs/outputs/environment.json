@@ -1,0 +1,11 @@
+{
+  "python": "3.14.2",
+  "packages": {
+    "numpy": "2.5.4",
+    "pillow": "13.0.0"
+  },
+  "optional_packages": {
+    "matplotlib": "3.11.2"
+  },
+  "source_revision": "4340d274572876239c154c90bc507a9b3250a656"
+}

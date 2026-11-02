@@ -10,3 +10,6 @@ projects/possession-danger/web/vendor/** linguist-vendored=true -whitespace
 projects/possession-danger/web/snapshot.json.gz linguist-generated=true
 projects/possession-danger/outputs/** linguist-generated=true -whitespace
 projects/possession-danger/docs/source/** -whitespace
+projects/possession-lab/web/release.tar.gz linguist-generated=true
+projects/possession-lab/benchmarks/history.tar.gz linguist-generated=true
+projects/possession-lab/reports/** linguist-generated=true -whitespace

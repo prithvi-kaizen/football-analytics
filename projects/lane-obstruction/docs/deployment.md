@@ -1,8 +1,10 @@
-# Vercel preview release
+# Public Vercel release
 
-The existing repository's Vercel integration deployed branch `codex/lane-obstruction-publication`. Vercel reported Ready for release commit `0d81e86507a9fd1ab6bc3b0864185eb31e9cedb5` on 29 October 2026. No production merge was made.
+Public URL: [football-analytics-self.vercel.app/lane-obstruction/](https://football-analytics-self.vercel.app/lane-obstruction/). Production tracks `main` through the existing GitHub/Vercel integration. Share this production URL; the original branch preview requires Vercel access.
 
-- [Replay preview](https://football-analytics-git-cod-ae6a65-prithvirajs-projects-b40fa6af.vercel.app/lane-obstruction/)
+The project was initially deployed from `codex/lane-obstruction-publication` on 29 October 2026. The public release reconciles that branch with current production and includes the replay in the portfolio build.
+
+- [Public replay](https://football-analytics-self.vercel.app/lane-obstruction/)
 - [GitHub source and methodology](https://github.com/prithvi-kaizen/football-analytics/tree/codex/lane-obstruction-publication/projects/lane-obstruction)
 - [Draft pull request](https://github.com/prithvi-kaizen/football-analytics/pull/1)
 - [Vercel release status](https://vercel.com/prithvirajs-projects-b40fa6af/football-analytics/4BApXKbHs58hyu4R2kBqGfGeUhZ7)

@@ -13,7 +13,7 @@ Across 832 labelled possession starts in two held-out matches, simple geometry a
 
 Built with Python, NumPy and pandas, with a browser version deployed on Vercel.
 
-Live project : https://football-analytics-git-cod-ae6a65-prithvirajs-projects-b40fa6af.vercel.app/lane-obstruction/
+Live project : https://football-analytics-self.vercel.app/lane-obstruction/
 GitHub and methodology : https://github.com/prithvi-kaizen/football-analytics/tree/codex/lane-obstruction-publication/projects/lane-obstruction
 
 I’d welcome feedback on how to validate passing-lane obstruction independently.

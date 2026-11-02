@@ -1,0 +1,17 @@
+[
+  [
+    "renewal:corrupt:single",
+    22007,
+    "Largest corrupted-tag harm; \u0394macro=-0.039"
+  ],
+  [
+    "renewal:occluded:single",
+    22003,
+    "Largest occlusion benefit; \u0394macro=+0.398"
+  ],
+  [
+    "twins_invisible:moderate:dead",
+    22001,
+    "First declared ambiguous dead-world case"
+  ]
+]

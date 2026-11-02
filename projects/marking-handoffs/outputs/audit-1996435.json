@@ -1,0 +1,191 @@
+{
+  "source_frames": 57621,
+  "null_period_frames": 19,
+  "player_rows": 957682,
+  "detected_rows": 630145,
+  "extrapolated_rows": 327517,
+  "out_of_bounds_rows": 20,
+  "speed_steps_above_12_5_mps": 3,
+  "phase_period_mismatch_frames": 72,
+  "match_id": 1996435,
+  "period_frames": 57602,
+  "missing_source_frames": 0,
+  "phase_frames": 32112,
+  "missing_ball_period_frames": 14071,
+  "phase_possession_disagreements": 5000,
+  "players": 36,
+  "detection_fraction": 0.6580035544899975,
+  "player_count_distribution": {
+    "0": 14071,
+    "21": 20,
+    "22": 43511
+  },
+  "schema_keys": [
+    "frame",
+    "timestamp",
+    "period",
+    "ball_data",
+    "possession",
+    "image_corners_projection",
+    "player_data"
+  ],
+  "sample_record": {
+    "frame": 10,
+    "timestamp": "00:00:00.00",
+    "period": 1,
+    "ball_data": {
+      "x": 0.63,
+      "y": -0.17,
+      "z": 0.15,
+      "is_detected": true
+    },
+    "possession": {
+      "player_id": null,
+      "group": null
+    },
+    "image_corners_projection": {
+      "x_top_left": -39.24,
+      "y_top_left": 39.0,
+      "x_bottom_left": -13.96,
+      "y_bottom_left": -35.57,
+      "x_bottom_right": 13.55,
+      "y_bottom_right": -34.9,
+      "x_top_right": 36.74,
+      "y_top_right": 39.0
+    },
+    "player_data": [
+      {
+        "x": -38.75,
+        "y": -1.63,
+        "player_id": 931987,
+        "is_detected": false
+      },
+      {
+        "x": -18.45,
+        "y": -10.31,
+        "player_id": 51644,
+        "is_detected": true
+      },
+      {
+        "x": -16.4,
+        "y": 0.81,
+        "player_id": 998256,
+        "is_detected": true
+      },
+      {
+        "x": -17.96,
+        "y": -20.33,
+        "player_id": 795547,
+        "is_detected": true
+      },
+      {
+        "x": -15.42,
+        "y": 11.85,
+        "player_id": 51000,
+        "is_detected": true
+      },
+      {
+        "x": -8.99,
+        "y": -4.35,
+        "player_id": 28293,
+        "is_detected": true
+      },
+      {
+        "x": -9.15,
+        "y": 3.8,
+        "player_id": 133852,
+        "is_detected": true
+      },
+      {
+        "x": -6.69,
+        "y": -14.19,
+        "player_id": 51045,
+        "is_detected": true
+      },
+      {
+        "x": -1.92,
+        "y": -18.13,
+        "player_id": 18573,
+        "is_detected": true
+      },
+      {
+        "x": -4.69,
+        "y": 9.45,
+        "player_id": 25534,
+        "is_detected": true
+      },
+      {
+        "x": 0.09,
+        "y": 8.9,
+        "player_id": 17231,
+        "is_detected": true
+      },
+      {
+        "x": 34.76,
+        "y": -0.64,
+        "player_id": 809070,
+        "is_detected": false
+      },
+      {
+        "x": 14.94,
+        "y": 5.6,
+        "player_id": 26766,
+        "is_detected": true
+      },
+      {
+        "x": 13.62,
+        "y": -3.39,
+        "player_id": 809759,
+        "is_detected": true
+      },
+      {
+        "x": 5.47,
+        "y": 8.75,
+        "player_id": 51005,
+        "is_detected": true
+      },
+      {
+        "x": 7.69,
+        "y": -14.89,
+        "player_id": 973078,
+        "is_detected": true
+      },
+      {
+        "x": -0.54,
+        "y": -0.05,
+        "player_id": 560893,
+        "is_detected": true
+      },
+      {
+        "x": 8.74,
+        "y": 3.93,
+        "player_id": 50949,
+        "is_detected": true
+      },
+      {
+        "x": 1.51,
+        "y": -13.15,
+        "player_id": 50959,
+        "is_detected": true
+      },
+      {
+        "x": 0.57,
+        "y": 9.61,
+        "player_id": 42513,
+        "is_detected": true
+      },
+      {
+        "x": 0.52,
+        "y": -30.74,
+        "player_id": 51646,
+        "is_detected": true
+      },
+      {
+        "x": 1.03,
+        "y": -10.56,
+        "player_id": 51686,
+        "is_detected": true
+      }
+    ]
+  }
+}

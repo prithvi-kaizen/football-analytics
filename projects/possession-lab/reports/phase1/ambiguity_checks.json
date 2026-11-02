@@ -1,0 +1,1442 @@
+[
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_continuity",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hierarchical",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "sm_no_stationary",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_stationary",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "nearest",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_duration",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "state_machine",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_missing_as_static",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm_no_stationary",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm_no_stationary",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "sm_no_stationary",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "state_machine",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_missing_as_static",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_continuity",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "nearest",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_stationary",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hierarchical",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_duration",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hierarchical",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_missing_as_static",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm_no_stationary",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_continuity",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "sm_no_stationary",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_duration",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_stationary",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "nearest",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "state_machine",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hierarchical",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_stationary",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "state_machine",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "sm_no_stationary",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_missing_as_static",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm_no_stationary",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "nearest",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_duration",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_continuity",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_continuity",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "sm_no_stationary",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_missing_as_static",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm_no_stationary",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "state_machine",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "nearest",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hierarchical",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_stationary",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_duration",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_duration",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_missing_as_static",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "nearest",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm_no_stationary",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hierarchical",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_stationary",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "state_machine",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "sm_no_stationary",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_continuity",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_duration",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_missing_as_static",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "sm_no_stationary",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_continuity",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm_no_stationary",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "state_machine",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hierarchical",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "nearest",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_stationary",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "state_machine",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_continuity",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "sm_no_stationary",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_stationary",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "nearest",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hierarchical",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_duration",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm_no_stationary",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_missing_as_static",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_stationary",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hierarchical",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_continuity",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "state_machine",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "nearest",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm_no_stationary",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "sm_no_stationary",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_duration",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_missing_as_static",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "nearest",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_missing_as_static",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_stationary",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "sm_no_stationary",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_continuity",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hierarchical",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_duration",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm_no_stationary",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "state_machine",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm_no_stationary",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "state_machine",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_duration",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "nearest",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hierarchical",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_missing_as_static",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "sm_no_stationary",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_stationary",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_continuity",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "sm_no_stationary",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_stationary",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "nearest",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "state_machine",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_duration",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_missing_as_static",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm_no_stationary",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hmm",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hierarchical",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "static",
+    "method": "hier_no_continuity",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_continuity",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hierarchical",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "sm_no_stationary",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_stationary",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "nearest",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_duration",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "state_machine",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_missing_as_static",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm_no_stationary",
+    "trial": 8001
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm_no_stationary",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "sm_no_stationary",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "state_machine",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_missing_as_static",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_continuity",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "nearest",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_stationary",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hierarchical",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_duration",
+    "trial": 8002
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hierarchical",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_missing_as_static",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm_no_stationary",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_continuity",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "sm_no_stationary",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_duration",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_stationary",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "nearest",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "state_machine",
+    "trial": 8003
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hierarchical",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_stationary",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "state_machine",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "sm_no_stationary",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_missing_as_static",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm_no_stationary",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "nearest",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_duration",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_continuity",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm",
+    "trial": 8004
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_continuity",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "sm_no_stationary",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_missing_as_static",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm_no_stationary",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "state_machine",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "nearest",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hierarchical",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_stationary",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_duration",
+    "trial": 8005
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_duration",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_missing_as_static",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "nearest",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm_no_stationary",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hierarchical",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_stationary",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "state_machine",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "sm_no_stationary",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_continuity",
+    "trial": 8006
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_duration",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_missing_as_static",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "sm_no_stationary",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_continuity",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm_no_stationary",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "state_machine",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hierarchical",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "nearest",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_stationary",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm",
+    "trial": 8007
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "state_machine",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_continuity",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "sm_no_stationary",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_stationary",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "nearest",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hierarchical",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_duration",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm_no_stationary",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_missing_as_static",
+    "trial": 8008
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_stationary",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hierarchical",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_continuity",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "state_machine",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "nearest",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm_no_stationary",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "sm_no_stationary",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_duration",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_missing_as_static",
+    "trial": 8009
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "nearest",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_missing_as_static",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_stationary",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "sm_no_stationary",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_continuity",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hierarchical",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_duration",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm_no_stationary",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "state_machine",
+    "trial": 8010
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm_no_stationary",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "state_machine",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_duration",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "nearest",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hierarchical",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_missing_as_static",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "sm_no_stationary",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_stationary",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_continuity",
+    "trial": 8011
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "sm_no_stationary",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_stationary",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "nearest",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "state_machine",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_duration",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_missing_as_static",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm_no_stationary",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hmm",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hierarchical",
+    "trial": 8012
+  },
+  {
+    "identical_predictions": true,
+    "kind": "invisible",
+    "method": "hier_no_continuity",
+    "trial": 8012
+  }
+]

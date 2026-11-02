@@ -1,0 +1,2162 @@
+[
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_static",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.32045454545454544,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.17045454545454544,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.17045454545454544,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.3712871287128713,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.3712871287128713,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.3712871287128713,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.3640776699029126,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.3640776699029126,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.47572815533980584,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.3640776699029126,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.2713178294573643,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.2329192546583851,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.2329192546583851,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.23148148148148148,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.23148148148148148,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.23148148148148148,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.23148148148148148,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.23148148148148148,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.48792270531400966,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.18115942028985507,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.18115942028985507,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.4396135265700483,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.18115942028985507,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.33783783783783783,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.33783783783783783,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.33783783783783783,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.33783783783783783,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.33783783783783783,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.20380434782608695,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.024456521739130436,
+    "balanced_target_accuracy": 0.024456521739130436,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.20380434782608695,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.22191011235955055,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "moderate",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "moderate",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "moderate",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.21067415730337077,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "moderate",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.21067415730337077,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "moderate",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22001
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.32045454545454544,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.17045454545454544,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.17045454545454544,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22002
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.3712871287128713,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.3712871287128713,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22003
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.3640776699029126,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.3640776699029126,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.47572815533980584,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.3640776699029126,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22004
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.2713178294573643,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22005
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.2329192546583851,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.2329192546583851,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.2329192546583851,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.2329192546583851,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22006
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.23148148148148148,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.23148148148148148,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.23148148148148148,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.23148148148148148,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.23148148148148148,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22007
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.29069767441860467,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22008
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.18115942028985507,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.18115942028985507,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.18115942028985507,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.18115942028985507,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.18115942028985507,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22009
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.33783783783783783,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.33783783783783783,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.33783783783783783,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.33783783783783783,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22010
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.20380434782608695,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.024456521739130436,
+    "balanced_target_accuracy": 0.024456521739130436,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.20380434782608695,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.20380434782608695,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.20380434782608695,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22011
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.22191011235955055,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_uninformative",
+    "regime": "shared_view",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shuffled",
+    "regime": "shared_view",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.5,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "tags_shifted",
+    "regime": "shared_view",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.21067415730337077,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hmm",
+    "regime": "shared_view",
+    "trial": 22012
+  },
+  {
+    "balanced_filled_target_accuracy": 0.5,
+    "balanced_target_accuracy": 0.21067415730337077,
+    "family": "twins_invisible",
+    "identical_predictions": true,
+    "method": "hierarchical",
+    "regime": "shared_view",
+    "trial": 22012
+  }
+]

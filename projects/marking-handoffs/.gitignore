@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+data/raw/
+outputs/.mplconfig/
+outputs/qa/
+web/

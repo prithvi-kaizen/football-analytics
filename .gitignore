@@ -29,3 +29,7 @@
 !/projects/pressing-trap-detector/dashboard/src/content/dashboard/pressing.css
 /projects/pressing-trap-detector/dashboard/src/content/assets/*
 !/projects/pressing-trap-detector/dashboard/src/content/assets/statsbomb-logo.png
+
+# Pinned public upstream checkouts used by Possession Lab, kept outside its source.
+/projects/more-than-a-hack-2027
+/projects/public-sample-data

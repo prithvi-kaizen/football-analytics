@@ -1,0 +1,40 @@
+{
+  "development": {
+    "match_id": 1925299,
+    "metrics": {
+      "eligible_attacker_frames": 125850,
+      "eligible_attacker_minutes": 209.75,
+      "segments": 2430,
+      "direct_switches": 1783,
+      "short_assignment_runs": 59,
+      "switches_per_attacker_minute": 8.500595947556615,
+      "short_runs_per_attacker_minute": 0.28128724672228844,
+      "assigned_fraction": 1.0
+    },
+    "validation": {
+      "samples_checked": 500,
+      "all_agree": true,
+      "seed": 20261028,
+      "reference": "Scalar math.hypot on raw coordinates; minimum distance then stable player id"
+    }
+  },
+  "heldout": {
+    "match_id": 1996435,
+    "metrics": {
+      "eligible_attacker_frames": 105492,
+      "eligible_attacker_minutes": 175.82000000000002,
+      "segments": 2380,
+      "direct_switches": 1467,
+      "short_assignment_runs": 54,
+      "switches_per_attacker_minute": 8.343760664315777,
+      "short_runs_per_attacker_minute": 0.30713229439199174,
+      "assigned_fraction": 1.0
+    },
+    "validation": {
+      "samples_checked": 500,
+      "all_agree": true,
+      "seed": 20261028,
+      "reference": "Scalar math.hypot on raw coordinates; minimum distance then stable player id"
+    }
+  }
+}

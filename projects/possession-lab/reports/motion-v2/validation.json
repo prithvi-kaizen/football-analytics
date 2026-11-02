@@ -1,0 +1,9 @@
+{
+  "legacy_clean_max_step_m": 63.091393173231396,
+  "v2_worst_max_step_m": 0.2798530723719523,
+  "frozen_files_unchanged": 408,
+  "official_files_unchanged": 34,
+  "scenario_trials": 25,
+  "reported_method_runs": 100,
+  "full_pipeline_median_ms": 372.6574160391465
+}

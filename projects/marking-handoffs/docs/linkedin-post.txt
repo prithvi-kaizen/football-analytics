@@ -1,0 +1,22 @@
+When one defender lets an attacker go, who takes over?
+
+I built Marking Handoffs to explore this using SkillCorner’s open tracking data.
+It flags candidate handoffs and temporary coverage gaps from player positions and movement. The interactive pitch lets you replay each situation and compare it with the nearest-defender estimate.
+
+In one held-out match, it flagged 306 candidate handoffs, including 44 with gaps of at least 0.4 seconds under the model’s coverage rules.
+
+⛳️ My main learnings:
+➤ Distance and timing thresholds change which handoffs get flagged.
+➤ Estimated off-camera positions can create or hide coverage gaps.
+➤ Fewer defender switches didn’t mean fewer brief assignments: these increased from 54 to 62.
+
+These are candidate handoffs, not known coaching assignments.
+
+Built with Python and NumPy, with an HTML/JavaScript viewer deployed on Vercel.
+
+Live project : https://marking-handoffs.vercel.app
+GitHub and methodology : https://github.com/prithvi-kaizen/football-analytics/tree/main/projects/marking-handoffs
+
+I’d welcome feedback on how to improve the coverage rules.
+
+#FootballAnalytics #SportsAnalytics #Python

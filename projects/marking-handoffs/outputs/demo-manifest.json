@@ -1,0 +1,12 @@
+{
+  "duration_s": 32,
+  "fps": 20,
+  "dimensions": [
+    1280,
+    720
+  ],
+  "continuous": "1996435-118-560893-10278",
+  "gap": "1996435-109-560893-9704",
+  "selection": "First lexicographic ID per category, held-out, detected trio, >=30 replay frames, no ambiguity/shared flag",
+  "playback": "0.5x source time, positions displayed at 5 Hz, output encoded at 20 fps"
+}

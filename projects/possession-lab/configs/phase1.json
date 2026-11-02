@@ -1,0 +1,17 @@
+{
+  "trials": [8001, 8002, 8003, 8004, 8005, 8006, 8007, 8008, 8009, 8010, 8011, 8012],
+  "scenarios": ["iid", "bursty", "state_dependent", "camera_window", "moving_dead", "stationary_live", "invisible_stoppages", "identity_switches", "outliers", "short_spells", "twin_static_live", "twin_static_dead", "twin_invisible_live", "twin_invisible_dead"],
+  "hierarchical": {
+    "stationarity_weight": 0.35,
+    "missing_masks": true,
+    "duration_priors": true,
+    "possession_continuity": true,
+    "live_mean_s": 18.0,
+    "dead_mean_s": 6.0,
+    "owner_mean_s": 12.0,
+    "evidence_power": 0.2,
+    "abstain_after_s": 3.0
+  },
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 1701
+}

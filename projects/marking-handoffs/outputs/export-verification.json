@@ -1,0 +1,8 @@
+{
+  "assignment_rows": 231342,
+  "candidates_checked": 801,
+  "replay_frames_checked": 21078,
+  "all_gap_durations_recomputed": true,
+  "all_counts_reconciled": true,
+  "reference": "Independent scalar CSV calculations; no analytics-module imports"
+}
