@@ -1,0 +1,92 @@
+{
+  "hypothesis_supported": false,
+  "per_match": {
+    "1925299": {
+      "n": 439,
+      "geometry_rho": 0.3244308802708543,
+      "arrival_rho": 0.016332528762067863,
+      "delta_rho": -0.30809835150878645,
+      "clusters": 218,
+      "repetitions": 1000,
+      "method": "paired phase cluster bootstrap, stratified by match",
+      "seed": 31415,
+      "interval_95": [
+        -0.41283389036872786,
+        -0.18985939353948075
+      ],
+      "valid_repetitions": 1000
+    },
+    "1996435": {
+      "n": 393,
+      "geometry_rho": 0.2688268645482267,
+      "arrival_rho": 0.09598022988327548,
+      "delta_rho": -0.1728466346649512,
+      "clusters": 215,
+      "repetitions": 1000,
+      "method": "paired phase cluster bootstrap, stratified by match",
+      "seed": 31415,
+      "interval_95": [
+        -0.2753133879325189,
+        -0.07274240429580792
+      ],
+      "valid_repetitions": 1000
+    }
+  },
+  "pooled": {
+    "n": 832,
+    "geometry_rho": 0.2925059706757593,
+    "arrival_rho": 0.06221761485924538,
+    "delta_rho": -0.2302883558165139,
+    "clusters": 433,
+    "repetitions": 1000,
+    "method": "paired phase cluster bootstrap, stratified by match",
+    "seed": 31415,
+    "interval_95": [
+      -0.3048931064664806,
+      -0.15306570260175284
+    ],
+    "valid_repetitions": 1000
+  },
+  "time_block_sensitivity": {
+    "n": 832,
+    "geometry_rho": 0.2925059706757593,
+    "arrival_rho": 0.06221761485924538,
+    "delta_rho": -0.2302883558165139,
+    "clusters": 43,
+    "repetitions": 1000,
+    "method": "paired time_block cluster bootstrap, stratified by match",
+    "seed": 31415,
+    "interval_95": [
+      -0.2933777013393721,
+      -0.16175315423587586
+    ],
+    "valid_repetitions": 1000
+  },
+  "all_detected": {
+    "n": 0,
+    "geometry_rho": null,
+    "arrival_rho": null,
+    "delta_rho": null,
+    "clusters": 0,
+    "repetitions": 1000,
+    "method": "paired phase cluster bootstrap, stratified by match",
+    "seed": 31415,
+    "interval_95": null
+  },
+  "pressure_association": {
+    "n": 832,
+    "geometry_rho": 0.2802037761769673,
+    "arrival_rho": 0.03946302687766604,
+    "delta_rho": -0.24074074929930125
+  },
+  "development": {
+    "n": 436,
+    "geometry_rho": 0.3110339345881412,
+    "arrival_rho": 0.019142863463093202,
+    "delta_rho": -0.29189107112504803
+  },
+  "held_out_starts": 856,
+  "held_out_lanes": 6337,
+  "geometry_open_arrival_ge_half": 1554,
+  "mean_player_detection_fraction": 0.695571367884452
+}

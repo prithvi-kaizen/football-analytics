@@ -1,0 +1,136 @@
+[
+  {
+    "source_frames": 59061,
+    "null_period_frames": 19,
+    "player_rows": 956037,
+    "detected_player_rows": 566778,
+    "ball_detected_frames": 35750,
+    "unknown_carrier_frames": 48555,
+    "frames_without_22_players": 15623,
+    "invalid_coordinate_rows": 39,
+    "periods": {
+      "1": [
+        10,
+        27790,
+        27781
+      ],
+      "2": [
+        27800,
+        59060,
+        31261
+      ]
+    },
+    "match_id": 1886347,
+    "match": "Auckland FC vs Newcastle",
+    "date": "2024-11-30T04:00:00Z",
+    "event_rows": 5115,
+    "event_columns": 322,
+    "event_types": {
+      "passing_option": 2573,
+      "player_possession": 990,
+      "on_ball_engagement": 957,
+      "off_ball_run": 595
+    },
+    "possession_rows": 990,
+    "missing_ease": 80,
+    "missing_pressure": 80,
+    "eligible_starts": 442,
+    "exclusions": {
+      "carrier_not_confirmed": 520,
+      "ball_not_low": 6,
+      "ball_far_from_carrier": 3,
+      "no_matching_in_play_phase": 19
+    },
+    "all_detected_starts": 0
+  },
+  {
+    "source_frames": 61301,
+    "null_period_frames": 19,
+    "player_rows": 1054573,
+    "detected_player_rows": 610457,
+    "ball_detected_frames": 38618,
+    "unknown_carrier_frames": 49179,
+    "frames_without_22_players": 13491,
+    "invalid_coordinate_rows": 151,
+    "periods": {
+      "1": [
+        10,
+        30240,
+        30231
+      ],
+      "2": [
+        30250,
+        61300,
+        31051
+      ]
+    },
+    "match_id": 1925299,
+    "match": "Brisbane FC vs Perth Glory",
+    "date": "2024-12-21T06:00:00Z",
+    "event_rows": 5222,
+    "event_columns": 322,
+    "event_types": {
+      "passing_option": 2734,
+      "player_possession": 1054,
+      "on_ball_engagement": 936,
+      "off_ball_run": 498
+    },
+    "possession_rows": 1054,
+    "missing_ease": 118,
+    "missing_pressure": 118,
+    "eligible_starts": 444,
+    "exclusions": {
+      "carrier_not_confirmed": 584,
+      "no_matching_in_play_phase": 20,
+      "ball_not_low": 5,
+      "ball_far_from_carrier": 1
+    },
+    "all_detected_starts": 0
+  },
+  {
+    "source_frames": 57621,
+    "null_period_frames": 19,
+    "player_rows": 957662,
+    "detected_player_rows": 630145,
+    "ball_detected_frames": 34701,
+    "unknown_carrier_frames": 46787,
+    "frames_without_22_players": 14091,
+    "invalid_coordinate_rows": 20,
+    "periods": {
+      "1": [
+        10,
+        28020,
+        28011
+      ],
+      "2": [
+        28030,
+        57620,
+        29591
+      ]
+    },
+    "match_id": 1996435,
+    "match": "Sydney FC vs Adelaide United",
+    "date": "2025-02-01T06:00:00Z",
+    "event_rows": 5171,
+    "event_columns": 322,
+    "event_types": {
+      "passing_option": 2626,
+      "on_ball_engagement": 1025,
+      "player_possession": 1005,
+      "off_ball_run": 515
+    },
+    "possession_rows": 1005,
+    "missing_ease": 107,
+    "missing_pressure": 107,
+    "eligible_starts": 412,
+    "exclusions": {
+      "carrier_not_confirmed": 560,
+      "no_matching_in_play_phase": 25,
+      "ball_not_low": 3,
+      "ball_far_from_carrier": 2,
+      "missing_defender_history": 1,
+      "ball_off_pitch": 2
+    },
+    "all_detected_starts": 0
+  }
+]

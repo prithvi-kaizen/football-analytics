@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "checks": [
+    "Target select changes displayed target and lane scores",
+    "Defender select changes named DLO and arrival margin",
+    "Possession select resets frame and target set",
+    "Previous/Next move exactly one sampled frame; boundary buttons disabled",
+    "Range control responds to keyboard ArrowRight",
+    "Freeze checkbox switches defender-state display",
+    "Corridor checkbox hides and restores the finite baseline corridor",
+    "Play advances; Pause stops; playback does not autoplay",
+    "Exact-value disclosure expands populated lane and defender tables",
+    "JSON download contains the executed 832-label result",
+    "Four local results/methodology/limitations/licence links resolve HTTP 200",
+    "Skip link navigates to the replay anchor",
+    "No document horizontal overflow at 320/390/640/820/1060/1365 px",
+    "200% root text size at 390 px reflows without page overflow",
+    "Malformed embedded payload shows actionable error state",
+    "Empty export shows actionable empty state"
+  ],
+  "console_errors": [],
+  "scope": "Chromium desktop and emulated widths; no physical-device or screen-reader audit"
+}

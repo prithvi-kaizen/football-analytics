@@ -1,0 +1,163 @@
+{
+  "status": "passed",
+  "python": "3.12.14",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "Pillow": "12.3.0"
+  },
+  "analytical_test_log": "test_already_on_route_is_immediately_reachable (test_arrival.ArrivalTests.test_already_on_route_is_immediately_reachable) ... ok\ntest_marginal_nonnegative_and_permutation_invariant (test_arrival.ArrivalTests.test_marginal_nonnegative_and_permutation_invariant) ... ok\ntest_negative_speed_rejected (test_arrival.ArrivalTests.test_negative_speed_rejected) ... ok\ntest_rank_ties_and_missingness (test_arrival.ArrivalTests.test_rank_ties_and_missingness) ... ok\ntest_slower_ball_gives_defender_more_time (test_arrival.ArrivalTests.test_slower_ball_gives_defender_more_time) ... ok\ntest_towards_lane_velocity_matters (test_arrival.ArrivalTests.test_towards_lane_velocity_matters) ... ok\ntest_known_lanes_and_flat_endpoints (test_baseline.GeometryTests.test_known_lanes_and_flat_endpoints) ... ok\ntest_reject_degenerate (test_baseline.GeometryTests.test_reject_degenerate) ... ok\ntest_rotation_translation_invariance (test_baseline.GeometryTests.test_rotation_translation_invariance) ... ok\ntest_shared_credit_is_not_double_counted (test_baseline.GeometryTests.test_shared_credit_is_not_double_counted) ... ok\ntest_clear_offside_and_gk_not_candidate (test_data.DataTests.test_clear_offside_and_gk_not_candidate) ... ok\ntest_duplicate_frame_rejected (test_data.DataTests.test_duplicate_frame_rejected) ... ok\ntest_future_tracking_does_not_change_snapshot (test_data.DataTests.test_future_tracking_does_not_change_snapshot) ... ok\ntest_half_open_phase_boundary (test_data.DataTests.test_half_open_phase_boundary) ... ok\ntest_no_velocity_across_gap_or_period (test_data.DataTests.test_no_velocity_across_gap_or_period) ... ok\ntest_paired_cluster_bootstrap_preserves_identical_models (test_data.DataTests.test_paired_cluster_bootstrap_preserves_identical_models) ... ok\ntest_splits_disjoint (test_data.DataTests.test_splits_disjoint) ... ok\ntest_unknown_carrier_is_not_inferred (test_data.DataTests.test_unknown_carrier_is_not_inferred) ... ok\ntest_dlo_nonnegative_and_not_double_counted (test_outputs.ExecutedOutputTests.test_dlo_nonnegative_and_not_double_counted) ... ok\ntest_exclusion_waterfalls_and_csv_grain (test_outputs.ExecutedOutputTests.test_exclusion_waterfalls_and_csv_grain) ... ok\ntest_held_out_correlations_independently_recomputed (test_outputs.ExecutedOutputTests.test_held_out_correlations_independently_recomputed) ... ok\ntest_replay_freeze_matches_initial_state (test_outputs.ExecutedOutputTests.test_replay_freeze_matches_initial_state) ... ok\n\n----------------------------------------------------------------------\nRan 22 tests in 0.108s\n\nOK",
+  "browser": {
+    "status": "passed",
+    "checks": [
+      "Target select changes displayed target and lane scores",
+      "Defender select changes named DLO and arrival margin",
+      "Possession select resets frame and target set",
+      "Previous/Next move exactly one sampled frame; boundary buttons disabled",
+      "Range control responds to keyboard ArrowRight",
+      "Freeze checkbox switches defender-state display",
+      "Corridor checkbox hides and restores the finite baseline corridor",
+      "Play advances; Pause stops; playback does not autoplay",
+      "Exact-value disclosure expands populated lane and defender tables",
+      "JSON download contains the executed 832-label result",
+      "Four local results/methodology/limitations/licence links resolve HTTP 200",
+      "Skip link navigates to the replay anchor",
+      "No document horizontal overflow at 320/390/640/820/1060/1365 px",
+      "200% root text size at 390 px reflows without page overflow",
+      "Malformed embedded payload shows actionable error state",
+      "Empty export shows actionable empty state"
+    ],
+    "console_errors": [],
+    "scope": "Chromium desktop and emulated widths; no physical-device or screen-reader audit"
+  },
+  "media": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720
+      }
+    ],
+    "format": {
+      "duration": "30.000000",
+      "size": "231452"
+    }
+  },
+  "contrast_pairs": [
+    {
+      "foreground": "#192724",
+      "background": "#f7f4ec",
+      "ratio": 14.08,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "#4c5955",
+      "background": "#f7f4ec",
+      "ratio": 6.663,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "#00665c",
+      "background": "#f7f4ec",
+      "ratio": 6.254,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "#973c20",
+      "background": "#f7f4ec",
+      "ratio": 6.405,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "#192724",
+      "background": "#e5ede4",
+      "ratio": 12.944,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "#00665c",
+      "background": "#e5ede4",
+      "ratio": 5.75,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "#973c20",
+      "background": "#e5ede4",
+      "ratio": 5.888,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "#727d75",
+      "background": "#f7f4ec",
+      "ratio": 3.895,
+      "minimum": 3
+    },
+    {
+      "foreground": "#727d75",
+      "background": "#e5ede4",
+      "ratio": 3.581,
+      "minimum": 3
+    }
+  ],
+  "source_and_code_sha256": {
+    "lane_obstruction/__init__.py": "20209ce531f2f9ba2df40cb31f4ae237a617b760ff4ac66dc6fc134e1b686ff3",
+    "lane_obstruction/__main__.py": "950733800e007519b811b7193d085648fdc5395dedafeb9a687b4fea1795677d",
+    "lane_obstruction/arrival.py": "0926f08113f63febd50488a6328a1af8dca6bf8f6de7eb0ac1fdd11f7ce726f5",
+    "lane_obstruction/baseline.py": "43c945715a4dc099f5770e816d7d252c950003bf2bab032f3bd481962fcec8ba",
+    "lane_obstruction/data.py": "1af3f92ba58d74445ced14c97f0bc10334070b4db5349e554699f32784b181c4",
+    "lane_obstruction/evaluation.py": "908c3c235249d1467c4959e4f8ffda5062dcf08cdad12182680f2dacf4a99bb3",
+    "lane_obstruction/experiment.py": "5946c781f63eb55bbd43f98703ccb47b325abe912e297f99c77c433a909a44d1",
+    "lane_obstruction/publication.py": "be13585583dc5efe76574c838cbbbec66a8caa69d4cf78572df1233a8d14d040",
+    "lane_obstruction/replay.py": "e2e2935de7c2573ec0b4f955b00d719a2be6cb27fba5304a44236b9a7880bd6f",
+    "scripts/build_viewer.py": "3c88ff7e914be2251b80d10a0b5695b77fe2e8839e55b7fc81aa6f8fd9d20fec",
+    "scripts/build_website.py": "7325f5baed14e400e69b355ccc0b46c94f396b03dc8e0dd273aa0670db7a63eb",
+    "scripts/fetch_data.py": "8d848174afaf0d3955ef1e0f23c3d7c7c1bd2740e4111d127f9c37c4b48ea983",
+    "scripts/render_demo.py": "d5273f7fad947ecb6f43dde6cfc795780c71fd276e07c03dd2fbdbc49fc1adfa",
+    "scripts/validate_baseline.py": "507adf7adc1bef432dc49fbe634184f709464397618b555178e7bb59c482dc9a",
+    "scripts/verify_release.py": "5a0fcf1cbe0cc61eae96b154eaa64a452cfbf01955b980ba389df5299c3f6143",
+    "tests/browser/check.cjs": "7f2a1cf59b531fe306f95662ca9e3e63b4594748c868f5c3f605c98a7a57f781",
+    "tests/test_arrival.py": "c6f1797f25cc0a2e9a2a074a5aefe6aa53ed178e3cc9727db2ed5a74b782c05c",
+    "tests/test_baseline.py": "60dab6c60fdf53f6874ab9c0a815f96ee6278cad0ce23de8bd6859dc12e82dd8",
+    "tests/test_data.py": "8aacd106a25500a6745a7ff767ee5bd2ea87a6f2989a0188ae4cf836890f1419",
+    "tests/test_outputs.py": "8b9a2e0f507df65e608608f9e9113097b60ed59389ac25bb90728c3c316e5bdd",
+    "configs/pilot.json": "7ff9b446e053f1de008f47c7ba33f70b0b9aa1970673bd4cd17c04837d4552fe",
+    "docs/deployment.md": "3a91906b71d0aae2a87be54aded87e006790d9b365cb67866f33aa6a8fd52da1",
+    "docs/feasibility.md": "253a6b114ba4067680579820dcbe000e9bf8dfde21f394ae100f88e4470d561d",
+    "docs/limitations.md": "7ac5d5d09a302a48c7bddba38892f1dbf7d62234aa774456d74f43f73d829086",
+    "docs/linkedin-style-notes.md": "d466ed502ea1f26ec674e2dde417bf43ba6fccd2ae65264479627b6fda1a1938",
+    "docs/methodology.md": "11ea4a5f386ac444594296ffc9c0e39a7658ae731cc471bc74ced4258f3f49bc",
+    "docs/source/SkillCorner-LICENSE": "3384cc66ffd008209759af5e6328677eabded72756fb1f56f4f82e68e9b3c6eb",
+    "docs/source/SkillCorner-README.md": "c09886c6359e5f7ff3bfd71a653510caf2f674d238ca79219aa1ec9ebe6f4428",
+    "docs/source/matches.json": "4dd7a62f966046a8fde2563e69fd044997d471b213118aed436cb23ab1fdfad0",
+    "docs/validation.md": "637655cee23691f1fe5047c647a1d251d0131955ade92b3cb7059fa7f09d5b43",
+    "README.md": "cb5601aef0b189e34b18baf339c848691b22398ad88d4f108e2ea4df47da19f0",
+    "LICENSE": "49551981660e271072d03c6dc2c76081a8e93e2d2a1c1ff3e1ca5c107230f8db",
+    "pyproject.toml": "e8c280bbf0f999169be9189b19462c49f5f68973185c62adddd533acf2126212",
+    "requirements-lock.txt": "68159136b241d8a01ffc6131f721f3d8930d7a353d85dfedb5da787b514484c3",
+    "viewer.html": "165a32d5a68768af1638b4256a75a5bf2795f071359904d21a0435b5c8b50a09",
+    "data/source-lock.json": "1ccf8b68b513e75ea1bb43bce7dfe579d8c3fb9c1071351fb2064b669ec6d7fb"
+  },
+  "output_sha256": {
+    "outputs/baseline_validation.json": "29df10493ac7708d6eafce02e65b1fed6b6d09e97de56039f12145a5792afdc5",
+    "outputs/browser-validation.json": "a4ddc347f30c47d3e2647469bc7a81abf57b6437998179ba893ec05d476ca596",
+    "outputs/data_audit.json": "8fc6cbcb1551ce3086fbadc81ea236dd13621c8b02d5c0bf0268afa748890484",
+    "outputs/defender_snapshots.csv": "7c715a0f2818d12a4c658908189a5cf7fe3254291740b983936ff26e50b4b987",
+    "outputs/demo-poster.png": "b99f7bfba848ae96202cb28e6af953c1a7111afcb80a99e6be6d2832e2581cba",
+    "outputs/demo.mp4": "1ba035f40b189fcdaf6ba2693bd6286cd027ceab7429bbf68e8942832295be43",
+    "outputs/linkedin-post.txt": "b348652ad7f8fe33dbf69ecfd5cf0c567fdd9b7ca70551afe2f4ec8f9a73a7f7",
+    "outputs/possessions.csv": "d5554538cc51b4571cf7cac8aae2f688ef86bed06b43da19f2dd79b4413d51ab",
+    "outputs/provenance.json": "5eb204b4ca289d3690067d09d712aef6cfcbbd6719cb820daf8842789140599a",
+    "outputs/public-post.md": "abaee1798b5a1bc5bbc5959d84c4c001090c62121ed82f5b964331b120789924",
+    "outputs/replays.json": "6ebe3af5c652287855ed0a58d5a1c59f319b79eec3faae9cd8fb31541ccc7199",
+    "outputs/results.json": "ccd5927a07cfd7877711895b629abd48ca69956b3512c4bacd98ba198064ffbd",
+    "outputs/results.md": "c51334032d808505b4ba69f188c069534a18c370570a28e182ef45f4ed541762",
+    "outputs/results.png": "aef32d213a20506da794f1d01fbeaebf68eccb33995931981a8b3719dd5ad49c",
+    "outputs/sensitivity.csv": "38fa183a57a48c73567f714480bfa4d268685a5c8ba8344ad9b83ac6ad5cb01e",
+    "outputs/viewer-desktop.png": "7586ea2ee2b2270a35979c9362541e420dc8424ac5bcd7a15adf2d085d964747",
+    "outputs/viewer-mobile.png": "392b361319db03e9e228be9fccf34a8d03e7fd1970fb52d542c316729cd5586b",
+    "outputs/viewer.html": "cc3b5da20d6c838a5f56d571fba80f745f0b77fe922e5a5a2408646920ba19b3"
+  },
+  "limitations": "Engineering and rendering checks only; no physical-device, screen-reader, independent football-label or causal validation."
+}

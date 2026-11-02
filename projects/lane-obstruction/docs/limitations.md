@@ -1,0 +1,14 @@
+# Interpretation limits
+
+- **Unattempted passes are unobserved counterfactuals.** A high DLO cannot establish that a pass was considered or prevented. The title is a research question, not a verified tactical claim.
+- **Extrapolation is fundamental.** Broadcast cameras omit relevant defenders and receivers. Required 22-player coordinate coverage includes extrapolated positions. Detection flags are reported; no model can recover independent validation from those flags.
+- **Shared-input validation.** SkillCorner ease and pressure are proprietary tracking-derived categories. Correlations are agreement between dependent proxies. They are not accuracy, calibration or evidence of defensive value.
+- **Sampling and leakage.** Three convenient A-League games are not representative. Holdouts are separate from this implementation's development, but have been used in other workspace projects. Players and teams may recur elsewhere in the source release. No global independence is claimed.
+- **Selection losses.** Carrier confirmation, low-ball and complete-context filters may select easier receptions and settled possessions. Event-start analysis misses screening during other times. Missing provider categories can be selective. Report all denominators.
+- **Uncertainty is conditional.** Phase and time-block bootstraps address some within-match dependence. Only two held-out matches cannot support league generalisation, precise player comparisons or a reliable between-match confidence interval.
+- **Simplified physics.** Fixed targets, straight constant-speed ground passes, identical movement parameters, capped past velocity, instantaneous control radius, no orientation/acceleration/turning/ball deceleration. A score is not a probability.
+- **Metric design choices.** Endpoint buffers discard some interventions; flat corridor ends differ from reachability over the same segment; max aggregation ignores combined defensive effects. Equal target weights ignore danger and preference. Strict max-based ablation undervalues shared coverage. No claim of optimal thresholds.
+- **Temporal attribution.** Current-vs-frozen defender-state comparison changes position and velocity and permits no behavioural adaptation. Fixed target identities serve interpretation; they may no longer pass current range/offside filters. Replays are development examples, not test evidence.
+- **No action-free causal claim.** The experiment is positioned as value without tackles/interceptions but does not infer action absence, tactical intent or a defender's counterfactual choices. There is no human-labeled cover-shadow dataset or identification strategy.
+
+Next credible validation would independently annotate a pre-sampled unseen-match set, report annotator agreement, compare labelled ground-pass choices and outcomes while addressing selection, and test player stability across many matches. Do not tune on the present holdouts and relabel them as untouched tests.

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Defender Nobody Notices | Lane obstruction pilot</title>
+<style>
+:root{color-scheme:light;--paper:#f7f4ec;--ink:#192724;--muted:#4c5955;--teal:#00665c;--rust:#973c20;--rule:#727d75;--pitch:#e5ede4}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.55 system-ui,sans-serif}main{max-width:1180px;margin:auto;padding:1.2rem}h1,h2{font-family:Georgia,serif;line-height:1.12;font-weight:normal}h1{font-size:clamp(2rem,4.3vw,3.4rem);max-width:24ch;margin:.4rem 0 1rem}h2{font-size:1.7rem;margin:0 0 1rem}p{max-width:83ch}small,.muted{color:var(--muted)}a{color:var(--teal);text-underline-offset:3px}a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--rust);outline-offset:4px}button,select{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:3px;min-height:44px;padding:.5rem .7rem;max-width:100%}button{cursor:pointer}button:hover{background:#e2e7df}button:disabled{cursor:default;opacity:.6}label{display:block}select{width:100%}.controls{display:grid;grid-template-columns:1fr;gap:1rem;margin:1.4rem 0}.controls>div{min-width:0}.transport{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;margin:.6rem 0}.scrub{flex:1;min-width:160px;height:44px;accent-color:var(--teal)}.checks{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem}.checks label{display:flex;align-items:center;gap:.6rem;min-height:44px}.checks input{width:20px;height:20px;accent-color:var(--teal)}figure{margin:1rem 0}.pitch{display:block;width:100%;background:var(--pitch);border:1px solid var(--rule)}.timeline{display:block;width:100%;height:200px}.legend{display:flex;gap:.5rem 1.6rem;flex-wrap:wrap;margin:.7rem 0;font-size:.92rem}.legend b{font-weight:600}.teal{color:var(--teal)}.rust{color:var(--rust)}.evidence{border-top:1px solid var(--rule);padding-top:2rem;margin-top:2rem}.metrics{display:grid;grid-template-columns:1fr;gap:1rem}.metrics p{margin:.4rem 0}table{width:100%;border-collapse:collapse;font-size:.95rem}th,td{text-align:left;border-bottom:1px solid #a4ada5;padding:.5rem .4rem;vertical-align:top;overflow-wrap:anywhere}th{font-weight:600}td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}.table-wrap{max-width:100%;overflow-x:auto}summary{cursor:pointer;min-height:44px;padding:.6rem 0}.result-chart{width:100%;display:block;max-height:240px}#status{padding:.8rem 0}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.skip{display:inline-block;min-height:44px;padding:.4rem 0}footer{margin:2rem 0;color:var(--muted)}@media(min-width:640px){main{padding:2rem}.controls{grid-template-columns:1fr 1fr}.metrics{grid-template-columns:1fr 1fr}}@media(min-width:1060px){.controls{grid-template-columns:1.4fr 1fr 1fr}.metrics{grid-template-columns:1fr 1fr}}
+</style>
+<main>
+<a class="skip" href="#replay">Skip to pitch replay</a>
+<header><h1>The Defender Nobody Notices</h1><p>How much can a defender obstruct a pass before it is attempted? A geometric corridor and an approximate arrival-time model, examined on SkillCorner Open Data.</p><p><strong>Research pilot. Scores are model-derived proxies, not probabilities or validated prevented passes.</strong></p></header>
+<div id="status" role="status">Loading the embedded, verified replay…</div>
+<section id="replay" hidden aria-label="Football replay">
+<div class="controls">
+<div><label for="example">Development possession</label><select id="example"></select></div>
+<div><label for="target">Passing target</label><select id="target"></select></div>
+<div><label for="defender">Defender to inspect</label><select id="defender"></select></div>
+</div>
+<div class="checks"><label><input id="freeze" type="checkbox">Freeze defenders at the first frame</label><label><input id="corridor" type="checkbox" checked>Show the 1 m corridor baseline</label></div>
+<div class="transport"><button id="previous" aria-label="Previous sampled frame">Previous</button><button id="play">Play replay</button><button id="next" aria-label="Next sampled frame">Next</button><label for="frame" class="sr">Replay frame</label><input class="scrub" id="frame" type="range" min="0" max="1" value="0" step="1"><output id="clock" for="frame"></output></div>
+<p class="muted" id="context"></p><p class="muted">Selected route: solid when obstruction ≥0.5, dashed when lower. This display threshold does not validate a lane as open or closed.</p>
+<figure><svg id="pitch" class="pitch" viewBox="0 0 1100 755" role="img" aria-labelledby="pitchTitle pitchDesc"><title id="pitchTitle">Passing-lane replay</title><desc id="pitchDesc">Circles are attackers, squares are defenders. Dashed outlines mark extrapolated positions. The ball-to-target line and optional corridor show the selected lane.</desc></svg><figcaption class="legend"><b class="teal">Circles: attackers</b><b class="rust">Squares: defenders</b><span>Dashed outline: extrapolated</span><span>Large outline: selected defender/target</span></figcaption></figure>
+<div class="metrics"><div><p id="laneValue"></p><p id="defenderValue"></p><p id="visibility"></p></div><div><p>Solid line: current arrival-model availability. Dashed line: availability with defenders frozen. Grey steps: geometric availability (0 or 1).</p><p class="muted">Availability = 1 − obstruction. Fixed initial target identities; a later frame may fail the evaluation's snapshot range/offside screen. The freeze comparison changes defender positions and velocities, without modelling tactical responses.</p></div></div>
+<figure><svg id="timeline" class="timeline" role="img" aria-labelledby="timelineTitle"><title id="timelineTitle">Selected lane availability through time</title></svg><figcaption>Uncalibrated lane-availability index (0–1). Replay samples at 2 Hz; past-velocity inputs use 10 Hz tracking. Exact values are below.</figcaption></figure>
+<details id="exact"><summary>Exact lane values and defender attribution</summary><div class="table-wrap"><table><thead><tr><th>Seconds</th><th class="num">Geometry availability</th><th class="num">Arrival availability</th><th class="num">Frozen availability</th></tr></thead><tbody id="timelineRows"></tbody></table></div><p>Selected defender's DLO is the mean reduction in team obstruction when that defender is removed, across the fixed target set. Shared blocking can produce DLO=0 even when the defender obstructs a lane.</p><div class="table-wrap"><table><thead><tr><th>Defender</th><th class="num">DLO</th><th class="num">Selected-lane individual obstruction</th></tr></thead><tbody id="defenderRows"></tbody></table></div></details>
+</section>
+<section class="evidence" id="results" hidden><h2 id="resultsHeading">Held-out proxy agreement</h2><p id="finding"></p><svg id="resultChart" class="result-chart" viewBox="0 0 1000 230" role="img" aria-label="Paired correlation differences and 95 percent bootstrap intervals"></svg><p class="muted">Points: arrival rho minus geometry rho. Lines: paired phase-cluster bootstrap 95% intervals. The zero reference means equal correlation. These intervals condition on the two selected matches.</p><div class="table-wrap"><table><thead><tr><th>Evaluation sample</th><th class="num">Labelled starts</th><th class="num">Geometry rho</th><th class="num">Arrival rho</th><th class="num">Difference [95% interval]</th></tr></thead><tbody id="resultsRows"></tbody></table></div><p id="quality"></p><button id="download">Download results JSON</button></section>
+<section class="evidence"><h2>What this model assumes</h2><p>A plausible target is an outfield teammate 5–40 m from the ball, on the pitch and behind a snapshot offside screen. The geometric baseline asks whether a defender lies within 1 m of the pass route, excluding 2 m at either end.</p><p>The arrival model samples the same route at no more than 0.5 m spacing. A 15 m/s ball competes with defenders using a 0.7 s reaction interval, capped past velocity and 5 m/s movement. A smooth function maps the best arrival margin to an obstruction index. No probability calibration, body orientation, pass technique or receiver movement is modelled.</p><p>SkillCorner Passing Option Ease and pressure categories are possession-level, proprietary outputs derived from shared tracking. The comparison evaluates agreement between proxies. No unattempted-pass outcomes, causal credit, action-free defensive value or player ranking are validated.</p><p>Development: Auckland FC–Newcastle (1886347). Pipeline holdouts: Brisbane FC–Perth Glory (1925299), Sydney FC–Adelaide United (1996435). Source revision: <code>4340d274…</code>. These are three convenience matches.</p><p><a href="results.md">Executed results</a> · <a href="../docs/methodology.md">Full methodology</a> · <a href="../docs/limitations.md">Limitations</a> · <a href="../docs/source/SkillCorner-LICENSE">Data licence</a></p></section>
+<footer>Data: <a href="https://github.com/SkillCorner/opendata">SkillCorner Open Data</a>, released with <a href="https://pysport.org/">PySport</a>. Original MIT notice retained. No match footage or external runtime requests.</footer>
+<noscript>This replay requires JavaScript. Read outputs/results.md for the executed numerical results and limitations.</noscript>
+</main>
+<script id="payload" type="application/json">__PAYLOAD__</script>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), NS='http://www.w3.org/2000/svg';
+function el(tag,attrs={},text=''){const node=document.createElementNS(NS,tag);for(const [k,v]of Object.entries(attrs))node.setAttribute(k,v);if(text)node.textContent=text;return node}
+const fmt=x=>Number(x).toFixed(3), clock=s=>`${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}`;
+let payload,example,index=0,timer=null;
+const colour={ink:'#192724',teal:'#00665c',rust:'#973c20',muted:'#4c5955',paper:'#f7f4ec',pitch:'#e5ede4'};
+function stop(){if(timer)clearInterval(timer);timer=null;$('play').textContent='Play replay'}
+function option(select,value,label){const o=document.createElement('option');o.value=value;o.textContent=label;select.append(o)}
+function xy(pos){const d=payload.replays;return [40+(pos[0]+d.length/2)*1020/d.length,35+(d.width/2-pos[1])*667/d.width]}
+function line(svg,a,b,attrs={}){const p=xy(a),q=xy(b);svg.append(el('line',{x1:p[0],y1:p[1],x2:q[0],y2:q[1],stroke:colour.ink,'stroke-width':2,...attrs}))}
+function choose(){stop();example=payload.replays.examples[Number($('example').value)];index=0;$('target').replaceChildren();$('defender').replaceChildren();example.target_names.forEach((n,i)=>option($('target'),i,n));example.defender_names.forEach((n,i)=>option($('defender'),i,n));$('frame').max=example.frames.length-1;$('frame').value=0;$('freeze').checked=false;draw()}
+function drawPitch(f,j,d,freeze){
+ const svg=$('pitch');svg.replaceChildren(el('title',{},`Lane to ${example.target_names[j]}; ${freeze?'defenders frozen':'current positions'}`),el('desc',{},'Circles attackers, squares defenders; dashed outlines extrapolated. Selected players have a larger outline.'));
+ const W=payload.replays.length,H=payload.replays.width;
+ function rect(x,y,w,h,attrs={}){const a=xy([x,y+h]);svg.append(el('rect',{x:a[0],y:a[1],width:w*1020/W,height:h*667/H,fill:'none',stroke:'#727d75','stroke-width':1.5,...attrs}))}
+ rect(-W/2,-H/2,W,H);line(svg,[0,-H/2],[0,H/2],{stroke:'#727d75','stroke-width':1.5});svg.append(el('ellipse',{cx:550,cy:368.5,rx:9.15*1020/W,ry:9.15*667/H,fill:'none',stroke:'#727d75','stroke-width':1.5}));rect(-W/2,-20.16,16.5,40.32);rect(W/2-16.5,-20.16,16.5,40.32);
+ const target=f.xy[example.ids.indexOf(example.target_ids[j])],a=f.ball,delta=[target[0]-a[0],target[1]-a[1]],L=Math.hypot(...delta),u=delta.map(v=>v/L),n=[-u[1],u[0]];
+ if($('corridor').checked){const pts=[[2,1],[L-2,1],[L-2,-1],[2,-1]].map(([t,w])=>xy([a[0]+u[0]*t+n[0]*w,a[1]+u[1]*t+n[1]*w]).join(',')).join(' ');svg.append(el('polygon',{points:pts,fill:'#becbc0',stroke:colour.muted,'stroke-width':1,'stroke-dasharray':'5 4'}))}
+ const ob=freeze?f.frozen_obstruction[j]:f.obstruction[j];line(svg,a,target,{stroke:colour.rust,'stroke-width':3,'stroke-dasharray':ob<.5?'9 6':'none'});
+ const defenderPosition=freeze?example.frames[0].xy:f.xy;
+ example.ids.forEach((pid,i)=>{const attack=example.teams[i]===example.attacking_team,pos=attack?f.xy[i]:defenderPosition[i],p=xy(pos),selected=pid===example.defender_ids[d]||pid===example.target_ids[j],observed=freeze&&!attack?example.frames[0].detected[i]:f.detected[i];
+  const attrs={fill:colour.paper,stroke:attack?colour.teal:colour.rust,'stroke-width':selected?4:2.5,'stroke-dasharray':observed?'none':'4 3'};
+  const marker=attack?el('circle',{cx:p[0],cy:p[1],r:selected?13:11,...attrs}):el('rect',{x:p[0]-11,y:p[1]-11,width:22,height:22,...attrs});marker.append(el('title',{},`${example.names[i]}, ${observed?'detected':'extrapolated'}`));svg.append(marker);svg.append(el('text',{x:p[0],y:p[1]+5,'text-anchor':'middle',fill:colour.ink,'font-size':14,'font-family':'system-ui'},String(example.numbers[i])));
+ });
+ const b=xy(f.ball);svg.append(el('circle',{cx:b[0],cy:b[1],r:5,fill:colour.ink,stroke:colour.paper,'stroke-width':1.5}));
+ svg.append(el('text',{x:40,y:733,fill:colour.ink,'font-size':17,'font-family':'system-ui'},`Attack direction: ${example.attack_sign===1?'left to right':'right to left'} | ${freeze?'Defender states frozen':'Current sampled positions'}`));
+}
+function drawTimeline(j){
+ const svg=$('timeline'),width=Math.max(300,svg.clientWidth);svg.setAttribute('viewBox',`0 0 ${width} 200`);svg.replaceChildren(el('title',{},`Lane availability to ${example.target_names[j]} over ${example.frames.at(-1).t} seconds`));
+ const last=example.frames.at(-1).t,x=t=>42+(width-70)*t/last,y=v=>155-120*v;
+ [0,.5,1].forEach(v=>{svg.append(el('line',{x1:42,y1:y(v),x2:width-28,y2:y(v),stroke:'#b4bdb5'}));svg.append(el('text',{x:30,y:y(v)+6,'text-anchor':'end',fill:colour.ink,'font-size':16},String(v)))});
+ [0,last].forEach(t=>svg.append(el('text',{x:x(t),y:185,'text-anchor':'middle',fill:colour.ink,'font-size':17},`${t.toFixed(1)} s`)));
+ [['geometry',colour.muted,'3 5'],['frozen_obstruction',colour.rust,'8 5'],['obstruction',colour.teal,'']].forEach(([key,c,dash])=>{const points=example.frames.map(f=>[x(f.t),y(1-f[key][j])]);let path=`M${points[0].join(',')}`;points.slice(1).forEach((p,k)=>{path+=key==='geometry'?` H${p[0]} V${p[1]}`:` L${p.join(',')}`});svg.append(el('path',{d:path,fill:'none',stroke:c,'stroke-width':2.5,'stroke-dasharray':dash}))});
+ const at=example.frames[index];svg.append(el('line',{x1:x(at.t),x2:x(at.t),y1:24,y2:155,stroke:colour.ink,'stroke-width':1.5}));
+ $('timelineRows').replaceChildren();example.frames.forEach(f=>{const tr=document.createElement('tr');[f.t.toFixed(1),fmt(1-f.geometry[j]),fmt(1-f.obstruction[j]),fmt(1-f.frozen_obstruction[j])].forEach((v,k)=>{const td=document.createElement('td');td.textContent=v;if(k)td.className='num';tr.append(td)});$('timelineRows').append(tr)});
+}
+function draw(){
+ const f=example.frames[index],j=Number($('target').value),d=Number($('defender').value),freeze=$('freeze').checked;
+ $('clock').textContent=`+${f.t.toFixed(1)} s`;$('frame').value=index;$('previous').disabled=index===0;$('next').disabled=index===example.frames.length-1;
+ $('context').textContent=`${payload.replays.match} | period ${example.period}, ${clock(example.clock_seconds+f.t)} | carrier: ${example.names[example.ids.indexOf(example.carrier)]} | event ${example.event_id}`;
+ const ob=freeze?f.frozen_obstruction[j]:f.obstruction[j];
+ $('laneValue').textContent=`To ${example.target_names[j]}: ${freeze?'frozen-state':'current'} availability ${fmt(1-ob)}; current geometry ${fmt(1-f.geometry[j])}.`;
+ $('defenderValue').textContent=`${example.defender_names[d]}: current DLO ${fmt(f.marginal[d])} across ${example.target_ids.length} fixed targets. Selected-lane arrival margin ${f.margins_s[j][d].toFixed(2)} s.`;
+ $('visibility').textContent=`Current frame: ${f.detected.filter(Boolean).length}/22 players detected; ball ${f.ball_detected?'detected':'extrapolated'}. Remaining player positions are extrapolated.`;
+ drawPitch(f,j,d,freeze);drawTimeline(j);$('defenderRows').replaceChildren();example.defender_names.forEach((n,k)=>{const tr=document.createElement('tr');[n,fmt(f.marginal[k]),fmt(f.individual[j][k])].forEach((v,i)=>{const td=document.createElement('td');td.textContent=v;if(i)td.className='num';tr.append(td)});$('defenderRows').append(tr)});
+}
+function showResults(){
+ const r=payload.results,p=r.pooled;
+ $('resultsHeading').textContent=r.hypothesis_supported?'The improvement criterion was met for proxy agreement':'The added complexity did not meet the improvement criterion';
+ $('finding').textContent=`On ${p.n} labelled starts in two pipeline-held-out matches, geometry rho=${fmt(p.geometry_rho)} and arrival rho=${fmt(p.arrival_rho)} against provider passing difficulty. Difference ${fmt(p.delta_rho)} [${fmt(p.interval_95[0])}, ${fmt(p.interval_95[1])}]. The pre-specified improvement hypothesis was ${r.hypothesis_supported?'supported':'not supported'}.`;
+ $('quality').textContent=`Only ${r.held_out_starts} starts passed the eligibility filters; ${r.held_out_starts-p.n} then lacked paired labels. The strict all-22-players-and-ball-detected subset has n=${r.all_detected.n}, so its association is unavailable. Mean detected-player fraction across eligible held-out snapshots: ${(r.mean_player_detection_fraction*100).toFixed(1)}%.`;
+ const entries=[...Object.entries(r.per_match),['Pooled',p]];
+ entries.forEach(([name,v])=>{const tr=document.createElement('tr');[name,v.n,fmt(v.geometry_rho),fmt(v.arrival_rho),`${fmt(v.delta_rho)} [${fmt(v.interval_95[0])}, ${fmt(v.interval_95[1])}]`].forEach((txt,k)=>{const td=document.createElement('td');td.textContent=txt;if(k)td.className='num';tr.append(td)});$('resultsRows').append(tr)});drawResultChart();
+}
+function drawResultChart(){const svg=$('resultChart'),width=Math.max(300,svg.clientWidth),x=v=>95+(v+.5)/.6*(width-120);svg.setAttribute('viewBox',`0 0 ${width} 230`);svg.replaceChildren(el('title',{},'Paired correlation differences with conditional 95 percent intervals'));svg.append(el('line',{x1:x(0),x2:x(0),y1:20,y2:182,stroke:colour.ink,'stroke-dasharray':'5 4'}));[...Object.entries(payload.results.per_match),['Pooled',payload.results.pooled]].forEach(([name,v],i)=>{const y=45+i*53;svg.append(el('text',{x:4,y:y+6,fill:colour.ink,'font-size':15},name));svg.append(el('line',{x1:x(v.interval_95[0]),x2:x(v.interval_95[1]),y1:y,y2:y,stroke:colour.rust,'stroke-width':3}));svg.append(el('circle',{cx:x(v.delta_rho),cy:y,r:5,fill:colour.rust}))});[-.5,-.3,-.1,.1].forEach(v=>svg.append(el('text',{x:x(v),y:215,'text-anchor':'middle',fill:colour.ink,'font-size':15},v.toFixed(1))));}
+try{
+ payload=JSON.parse($('payload').textContent);
+ if(!payload.replays.examples.length){$('status').textContent='No eligible replay was exported. Run the Python experiment to create development examples.'}
+ else{
+ payload.replays.examples.forEach((e,i)=>option($('example'),i,`${clock(e.clock_seconds)} · event ${e.event_id}`));$('status').hidden=true;$('replay').hidden=false;$('results').hidden=false;choose();showResults();
+ $('example').addEventListener('change',choose);['target','defender','freeze','corridor'].forEach(id=>$(id).addEventListener('change',draw));$('frame').addEventListener('input',()=>{stop();index=Number($('frame').value);draw()});
+ $('previous').onclick=()=>{stop();index=Math.max(0,index-1);draw()};$('next').onclick=()=>{stop();index=Math.min(example.frames.length-1,index+1);draw()};
+ $('play').onclick=()=>{if(timer){stop();return}if(index===example.frames.length-1)index=0;$('play').textContent='Pause replay';timer=setInterval(()=>{index++;if(index>=example.frames.length-1){index=example.frames.length-1;stop()}draw()},500)};
+ $('download').onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(payload.results,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='lane-obstruction-results.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop()});
+ window.addEventListener('resize',()=>{drawTimeline(Number($('target').value));drawResultChart()});
+ }
+}catch(error){stop();$('status').hidden=false;$('replay').hidden=true;$('results').hidden=true;$('status').textContent=`The embedded replay could not load: ${error.message}. Rebuild with scripts/build_viewer.py.`;console.error(error)}
+</script>
+</html>

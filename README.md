@@ -2,7 +2,7 @@
 
 Football projects built around specific tactical questions, reproducible data processing and interactive analysis.
 
-**Live projects:** [Pressing trap detector](https://football-analytics-self.vercel.app) · [The Invisible Runner](https://football-analytics-self.vercel.app/invisible-runner/) · [Rest Defence Analyzer](https://football-analytics-self.vercel.app/rest-defence/) · [Pass Decision Lab](https://football-analytics-self.vercel.app/pass-decision-lab/) · [Possession danger](https://football-analytics-self.vercel.app/possession-danger/) · [TacticAI Lite](https://football-analytics-self.vercel.app/tacticai-lite/) · [Possession Lab](https://football-analytics-self.vercel.app/possession-lab/)
+**Live projects:** [Pressing trap detector](https://football-analytics-self.vercel.app) · [The Invisible Runner](https://football-analytics-self.vercel.app/invisible-runner/) · [Rest Defence Analyzer](https://football-analytics-self.vercel.app/rest-defence/) · [Pass Decision Lab](https://football-analytics-self.vercel.app/pass-decision-lab/) · [Possession danger](https://football-analytics-self.vercel.app/possession-danger/) · [TacticAI Lite](https://football-analytics-self.vercel.app/tacticai-lite/) · [Possession Lab](https://football-analytics-self.vercel.app/possession-lab/) · [Lane obstruction](https://football-analytics-self.vercel.app/lane-obstruction/)
 
 ## Projects
 
@@ -15,6 +15,7 @@ Football projects built around specific tactical questions, reproducible data pr
 | [Is possession actually dangerous?](projects/possession-danger/) | Does Barcelona's possession create more danger than its rivals? | StatsBomb women's leagues; full Liga F 2023/24 and five-league samples | Python/Streamlit workbench, tested xT model, public browser dashboard and reproducible findings |
 | [TacticAI Lite](projects/tacticai-lite/) | Which corner-kick patterns are associated with shot creation? | StatsBomb Euro 2024 and Women’s Euro 2025; all 82 matches | Validated Python/Streamlit project, match-held-out baseline and public aggregate explorer |
 | [Possession Lab](projects/possession-lab/) | Who has possession when the ball disappears from the tracking? | Continuous scripted synthetic motion and two unlabelled public Metrica sample excerpts | Tested Python research package, observation-failure playground and paired observability explorer |
+| [The Defender Nobody Notices](projects/lane-obstruction/) | Which defenders obstruct passing lanes before a pass is attempted? | SkillCorner open A-League tracking; three matches | Executed geometry/arrival comparison and public interactive replay |
 
 The first project includes pressure and recovery maps, event-level replays, team comparisons, an exploratory xT model, automated tests and a written investigation. It identifies patterns consistent with pressing traps; event data alone cannot prove intent.
 

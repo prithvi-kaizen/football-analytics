@@ -1,0 +1,21 @@
+{
+  "development_matches": [1886347],
+  "held_out_matches": [1925299, 1996435],
+  "fps": 10,
+  "min_pass_m": 5.0,
+  "max_pass_m": 40.0,
+  "endpoint_buffer_m": 2.0,
+  "corridor_halfwidth_m": 1.0,
+  "sample_spacing_m": 0.5,
+  "ball_speed_mps": 15.0,
+  "defender_speed_mps": 5.0,
+  "reaction_s": 0.7,
+  "control_radius_m": 0.5,
+  "transition_s": 0.25,
+  "velocity_window_frames": 5,
+  "max_raw_speed_mps": 12.5,
+  "max_ball_carrier_distance_m": 3.0,
+  "minimum_targets": 2,
+  "bootstrap_repetitions": 1000,
+  "seed": 31415
+}

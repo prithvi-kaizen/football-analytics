@@ -1,0 +1,77 @@
+{
+  "revision": "4340d274572876239c154c90bc507a9b3250a656",
+  "files": [
+    {
+      "file": "1886347_match.json",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1886347/1886347_match.json",
+      "sha256": "30c608e78663e9f490b3545479a3ce67b171f418c5133d5609cb249a2466abb2",
+      "bytes": 27541
+    },
+    {
+      "file": "1886347_dynamic_events.csv",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1886347/1886347_dynamic_events.csv",
+      "sha256": "b21368b9b94eb8f83032fe14a2a8da88ab7eda048b4f8078c06d0e6955d12bfb",
+      "bytes": 4918599
+    },
+    {
+      "file": "1886347_phases_of_play.csv",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1886347/1886347_phases_of_play.csv",
+      "sha256": "d1c3066f7ed0598069d0d1b317bb30261eca3d7786fd9d540985f395e4c8aea9",
+      "bytes": 121864
+    },
+    {
+      "file": "1886347_tracking_extrapolated.jsonl",
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1886347/1886347_tracking_extrapolated.jsonl",
+      "sha256": "3577e2803da95390f8b2f85d47829eb55fbbfee6211c94adc65db0dc78e46b41",
+      "bytes": 89280839
+    },
+    {
+      "file": "1925299_match.json",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1925299/1925299_match.json",
+      "bytes": 28396,
+      "sha256": "f4345b32c0fdd7c9990df70050b3a74f57b1992cf762e20f2a4d309bd2fba7d2"
+    },
+    {
+      "file": "1925299_dynamic_events.csv",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1925299/1925299_dynamic_events.csv",
+      "bytes": 5043601,
+      "sha256": "2557acbdcba6547d764b9f7c277c3d7e81a4d58692d6c20c2bfa28625ae0cce3"
+    },
+    {
+      "file": "1925299_tracking_extrapolated.jsonl",
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1925299/1925299_tracking_extrapolated.jsonl",
+      "bytes": 97091519,
+      "sha256": "48528be40ad82fa3e2b232e1af8d311705f7d6d119925ef199d2b59ea36fd3c9"
+    },
+    {
+      "file": "1925299_phases_of_play.csv",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1925299/1925299_phases_of_play.csv",
+      "bytes": 131104,
+      "sha256": "a1682a736a9cf1c311cb799f0a949f7e023dca4ebaa9dd294b138e8929271274"
+    },
+    {
+      "file": "1996435_match.json",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1996435/1996435_match.json",
+      "bytes": 27830,
+      "sha256": "f54179645d3c3f308a7094086283277f2a7c99da5f3919302e622cbd82f9d065"
+    },
+    {
+      "file": "1996435_dynamic_events.csv",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1996435/1996435_dynamic_events.csv",
+      "bytes": 4964532,
+      "sha256": "379e5bbd90df47d2358a2bfc5b741f7626b934db780ff33d3337a8b1d5efc87c"
+    },
+    {
+      "file": "1996435_tracking_extrapolated.jsonl",
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1996435/1996435_tracking_extrapolated.jsonl",
+      "bytes": 88634016,
+      "sha256": "f42764d8bde290e8f738fa21141cadbed75408314b0b337bbf1d5a3444540a02"
+    },
+    {
+      "file": "1996435_phases_of_play.csv",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1996435/1996435_phases_of_play.csv",
+      "bytes": 120335,
+      "sha256": "ff7ed406c900ad98bd48b6b9913e088c40bf176a3915f061430c1af7405ccb09"
+    }
+  ]
+}
