@@ -1,6 +1,6 @@
 # Validation record
 
-Recorded 9 November 2026. The final project is implemented locally and integrated into the existing static portfolio build. It has not been pushed or deployed, and no social post has been sent.
+Recorded 9 November 2026. The project is integrated into the static portfolio build. On 9 November 2026 it was published on the isolated `codex/one-step-behind` GitHub branch and deployed as a standalone Vercel preview. Public access was enabled with explicit user approval. The portfolio production site and unrelated workspace changes are unchanged; no social post has been sent.
 
 ## Analytical checks
 

@@ -28,6 +28,7 @@ def build(output):
     output.mkdir(parents=True, exist_ok=True)
     page = (ROOT / 'viewer/index.html').read_text().replace('__PAYLOAD__', payload.replace('</', '<\\/'))
     (output / 'index.html').write_text(page)
+    (output / 'vercel.json').write_text(json.dumps(dict(version=2, framework=None, buildCommand='', installCommand='', outputDirectory='.'))+'\n')
     for name in ['replays.json', 'results-1925299.json', 'results-1996435.json', 'independent-checks.json', 'verification.json']:
         shutil.copyfile(ROOT / 'outputs' / name, output / name)
     for source, target in [('docs/source/LICENSE.skillcorner', 'LICENSE.skillcorner'),

@@ -38,7 +38,7 @@
     "scripts/prepare_data.py": "0dd03cebdc8d9c0a396bb4e8820f7634b5252ce12a3dc96138e38e63f5464a4f",
     "scripts/build_report.py": "2733458bfad095ea163e3a80756a8037c405d8701158b227505662f448380d34",
     "scripts/render_demo.py": "062f1d19de7ff91b6598213cc8f74156fc92b55cb230fc0aa01e5dabbbb80fb5",
-    "scripts/build_website.py": "d3f3a7f324d21eb1edf20e8d4f61ba38eb335eff5b396415d375dc61c877e675",
+    "scripts/build_website.py": "1571949d44f21ca99164b6d97107b3197b4ede4c8b43aca95d411021b8f75b59",
     "scripts/audit_data.py": "0067866033cbf2712b89e33b0f66540b869133070710eae9af6366bbe736c3db",
     "scripts/reproduce.sh": "3a2687104549b1337c006ae784d5a21bb463f3be18036c39072ce822ab91063c",
     "scripts/verify_outputs.py": "9af180ee444325ff585fa1e7ebd41430e35edcc342230e017ad01586b68c7554",

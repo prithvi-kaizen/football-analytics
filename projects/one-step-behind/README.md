@@ -1,5 +1,7 @@
 # One Step Behind
 
+[Live explorer](https://one-step-behind-f2jqpwe4e-prithvirajs-projects-b40fa6af.vercel.app) · [Public code and methodology](https://github.com/prithvi-kaizen/football-analytics/tree/codex/one-step-behind/projects/one-step-behind)
+
 **When a defensive line steps forward, does one defender remain behind?**
 
 A two-match SkillCorner tracking pilot with an interpretable Python detector and a pitch-first browser replay. The frozen method retrieved **0 candidates in 49 development steps and 0 in 44 held-out steps**. The instantaneous 3 m baseline flagged two held-out steps; neither passed the full temporal rules. Candidate duration and recovery distributions are therefore unavailable. The project preserves that negative result.
@@ -68,7 +70,7 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
 
 Open `http://127.0.0.1:4173/one-step-behind/`. Play/pause, step frames, scrub, switch between three real sequences, change the local positional tolerance and inspect observation flags. The slider recalculates the clip interpretation; published aggregate counts retain the frozen configuration. The default replay is the fully detected Adelaide example. Dark view and native keyboard controls are available.
 
-The production route will be `https://football-analytics-self.vercel.app/one-step-behind/` **after these changes are pushed and deployed through the existing GitHub/Vercel integration**. This work does not publish the LinkedIn draft or push unrelated workspace changes.
+The standalone explorer is deployed on Vercel at the live link above, with public access explicitly approved. Source is published on the `codex/one-step-behind` branch. The portfolio route `/one-step-behind/` is also registered in that branch, pending merge and the portfolio Git deployment. The LinkedIn post remains a draft. Unrelated workspace changes were not published.
 
 ## Attribution
 
