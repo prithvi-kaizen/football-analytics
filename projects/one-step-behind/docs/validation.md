@@ -1,6 +1,6 @@
 # Validation record
 
-Recorded 9 November 2026. The project is integrated into the static portfolio build. On 9 November 2026 it was published on the isolated `codex/one-step-behind` GitHub branch and deployed as a standalone Vercel preview. Public access was enabled with explicit user approval. The portfolio production site and unrelated workspace changes are unchanged; no social post has been sent.
+Recorded 9 November 2026. The project is integrated into the static portfolio build. On 9 November 2026 it was published on an isolated GitHub branch, subsequently renamed `one-step-behind` at the user’s request and deployed as a standalone Vercel preview. Public access was enabled with explicit user approval. The portfolio production site and unrelated workspace changes are unchanged; no social post has been sent.
 
 ## Analytical checks
 
@@ -78,3 +78,7 @@ One line per applicable rule, with concrete evidence. These checks describe the 
 - R-29 PASS: neutral base, slate and blue team colours, one amber measurement accent.
 - R-30 PASS: no imitation of a generic SaaS/Linear/Vercel interface.
 - R-31 PASS: visual decisions each have an explicit one-line rationale in DESIGN.md.
+
+## Video opening revision, 9 November 2026
+
+The 32-second MP4 now opens at real source frame 41228 (match clock 66:59.8), with a 3.53 m peer-median gap and the exact overlay “3.53m behind the line. But was he actually late?”. At four seconds it explicitly cuts back to the step start, then replays the real sequence with a forward-displacement counter. The peak comparison still reports +1.76 m for Talladira and +2.36 m for peers. No tracking coordinates or analysis thresholds were changed.

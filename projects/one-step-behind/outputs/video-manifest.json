@@ -8,16 +8,18 @@
   ],
   "silent": true,
   "note": "Real 10Hz positions held between samples. Sequence replayed with disclosed slower rates; no interpolation. No primary candidate or candidate recovery claim.",
+  "first_source_frame": 41228,
+  "opening_overlay": "3.53m behind the line. But was he actually late?",
   "timing": [
     {
       "start": 0,
       "end": 4,
-      "story": "question; first real frame"
+      "story": "real 3.53m peak frame held; exact user-requested hook"
     },
     {
       "start": 4,
       "end": 12,
-      "story": "full real sequence, 0.76x"
+      "story": "explicit cut back to start; full real sequence, 0.76x, forward-displacement counter"
     },
     {
       "start": 12,

@@ -11,8 +11,8 @@ Across 93 eligible steps in two matches, none met the full lagging-defender rule
 
 Built with Python, NumPy and JavaScript, with the browser replay deployed on Vercel.
 
-Live project : https://one-step-behind-f2jqpwe4e-prithvirajs-projects-b40fa6af.vercel.app
-GitHub and methodology : https://github.com/prithvi-kaizen/football-analytics/tree/codex/one-step-behind/projects/one-step-behind
+Live project : https://one-step-behind-pk02ib2if-prithvirajs-projects-b40fa6af.vercel.app
+GitHub and methodology : https://github.com/prithvi-kaizen/football-analytics/tree/main/projects/one-step-behind
 
 I’d welcome feedback on how to identify the defensive line more reliably.
 

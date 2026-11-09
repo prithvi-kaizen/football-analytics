@@ -29,7 +29,8 @@ def frame(t,e):
     for x,sgn in [(-52.5,1),(52.5,-1)]:
         a=pos(x,20.16);b=pos(x+sgn*16.5,-20.16);d.rectangle([min(a[0],b[0]),a[1],max(a[0],b[0]),b[1]],outline=MARK,width=2)
         a=pos(x,9.16);b=pos(x+sgn*5.5,-9.16);d.rectangle([min(a[0],b[0]),a[1],max(a[0],b[0]),b[1]],outline=MARK,width=2)
-    if t<4: source_t=0
+    peak = next(f for f in e['frames'] if f['frame']==e['peak_frame'])
+    if t<4: source_t=peak['t']
     elif t<12: source_t=(t-4)/8*6.1
     elif t<23: source_t=min(1.3,(t-12)*.22)
     elif t<29: source_t=1.3+(t-23)/6*4.8
@@ -45,15 +46,15 @@ def frame(t,e):
     bx,by=pos(*f['ball']);d.ellipse([bx-6,by-6,bx+6,by+6],fill='white',outline=INK,width=2)
     p=next(p for p in f['players'] if p['id']==e['highlight_id']); gap=f['gaps'][str(p['id'])]
     px,py=pos(p['x'],p['y']);rx,_=pos(p['x']+gap,p['y'])
-    if 12<=t<29:
+    if t<4 or 12<=t<29:
         yy=py-31;d.line([px,yy,rx,yy],fill=AMBER,width=4)
         for xx in [px,rx]:d.line([xx,yy-8,xx,yy+8],fill=AMBER,width=3)
     if t<4:
-        text(d,(85,40),"What happens when one defender",47,serif=True)
-        text(d,(85,100),"doesn't step up?",47,serif=True)
+        text(d,(85,40),"3.53m behind the line.",50,serif=True)
+        text(d,(85,104),"But was he actually late?",50,serif=True)
     elif t<12:
-        text(d,(85,45),'First, watch the line step',48,serif=True)
-        text(d,(85,117),'Adelaide United · 66:58.5 · replay at 0.76×',25)
+        text(d,(85,45),'Watch him move forward too',48,serif=True)
+        text(d,(85,117),'Back to the start · Adelaide United · replay at 0.76×',25)
     elif t<23:
         text(d,(85,45),'Deeper does not mean stationary',48,serif=True)
         text(d,(85,117),'Same sequence · slow replay, then peak held',25)
@@ -67,7 +68,12 @@ def frame(t,e):
     text(d,(sx,215),'F. Talladira',30,serif=True)
     text(d,(sx,270),f'{abs(gap):.2f} m',58,AMBER)
     text(d,(sx,344),'behind peer median' if gap>=0 else 'ahead of peer median',23)
-    if 17<=t<23:
+    if 4<=t<12:
+        start=e['frames'][0]
+        start_p=next(q for q in start['players'] if q['id']==e['highlight_id'])
+        text(d,(sx,422),f"{p['x']-start_p['x']:+.2f} m forward",27)
+        text(d,(sx,466),'since the step began',23)
+    elif 17<=t<23:
         text(d,(sx,422),'At the peak gap:',24)
         text(d,(sx,465),'Talladira +1.76 m',24)
         text(d,(sx,506),'Peers +2.36 m',24)
@@ -99,12 +105,13 @@ def main():
         process=subprocess.Popen(command,stdin=subprocess.PIPE,stderr=log)
         for n in range(FPS*DURATION):
             im=frame(n/FPS,e)
-            if n in [60,300,600,780,915]: im.save(ROOT/f'outputs/video-frame-{n:03}.png')
+            if n in [0,60,300,600,780,915]: im.save(ROOT/f'outputs/video-frame-{n:03}.png')
             process.stdin.write(im.tobytes())
         process.stdin.close()
         if process.wait()!=0: raise RuntimeError('FFmpeg failed; see video-render.log')
     (ROOT/'outputs/video-manifest.json').write_text(json.dumps(dict(example_id=e['id'],duration_s=DURATION,fps=FPS,size=[W,H],silent=True,
         note='Real 10Hz positions held between samples. Sequence replayed with disclosed slower rates; no interpolation. No primary candidate or candidate recovery claim.',
-        timing=[dict(start=0,end=4,story='question; first real frame'),dict(start=4,end=12,story='full real sequence, 0.76x'),dict(start=12,end=23,story='slow replay to 3.53m peak; held peak; real displacements'),dict(start=23,end=29,story='continue to clip end, final spread 1.02m'),dict(start=29,end=32,story='0/44 finding and project route')]),indent=2)+'\n')
+        first_source_frame=e['peak_frame'],opening_overlay='3.53m behind the line. But was he actually late?',
+        timing=[dict(start=0,end=4,story='real 3.53m peak frame held; exact user-requested hook'),dict(start=4,end=12,story='explicit cut back to start; full real sequence, 0.76x, forward-displacement counter'),dict(start=12,end=23,story='slow replay to 3.53m peak; held peak; real displacements'),dict(start=23,end=29,story='continue to clip end, final spread 1.02m'),dict(start=29,end=32,story='0/44 finding and project route')]),indent=2)+'\n')
     print(target)
 if __name__=='__main__':main()

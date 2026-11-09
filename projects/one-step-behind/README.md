@@ -1,6 +1,6 @@
 # One Step Behind
 
-[Live explorer](https://one-step-behind-f2jqpwe4e-prithvirajs-projects-b40fa6af.vercel.app) · [Public code and methodology](https://github.com/prithvi-kaizen/football-analytics/tree/codex/one-step-behind/projects/one-step-behind)
+[Live explorer](https://one-step-behind-pk02ib2if-prithvirajs-projects-b40fa6af.vercel.app) · [Public code and methodology](https://github.com/prithvi-kaizen/football-analytics/tree/main/projects/one-step-behind)
 
 **When a defensive line steps forward, does one defender remain behind?**
 
@@ -70,7 +70,7 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
 
 Open `http://127.0.0.1:4173/one-step-behind/`. Play/pause, step frames, scrub, switch between three real sequences, change the local positional tolerance and inspect observation flags. The slider recalculates the clip interpretation; published aggregate counts retain the frozen configuration. The default replay is the fully detected Adelaide example. Dark view and native keyboard controls are available.
 
-The standalone explorer is deployed on Vercel at the live link above, with public access explicitly approved. Source is published on the `codex/one-step-behind` branch. The portfolio route `/one-step-behind/` is also registered in that branch, pending merge and the portfolio Git deployment. The LinkedIn post remains a draft. Unrelated workspace changes were not published.
+The standalone explorer is deployed on Vercel at the live link above, with public access explicitly approved. Source and the portfolio route `/one-step-behind/` are integrated into `main`. The LinkedIn post remains a draft. Unrelated workspace changes were not published.
 
 ## Attribution
 
