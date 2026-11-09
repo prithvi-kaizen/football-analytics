@@ -1,0 +1,41 @@
+{
+  "source_frames": 61301,
+  "null_period_frames": 19,
+  "player_rows": 1054724,
+  "detected_rows": 610457,
+  "extrapolated_rows": 444116,
+  "out_of_bounds_rows": 151,
+  "speed_steps_above_12_5_mps": 0,
+  "phase_period_mismatch_frames": 85,
+  "match_id": 1925299,
+  "period_frames": 61282,
+  "missing_source_frames": 0,
+  "phase_frames": 35642,
+  "missing_ball_period_frames": 13340,
+  "phase_possession_disagreements": 5080,
+  "players": 36,
+  "detection_fraction": 0.5788665175383781,
+  "player_count_distribution": {
+    "0": 13340,
+    "21": 151,
+    "22": 47791
+  },
+  "schema_keys": [
+    "frame",
+    "timestamp",
+    "period",
+    "ball_data",
+    "possession",
+    "image_corners_projection",
+    "player_data"
+  ],
+  "roles": {
+    "Central Defender": 5,
+    "Wide Attacker": 9,
+    "Center Forward": 5,
+    "Midfield": 6,
+    "Full Back": 5,
+    "Other": 6
+  },
+  "all_22_detected_frames": 0
+}

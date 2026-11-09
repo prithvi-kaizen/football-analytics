@@ -1,0 +1,38 @@
+{
+  "example_id": "1996435-042",
+  "duration_s": 32,
+  "fps": 30,
+  "size": [
+    1600,
+    900
+  ],
+  "silent": true,
+  "note": "Real 10Hz positions held between samples. Sequence replayed with disclosed slower rates; no interpolation. No primary candidate or candidate recovery claim.",
+  "timing": [
+    {
+      "start": 0,
+      "end": 4,
+      "story": "question; first real frame"
+    },
+    {
+      "start": 4,
+      "end": 12,
+      "story": "full real sequence, 0.76x"
+    },
+    {
+      "start": 12,
+      "end": 23,
+      "story": "slow replay to 3.53m peak; held peak; real displacements"
+    },
+    {
+      "start": 23,
+      "end": 29,
+      "story": "continue to clip end, final spread 1.02m"
+    },
+    {
+      "start": 29,
+      "end": 32,
+      "story": "0/44 finding and project route"
+    }
+  ]
+}

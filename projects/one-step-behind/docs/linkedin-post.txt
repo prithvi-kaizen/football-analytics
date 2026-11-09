@@ -1,0 +1,15 @@
+When a defensive line steps up, is the deepest defender actually being left behind?
+
+I looked at two matches of public SkillCorner tracking for One Step Behind.
+
+One Adelaide sequence reaches a 3.53 m depth gap. But the deepest defender has moved 1.76 m forward while his teammates' median advance is 2.36 m. Being deeper and remaining behind are different things.
+
+The frozen method found 0 qualifying candidates in 44 held-out steps. A simple instantaneous-gap baseline flagged two. I kept the zero result, along with the missingness audit and threshold sensitivity.
+
+The replay shows real coordinates, observation flags and an adjustable tolerance. No defensive-error claims.
+
+Demo, after the portfolio update is deployed:
+https://football-analytics-self.vercel.app/one-step-behind/
+
+Code location, after these files are pushed:
+https://github.com/prithvi-kaizen/football-analytics/tree/main/projects/one-step-behind

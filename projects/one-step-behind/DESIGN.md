@@ -1,0 +1,9 @@
+# Design read
+
+User direction: restrained professional explorer, consistent with the existing portfolio, pitch before dashboard statistics. User selected antislop during construction. Follow the existing light tactical-board visual language documented by Marking Handoffs, with the requested content determining the layout.
+
+ENERGY 1 / RHYTHM 2 / MOTION 2. Large pitch is the focal point; the narrow evidence column explains the inspected defender. Georgia title follows the portfolio's editorial voice, system sans keeps controls and evidence compact. Warm paper #f5f3ed, pale pitch #e8eee4, slate ink #273c45 and blue #245a79 differentiate teams; amber #935000 is reserved for the inspected deviation. Text labels and hollow/solid markers supplement colour. Dark mode has a complete equivalent palette. No gradients, icons, shadows, stock imagery or decorative animation are needed.
+
+Spacing separates the football question, playback, then research evidence. Mobile stacks the evidence under the pitch. Native controls have visible focus and 44px touch height. All animation is deliberate coordinate playback. A small linked depth chart explains the measured gap rather than filling dashboard space.
+
+Video: calm, precise, investigative. One continuous tactical board with actual 10Hz sampled positions; the measurement bracket appears when the depth opens. Full-pitch context precedes a brief closer framing, then the result is revealed. Same palette and fonts as explorer. Text supports real moving players, never a sequence of presentation cards. The user's specified 0-4/4-12/12-23/23-30/final narrative controls timing; a negative finding replaces any unsupported candidate or recovery claim. Frame rendering is deterministic, not driven by wall time. No footage, invented event or synthetic position is used.

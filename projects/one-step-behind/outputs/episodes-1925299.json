@@ -1,0 +1,931 @@
+[
+  {
+    "start_frame": 1532,
+    "end_frame": 1548,
+    "duration_s": 1.7,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 12,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-001",
+    "clock": "02:32.2"
+  },
+  {
+    "start_frame": 1624,
+    "end_frame": 1641,
+    "duration_s": 1.8,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 13,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-002",
+    "clock": "02:41.4"
+  },
+  {
+    "start_frame": 5748,
+    "end_frame": 5769,
+    "duration_s": 2.2,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 54,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-003",
+    "clock": "09:33.8"
+  },
+  {
+    "start_frame": 6426,
+    "end_frame": 6437,
+    "duration_s": 1.2,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 59,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-004",
+    "clock": "10:41.6"
+  },
+  {
+    "start_frame": 6438,
+    "end_frame": 6486,
+    "duration_s": 4.9,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 60,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-005",
+    "clock": "10:42.8"
+  },
+  {
+    "start_frame": 6641,
+    "end_frame": 6681,
+    "duration_s": 4.1,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 65,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-006",
+    "clock": "11:03.1"
+  },
+  {
+    "start_frame": 7172,
+    "end_frame": 7214,
+    "duration_s": 4.3,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 72,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-007",
+    "clock": "11:56.2"
+  },
+  {
+    "start_frame": 7287,
+    "end_frame": 7312,
+    "duration_s": 2.6,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 72,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-008",
+    "clock": "12:07.7"
+  },
+  {
+    "start_frame": 7313,
+    "end_frame": 7338,
+    "duration_s": 2.6,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 73,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-009",
+    "clock": "12:10.3"
+  },
+  {
+    "start_frame": 12394,
+    "end_frame": 12436,
+    "duration_s": 4.3,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 118,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-010",
+    "clock": "20:38.4"
+  },
+  {
+    "start_frame": 12690,
+    "end_frame": 12712,
+    "duration_s": 2.3,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 119,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-011",
+    "clock": "21:08.0"
+  },
+  {
+    "start_frame": 12773,
+    "end_frame": 12789,
+    "duration_s": 1.7,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 120,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-012",
+    "clock": "21:16.3"
+  },
+  {
+    "start_frame": 22904,
+    "end_frame": 22959,
+    "duration_s": 5.6,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 187,
+    "members": [
+      6,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-013",
+    "clock": "38:09.4"
+  },
+  {
+    "start_frame": 27901,
+    "end_frame": 27919,
+    "duration_s": 1.9,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 227,
+    "members": [
+      6,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-014",
+    "clock": "46:29.1"
+  },
+  {
+    "start_frame": 28860,
+    "end_frame": 28878,
+    "duration_s": 1.9,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 235,
+    "members": [
+      6,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-015",
+    "clock": "48:05.0"
+  },
+  {
+    "start_frame": 34311,
+    "end_frame": 34332,
+    "duration_s": 2.2,
+    "team_id": 1802,
+    "period": 2,
+    "phase_id": 295,
+    "members": [
+      6,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-016",
+    "clock": "51:46.1"
+  },
+  {
+    "start_frame": 34892,
+    "end_frame": 34933,
+    "duration_s": 4.2,
+    "team_id": 1802,
+    "period": 2,
+    "phase_id": 301,
+    "members": [
+      6,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-017",
+    "clock": "52:44.2"
+  },
+  {
+    "start_frame": 43624,
+    "end_frame": 43660,
+    "duration_s": 3.7,
+    "team_id": 1802,
+    "period": 2,
+    "phase_id": 358,
+    "members": [
+      9,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-018",
+    "clock": "67:17.4"
+  },
+  {
+    "start_frame": 43661,
+    "end_frame": 43704,
+    "duration_s": 4.4,
+    "team_id": 1802,
+    "period": 2,
+    "phase_id": 359,
+    "members": [
+      9,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-019",
+    "clock": "67:21.1"
+  },
+  {
+    "start_frame": 47926,
+    "end_frame": 47947,
+    "duration_s": 2.2,
+    "team_id": 1802,
+    "period": 2,
+    "phase_id": 381,
+    "members": [
+      9,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-020",
+    "clock": "74:27.6"
+  },
+  {
+    "start_frame": 50286,
+    "end_frame": 50323,
+    "duration_s": 3.8,
+    "team_id": 1802,
+    "period": 2,
+    "phase_id": 402,
+    "members": [
+      9,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-021",
+    "clock": "78:23.6"
+  },
+  {
+    "start_frame": 173,
+    "end_frame": 221,
+    "duration_s": 4.9,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 3,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-022",
+    "clock": "00:16.3"
+  },
+  {
+    "start_frame": 1817,
+    "end_frame": 1841,
+    "duration_s": 2.5,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 16,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-023",
+    "clock": "03:00.7"
+  },
+  {
+    "start_frame": 2194,
+    "end_frame": 2226,
+    "duration_s": 3.3,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 19,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-024",
+    "clock": "03:38.4"
+  },
+  {
+    "start_frame": 2679,
+    "end_frame": 2691,
+    "duration_s": 1.3,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 26,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-025",
+    "clock": "04:26.9"
+  },
+  {
+    "start_frame": 2822,
+    "end_frame": 2844,
+    "duration_s": 2.3,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 27,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-026",
+    "clock": "04:41.2"
+  },
+  {
+    "start_frame": 3016,
+    "end_frame": 3044,
+    "duration_s": 2.9,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 29,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-027",
+    "clock": "05:00.6"
+  },
+  {
+    "start_frame": 4138,
+    "end_frame": 4157,
+    "duration_s": 2.0,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 36,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-028",
+    "clock": "06:52.8"
+  },
+  {
+    "start_frame": 4198,
+    "end_frame": 4208,
+    "duration_s": 1.1,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 36,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-029",
+    "clock": "06:58.8"
+  },
+  {
+    "start_frame": 4640,
+    "end_frame": 4692,
+    "duration_s": 5.3,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 40,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-030",
+    "clock": "07:43.0"
+  },
+  {
+    "start_frame": 5109,
+    "end_frame": 5137,
+    "duration_s": 2.9,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 47,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-031",
+    "clock": "08:29.9"
+  },
+  {
+    "start_frame": 8904,
+    "end_frame": 8943,
+    "duration_s": 4.0,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 88,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-032",
+    "clock": "14:49.4"
+  },
+  {
+    "start_frame": 10338,
+    "end_frame": 10381,
+    "duration_s": 4.4,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 97,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-033",
+    "clock": "17:12.8"
+  },
+  {
+    "start_frame": 14490,
+    "end_frame": 14530,
+    "duration_s": 4.1,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 137,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-034",
+    "clock": "24:08.0"
+  },
+  {
+    "start_frame": 17290,
+    "end_frame": 17322,
+    "duration_s": 3.3,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 153,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-035",
+    "clock": "28:48.0"
+  },
+  {
+    "start_frame": 17689,
+    "end_frame": 17708,
+    "duration_s": 2.0,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 158,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-036",
+    "clock": "29:27.9"
+  },
+  {
+    "start_frame": 17833,
+    "end_frame": 17856,
+    "duration_s": 2.4,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 158,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-037",
+    "clock": "29:42.3"
+  },
+  {
+    "start_frame": 21853,
+    "end_frame": 21881,
+    "duration_s": 2.9,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 180,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-038",
+    "clock": "36:24.3"
+  },
+  {
+    "start_frame": 24162,
+    "end_frame": 24199,
+    "duration_s": 3.8,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 201,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-039",
+    "clock": "40:15.2"
+  },
+  {
+    "start_frame": 24512,
+    "end_frame": 24523,
+    "duration_s": 1.2,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 203,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-040",
+    "clock": "40:50.2"
+  },
+  {
+    "start_frame": 25576,
+    "end_frame": 25599,
+    "duration_s": 2.4,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 214,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-041",
+    "clock": "42:36.6"
+  },
+  {
+    "start_frame": 30846,
+    "end_frame": 30876,
+    "duration_s": 3.1,
+    "team_id": 871,
+    "period": 2,
+    "phase_id": 259,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-042",
+    "clock": "45:59.6"
+  },
+  {
+    "start_frame": 36785,
+    "end_frame": 36833,
+    "duration_s": 4.9,
+    "team_id": 871,
+    "period": 2,
+    "phase_id": 316,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-043",
+    "clock": "55:53.5"
+  },
+  {
+    "start_frame": 40081,
+    "end_frame": 40115,
+    "duration_s": 3.5,
+    "team_id": 871,
+    "period": 2,
+    "phase_id": 340,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-044",
+    "clock": "61:23.1"
+  },
+  {
+    "start_frame": 41184,
+    "end_frame": 41208,
+    "duration_s": 2.5,
+    "team_id": 871,
+    "period": 2,
+    "phase_id": 344,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-045",
+    "clock": "63:13.4"
+  },
+  {
+    "start_frame": 41584,
+    "end_frame": 41594,
+    "duration_s": 1.1,
+    "team_id": 871,
+    "period": 2,
+    "phase_id": 348,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-046",
+    "clock": "63:53.4"
+  },
+  {
+    "start_frame": 47120,
+    "end_frame": 47151,
+    "duration_s": 3.2,
+    "team_id": 871,
+    "period": 2,
+    "phase_id": 375,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-047",
+    "clock": "73:07.0"
+  },
+  {
+    "start_frame": 59869,
+    "end_frame": 59883,
+    "duration_s": 1.5,
+    "team_id": 871,
+    "period": 2,
+    "phase_id": 471,
+    "members": [
+      0,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-048",
+    "clock": "94:21.9"
+  },
+  {
+    "start_frame": 60320,
+    "end_frame": 60334,
+    "duration_s": 1.5,
+    "team_id": 871,
+    "period": 2,
+    "phase_id": 475,
+    "members": [
+      0,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-049",
+    "clock": "95:07.0"
+  }
+]

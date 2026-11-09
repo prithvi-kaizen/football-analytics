@@ -1,0 +1,1421 @@
+[
+  {
+    "start_frame": 1532,
+    "end_frame": 1548,
+    "duration_s": 1.7,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 12,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-001",
+    "clock": "02:32.2",
+    "peak_search_gap_m": 1.5900001525878906,
+    "highlight_id": 51050,
+    "highlight_name": "B. Warland",
+    "peak_frame": 1532,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 1624,
+    "end_frame": 1641,
+    "duration_s": 1.8,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 13,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-002",
+    "clock": "02:41.4",
+    "peak_search_gap_m": 1.1999988555908203,
+    "highlight_id": 51043,
+    "highlight_name": "H. Van Der Saag",
+    "peak_frame": 1624,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 5748,
+    "end_frame": 5769,
+    "duration_s": 2.2,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 54,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-003",
+    "clock": "09:33.8",
+    "peak_search_gap_m": 2.2099990844726562,
+    "highlight_id": 560983,
+    "highlight_name": "A. Burke-Gilroy",
+    "peak_frame": 5748,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 6426,
+    "end_frame": 6437,
+    "duration_s": 1.2,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 59,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-004",
+    "clock": "10:41.6",
+    "peak_search_gap_m": 1.3800010681152344,
+    "highlight_id": 965697,
+    "highlight_name": "L. Herrington",
+    "peak_frame": 6426,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 6438,
+    "end_frame": 6486,
+    "duration_s": 4.9,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 60,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-005",
+    "clock": "10:42.8",
+    "peak_search_gap_m": 2.6000003814697266,
+    "highlight_id": 965697,
+    "highlight_name": "L. Herrington",
+    "peak_frame": 6496,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": false,
+      "growth": true,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 6641,
+    "end_frame": 6681,
+    "duration_s": 4.1,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 65,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-006",
+    "clock": "11:03.1",
+    "peak_search_gap_m": 2.6500000953674316,
+    "highlight_id": 965697,
+    "highlight_name": "L. Herrington",
+    "peak_frame": 6681,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": true,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 7172,
+    "end_frame": 7214,
+    "duration_s": 4.3,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 72,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-007",
+    "clock": "11:56.2",
+    "peak_search_gap_m": 1.8300018310546875,
+    "highlight_id": 51043,
+    "highlight_name": "H. Van Der Saag",
+    "peak_frame": 7172,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 7287,
+    "end_frame": 7312,
+    "duration_s": 2.6,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 72,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-008",
+    "clock": "12:07.7",
+    "peak_search_gap_m": 2.25,
+    "highlight_id": 965697,
+    "highlight_name": "L. Herrington",
+    "peak_frame": 7287,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 7313,
+    "end_frame": 7338,
+    "duration_s": 2.6,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 73,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-009",
+    "clock": "12:10.3",
+    "peak_search_gap_m": 1.2799997329711914,
+    "highlight_id": 51043,
+    "highlight_name": "H. Van Der Saag",
+    "peak_frame": 7313,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 12394,
+    "end_frame": 12436,
+    "duration_s": 4.3,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 118,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-010",
+    "clock": "20:38.4",
+    "peak_search_gap_m": 1.6000003814697266,
+    "highlight_id": 51043,
+    "highlight_name": "H. Van Der Saag",
+    "peak_frame": 12398,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 12690,
+    "end_frame": 12712,
+    "duration_s": 2.3,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 119,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-011",
+    "clock": "21:08.0",
+    "peak_search_gap_m": 1.3099994659423828,
+    "highlight_id": 51043,
+    "highlight_name": "H. Van Der Saag",
+    "peak_frame": 12690,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 12773,
+    "end_frame": 12789,
+    "duration_s": 1.7,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 120,
+    "members": [
+      6,
+      7,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-012",
+    "clock": "21:16.3",
+    "peak_search_gap_m": 1.179999828338623,
+    "highlight_id": 965697,
+    "highlight_name": "L. Herrington",
+    "peak_frame": 12799,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 22904,
+    "end_frame": 22959,
+    "duration_s": 5.6,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 187,
+    "members": [
+      6,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-013",
+    "clock": "38:09.4",
+    "peak_search_gap_m": 1.6900005340576172,
+    "highlight_id": 965697,
+    "highlight_name": "L. Herrington",
+    "peak_frame": 22911,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 27901,
+    "end_frame": 27919,
+    "duration_s": 1.9,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 227,
+    "members": [
+      6,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-014",
+    "clock": "46:29.1",
+    "peak_search_gap_m": 1.2000007629394531,
+    "highlight_id": 560983,
+    "highlight_name": "A. Burke-Gilroy",
+    "peak_frame": 27901,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 28860,
+    "end_frame": 28878,
+    "duration_s": 1.9,
+    "team_id": 1802,
+    "period": 1,
+    "phase_id": 235,
+    "members": [
+      6,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-015",
+    "clock": "48:05.0",
+    "peak_search_gap_m": 1.5299999713897705,
+    "highlight_id": 69111,
+    "highlight_name": "H. Bility",
+    "peak_frame": 28888,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": false,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 34311,
+    "end_frame": 34332,
+    "duration_s": 2.2,
+    "team_id": 1802,
+    "period": 2,
+    "phase_id": 295,
+    "members": [
+      6,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-016",
+    "clock": "51:46.1",
+    "peak_search_gap_m": 2.5800018310546875,
+    "highlight_id": 560983,
+    "highlight_name": "A. Burke-Gilroy",
+    "peak_frame": 34332,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 34892,
+    "end_frame": 34933,
+    "duration_s": 4.2,
+    "team_id": 1802,
+    "period": 2,
+    "phase_id": 301,
+    "members": [
+      6,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-017",
+    "clock": "52:44.2",
+    "peak_search_gap_m": 1.9099998474121094,
+    "highlight_id": 965697,
+    "highlight_name": "L. Herrington",
+    "peak_frame": 34892,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 43624,
+    "end_frame": 43660,
+    "duration_s": 3.7,
+    "team_id": 1802,
+    "period": 2,
+    "phase_id": 358,
+    "members": [
+      9,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-018",
+    "clock": "67:17.4",
+    "peak_search_gap_m": 0.8799991607666016,
+    "highlight_id": 69111,
+    "highlight_name": "H. Bility",
+    "peak_frame": 43624,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 43661,
+    "end_frame": 43704,
+    "duration_s": 4.4,
+    "team_id": 1802,
+    "period": 2,
+    "phase_id": 359,
+    "members": [
+      9,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-019",
+    "clock": "67:21.1",
+    "peak_search_gap_m": 1.2100000381469727,
+    "highlight_id": 965697,
+    "highlight_name": "L. Herrington",
+    "peak_frame": 43703,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 47926,
+    "end_frame": 47947,
+    "duration_s": 2.2,
+    "team_id": 1802,
+    "period": 2,
+    "phase_id": 381,
+    "members": [
+      9,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-020",
+    "clock": "74:27.6",
+    "peak_search_gap_m": 2.2099990844726562,
+    "highlight_id": 965697,
+    "highlight_name": "L. Herrington",
+    "peak_frame": 47931,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 50286,
+    "end_frame": 50323,
+    "duration_s": 3.8,
+    "team_id": 1802,
+    "period": 2,
+    "phase_id": 402,
+    "members": [
+      9,
+      10,
+      15,
+      30
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-021",
+    "clock": "78:23.6",
+    "peak_search_gap_m": 2.520000457763672,
+    "highlight_id": 51722,
+    "highlight_name": "J. Hingert",
+    "peak_frame": 50309,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 173,
+    "end_frame": 221,
+    "duration_s": 4.9,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 3,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-022",
+    "clock": "00:16.3",
+    "peak_search_gap_m": 1.1299991607666016,
+    "highlight_id": 11897,
+    "highlight_name": "J. Risdon",
+    "peak_frame": 189,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 1817,
+    "end_frame": 1841,
+    "duration_s": 2.5,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 16,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-023",
+    "clock": "03:00.7",
+    "peak_search_gap_m": 1.5799999237060547,
+    "highlight_id": 560989,
+    "highlight_name": "T. Mr\u010dela",
+    "peak_frame": 1817,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 2194,
+    "end_frame": 2226,
+    "duration_s": 3.3,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 19,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-024",
+    "clock": "03:38.4",
+    "peak_search_gap_m": 2.9699974060058594,
+    "highlight_id": 50982,
+    "highlight_name": "R. Warland",
+    "peak_frame": 2226,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": true,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 2679,
+    "end_frame": 2691,
+    "duration_s": 1.3,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 26,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-025",
+    "clock": "04:26.9",
+    "peak_search_gap_m": 0.7399997711181641,
+    "highlight_id": 809166,
+    "highlight_name": "A. Lebib",
+    "peak_frame": 2699,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 2822,
+    "end_frame": 2844,
+    "duration_s": 2.3,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 27,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-026",
+    "clock": "04:41.2",
+    "peak_search_gap_m": 0.8499994277954102,
+    "highlight_id": 560989,
+    "highlight_name": "T. Mr\u010dela",
+    "peak_frame": 2822,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 3016,
+    "end_frame": 3044,
+    "duration_s": 2.9,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 29,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-027",
+    "clock": "05:00.6",
+    "peak_search_gap_m": 2.329998016357422,
+    "highlight_id": 11897,
+    "highlight_name": "J. Risdon",
+    "peak_frame": 3043,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": true,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 4138,
+    "end_frame": 4157,
+    "duration_s": 2.0,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 36,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-028",
+    "clock": "06:52.8",
+    "peak_search_gap_m": 1.0699996948242188,
+    "highlight_id": 50982,
+    "highlight_name": "R. Warland",
+    "peak_frame": 4138,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 4198,
+    "end_frame": 4208,
+    "duration_s": 1.1,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 36,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-029",
+    "clock": "06:58.8",
+    "peak_search_gap_m": 0.5199985504150391,
+    "highlight_id": 50982,
+    "highlight_name": "R. Warland",
+    "peak_frame": 4208,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": false,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 4640,
+    "end_frame": 4692,
+    "duration_s": 5.3,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 40,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-030",
+    "clock": "07:43.0",
+    "peak_search_gap_m": 0.9599990844726562,
+    "highlight_id": 50982,
+    "highlight_name": "R. Warland",
+    "peak_frame": 4660,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 5109,
+    "end_frame": 5137,
+    "duration_s": 2.9,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 47,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-031",
+    "clock": "08:29.9",
+    "peak_search_gap_m": 1.1700000762939453,
+    "highlight_id": 560989,
+    "highlight_name": "T. Mr\u010dela",
+    "peak_frame": 5109,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 8904,
+    "end_frame": 8943,
+    "duration_s": 4.0,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 88,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-032",
+    "clock": "14:49.4",
+    "peak_search_gap_m": 1.25,
+    "highlight_id": 809166,
+    "highlight_name": "A. Lebib",
+    "peak_frame": 8904,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 10338,
+    "end_frame": 10381,
+    "duration_s": 4.4,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 97,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-033",
+    "clock": "17:12.8",
+    "peak_search_gap_m": 1.4900016784667969,
+    "highlight_id": 809166,
+    "highlight_name": "A. Lebib",
+    "peak_frame": 10338,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 14490,
+    "end_frame": 14530,
+    "duration_s": 4.1,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 137,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-034",
+    "clock": "24:08.0",
+    "peak_search_gap_m": 2.9499969482421875,
+    "highlight_id": 11897,
+    "highlight_name": "J. Risdon",
+    "peak_frame": 14535,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": true,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 17290,
+    "end_frame": 17322,
+    "duration_s": 3.3,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 153,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-035",
+    "clock": "28:48.0",
+    "peak_search_gap_m": 2.669999122619629,
+    "highlight_id": 809166,
+    "highlight_name": "A. Lebib",
+    "peak_frame": 17290,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 17689,
+    "end_frame": 17708,
+    "duration_s": 2.0,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 158,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-036",
+    "clock": "29:27.9",
+    "peak_search_gap_m": 1.0800018310546875,
+    "highlight_id": 11897,
+    "highlight_name": "J. Risdon",
+    "peak_frame": 17716,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 17833,
+    "end_frame": 17856,
+    "duration_s": 2.4,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 158,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-037",
+    "clock": "29:42.3",
+    "peak_search_gap_m": 1.7699966430664062,
+    "highlight_id": 11897,
+    "highlight_name": "J. Risdon",
+    "peak_frame": 17845,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 21853,
+    "end_frame": 21881,
+    "duration_s": 2.9,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 180,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-038",
+    "clock": "36:24.3",
+    "peak_search_gap_m": 0.5999984741210938,
+    "highlight_id": 560989,
+    "highlight_name": "T. Mr\u010dela",
+    "peak_frame": 21853,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 24162,
+    "end_frame": 24199,
+    "duration_s": 3.8,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 201,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-039",
+    "clock": "40:15.2",
+    "peak_search_gap_m": 2.1100006103515625,
+    "highlight_id": 560989,
+    "highlight_name": "T. Mr\u010dela",
+    "peak_frame": 24162,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 24512,
+    "end_frame": 24523,
+    "duration_s": 1.2,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 203,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-040",
+    "clock": "40:50.2",
+    "peak_search_gap_m": 1.5,
+    "highlight_id": 11897,
+    "highlight_name": "J. Risdon",
+    "peak_frame": 24526,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 25576,
+    "end_frame": 25599,
+    "duration_s": 2.4,
+    "team_id": 871,
+    "period": 1,
+    "phase_id": 214,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-041",
+    "clock": "42:36.6",
+    "peak_search_gap_m": 2.0699996948242188,
+    "highlight_id": 809166,
+    "highlight_name": "A. Lebib",
+    "peak_frame": 25576,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 30846,
+    "end_frame": 30876,
+    "duration_s": 3.1,
+    "team_id": 871,
+    "period": 2,
+    "phase_id": 259,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-042",
+    "clock": "45:59.6",
+    "peak_search_gap_m": 1.3899993896484375,
+    "highlight_id": 809166,
+    "highlight_name": "A. Lebib",
+    "peak_frame": 30846,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 36785,
+    "end_frame": 36833,
+    "duration_s": 4.9,
+    "team_id": 871,
+    "period": 2,
+    "phase_id": 316,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-043",
+    "clock": "55:53.5",
+    "peak_search_gap_m": 1.7900009155273438,
+    "highlight_id": 809166,
+    "highlight_name": "A. Lebib",
+    "peak_frame": 36786,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 40081,
+    "end_frame": 40115,
+    "duration_s": 3.5,
+    "team_id": 871,
+    "period": 2,
+    "phase_id": 340,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-044",
+    "clock": "61:23.1",
+    "peak_search_gap_m": 2.039999008178711,
+    "highlight_id": 809166,
+    "highlight_name": "A. Lebib",
+    "peak_frame": 40081,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": true
+    }
+  },
+  {
+    "start_frame": 41184,
+    "end_frame": 41208,
+    "duration_s": 2.5,
+    "team_id": 871,
+    "period": 2,
+    "phase_id": 344,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-045",
+    "clock": "63:13.4",
+    "peak_search_gap_m": 0.940000057220459,
+    "highlight_id": 809166,
+    "highlight_name": "A. Lebib",
+    "peak_frame": 41214,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 41584,
+    "end_frame": 41594,
+    "duration_s": 1.1,
+    "team_id": 871,
+    "period": 2,
+    "phase_id": 348,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-046",
+    "clock": "63:53.4",
+    "peak_search_gap_m": 0.9700002670288086,
+    "highlight_id": 809166,
+    "highlight_name": "A. Lebib",
+    "peak_frame": 41604,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 47120,
+    "end_frame": 47151,
+    "duration_s": 3.2,
+    "team_id": 871,
+    "period": 2,
+    "phase_id": 375,
+    "members": [
+      0,
+      2,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-047",
+    "clock": "73:07.0",
+    "peak_search_gap_m": 1.1800003051757812,
+    "highlight_id": 809166,
+    "highlight_name": "A. Lebib",
+    "peak_frame": 47161,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 59869,
+    "end_frame": 59883,
+    "duration_s": 1.5,
+    "team_id": 871,
+    "period": 2,
+    "phase_id": 471,
+    "members": [
+      0,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-048",
+    "clock": "94:21.9",
+    "peak_search_gap_m": 1.4150009155273438,
+    "highlight_id": 11897,
+    "highlight_name": "J. Risdon",
+    "peak_frame": 59883,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": false,
+      "relative_motion": false
+    }
+  },
+  {
+    "start_frame": 60320,
+    "end_frame": 60334,
+    "duration_s": 1.5,
+    "team_id": 871,
+    "period": 2,
+    "phase_id": 475,
+    "members": [
+      0,
+      21,
+      28
+    ],
+    "baseline": false,
+    "candidate": false,
+    "match_id": 1925299,
+    "id": "1925299-049",
+    "clock": "95:07.0",
+    "peak_search_gap_m": 2.8400001525878906,
+    "highlight_id": 11897,
+    "highlight_name": "J. Risdon",
+    "peak_frame": 60334,
+    "peak_conditions": {
+      "gap": false,
+      "peer_shape": true,
+      "growth": true,
+      "relative_motion": true
+    }
+  }
+]
