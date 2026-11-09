@@ -1,0 +1,19 @@
+When a defensive line steps up, does every defender move with it?
+
+I built One Step Behind to explore defensive-line movement using SkillCorner’s open tracking data. The interactive pitch lets you replay real sequences, inspect depth gaps and adjust the positional tolerance.
+
+Across 93 eligible steps in two matches, none met the full lagging-defender rule. One defender reached a 3.53 m gap while still moving forward with his teammates.
+
+⛳️ My main learnings:
+➤ Being deeper doesn’t automatically mean a defender failed to step up.
+➤ Missing and estimated positions limit which sequences can be assessed.
+➤ Gap size alone isn’t enough. Movement over time and threshold choices matter.
+
+Built with Python, NumPy and JavaScript, with the browser replay deployed on Vercel.
+
+Live project : https://one-step-behind-pk02ib2if-prithvirajs-projects-b40fa6af.vercel.app
+GitHub and methodology : https://github.com/prithvi-kaizen/football-analytics/tree/main/projects/one-step-behind
+
+I’d welcome feedback on how to identify the defensive line more reliably.
+
+#FootballAnalytics #SportsAnalytics #Python

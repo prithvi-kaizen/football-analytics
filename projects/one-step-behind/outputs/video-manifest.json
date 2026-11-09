@@ -1,0 +1,40 @@
+{
+  "example_id": "1996435-042",
+  "duration_s": 32,
+  "fps": 30,
+  "size": [
+    1600,
+    900
+  ],
+  "silent": true,
+  "note": "Real 10Hz positions held between samples. Sequence replayed with disclosed slower rates; no interpolation. No primary candidate or candidate recovery claim.",
+  "first_source_frame": 41228,
+  "opening_overlay": "3.53m behind the line. But was he actually late?",
+  "timing": [
+    {
+      "start": 0,
+      "end": 4,
+      "story": "real 3.53m peak frame held; exact user-requested hook"
+    },
+    {
+      "start": 4,
+      "end": 12,
+      "story": "explicit cut back to start; full real sequence, 0.76x, forward-displacement counter"
+    },
+    {
+      "start": 12,
+      "end": 23,
+      "story": "slow replay to 3.53m peak; held peak; real displacements"
+    },
+    {
+      "start": 23,
+      "end": 29,
+      "story": "continue to clip end, final spread 1.02m"
+    },
+    {
+      "start": 29,
+      "end": 32,
+      "story": "0/44 finding and project route"
+    }
+  ]
+}

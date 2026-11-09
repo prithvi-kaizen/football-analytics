@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "development_match": 1925299,
+  "held_out_match": 1996435,
+  "hz": 10,
+  "initial_spread_m": 3.0,
+  "max_spread_m": 12.0,
+  "min_width_m": 12.0,
+  "step_window_s": 1.0,
+  "step_advance_m": 1.5,
+  "sustained_half_advance_m": 0.5,
+  "peer_spread_m": 3.0,
+  "gap_m": 3.0,
+  "gap_growth_m": 1.5,
+  "lag_motion_ratio": 0.5,
+  "persistence_s": 0.5,
+  "recovery_confirmation_s": 0.5,
+  "followup_s": 10.0,
+  "allowed_phases": ["build_up", "create", "finish"]
+}
