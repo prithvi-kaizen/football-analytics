@@ -1,16 +1,27 @@
 # LinkedIn
 
-A clearance is not the end of a corner.
+How often does a corner stay dangerous after the first delivery?
 
-I traced 817 corners from men's Euro 2024 and Women's Euro 2025. Within 15 seconds, the attacking side had a recorded action *after* defensive contact on 389 corners (47.6%; match-clustered 95% interval 44.1–51.3%). On 126 corners, that recovery led to a shot.
+I built The Corner That Never Ended to follow what happens after the first delivery, using StatsBomb Open Data from men's Euro 2024 and Women's Euro 2025.
+It separates a defender's touch from a completed turnover, then tracks attacking recoveries, later shots, box entries and opposition breaks. The interactive explorer lets you change the time window and follow three real corners.
 
-Counting only the first ball would miss much of the measured activity: 69 first-ball shots versus 184 later shots whose phase we can assign. Another 75 shots remain phase unknown because attacking and defending actions share a timestamp. I kept those separate.
+Across 817 corners in 82 matches, the attacking team had a recorded action after defensive contact on 389 corners (47.6%) within 15 seconds. A recovered second phase produced a shot on 126 corners (15.4%).
 
-The interactive explorer lets you change the horizon, follow three real corners, and see exactly where a clearance becomes a recovery or a confirmed turnover. This is historical Euro data, not an estimate of the Premier League's 2026/27 refereeing changes.
+⛳️ My main learnings:
+➤ A clearance event does not mean the defending team has possession.
+➤ At 15 seconds, 184 classifiable shots came after the first ball, compared with 69 first-ball shots.
+➤ Another 75 shots have uncertain phase because attacking and defending events share a timestamp.
 
-Explore: https://football-analytics-self.vercel.app/corner-second-phase/
+These are historical Euro matches. They do not measure the effect of the Premier League's 2026/27 refereeing guidance.
 
-Data: StatsBomb Open Data. Methods and code: https://github.com/prithvi-kaizen/football-analytics/tree/main/projects/corner-second-phase
+Built with Python and JavaScript, with the interactive explorer deployed on Vercel.
+
+Live project : **https://football-analytics-self.vercel.app/corner-second-phase/**
+GitHub and methodology : **https://github.com/prithvi-kaizen/football-analytics/tree/main/projects/corner-second-phase**
+
+I'd welcome feedback on where to draw the line between the first ball and a second phase when event timestamps overlap.
+
+#FootballAnalytics #SportsAnalytics #Python
 
 # X thread
 
