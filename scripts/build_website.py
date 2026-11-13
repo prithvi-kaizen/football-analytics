@@ -13,6 +13,7 @@ for project, target in [("pressing-trap-detector", OUTPUT), ("invisible-runner",
                         ("tacticai-lite", OUTPUT / "tacticai-lite"),
                         ("possession-lab", OUTPUT / "possession-lab"),
                         ("lane-obstruction", OUTPUT / "lane-obstruction"),
-                        ("one-step-behind", OUTPUT / "one-step-behind")]:
+                        ("one-step-behind", OUTPUT / "one-step-behind"),
+                        ("corner-second-phase", OUTPUT / "corner-second-phase")]:
     subprocess.run([sys.executable, str(ROOT / "projects" / project / "scripts/build_website.py"),
                     "--output", str(target)], check=True)

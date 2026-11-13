@@ -16,6 +16,7 @@ Football projects built around specific tactical questions, reproducible data pr
 | [TacticAI Lite](projects/tacticai-lite/) | Which corner-kick patterns are associated with shot creation? | StatsBomb Euro 2024 and Women’s Euro 2025; all 82 matches | Validated Python/Streamlit project, match-held-out baseline and public aggregate explorer |
 | [Possession Lab](projects/possession-lab/) | Who has possession when the ball disappears from the tracking? | Continuous scripted synthetic motion and two unlabelled public Metrica sample excerpts | Tested Python research package, observation-failure playground and paired observability explorer |
 | [The Defender Nobody Notices](projects/lane-obstruction/) | Which defenders obstruct passing lanes before a pass is attempted? | SkillCorner open A-League tracking; three matches | Executed geometry/arrival comparison and public interactive replay |
+| [The Corner That Never Ended](projects/corner-second-phase/) | How often does attacking pressure survive the first corner delivery? | StatsBomb Euro 2024 and Women's Euro 2025; 817 corners | Reproducible second-phase analysis, match-clustered intervals and interactive sequence explorer |
 
 The first project includes pressure and recovery maps, event-level replays, team comparisons, an exploratory xT model, automated tests and a written investigation. It identifies patterns consistent with pressing traps; event data alone cannot prove intent.
 

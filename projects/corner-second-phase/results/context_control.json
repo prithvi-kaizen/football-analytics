@@ -1,0 +1,21 @@
+{
+  "seed": 20261113,
+  "unit": "one final-third open-play pass per corner, sampled within match, >=30s from any corner",
+  "n": 817,
+  "matches": 82,
+  "recovered": {
+    "n": 216,
+    "match_bootstrap_95": [
+      0.231,
+      0.2974
+    ]
+  },
+  "second_phase_shot": {
+    "n": 30,
+    "match_bootstrap_95": [
+      0.0243,
+      0.0531
+    ]
+  },
+  "limitation": "Final-third open-play passes differ from corners in selection, field position and defensive organization; this is a descriptive context benchmark, not a causal null."
+}
